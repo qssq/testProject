@@ -1,25 +1,16 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 #include "EncryptionHelper.h"
+#include "FileHelper.h"
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
-	EncryptionHelper eh;
-	string last = "gongxun";
-	string fast = eh.codeData(last);
-	string fast2 = eh.codeData(fast);
-
-	cout<<last<<endl;
-	cout<<fast<<endl;
-	cout<<fast2<<endl;
-
-	string a = "a";
-	a[0] ^= 10;
-	cout<<a<<endl;
-	a[0] ^= 10;
-	cout<<a<<endl;
-
+	FileHelper fh("input.txt");
+	fh.file();
+	fh.readString();
 	system("pause");
 	return 0;
 }

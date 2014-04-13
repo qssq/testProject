@@ -4,16 +4,25 @@
     <Filter Include="Encryption">
       <UniqueIdentifier>{d18d71d5-e4da-463e-8c11-a0fcfeaec557}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FIle">
+      <UniqueIdentifier>{7c9acb85-e372-46d6-94af-11259c5d597b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="EncryptionHelper.cpp">
       <Filter>Encryption</Filter>
     </ClCompile>
+    <ClCompile Include="FileHelper.cpp">
+      <Filter>FIle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EncryptionHelper.h">
       <Filter>Encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHelper.h">
+      <Filter>FIle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
