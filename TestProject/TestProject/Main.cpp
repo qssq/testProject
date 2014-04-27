@@ -3,14 +3,15 @@
 #include <string>
 #include "EncryptionHelper.h"
 #include "FileHelper.h"
+#include "ArrayHelper.h"
+#include "GenericHelper.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-	FileHelper fh("input.txt");
-	fh.file();
-	fh.readString();
+	GenericHelper gh;
+	gh.testSort();
 	system("pause");
 	return 0;
 }

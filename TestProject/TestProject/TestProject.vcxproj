@@ -62,13 +62,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="ArrayHelper.cpp" />
     <ClCompile Include="EncryptionHelper.cpp" />
     <ClCompile Include="FileHelper.cpp" />
+    <ClCompile Include="GenericHelper.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animal.h" />
+    <ClInclude Include="ArrayHelper.h" />
     <ClInclude Include="EncryptionHelper.h" />
     <ClInclude Include="FileHelper.h" />
+    <ClInclude Include="GenericHelper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

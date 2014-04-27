@@ -7,6 +7,15 @@
     <Filter Include="FIle">
       <UniqueIdentifier>{7c9acb85-e372-46d6-94af-11259c5d597b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ArrayHelper">
+      <UniqueIdentifier>{86363b6d-9a01-467f-9eeb-4dc116a51473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{34cec360-19aa-4fbd-82f8-144765dd3818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenericAlgorithm">
+      <UniqueIdentifier>{d6d16473-406b-4e40-b095-381ed655e08f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -16,6 +25,15 @@
     <ClCompile Include="FileHelper.cpp">
       <Filter>FIle</Filter>
     </ClCompile>
+    <ClCompile Include="ArrayHelper.cpp">
+      <Filter>ArrayHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="Animal.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericHelper.cpp">
+      <Filter>GenericAlgorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EncryptionHelper.h">
@@ -23,6 +41,15 @@
     </ClInclude>
     <ClInclude Include="FileHelper.h">
       <Filter>FIle</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayHelper.h">
+      <Filter>ArrayHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="Animal.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericHelper.h">
+      <Filter>GenericAlgorithm</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
