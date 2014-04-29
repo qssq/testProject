@@ -135,3 +135,87 @@ void GenericHelper::testSort()
 		cout<<it<<endl;
 	}
 }
+
+void GenericHelper::testLambda()
+{
+	vector<string> vec;
+	vec.push_back("fox");
+	vec.push_back("jumps");
+	vec.push_back("over");
+	vec.push_back("quick");
+	vec.push_back("red");
+	vec.push_back("slow");
+	vec.push_back("fox");
+	vec.push_back("turtle");
+	vec.push_back("over");
+	vec.push_back("end");
+	for (auto it : vec)
+	{
+		cout<<it<<endl;
+	}
+
+	stable_sort(vec.begin(), vec.end(), 
+	[](const string &a, const string &b)
+	{
+		return a.size() < b.size();
+	});
+
+	cout<<"--------------------------------"<<endl;
+	for (auto it : vec)
+	{
+		cout<<it<<endl;
+	}
+
+	cout<<"--------------------------------"<<endl;
+	vector<int> cards;
+	cards.push_back(10);
+	cards.push_back(7);
+	cards.push_back(2);
+	cards.push_back(12);
+	cards.push_back(32);
+	cards.push_back(22);
+	cards.push_back(90);
+
+	int card = 12;
+	auto it = find_if(cards.begin(), cards.end(), 
+		[card](const int &a)
+	{
+		return a == card;
+	});
+	cout<<*it<<endl;
+
+	cout<<"--------------------------------"<<endl;
+	for_each(cards.begin(), cards.end(), [](const int &a){cout<<a<<endl;});
+}
+
+void GenericHelper::testLambda1()
+{
+	int v1 = 42;
+	auto f = [v1](){return v1;};
+	v1 = 32;
+	cout<<f()<<endl;
+}
+
+void GenericHelper::testRandom()
+{
+	//random_device rd;
+	//for (int i = 0; i < 100; i++)
+	//{
+	//	cout<<rd()%10<<endl;
+	//}
+
+	//std::default_random_engine generator;  
+	//std::uniform_int_distribution<int> dis(0,10);  
+	//for(int i=0;i<10;i++)  
+	//{  
+	//	std::cout<<dis(generator)<<std::endl;  
+	//}  
+
+	std::default_random_engine generator(time(NULL));  
+	std::uniform_int_distribution<int> dis(0,2);  
+	auto dice= std::bind(dis,generator);  
+	for(int i=0;i<10;i++)  
+	{  
+		std::cout<<dice()<<std::endl;  
+	}  
+}

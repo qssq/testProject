@@ -7,6 +7,9 @@
 #include <vector>
 #include <list>
 #include <numeric>
+#include <random>
+#include <time.h>
+#include <functional>
 
 using namespace std;
 
@@ -19,6 +22,9 @@ public:
 	void testInserter();	//Ð´ÈÝÆ÷Ëã·¨
 	void testFill_n();
 	void testSort();
+	void testLambda();
+	void testLambda1();
+	void testRandom();
 
 	static bool isShorter(const string &s1, const string &s2);
 private:
