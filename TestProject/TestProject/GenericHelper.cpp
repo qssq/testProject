@@ -43,6 +43,19 @@ void GenericHelper::testStdFind()
 
 void GenericHelper::testInserter()
 {
+	vector<int> ivec;
+	int cinInt;
+	while (cin>>cinInt)
+	{
+		auto itS = inserter(ivec, ivec.begin());
+		itS = cinInt;
+	}
+	for (auto it : ivec)
+	{
+		cout<<it<<endl;
+	}
+
+	cout<<"---------"<<endl;
 	vector<int> vec;
 
 	fill_n(back_inserter(vec), 5, 8);
@@ -56,6 +69,22 @@ void GenericHelper::testInserter()
 	int a1[sizeof(a)/sizeof(*a)];
 	copy(begin(a), end(a), a1);
 	for (int it : a1)
+	{
+		cout<<it<<endl;
+	}
+}
+
+void GenericHelper::testIoInserter()
+{
+	vector<int> vec;
+	istream_iterator<int> in_iter(cin);
+	istream_iterator<int> eof;
+	while (in_iter != eof)
+	{
+		vec.push_back(*in_iter++);
+	}
+	cout<<"-------------------"<<endl;
+	for (auto it : vec)
 	{
 		cout<<it<<endl;
 	}
@@ -218,4 +247,36 @@ void GenericHelper::testRandom()
 	{  
 		std::cout<<dice()<<std::endl;  
 	}  
+}
+
+void GenericHelper::testritertor()
+{
+	vector<int> ivec;
+	ivec.push_back(1);
+	ivec.push_back(2);
+	ivec.push_back(3);
+	ivec.push_back(4);
+	ivec.push_back(5);
+	ivec.push_back(6);
+
+	for (auto it = ivec.rbegin(); it != ivec.rend(); ++it)
+	{
+		cout<<*it<<endl;
+	}
+	cout<<"----------ÉýÐò----------"<<endl;
+	sort(ivec.begin(), ivec.end());
+	for (auto it : ivec)
+	{
+		cout<<it<<endl;
+	}
+	cout<<"----------½µÐò----------"<<endl;
+	sort(ivec.rbegin(), ivec.rend());
+	for (auto it : ivec)
+	{
+		cout<<it<<endl;
+	}
+	cout<<"----------·´Ïò²éÕÒ----------"<<endl;
+	string s = "12222222222212";
+	auto rcomma = find(s.rbegin(), s.rend(), '1');
+	cout<<string(s.rbegin(), rcomma)<<endl;
 }

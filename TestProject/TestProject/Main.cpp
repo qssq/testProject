@@ -11,7 +11,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 	GenericHelper gh;
-	gh.testRandom();
+	gh.testritertor();
 	system("pause");
 	return 0;
 }
