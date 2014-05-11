@@ -280,3 +280,24 @@ void GenericHelper::testritertor()
 	auto rcomma = find(s.rbegin(), s.rend(), '1');
 	cout<<string(s.rbegin(), rcomma)<<endl;
 }
+
+void GenericHelper::testCppy()
+{
+	vector<int> number;
+	int i = 0;
+	while (i < 10)
+	{
+		number.push_back(++i);
+	}
+	vector<int> jishu;
+
+	copy_if(number.begin(), number.end(), back_inserter(jishu), [](int a)
+	{
+		return (a%2 == 1);
+	});
+
+	for (auto it : jishu)
+	{
+		cout<<it<<endl;
+	}
+}

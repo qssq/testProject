@@ -16,6 +16,9 @@
     <Filter Include="GenericAlgorithm">
       <UniqueIdentifier>{d6d16473-406b-4e40-b095-381ed655e08f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AssociativeContainer">
+      <UniqueIdentifier>{57414c52-508e-4648-9dbe-0053bb0d2e6c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -34,6 +37,9 @@
     <ClCompile Include="GenericHelper.cpp">
       <Filter>GenericAlgorithm</Filter>
     </ClCompile>
+    <ClCompile Include="AssociativeHelper.cpp">
+      <Filter>AssociativeContainer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EncryptionHelper.h">
@@ -50,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="GenericHelper.h">
       <Filter>GenericAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="AssociativeHelper.h">
+      <Filter>AssociativeContainer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

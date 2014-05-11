@@ -27,6 +27,7 @@ public:
 	void testLambda1();
 	void testRandom();
 	void testritertor();
+	void testCppy();
 
 	static bool isShorter(const string &s1, const string &s2);
 private:
