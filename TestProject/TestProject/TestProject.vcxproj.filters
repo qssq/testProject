@@ -19,6 +19,18 @@
     <Filter Include="AssociativeContainer">
       <UniqueIdentifier>{57414c52-508e-4648-9dbe-0053bb0d2e6c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Function">
+      <UniqueIdentifier>{a56ebe40-0b04-4285-96b6-1df0366a67b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generic">
+      <UniqueIdentifier>{1568a7e8-a135-459a-92f8-5323150462a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="random">
+      <UniqueIdentifier>{86ab9346-c14a-48ef-86f2-f8d5ac8dca34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pointer">
+      <UniqueIdentifier>{d7596547-410d-423a-b535-67b0a8204884}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -40,6 +52,18 @@
     <ClCompile Include="AssociativeHelper.cpp">
       <Filter>AssociativeContainer</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionHelper.cpp">
+      <Filter>Function</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateGenericHelper.cpp">
+      <Filter>Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomHelper.cpp">
+      <Filter>random</Filter>
+    </ClCompile>
+    <ClCompile Include="PointerHelper.cpp">
+      <Filter>Pointer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EncryptionHelper.h">
@@ -59,6 +83,18 @@
     </ClInclude>
     <ClInclude Include="AssociativeHelper.h">
       <Filter>AssociativeContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionHelper.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateGenericHelper.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomHelper.h">
+      <Filter>random</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerHelper.h">
+      <Filter>Pointer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

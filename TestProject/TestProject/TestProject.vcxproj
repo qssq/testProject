@@ -43,9 +43,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vld.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -65,18 +68,26 @@
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="ArrayHelper.cpp" />
     <ClCompile Include="AssociativeHelper.cpp" />
+    <ClCompile Include="CreateGenericHelper.cpp" />
     <ClCompile Include="EncryptionHelper.cpp" />
     <ClCompile Include="FileHelper.cpp" />
+    <ClCompile Include="FunctionHelper.cpp" />
     <ClCompile Include="GenericHelper.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PointerHelper.cpp" />
+    <ClCompile Include="RandomHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="ArrayHelper.h" />
     <ClInclude Include="AssociativeHelper.h" />
+    <ClInclude Include="CreateGenericHelper.h" />
     <ClInclude Include="EncryptionHelper.h" />
     <ClInclude Include="FileHelper.h" />
+    <ClInclude Include="FunctionHelper.h" />
     <ClInclude Include="GenericHelper.h" />
+    <ClInclude Include="PointerHelper.h" />
+    <ClInclude Include="RandomHelper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
