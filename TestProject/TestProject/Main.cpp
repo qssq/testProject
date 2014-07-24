@@ -13,13 +13,14 @@
 #include "CreateGenericHelper.h"
 #include "RandomHelper.h"
 #include "PointerHelper.h"
+#include "ThreadHelper.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-	PointerHelper ptrHelper;
-	ptrHelper.shared_ptrTest();
+	ThreadHelper threadHelper;
+	threadHelper.ThreadTest();
 	system("pause");
 	return 0;
 }

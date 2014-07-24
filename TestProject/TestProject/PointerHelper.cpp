@@ -24,6 +24,25 @@ void PointerHelper::shared_ptrTest()
 	cin>>s;
 }
 
+void PointerHelper::byReferenceTest()
+{
+	ClassB b;
+	displayClassByValue(b);
+
+	cout<<"-----------------------------"<<endl;
+	displayClassByRefernce(b);
+}
+
+void PointerHelper::displayClassByValue( ClassA c )
+{
+	c.display();
+}
+
+void PointerHelper::displayClassByRefernce( const ClassA &c )
+{
+	c.display();
+}
+
 
 
 
@@ -45,4 +64,19 @@ TestPointer * TestPointer::getTestPointer()
 std::string TestPointer::getName()
 {
 	return mName;
+}
+
+ClassA::~ClassA()
+{
+
+}
+
+void ClassA::display() const
+{
+	cout<<"AAAAAAAAAAAAA"<<endl;
+}
+
+void ClassB::display() const
+{
+	cout<<"BBBBBBBBBBBBB"<<endl;
 }

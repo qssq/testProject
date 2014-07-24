@@ -31,6 +31,9 @@
     <Filter Include="Pointer">
       <UniqueIdentifier>{d7596547-410d-423a-b535-67b0a8204884}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{12e49310-0591-49cf-9856-0007c61c7103}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -64,6 +67,9 @@
     <ClCompile Include="PointerHelper.cpp">
       <Filter>Pointer</Filter>
     </ClCompile>
+    <ClCompile Include="ThreadHelper.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EncryptionHelper.h">
@@ -95,6 +101,9 @@
     </ClInclude>
     <ClInclude Include="PointerHelper.h">
       <Filter>Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadHelper.h">
+      <Filter>Thread</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

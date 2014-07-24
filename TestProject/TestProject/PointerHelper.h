@@ -5,6 +5,18 @@
 #include <string>
 #include <memory>
 
+class ClassA
+{
+public:
+	virtual ~ClassA();
+	virtual void display() const;
+};
+
+class ClassB : public ClassA
+{
+public:
+	void display() const;
+};
 class TestPointer
 {
 public:
@@ -23,6 +35,10 @@ public:
 	PointerHelper();
 	~PointerHelper();
 	void shared_ptrTest();
+	void byReferenceTest();
+private:
+	void displayClassByValue(ClassA c);
+	void displayClassByRefernce(const ClassA &c);
 };
 
 #endif
