@@ -69,6 +69,7 @@
     <ClCompile Include="ArrayHelper.cpp" />
     <ClCompile Include="AssociativeHelper.cpp" />
     <ClCompile Include="CreateGenericHelper.cpp" />
+    <ClCompile Include="dataStructure\DataString.cpp" />
     <ClCompile Include="EncryptionHelper.cpp" />
     <ClCompile Include="FileHelper.cpp" />
     <ClCompile Include="FunctionHelper.cpp" />
@@ -76,6 +77,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PointerHelper.cpp" />
     <ClCompile Include="RandomHelper.cpp" />
+    <ClCompile Include="TemplateHelper.cpp" />
     <ClCompile Include="ThreadHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -83,13 +85,19 @@
     <ClInclude Include="ArrayHelper.h" />
     <ClInclude Include="AssociativeHelper.h" />
     <ClInclude Include="CreateGenericHelper.h" />
+    <ClInclude Include="dataStructure\DataString.h" />
     <ClInclude Include="EncryptionHelper.h" />
     <ClInclude Include="FileHelper.h" />
     <ClInclude Include="FunctionHelper.h" />
     <ClInclude Include="GenericHelper.h" />
     <ClInclude Include="PointerHelper.h" />
+    <ClInclude Include="Question.h" />
     <ClInclude Include="RandomHelper.h" />
+    <ClInclude Include="TemplateHelper.h" />
     <ClInclude Include="ThreadHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Question.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
