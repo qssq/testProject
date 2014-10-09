@@ -19,6 +19,7 @@ public:
 	void testOperators();
 	void testFind();
 	void testNumericConversion();
+	void testFindAndEarse();
 private:
 
 };

@@ -19,8 +19,9 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	ThreadHelper threadHelper;
-	threadHelper.ThreadTest();
+	ArrayHelper ah;
+	ah.testFindAndEarse();
+
 	system("pause");
 	return 0;
 }

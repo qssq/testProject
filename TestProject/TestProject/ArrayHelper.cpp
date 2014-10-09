@@ -130,3 +130,39 @@ void ArrayHelper::testNumericConversion()
 	double d2 = std::stod(s2.substr(s2.find_first_of("+-.0123456789")));
 	cout<<d2<<endl;
 }
+
+struct testFindAndEarseStruct
+{
+	int id;
+	string name;
+};
+
+void ArrayHelper::testFindAndEarse()
+{
+	testFindAndEarseStruct a = {1, "haha"};
+	testFindAndEarseStruct b = {2, "woshi"};
+	testFindAndEarseStruct c = {3, "xun"};
+	vector<testFindAndEarseStruct> testFindAndEarseStructs;
+	testFindAndEarseStructs.push_back(a);
+	testFindAndEarseStructs.push_back(b);
+	testFindAndEarseStructs.push_back(c);
+
+	testFindAndEarseStruct test = {1, "test"};
+
+	auto it = find_if(testFindAndEarseStructs.begin(), testFindAndEarseStructs.end(), 
+		[test](const testFindAndEarseStruct &a)
+	{
+		return a.id == test.id;
+	});
+
+	if (it != testFindAndEarseStructs.end())
+	{
+		testFindAndEarseStructs.erase(it);
+		testFindAndEarseStructs.push_back(test);
+	}
+
+	for (auto it : testFindAndEarseStructs)
+	{
+		cout<<it.name<<endl;
+	}
+}
