@@ -22,10 +22,8 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-<<<<<<< HEAD
 	ArrayHelper ah;
 	ah.testFindAndEarse();
-=======
 	TemplateHelper th;
 	string intS = th.toString(109);
 	string doubleS = th.toString(121.2121);
@@ -38,7 +36,6 @@ int main(int argc, char *argv[])
 	string SInt = "888";
 	double d1 = th.parseString<double>(SDouble);
 	int i1 = th.parseString<int>(SInt);
->>>>>>> origin/master
 
 	system("pause");
 	return 0;
