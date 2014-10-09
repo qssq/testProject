@@ -3,58 +3,105 @@
 
 using namespace std;
 
-void renderScene(void)  
+void display()  
 {  
-	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  
-
-	glLoadIdentity();  
-
+	glClear(GL_COLOR_BUFFER_BIT);  
 	glColor3f(1.0f, 0.0f, 0.0f);
 
-	glOrtho(0.0f, 1.0f, 0.0f, 1.0f, -1.0f, 1.0f);
-
 	glBegin(GL_POLYGON);  
-
 	glVertex3f(0.25f, 0.25f, 0.0f);  
-
-	glVertex3f(0.5f, 0.25f, 0.0f);  
-
-	glVertex3f(0.5f, 0.5f, 0.0f);  
-
-	glVertex3f(0.25f, 0.5f, 0.0f);  
-
+	glVertex3f(0.75f, 0.25f, 0.0f); 
+	glVertex3f(0.75f, 0.75f, 0.0f);  
+	glVertex3f(0.25f, 0.75f, 0.0f);  
 	glEnd();  
 
 	glFlush();
-
-	glutSwapBuffers();  
+	glutSwapBuffers();
 }  
 
-void TimerFunction(int value)
+void reshape( int width, int height)
 {
-	glutPostRedisplay();
-	glutTimerFunc(33,TimerFunction, 1);
+
+}
+
+void keyboard(unsigned char key, int x, int y)
+{
+	if (key == 'a')
+	{
+		glClear(GL_COLOR_BUFFER_BIT); 
+
+		glutWireCube(0.5f);
+
+		glFlush();
+	}
+	else if (key == 'b')
+	{
+		glClear(GL_COLOR_BUFFER_BIT); 
+
+		glutSolidCube(0.5f);
+
+		glFlush();
+	}
+	else if (key == 'c')
+	{
+		glClear(GL_COLOR_BUFFER_BIT); 
+
+		glutWireSphere(0.5f, 100, 100);
+
+		glFlush();
+	}
+	else if (key == 'd')
+	{
+		glClear(GL_COLOR_BUFFER_BIT); 
+
+		glutSolidSphere(0.5f, 100, 100);
+
+		glFlush();
+	}
+}
+
+void mouse(int button, int statte, int x, int y)
+{
+
+}
+
+void motion(int x, int y)
+{
+
+}
+
+void idle()
+{
+
+}
+
+void init()
+{
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+	//initialize viewing values
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();								//原点移到屏幕中心点
+	glOrtho(1.0f, 1.0f, 1.0f, 1.0f, -1.0f, 1.0f);	//左右下上近远
 }
 
 int main(int argc, char *argv[])
 {
-	glutInit(&argc, (char**) argv);  
-
-	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);  
-
+	glutInit(&argc, argv);  
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);  
+	glutInitWindowSize(480, 480);  
 	glutInitWindowPosition(100, 100);  
-
-	glutInitWindowSize(640, 480);  
-
 	glutCreateWindow("Hello OpenGL");  
+	init();
 
-	glutDisplayFunc(renderScene);  
+	glutDisplayFunc(display);  
+	glutReshapeFunc(reshape);
+	glutKeyboardFunc(keyboard);
+	glutMouseFunc(mouse);
+	glutMotionFunc(motion);
+	glutIdleFunc(idle);
 
-	//glutTimerFunc(33, TimerFunction, 1);
-
-	glutMainLoop();//enters the GLUT event processing loop.  
+	glutMainLoop();
 	
 	return 0;
 }
