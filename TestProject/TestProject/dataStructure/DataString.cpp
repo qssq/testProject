@@ -47,3 +47,19 @@ void DataString::questionAnDian()
 		}
 	}
 }
+
+void DataString::sparseMatrixTranspose()
+{
+
+}
+
+void DataString::showSparseMatrix( const SparseMatrix &sp )
+{
+	for (int i = 0; i < sp.row; i++)
+	{
+		for (int j = 0; j < sp.column; j++)
+		{
+			
+		}
+	}
+}
