@@ -1,109 +1,141 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Encryption">
-      <UniqueIdentifier>{d18d71d5-e4da-463e-8c11-a0fcfeaec557}</UniqueIdentifier>
+    <Filter Include="test">
+      <UniqueIdentifier>{d2659e3e-9831-4cb2-a846-3a52bb1ab00c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="FIle">
-      <UniqueIdentifier>{7c9acb85-e372-46d6-94af-11259c5d597b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ArrayHelper">
+    <Filter Include="test\ArrayHelper">
       <UniqueIdentifier>{86363b6d-9a01-467f-9eeb-4dc116a51473}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Model">
-      <UniqueIdentifier>{34cec360-19aa-4fbd-82f8-144765dd3818}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GenericAlgorithm">
-      <UniqueIdentifier>{d6d16473-406b-4e40-b095-381ed655e08f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AssociativeContainer">
+    <Filter Include="test\AssociativeContainer">
       <UniqueIdentifier>{57414c52-508e-4648-9dbe-0053bb0d2e6c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Function">
+    <Filter Include="test\Encryption">
+      <UniqueIdentifier>{d18d71d5-e4da-463e-8c11-a0fcfeaec557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\FIle">
+      <UniqueIdentifier>{7c9acb85-e372-46d6-94af-11259c5d597b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\Function">
       <UniqueIdentifier>{a56ebe40-0b04-4285-96b6-1df0366a67b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Generic">
+    <Filter Include="test\Generic">
       <UniqueIdentifier>{1568a7e8-a135-459a-92f8-5323150462a2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="random">
-      <UniqueIdentifier>{86ab9346-c14a-48ef-86f2-f8d5ac8dca34}</UniqueIdentifier>
+    <Filter Include="test\GenericAlgorithm">
+      <UniqueIdentifier>{d6d16473-406b-4e40-b095-381ed655e08f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pointer">
+    <Filter Include="test\Model">
+      <UniqueIdentifier>{34cec360-19aa-4fbd-82f8-144765dd3818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\Pointer">
       <UniqueIdentifier>{d7596547-410d-423a-b535-67b0a8204884}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Thread">
+    <Filter Include="test\question">
+      <UniqueIdentifier>{c05815da-aac7-421e-af7d-6e50b1222a24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\random">
+      <UniqueIdentifier>{86ab9346-c14a-48ef-86f2-f8d5ac8dca34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\Thread">
       <UniqueIdentifier>{12e49310-0591-49cf-9856-0007c61c7103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructure">
+      <UniqueIdentifier>{b4a52bd6-d7b4-4169-89f6-36f16c5b61c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\Template">
+      <UniqueIdentifier>{197ce4ec-7575-4197-be36-2887a062de57}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="EncryptionHelper.cpp">
-      <Filter>Encryption</Filter>
+      <Filter>test\Encryption</Filter>
     </ClCompile>
     <ClCompile Include="FileHelper.cpp">
-      <Filter>FIle</Filter>
+      <Filter>test\FIle</Filter>
     </ClCompile>
     <ClCompile Include="ArrayHelper.cpp">
-      <Filter>ArrayHelper</Filter>
+      <Filter>test\ArrayHelper</Filter>
     </ClCompile>
     <ClCompile Include="Animal.cpp">
-      <Filter>Model</Filter>
+      <Filter>test\Model</Filter>
     </ClCompile>
     <ClCompile Include="GenericHelper.cpp">
-      <Filter>GenericAlgorithm</Filter>
+      <Filter>test\GenericAlgorithm</Filter>
     </ClCompile>
     <ClCompile Include="AssociativeHelper.cpp">
-      <Filter>AssociativeContainer</Filter>
+      <Filter>test\AssociativeContainer</Filter>
     </ClCompile>
     <ClCompile Include="FunctionHelper.cpp">
-      <Filter>Function</Filter>
+      <Filter>test\Function</Filter>
     </ClCompile>
     <ClCompile Include="CreateGenericHelper.cpp">
-      <Filter>Generic</Filter>
+      <Filter>test\Generic</Filter>
     </ClCompile>
     <ClCompile Include="RandomHelper.cpp">
-      <Filter>random</Filter>
+      <Filter>test\random</Filter>
     </ClCompile>
     <ClCompile Include="PointerHelper.cpp">
-      <Filter>Pointer</Filter>
+      <Filter>test\Pointer</Filter>
     </ClCompile>
     <ClCompile Include="ThreadHelper.cpp">
-      <Filter>Thread</Filter>
+      <Filter>test\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="dataStructure\DataString.cpp">
+      <Filter>DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateHelper.cpp">
+      <Filter>test\Template</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EncryptionHelper.h">
-      <Filter>Encryption</Filter>
+      <Filter>test\Encryption</Filter>
     </ClInclude>
     <ClInclude Include="FileHelper.h">
-      <Filter>FIle</Filter>
+      <Filter>test\FIle</Filter>
     </ClInclude>
     <ClInclude Include="ArrayHelper.h">
-      <Filter>ArrayHelper</Filter>
+      <Filter>test\ArrayHelper</Filter>
     </ClInclude>
     <ClInclude Include="Animal.h">
-      <Filter>Model</Filter>
+      <Filter>test\Model</Filter>
     </ClInclude>
     <ClInclude Include="GenericHelper.h">
-      <Filter>GenericAlgorithm</Filter>
+      <Filter>test\GenericAlgorithm</Filter>
     </ClInclude>
     <ClInclude Include="AssociativeHelper.h">
-      <Filter>AssociativeContainer</Filter>
+      <Filter>test\AssociativeContainer</Filter>
     </ClInclude>
     <ClInclude Include="FunctionHelper.h">
-      <Filter>Function</Filter>
+      <Filter>test\Function</Filter>
     </ClInclude>
     <ClInclude Include="CreateGenericHelper.h">
-      <Filter>Generic</Filter>
+      <Filter>test\Generic</Filter>
     </ClInclude>
     <ClInclude Include="RandomHelper.h">
-      <Filter>random</Filter>
+      <Filter>test\random</Filter>
     </ClInclude>
     <ClInclude Include="PointerHelper.h">
-      <Filter>Pointer</Filter>
+      <Filter>test\Pointer</Filter>
     </ClInclude>
     <ClInclude Include="ThreadHelper.h">
-      <Filter>Thread</Filter>
+      <Filter>test\Thread</Filter>
     </ClInclude>
+    <ClInclude Include="Question.h">
+      <Filter>test\question</Filter>
+    </ClInclude>
+    <ClInclude Include="dataStructure\DataString.h">
+      <Filter>DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateHelper.h">
+      <Filter>test\Template</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Question.cpp">
+      <Filter>test\question</Filter>
+    </None>
   </ItemGroup>
 </Project>
