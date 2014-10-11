@@ -1,7 +1,19 @@
 #include <iostream>
 #include <gl/glut.h>
+#include "animation.h"
 
 using namespace std;
+
+
+void init()
+{
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+	//initialize viewing values
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();								//原点移到屏幕中心点
+	glOrtho(1.0f, 1.0f, 1.0f, 1.0f, -1.0f, 1.0f);	//左右下上近远
+}
 
 void display()  
 {  
@@ -75,33 +87,28 @@ void idle()
 
 }
 
-void init()
-{
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
-	//initialize viewing values
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();								//原点移到屏幕中心点
-	glOrtho(1.0f, 1.0f, 1.0f, 1.0f, -1.0f, 1.0f);	//左右下上近远
-}
-
 int main(int argc, char *argv[])
 {
-	glutInit(&argc, argv);  
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);  
-	glutInitWindowSize(480, 480);  
-	glutInitWindowPosition(100, 100);  
-	glutCreateWindow("Hello OpenGL");  
-	init();
+	Animation animation;
+	animation.init();
 
-	glutDisplayFunc(display);  
-	glutReshapeFunc(reshape);
-	glutKeyboardFunc(keyboard);
-	glutMouseFunc(mouse);
-	glutMotionFunc(motion);
-	glutIdleFunc(idle);
-
-	glutMainLoop();
-	
 	return 0;
+	
+	//glutInit(&argc, argv);  
+	//glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);  
+	//glutInitWindowSize(480, 480);  
+	//glutInitWindowPosition(100, 100);  
+	//glutCreateWindow("Hello OpenGL");  
+	//init();
+
+	//glutDisplayFunc(display);  
+	//glutReshapeFunc(reshape);
+	//glutKeyboardFunc(keyboard);
+	//glutMouseFunc(mouse);
+	//glutMotionFunc(motion);
+	//glutIdleFunc(idle);
+
+	//glutMainLoop();
+	//
+	//return 0;
 }
