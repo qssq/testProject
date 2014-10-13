@@ -1,5 +1,7 @@
 #include <iostream>
 #include <gl/glut.h>
+#include "vld.h"
+
 #include "animation.h"
 
 using namespace std;
@@ -90,7 +92,7 @@ void idle()
 int main(int argc, char *argv[])
 {
 	Animation animation;
-	animation.init();
+	animation.start(argc, argv);
 
 	return 0;
 	
