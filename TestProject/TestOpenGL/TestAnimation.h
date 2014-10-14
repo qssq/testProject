@@ -1,16 +1,16 @@
-#ifndef _ANIMATION_H_
-#define _ANIMATION_H_
+#ifndef _TEST_ANIMATION_H_
+#define _TEST_ANIMATION_H_
 
 #include <iostream>
 #include <gl/glut.h>
 
 using namespace std;
 
-class Animation
+class TestAnimation
 {
 public:
-	Animation();
-	~Animation();
+	TestAnimation();
+	~TestAnimation();
 	void start(int argc, char *argv[]);
 	void init();
 	

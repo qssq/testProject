@@ -2,7 +2,8 @@
 #include <gl/glut.h>
 #include "vld.h"
 
-#include "animation.h"
+#include "TestAnimation.h"
+#include "TestLines.h"
 
 using namespace std;
 
@@ -91,8 +92,8 @@ void idle()
 
 int main(int argc, char *argv[])
 {
-	Animation animation;
-	animation.start(argc, argv);
+	TestLines lines;
+	lines.start(argc, argv);
 
 	return 0;
 	

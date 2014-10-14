@@ -1,22 +1,22 @@
-#include "animation.h"
+#include "TestAnimation.h"
 
 #include <complex>
 
 static GLfloat spin = 0.0f;
 
-Animation::Animation()
+TestAnimation::TestAnimation()
 {
 
 }
 
-Animation::~Animation()
+TestAnimation::~TestAnimation()
 {
 
 }
 
 
 
-void Animation::start( int argc, char *argv[] )
+void TestAnimation::start( int argc, char *argv[] )
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
@@ -25,14 +25,14 @@ void Animation::start( int argc, char *argv[] )
 	glutCreateWindow("doubel openGL");  
 	init();
 
-	glutDisplayFunc(Animation::display);
-	glutReshapeFunc(Animation::reshape);
-	glutMouseFunc(Animation::mouse);
+	glutDisplayFunc(TestAnimation::display);
+	glutReshapeFunc(TestAnimation::reshape);
+	glutMouseFunc(TestAnimation::mouse);
 
 	glutMainLoop();
 }
 
-void Animation::init()
+void TestAnimation::init()
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	glShadeModel(GL_FLAT);
@@ -41,27 +41,44 @@ void Animation::init()
 	
 }
 
-void Animation::display()
+void TestAnimation::display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glPushMatrix();
 	glRotatef(spin, 0, 0, 1);
 	glColor3f(1, 0, 1);
-	//glutSolidSphere(0.5f, 10, 10);
+	glutSolidSphere(0.5f, 10, 10);
 
-	//glRectf(-100, -100, 100, 100);
+	glRectf(-100, -100, 100, 100);
 
-	const float PI = 3.1415926f;
-	int circlePoints = 100;
-	float angle(0);
+	//const float PI = 3.1415926f;
+	//int circlePoints = 100;
+	//float angle(0);
 
-	glBegin(GL_LINE_LOOP);
-	for (int i = 0; i < circlePoints; i++)
-	{
-		angle = 2 * PI * i / circlePoints;
-		glVertex2f(cos(angle) * 100, sin(angle) * 100);
-	}
-	glEnd();
+	//glEnable(GL_LINE_SMOOTH);
+	//glLineWidth(4);
+	//glBegin(GL_LINE_LOOP);
+	//for (int i = 0; i < circlePoints; i++)
+	//{
+	//	angle = 2 * PI * i / circlePoints;
+	//	glVertex2f(cos(angle) * 100, sin(angle) * 100);
+	//}
+	//glEnd();
+
+	//glEnable (GL_POINT_SMOOTH);
+	//glPointSize(20);
+	//glBegin(GL_POINTS);
+	//glVertex3f(0, 0, 0);
+	//glEnd();
+
+	//glLineWidth(1);
+	//glDisable(GL_LINE_SMOOTH);
+	//glLineStipple(1, 0xffff);
+	//glEnable(GL_LINE_STIPPLE);
+	//glBegin(GL_LINES);
+	//glVertex3f(0, 50, 0);
+	//glVertex3f(20, 100, 0);
+	//glEnd();
 
 	glPopMatrix();
 	glutSwapBuffers();
@@ -69,7 +86,7 @@ void Animation::display()
 	glFlush();
 }
 
-void Animation::reshape(int width, int height)
+void TestAnimation::reshape(int width, int height)
 {
 	glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 	glMatrixMode(GL_PROJECTION);
@@ -79,7 +96,7 @@ void Animation::reshape(int width, int height)
 	glLoadIdentity();
 }
 
-void Animation::mouse(int button, int state, int x, int y)
+void TestAnimation::mouse(int button, int state, int x, int y)
 {
 	switch (button)
 	{
@@ -100,7 +117,7 @@ void Animation::mouse(int button, int state, int x, int y)
 	}
 }
 
-void Animation::spinDisplay()
+void TestAnimation::spinDisplay()
 {
 	spin += spin + 2;
 	if (spin > 360)
