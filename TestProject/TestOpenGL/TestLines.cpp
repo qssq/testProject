@@ -77,6 +77,26 @@ void TestLines::display()
 	drawOneLine(50, 25, 350, 25);
 
 	glDisable(GL_LINE_STIPPLE);
+
+	glBegin(GL_POLYGON);
+	glVertex3f(50, 150, 0);
+	glVertex3f(150, 150, 0);
+	glVertex3f(150, 250, 0);
+	glVertex3f(50, 250, 0);
+	glEnd();
+
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glBegin(GL_POLYGON);
+	glEdgeFlag(GL_TRUE);
+	glVertex3f(250, 150, 0);
+	glEdgeFlag(GL_FALSE);
+	glVertex3f(350, 150, 0);
+	glEdgeFlag(GL_TRUE);
+	glVertex3f(350, 250, 0);
+	glEdgeFlag(GL_TRUE);
+	glVertex3f(250, 250, 0);
+	glEnd();
+
 	glFlush();
 }
 

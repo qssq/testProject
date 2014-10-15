@@ -82,10 +82,12 @@
     <ClCompile Include="TestAnimation.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="TestLines.cpp" />
+    <ClCompile Include="TestVertexArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestAnimation.h" />
     <ClInclude Include="TestLines.h" />
+    <ClInclude Include="TestVertexArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

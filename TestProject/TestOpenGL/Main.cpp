@@ -4,6 +4,7 @@
 
 #include "TestAnimation.h"
 #include "TestLines.h"
+#include "TestVertexArray.h"
 
 using namespace std;
 
@@ -92,8 +93,8 @@ void idle()
 
 int main(int argc, char *argv[])
 {
-	TestLines lines;
-	lines.start(argc, argv);
+	TestVertexArray vertexArray;
+	vertexArray.start(argc, argv);
 
 	return 0;
 	
