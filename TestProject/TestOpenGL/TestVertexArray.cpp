@@ -32,7 +32,7 @@ void TestVertexArray::init()
 	glShadeModel(GL_FLAT);
 }
 
-static GLint vertices[] = 
+GLint vertices[] = 
 {
 	25, 25,
 	100, 325,
@@ -42,7 +42,7 @@ static GLint vertices[] =
 	325, 325
 };
 
-static GLfloat colors[] =
+GLfloat colors[] =
 {
 	1, 0.2f, 0.2f,
 	0.2f, 0.2f, 1,
@@ -62,6 +62,22 @@ void TestVertexArray::display()
 	
 	glColorPointer(3, GL_FLOAT, 0, colors);
 	glVertexPointer(2, GL_INT, 0, vertices);
+
+	glBegin(GL_LINES);
+	glArrayElement(0);
+	glArrayElement(1);
+	glArrayElement(2);
+	glArrayElement(3);
+	glArrayElement(4);
+	glArrayElement(5);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(50, 150, 0);
+	glVertex3f(150, 150, 0);
+	glVertex3f(150, 250, 0);
+	glVertex3f(50, 250, 0);
+	glEnd();
 
 	glFlush();
 }
