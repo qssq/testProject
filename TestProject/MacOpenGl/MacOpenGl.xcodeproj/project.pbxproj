@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEF419FFD788006D42C3 /* main.cpp */; };
+		EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */; };
+		EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */; };
+		EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */; };
+		EAA1CF0519FFF238006D42C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA1CF0419FFF238006D42C3 /* OpenGL.framework */; };
+		EAA1CF0719FFF242006D42C3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA1CF0619FFF242006D42C3 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,14 @@
 /* Begin PBXFileReference section */
 		EAA1CEF119FFD788006D42C3 /* MacOpenGl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacOpenGl; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA1CEF419FFD788006D42C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestAnimation.cpp; sourceTree = "<group>"; };
+		EAA1CEFC19FFD8AC006D42C3 /* TestAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnimation.h; sourceTree = "<group>"; };
+		EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLines.cpp; sourceTree = "<group>"; };
+		EAA1CEFE19FFD8AC006D42C3 /* TestLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLines.h; sourceTree = "<group>"; };
+		EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestVertexArray.cpp; sourceTree = "<group>"; };
+		EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVertexArray.h; sourceTree = "<group>"; };
+		EAA1CF0419FFF238006D42C3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		EAA1CF0619FFF242006D42C3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA1CF0719FFF242006D42C3 /* GLUT.framework in Frameworks */,
+				EAA1CF0519FFF238006D42C3 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +56,8 @@
 		EAA1CEE819FFD788006D42C3 = {
 			isa = PBXGroup;
 			children = (
+				EAA1CF0619FFF242006D42C3 /* GLUT.framework */,
+				EAA1CF0419FFF238006D42C3 /* OpenGL.framework */,
 				EAA1CEF319FFD788006D42C3 /* MacOpenGl */,
 				EAA1CEF219FFD788006D42C3 /* Products */,
 			);
@@ -57,6 +74,12 @@
 		EAA1CEF319FFD788006D42C3 /* MacOpenGl */ = {
 			isa = PBXGroup;
 			children = (
+				EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */,
+				EAA1CEFC19FFD8AC006D42C3 /* TestAnimation.h */,
+				EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */,
+				EAA1CEFE19FFD8AC006D42C3 /* TestLines.h */,
+				EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */,
+				EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */,
 				EAA1CEF419FFD788006D42C3 /* main.cpp */,
 			);
 			path = MacOpenGl;
@@ -118,6 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */,
+				EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */,
+				EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */,
 				EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
