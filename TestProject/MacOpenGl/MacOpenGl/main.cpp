@@ -101,24 +101,7 @@ void haha()
 
 int main(int argc, char *argv[])
 {
-	//glutInit(&argc, argv);  
-	//glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);  
-	//glutInitWindowSize(480, 480);  
-	//glutInitWindowPosition(100, 100);  
-	//glutCreateWindow("Hello OpenGL");  
-	//init();
-
-	//glutDisplayFunc(display);  
-	//glutReshapeFunc(reshape);
-	//glutKeyboardFunc(keyboard);
-	//glutMouseFunc(mouse);
-	//glutMotionFunc(motion);
-	//glutIdleFunc(idle);
-
-	//glutMainLoop();
-	//
-    TestAnimation ta;
-    ta.start(argc, argv);
-    
+    TestVertexArray ta;
+    ta.run();
 	return 0;
 }

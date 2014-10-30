@@ -13,6 +13,7 @@
 		EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */; };
 		EAA1CF0519FFF238006D42C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA1CF0419FFF238006D42C3 /* OpenGL.framework */; };
 		EAA1CF0719FFF242006D42C3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA1CF0619FFF242006D42C3 /* GLUT.framework */; };
+		EACED30A1A02A1DB0090C181 /* COpenGLBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EAA1CEF119FFD788006D42C3 /* MacOpenGl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacOpenGl; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAA1CEF119FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacOpenGL.temp_caseinsensitive_rename; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA1CEF419FFD788006D42C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestAnimation.cpp; sourceTree = "<group>"; };
 		EAA1CEFC19FFD8AC006D42C3 /* TestAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnimation.h; sourceTree = "<group>"; };
@@ -38,6 +39,8 @@
 		EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVertexArray.h; sourceTree = "<group>"; };
 		EAA1CF0419FFF238006D42C3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EAA1CF0619FFF242006D42C3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = COpenGLBase.cpp; sourceTree = "<group>"; };
+		EACED3091A02A1DB0090C181 /* COpenGLBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COpenGLBase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,8 @@
 		EAA1CEE819FFD788006D42C3 = {
 			isa = PBXGroup;
 			children = (
-				EAA1CF0619FFF242006D42C3 /* GLUT.framework */,
-				EAA1CF0419FFF238006D42C3 /* OpenGL.framework */,
-				EAA1CEF319FFD788006D42C3 /* MacOpenGl */,
+				EAA1CEF319FFD788006D42C3 /* Classes */,
+				EACED3061A02A0E80090C181 /* lib */,
 				EAA1CEF219FFD788006D42C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,14 +68,15 @@
 		EAA1CEF219FFD788006D42C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EAA1CEF119FFD788006D42C3 /* MacOpenGl */,
+				EAA1CEF119FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EAA1CEF319FFD788006D42C3 /* MacOpenGl */ = {
+		EAA1CEF319FFD788006D42C3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EACED3071A02A1820090C181 /* OpenGl */,
 				EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */,
 				EAA1CEFC19FFD8AC006D42C3 /* TestAnimation.h */,
 				EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */,
@@ -82,15 +85,34 @@
 				EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */,
 				EAA1CEF419FFD788006D42C3 /* main.cpp */,
 			);
+			name = Classes;
 			path = MacOpenGl;
+			sourceTree = "<group>";
+		};
+		EACED3061A02A0E80090C181 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				EAA1CF0619FFF242006D42C3 /* GLUT.framework */,
+				EAA1CF0419FFF238006D42C3 /* OpenGL.framework */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		EACED3071A02A1820090C181 /* OpenGl */ = {
+			isa = PBXGroup;
+			children = (
+				EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */,
+				EACED3091A02A1DB0090C181 /* COpenGLBase.h */,
+			);
+			name = OpenGl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EAA1CEF019FFD788006D42C3 /* MacOpenGl */ = {
+		EAA1CEF019FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EAA1CEF819FFD788006D42C3 /* Build configuration list for PBXNativeTarget "MacOpenGl" */;
+			buildConfigurationList = EAA1CEF819FFD788006D42C3 /* Build configuration list for PBXNativeTarget "MacOpenGL.temp_caseinsensitive_rename" */;
 			buildPhases = (
 				EAA1CEED19FFD788006D42C3 /* Sources */,
 				EAA1CEEE19FFD788006D42C3 /* Frameworks */,
@@ -100,9 +122,9 @@
 			);
 			dependencies = (
 			);
-			name = MacOpenGl;
+			name = MacOpenGL.temp_caseinsensitive_rename;
 			productName = MacOpenGl;
-			productReference = EAA1CEF119FFD788006D42C3 /* MacOpenGl */;
+			productReference = EAA1CEF119FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EAA1CEEC19FFD788006D42C3 /* Build configuration list for PBXProject "MacOpenGl" */;
+			buildConfigurationList = EAA1CEEC19FFD788006D42C3 /* Build configuration list for PBXProject "MacOpenGL" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -131,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EAA1CEF019FFD788006D42C3 /* MacOpenGl */,
+				EAA1CEF019FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +166,7 @@
 				EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */,
 				EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */,
 				EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */,
+				EACED30A1A02A1DB0090C181 /* COpenGLBase.cpp in Sources */,
 				EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,21 +251,21 @@
 		EAA1CEF919FFD788006D42C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacOpenGL.temp_caseinsensitive_rename;
 			};
 			name = Debug;
 		};
 		EAA1CEFA19FFD788006D42C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacOpenGL.temp_caseinsensitive_rename;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EAA1CEEC19FFD788006D42C3 /* Build configuration list for PBXProject "MacOpenGl" */ = {
+		EAA1CEEC19FFD788006D42C3 /* Build configuration list for PBXProject "MacOpenGL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAA1CEF619FFD788006D42C3 /* Debug */,
@@ -251,13 +274,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EAA1CEF819FFD788006D42C3 /* Build configuration list for PBXNativeTarget "MacOpenGl" */ = {
+		EAA1CEF819FFD788006D42C3 /* Build configuration list for PBXNativeTarget "MacOpenGL.temp_caseinsensitive_rename" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EAA1CEF919FFD788006D42C3 /* Debug */,
 				EAA1CEFA19FFD788006D42C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

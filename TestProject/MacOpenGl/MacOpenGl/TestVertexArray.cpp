@@ -4,7 +4,8 @@
 
 TestVertexArray::TestVertexArray()
 {
-
+    setDisplayFunc(TestVertexArray::display);
+    setReshapeFunc(TestVertexArray::reshape);
 }
 
 TestVertexArray::~TestVertexArray()
@@ -12,26 +13,7 @@ TestVertexArray::~TestVertexArray()
 
 }
 
-void TestVertexArray::start( int argc, char *argv[] )
-{
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-	glutInitWindowSize(400, 400);
-	glutInitWindowPosition(100, 100);
-	glutCreateWindow("vertex array");
-	init();
-
-	glutDisplayFunc(TestVertexArray::display);
-	glutReshapeFunc(TestVertexArray::reshape);
-	glutMainLoop();
-}
-
-void TestVertexArray::init()
-{
-	glClearColor(0, 0, 0, 0);
-	glShadeModel(GL_FLAT);
-}
-
+//步骤2
 GLint vertices[] = 
 {
 	25, 25,
@@ -44,41 +26,80 @@ GLint vertices[] =
 
 GLfloat colors[] =
 {
-	1, 0.2f, 0.2f,
-	0.2f, 0.2f, 1,
-	0.8f, 1, 0.2f,
-	0.75f, 0.75f, 0.75f,
-	0.35f, 0.35f, 0.35f,
-	0.5f, 0.5f, 0.5f
+    1, 1, 1,
+    1, 0, 1,
+    0, 1, 1,
+    0, 1, 1,
+    1, 1, 1,
+    1, 0, 1,
+    0, 1, 1,
+    0, 1, 1
 };
+
+GLfloat cubes[] =
+{
+    0, 0, -100,
+    200, 0, -100,
+    200, 200, -100,
+    0, 200, -100,
+    0, 0, 100,
+    200, 0, 100,
+    200, 200, 100,
+    0, 200, 100
+};
+
+//正方体
+static GLubyte frontIndices[] = {4, 5, 6, 7};
+
+static GLubyte rightIndices[] = {1, 2, 6, 5};
+
+static GLubyte bottomIndices[] = {0, 1, 5, 4};
+
+static GLubyte backIndices[] = {0, 3, 2, 1};
+
+static GLubyte leftIndices[] = {0, 4, 7, 3};
+
+static GLubyte topIndices[] = {2, 3, 7, 6};
 
 void TestVertexArray::display()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(1, 1, 1);
-
+    
+    //步骤1
 	glEnableClientState(GL_COLOR_ARRAY);
 	glEnableClientState(GL_VERTEX_ARRAY);
 	
 	glColorPointer(3, GL_FLOAT, 0, colors);
-	glVertexPointer(2, GL_INT, 0, vertices);
+	glVertexPointer(3, GL_FLOAT, 0, cubes);
 
-	glBegin(GL_LINES);
-	glArrayElement(0);
-	glArrayElement(1);
-	glArrayElement(2);
-	glArrayElement(3);
-	glArrayElement(4);
-	glArrayElement(5);
-	glEnd();
-
-	glBegin(GL_POLYGON);
-	glVertex3f(50, 150, 0);
-	glVertex3f(150, 150, 0);
-	glVertex3f(150, 250, 0);
-	glVertex3f(50, 250, 0);
-	glEnd();
-
+    //步骤3 正方体
+    
+    //方法1
+//    glBegin(GL_QUADS);
+//    glArrayElement(0);
+//    glArrayElement(1);
+//    glArrayElement(2);
+//    glArrayElement(3);
+//    glEnd();
+    
+    //方法2
+    glDrawArrays(GL_QUADS, 0, 4);
+//    glMultiDrawElements()
+    
+    //方法3
+//    glDrawElements(GL_QUADS, 4, GL_UNSIGNED_BYTE, frontIndices);
+//    glDrawElements(GL_QUADS, 4, GL_UNSIGNED_BYTE, rightIndices);
+//    glDrawElements(GL_QUADS, 4, GL_UNSIGNED_BYTE, bottomIndices);
+//    glDrawElements(GL_QUADS, 4, GL_UNSIGNED_BYTE, backIndices);
+//    glDrawElements(GL_QUADS, 4, GL_UNSIGNED_BYTE, leftIndices);
+//    glDrawElements(GL_QUADS, 4, GL_UNSIGNED_BYTE, topIndices);
+    
+    //方法4
+//    GLsizei couts[] = {4, 4, 4, 4, 4, 4};
+//    GLvoid *indeces[] = {frontIndices, rightIndices, bottomIndices, backIndices, leftIndices, topIndices};
+//    glMultiDrawElements(GL_QUADS, couts, GL_UNSIGNED_BYTE, indeces, 6);
+    
 	glFlush();
 }
 
@@ -87,5 +108,5 @@ void TestVertexArray::reshape( int width, int height )
 	glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0, width, 0, height, -1, 1);
+	glOrtho(-width/2, width/2, -height/2, height/2, -100, 100);
 }

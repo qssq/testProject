@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DF121B0D-A8EB-43CA-955B-F25FD69EF7C1</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MacOpenGl</string>
+	<string>MacOpenGL</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0A23FA8CC272800C6885EFECE2EA532E1C795941</key>
 		<string>https://github.com/xungong91/testProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TestProject/MacOpenGl/MacOpenGl.xcodeproj</string>
+	<string>TestProject/MacOpenGL/MacOpenGL.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0A23FA8CC272800C6885EFECE2EA532E1C795941</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/xungong91/testProject.git</string>

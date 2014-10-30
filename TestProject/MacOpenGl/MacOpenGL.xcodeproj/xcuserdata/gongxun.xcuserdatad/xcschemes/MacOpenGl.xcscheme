@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EAA1CEF019FFD788006D42C3"
-               BuildableName = "MacOpenGl"
-               BlueprintName = "MacOpenGl"
-               ReferencedContainer = "container:MacOpenGl.xcodeproj">
+               BuildableName = "MacOpenGL.temp_caseinsensitive_rename"
+               BlueprintName = "MacOpenGL.temp_caseinsensitive_rename"
+               ReferencedContainer = "container:MacOpenGL.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EAA1CEF019FFD788006D42C3"
-            BuildableName = "MacOpenGl"
-            BlueprintName = "MacOpenGl"
-            ReferencedContainer = "container:MacOpenGl.xcodeproj">
+            BuildableName = "MacOpenGL.temp_caseinsensitive_rename"
+            BlueprintName = "MacOpenGL.temp_caseinsensitive_rename"
+            ReferencedContainer = "container:MacOpenGL.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EAA1CEF019FFD788006D42C3"
-            BuildableName = "MacOpenGl"
-            BlueprintName = "MacOpenGl"
-            ReferencedContainer = "container:MacOpenGl.xcodeproj">
+            BuildableName = "MacOpenGL.temp_caseinsensitive_rename"
+            BlueprintName = "MacOpenGL.temp_caseinsensitive_rename"
+            ReferencedContainer = "container:MacOpenGL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EAA1CEF019FFD788006D42C3"
-            BuildableName = "MacOpenGl"
-            BlueprintName = "MacOpenGl"
-            ReferencedContainer = "container:MacOpenGl.xcodeproj">
+            BuildableName = "MacOpenGL.temp_caseinsensitive_rename"
+            BlueprintName = "MacOpenGL.temp_caseinsensitive_rename"
+            ReferencedContainer = "container:MacOpenGL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

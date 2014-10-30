@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "self:MacOpenGL.xcodeproj"
+      name = "New Group 1">
+      <FileRef
+         location = "group:../../MacOpenGL/MacOpenGL.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
