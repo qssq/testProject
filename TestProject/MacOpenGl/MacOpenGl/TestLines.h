@@ -1,7 +1,7 @@
 #ifndef _TEST_LINES_H_
 #define _TEST_LINES_H_
 
-class TestLines
+class TestLines 
 {
 public:
 	TestLines();

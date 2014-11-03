@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E421AF16-C8E9-45AD-9375-EC56AE508976</string>
+	<string>E46DAA38-8D11-4096-883B-2E7CD3F8F155</string>
 	<key>IDESourceControlProjectName</key>
-	<string>MacOpenGL</string>
+	<string>TestPurchase</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0A23FA8CC272800C6885EFECE2EA532E1C795941</key>
 		<string>https://github.com/xungong91/testProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TestProject/MacOpenGL/MacOpenGL.xcodeproj</string>
+	<string>TestProject/TestPurchase/TestPurchase.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0A23FA8CC272800C6885EFECE2EA532E1C795941</key>
