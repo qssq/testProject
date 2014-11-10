@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA5442D91A105CD3002AD2B3 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5442D81A105CD3002AD2B3 /* libGLTools.a */; };
+		EA5442DB1A105CF9002AD2B3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5442DA1A105CF9002AD2B3 /* OpenGL.framework */; };
+		EA5442DD1A105D04002AD2B3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5442DC1A105D04002AD2B3 /* GLUT.framework */; };
+		EA5442E81A1062DB002AD2B3 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5442E61A1062DB002AD2B3 /* Triangle.cpp */; };
 		EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEF419FFD788006D42C3 /* main.cpp */; };
 		EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */; };
 		EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */; };
 		EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */; };
-		EAA1CF0519FFF238006D42C3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA1CF0419FFF238006D42C3 /* OpenGL.framework */; };
-		EAA1CF0719FFF242006D42C3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA1CF0619FFF242006D42C3 /* GLUT.framework */; };
 		EACED30A1A02A1DB0090C181 /* COpenGLBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */; };
+		EAD076021A08F49A00BAA734 /* TestPrimrestart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD076001A08F49A00BAA734 /* TestPrimrestart.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,18 +32,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA5442D81A105CD3002AD2B3 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLTools.a; path = ../../../../Documents/work/oglsuperbible5/XCode/GLTools/libGLTools.a; sourceTree = "<group>"; };
+		EA5442DA1A105CF9002AD2B3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		EA5442DC1A105D04002AD2B3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		EA5442E61A1062DB002AD2B3 /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Triangle.cpp; path = MacOpenGL/Blue/Triangle.cpp; sourceTree = SOURCE_ROOT; };
+		EA5442E71A1062DB002AD2B3 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Triangle.h; path = MacOpenGL/Blue/Triangle.h; sourceTree = SOURCE_ROOT; };
 		EAA1CEF119FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacOpenGL.temp_caseinsensitive_rename; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAA1CEF419FFD788006D42C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EAA1CEF419FFD788006D42C3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestAnimation.cpp; sourceTree = "<group>"; };
 		EAA1CEFC19FFD8AC006D42C3 /* TestAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnimation.h; sourceTree = "<group>"; };
 		EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLines.cpp; sourceTree = "<group>"; };
 		EAA1CEFE19FFD8AC006D42C3 /* TestLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLines.h; sourceTree = "<group>"; };
 		EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestVertexArray.cpp; sourceTree = "<group>"; };
 		EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVertexArray.h; sourceTree = "<group>"; };
-		EAA1CF0419FFF238006D42C3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		EAA1CF0619FFF242006D42C3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = COpenGLBase.cpp; sourceTree = "<group>"; };
 		EACED3091A02A1DB0090C181 /* COpenGLBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COpenGLBase.h; sourceTree = "<group>"; };
+		EAD076001A08F49A00BAA734 /* TestPrimrestart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestPrimrestart.cpp; path = MacOpenGL/TestPrimrestart.cpp; sourceTree = SOURCE_ROOT; };
+		EAD076011A08F49A00BAA734 /* TestPrimrestart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestPrimrestart.h; path = MacOpenGL/TestPrimrestart.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,14 +56,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAA1CF0719FFF242006D42C3 /* GLUT.framework in Frameworks */,
-				EAA1CF0519FFF238006D42C3 /* OpenGL.framework in Frameworks */,
+				EA5442DD1A105D04002AD2B3 /* GLUT.framework in Frameworks */,
+				EA5442DB1A105CF9002AD2B3 /* OpenGL.framework in Frameworks */,
+				EA5442D91A105CD3002AD2B3 /* libGLTools.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA5442E11A1062B3002AD2B3 /* Blue */ = {
+			isa = PBXGroup;
+			children = (
+				EA5442E61A1062DB002AD2B3 /* Triangle.cpp */,
+				EA5442E71A1062DB002AD2B3 /* Triangle.h */,
+			);
+			name = Blue;
+			sourceTree = "<group>";
+		};
 		EAA1CEE819FFD788006D42C3 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +94,7 @@
 		EAA1CEF319FFD788006D42C3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EA5442E11A1062B3002AD2B3 /* Blue */,
 				EACED3071A02A1820090C181 /* OpenGl */,
 				EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */,
 				EAA1CEFC19FFD8AC006D42C3 /* TestAnimation.h */,
@@ -84,6 +103,8 @@
 				EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */,
 				EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */,
 				EAA1CEF419FFD788006D42C3 /* main.cpp */,
+				EAD076001A08F49A00BAA734 /* TestPrimrestart.cpp */,
+				EAD076011A08F49A00BAA734 /* TestPrimrestart.h */,
 			);
 			name = Classes;
 			path = MacOpenGl;
@@ -92,8 +113,9 @@
 		EACED3061A02A0E80090C181 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				EAA1CF0619FFF242006D42C3 /* GLUT.framework */,
-				EAA1CF0419FFF238006D42C3 /* OpenGL.framework */,
+				EA5442DC1A105D04002AD2B3 /* GLUT.framework */,
+				EA5442DA1A105CF9002AD2B3 /* OpenGL.framework */,
+				EA5442D81A105CD3002AD2B3 /* libGLTools.a */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -164,7 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */,
+				EAD076021A08F49A00BAA734 /* TestPrimrestart.cpp in Sources */,
 				EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */,
+				EA5442E81A1062DB002AD2B3 /* Triangle.cpp in Sources */,
 				EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */,
 				EACED30A1A02A1DB0090C181 /* COpenGLBase.cpp in Sources */,
 				EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */,
@@ -251,6 +275,15 @@
 		EAA1CEF919FFD788006D42C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/gongxun/Documents/work/oglsuperbible5/Src/GLTools/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gongxun/Documents/work/oglsuperbible5/XCode/GLTools,
+				);
 				PRODUCT_NAME = MacOpenGL.temp_caseinsensitive_rename;
 			};
 			name = Debug;
@@ -258,6 +291,15 @@
 		EAA1CEFA19FFD788006D42C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/gongxun/Documents/work/oglsuperbible5/Src/GLTools/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gongxun/Documents/work/oglsuperbible5/XCode/GLTools,
+				);
 				PRODUCT_NAME = MacOpenGL.temp_caseinsensitive_rename;
 			};
 			name = Release;
