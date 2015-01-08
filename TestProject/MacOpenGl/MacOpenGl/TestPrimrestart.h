@@ -15,7 +15,7 @@
 class TestPrimrestart : public COpenGLBase
 {
 public:
-    TestPrimrestart();
+    TestPrimrestart(int argc, char* argv[]);
     ~TestPrimrestart();
     static void display();
     static void reshape(int width, int height);

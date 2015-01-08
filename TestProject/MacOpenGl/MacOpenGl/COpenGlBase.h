@@ -9,17 +9,21 @@
 #ifndef __MacOpenGl__COpenGlBase__
 #define __MacOpenGl__COpenGlBase__
 
-#include <GLUT/glut.h>
+#include "COpenGLFunc.h"
+#include <iostream>
 
-class COpenGLBase
+using namespace std;
+
+class COpenGLBase : public COpenGLFunc
 {
 public:
-    COpenGLBase();
+    COpenGLBase(int argc, char* argv[]);
     ~COpenGLBase();
-    void run();
+    void mainLoop();
+    virtual void SetupRC();
     
-    void setDisplayFunc(void (*func)(void));
-    void setReshapeFunc(void (*func)(int width, int height));
+    static void logMatrix44(const M3DMatrix44f &m);
+    static void DrawWireFramedBatch(GLTriangleBatch* pBatch);
 };
 
 

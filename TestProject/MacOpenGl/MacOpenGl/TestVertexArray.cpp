@@ -2,7 +2,7 @@
 
 #include <GLUT/glut.h>
 
-TestVertexArray::TestVertexArray()
+TestVertexArray::TestVertexArray(int argc, char* argv[]) : COpenGLBase(argc, argv)
 {
     setDisplayFunc(TestVertexArray::display);
     setReshapeFunc(TestVertexArray::reshape);

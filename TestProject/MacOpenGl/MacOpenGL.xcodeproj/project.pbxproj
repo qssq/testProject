@@ -7,16 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA1FB3371A1CC6250023F3E3 /* CPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB3351A1CC6250023F3E3 /* CPrimitives.cpp */; };
+		EA1FB33A1A1CCAF70023F3E3 /* COpenGLBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1FB3381A1CCAF70023F3E3 /* COpenGLBase.cpp */; };
 		EA5442D91A105CD3002AD2B3 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5442D81A105CD3002AD2B3 /* libGLTools.a */; };
 		EA5442DB1A105CF9002AD2B3 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5442DA1A105CF9002AD2B3 /* OpenGL.framework */; };
 		EA5442DD1A105D04002AD2B3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5442DC1A105D04002AD2B3 /* GLUT.framework */; };
 		EA5442E81A1062DB002AD2B3 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5442E61A1062DB002AD2B3 /* Triangle.cpp */; };
+		EA57EBC81A41D5840043BC72 /* CBlending.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA57EBC61A41D5840043BC72 /* CBlending.cpp */; };
+		EA57EBCB1A41E4320043BC72 /* CSmoother.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA57EBC91A41E4320043BC72 /* CSmoother.cpp */; };
+		EA6F44371A5D9AED002E6A94 /* COrthoGraphic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6F44351A5D9AED002E6A94 /* COrthoGraphic.cpp */; };
 		EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEF419FFD788006D42C3 /* main.cpp */; };
 		EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */; };
 		EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */; };
 		EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */; };
-		EACED30A1A02A1DB0090C181 /* COpenGLBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */; };
+		EABADF991A5BEBBD00C4A757 /* CObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABADF971A5BEBBD00C4A757 /* CObjects.cpp */; };
+		EAC2A4DF1A39F0AF00B3B0E8 /* COpenGLFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC2A4DD1A39F0AF00B3B0E8 /* COpenGLFunc.cpp */; };
 		EAD076021A08F49A00BAA734 /* TestPrimrestart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD076001A08F49A00BAA734 /* TestPrimrestart.cpp */; };
+		EAD578491A5E5B8F00394A3F /* CModelviewProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD578471A5E5B8F00394A3F /* CModelviewProjection.cpp */; };
+		EAD5784E1A5E6C3200394A3F /* CSphereWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD5784C1A5E6C3200394A3F /* CSphereWorld.cpp */; };
+		EAFDBD691A5AF6E100A4E6AA /* CMove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAFDBD671A5AF6E100A4E6AA /* CMove.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,11 +41,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA1FB3351A1CC6250023F3E3 /* CPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CPrimitives.cpp; path = MacOpenGL/Blue/CPrimitives.cpp; sourceTree = SOURCE_ROOT; };
+		EA1FB3361A1CC6250023F3E3 /* CPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPrimitives.h; path = MacOpenGL/Blue/CPrimitives.h; sourceTree = SOURCE_ROOT; };
+		EA1FB3381A1CCAF70023F3E3 /* COpenGLBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = COpenGLBase.cpp; path = MacOpenGL/COpenGLBase.cpp; sourceTree = SOURCE_ROOT; };
+		EA1FB3391A1CCAF70023F3E3 /* COpenGLBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COpenGLBase.h; path = MacOpenGL/COpenGLBase.h; sourceTree = SOURCE_ROOT; };
 		EA5442D81A105CD3002AD2B3 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLTools.a; path = ../../../../Documents/work/oglsuperbible5/XCode/GLTools/libGLTools.a; sourceTree = "<group>"; };
 		EA5442DA1A105CF9002AD2B3 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EA5442DC1A105D04002AD2B3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		EA5442E61A1062DB002AD2B3 /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Triangle.cpp; path = MacOpenGL/Blue/Triangle.cpp; sourceTree = SOURCE_ROOT; };
 		EA5442E71A1062DB002AD2B3 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Triangle.h; path = MacOpenGL/Blue/Triangle.h; sourceTree = SOURCE_ROOT; };
+		EA57EBC61A41D5840043BC72 /* CBlending.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CBlending.cpp; path = MacOpenGL/Blue/CBlending.cpp; sourceTree = SOURCE_ROOT; };
+		EA57EBC71A41D5840043BC72 /* CBlending.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBlending.h; path = MacOpenGL/Blue/CBlending.h; sourceTree = SOURCE_ROOT; };
+		EA57EBC91A41E4320043BC72 /* CSmoother.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSmoother.cpp; path = MacOpenGL/Blue/CSmoother.cpp; sourceTree = SOURCE_ROOT; };
+		EA57EBCA1A41E4320043BC72 /* CSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSmoother.h; path = MacOpenGL/Blue/CSmoother.h; sourceTree = SOURCE_ROOT; };
+		EA6F44351A5D9AED002E6A94 /* COrthoGraphic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = COrthoGraphic.cpp; path = MacOpenGL/Blue/COrthoGraphic.cpp; sourceTree = SOURCE_ROOT; };
+		EA6F44361A5D9AED002E6A94 /* COrthoGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COrthoGraphic.h; path = MacOpenGL/Blue/COrthoGraphic.h; sourceTree = SOURCE_ROOT; };
 		EAA1CEF119FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacOpenGL.temp_caseinsensitive_rename; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA1CEF419FFD788006D42C3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestAnimation.cpp; sourceTree = "<group>"; };
@@ -45,10 +64,18 @@
 		EAA1CEFE19FFD8AC006D42C3 /* TestLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLines.h; sourceTree = "<group>"; };
 		EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestVertexArray.cpp; sourceTree = "<group>"; };
 		EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVertexArray.h; sourceTree = "<group>"; };
-		EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = COpenGLBase.cpp; sourceTree = "<group>"; };
-		EACED3091A02A1DB0090C181 /* COpenGLBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COpenGLBase.h; sourceTree = "<group>"; };
+		EABADF971A5BEBBD00C4A757 /* CObjects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CObjects.cpp; path = MacOpenGL/Blue/CObjects.cpp; sourceTree = SOURCE_ROOT; };
+		EABADF981A5BEBBD00C4A757 /* CObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CObjects.h; path = MacOpenGL/Blue/CObjects.h; sourceTree = SOURCE_ROOT; };
+		EAC2A4DD1A39F0AF00B3B0E8 /* COpenGLFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = COpenGLFunc.cpp; path = MacOpenGL/COpenGLFunc.cpp; sourceTree = SOURCE_ROOT; };
+		EAC2A4DE1A39F0AF00B3B0E8 /* COpenGLFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COpenGLFunc.h; path = MacOpenGL/COpenGLFunc.h; sourceTree = SOURCE_ROOT; };
 		EAD076001A08F49A00BAA734 /* TestPrimrestart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestPrimrestart.cpp; path = MacOpenGL/TestPrimrestart.cpp; sourceTree = SOURCE_ROOT; };
 		EAD076011A08F49A00BAA734 /* TestPrimrestart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestPrimrestart.h; path = MacOpenGL/TestPrimrestart.h; sourceTree = SOURCE_ROOT; };
+		EAD578471A5E5B8F00394A3F /* CModelviewProjection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CModelviewProjection.cpp; path = MacOpenGL/Blue/CModelviewProjection.cpp; sourceTree = SOURCE_ROOT; };
+		EAD578481A5E5B8F00394A3F /* CModelviewProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CModelviewProjection.h; path = MacOpenGL/Blue/CModelviewProjection.h; sourceTree = SOURCE_ROOT; };
+		EAD5784C1A5E6C3200394A3F /* CSphereWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSphereWorld.cpp; path = MacOpenGL/Blue/CSphereWorld.cpp; sourceTree = SOURCE_ROOT; };
+		EAD5784D1A5E6C3200394A3F /* CSphereWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSphereWorld.h; path = MacOpenGL/Blue/CSphereWorld.h; sourceTree = SOURCE_ROOT; };
+		EAFDBD671A5AF6E100A4E6AA /* CMove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CMove.cpp; path = MacOpenGL/Blue/CMove.cpp; sourceTree = SOURCE_ROOT; };
+		EAFDBD681A5AF6E100A4E6AA /* CMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMove.h; path = MacOpenGL/Blue/CMove.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +97,22 @@
 			children = (
 				EA5442E61A1062DB002AD2B3 /* Triangle.cpp */,
 				EA5442E71A1062DB002AD2B3 /* Triangle.h */,
+				EA1FB3351A1CC6250023F3E3 /* CPrimitives.cpp */,
+				EA1FB3361A1CC6250023F3E3 /* CPrimitives.h */,
+				EA57EBC61A41D5840043BC72 /* CBlending.cpp */,
+				EA57EBC71A41D5840043BC72 /* CBlending.h */,
+				EA57EBC91A41E4320043BC72 /* CSmoother.cpp */,
+				EA57EBCA1A41E4320043BC72 /* CSmoother.h */,
+				EAFDBD671A5AF6E100A4E6AA /* CMove.cpp */,
+				EAFDBD681A5AF6E100A4E6AA /* CMove.h */,
+				EABADF971A5BEBBD00C4A757 /* CObjects.cpp */,
+				EABADF981A5BEBBD00C4A757 /* CObjects.h */,
+				EA6F44351A5D9AED002E6A94 /* COrthoGraphic.cpp */,
+				EA6F44361A5D9AED002E6A94 /* COrthoGraphic.h */,
+				EAD578471A5E5B8F00394A3F /* CModelviewProjection.cpp */,
+				EAD578481A5E5B8F00394A3F /* CModelviewProjection.h */,
+				EAD5784C1A5E6C3200394A3F /* CSphereWorld.cpp */,
+				EAD5784D1A5E6C3200394A3F /* CSphereWorld.h */,
 			);
 			name = Blue;
 			sourceTree = "<group>";
@@ -96,13 +139,13 @@
 			children = (
 				EA5442E11A1062B3002AD2B3 /* Blue */,
 				EACED3071A02A1820090C181 /* OpenGl */,
+				EAA1CEF419FFD788006D42C3 /* main.cpp */,
 				EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */,
 				EAA1CEFC19FFD8AC006D42C3 /* TestAnimation.h */,
 				EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */,
 				EAA1CEFE19FFD8AC006D42C3 /* TestLines.h */,
 				EAA1CEFF19FFD8AC006D42C3 /* TestVertexArray.cpp */,
 				EAA1CF0019FFD8AC006D42C3 /* TestVertexArray.h */,
-				EAA1CEF419FFD788006D42C3 /* main.cpp */,
 				EAD076001A08F49A00BAA734 /* TestPrimrestart.cpp */,
 				EAD076011A08F49A00BAA734 /* TestPrimrestart.h */,
 			);
@@ -123,8 +166,10 @@
 		EACED3071A02A1820090C181 /* OpenGl */ = {
 			isa = PBXGroup;
 			children = (
-				EACED3081A02A1DB0090C181 /* COpenGLBase.cpp */,
-				EACED3091A02A1DB0090C181 /* COpenGLBase.h */,
+				EA1FB3381A1CCAF70023F3E3 /* COpenGLBase.cpp */,
+				EA1FB3391A1CCAF70023F3E3 /* COpenGLBase.h */,
+				EAC2A4DD1A39F0AF00B3B0E8 /* COpenGLFunc.cpp */,
+				EAC2A4DE1A39F0AF00B3B0E8 /* COpenGLFunc.h */,
 			);
 			name = OpenGl;
 			sourceTree = "<group>";
@@ -185,13 +230,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABADF991A5BEBBD00C4A757 /* CObjects.cpp in Sources */,
+				EAC2A4DF1A39F0AF00B3B0E8 /* COpenGLFunc.cpp in Sources */,
 				EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */,
+				EAD5784E1A5E6C3200394A3F /* CSphereWorld.cpp in Sources */,
 				EAD076021A08F49A00BAA734 /* TestPrimrestart.cpp in Sources */,
 				EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */,
+				EAD578491A5E5B8F00394A3F /* CModelviewProjection.cpp in Sources */,
+				EA1FB33A1A1CCAF70023F3E3 /* COpenGLBase.cpp in Sources */,
+				EA1FB3371A1CC6250023F3E3 /* CPrimitives.cpp in Sources */,
+				EA57EBC81A41D5840043BC72 /* CBlending.cpp in Sources */,
 				EA5442E81A1062DB002AD2B3 /* Triangle.cpp in Sources */,
+				EA6F44371A5D9AED002E6A94 /* COrthoGraphic.cpp in Sources */,
+				EAFDBD691A5AF6E100A4E6AA /* CMove.cpp in Sources */,
 				EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */,
-				EACED30A1A02A1DB0090C181 /* COpenGLBase.cpp in Sources */,
 				EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */,
+				EA57EBCB1A41E4320043BC72 /* CSmoother.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

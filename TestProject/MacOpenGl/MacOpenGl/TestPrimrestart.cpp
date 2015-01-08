@@ -24,7 +24,7 @@ using namespace std;
 #define NumStrips               (NumYPoints - 1)
 #define RestartIndex            0xffff
 
-TestPrimrestart::TestPrimrestart()
+TestPrimrestart::TestPrimrestart(int argc, char* argv[]) : COpenGLBase(argc, argv)
 {
     setDisplayFunc(TestPrimrestart::display);
     setReshapeFunc(TestPrimrestart::reshape);

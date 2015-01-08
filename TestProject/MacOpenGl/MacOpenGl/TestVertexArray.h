@@ -6,7 +6,7 @@
 class TestVertexArray : public COpenGLBase
 {
 public:
-	TestVertexArray();
+	TestVertexArray(int argc, char* argv[]);
 	~TestVertexArray();
 	static void display();
 	static void reshape(int width, int height);
