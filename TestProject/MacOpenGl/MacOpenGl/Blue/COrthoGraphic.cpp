@@ -462,7 +462,7 @@ void COrthoGraphic::defaultDisplayFunc()
     glEnable(GL_DEPTH_TEST);
     
     
-    modelViewMatix.PushMatrix(viewFrame);
+    modelViewMatrix.PushMatrix(viewFrame);
     
     GLfloat vRed[] = { 1.0f, 0.0f, 0.0f, 1.0f };
     GLfloat vGray[] = { 0.75f, 0.75f, 0.75f, 1.0f };
@@ -473,7 +473,7 @@ void COrthoGraphic::defaultDisplayFunc()
     shaderManager.UseStockShader(GLT_SHADER_DEFAULT_LIGHT, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vGray);
     gOrthoGraphic->mInnerBatch.Draw();
     
-    modelViewMatix.PopMatrix();
+    modelViewMatrix.PopMatrix();
     
     
     glutSwapBuffers();
@@ -497,5 +497,5 @@ void COrthoGraphic::defaultReshapeFunc(int width, int height)
 //    viewFrustum.SetPerspective(35.0f, float(width)/float(height), 1.0f, 1000.0f);
     
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
-    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
+    transformPipeline.SetMatrixStacks(modelViewMatrix, projectionMatrix);
 }

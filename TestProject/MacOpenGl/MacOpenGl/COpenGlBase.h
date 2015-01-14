@@ -11,6 +11,8 @@
 
 #include "COpenGLFunc.h"
 #include <iostream>
+#include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -18,12 +20,15 @@ class COpenGLBase : public COpenGLFunc
 {
 public:
     COpenGLBase(int argc, char* argv[]);
-    ~COpenGLBase();
+    virtual ~COpenGLBase();
     void mainLoop();
     virtual void SetupRC();
+    virtual void ShutdownRC();
     
     static void logMatrix44(const M3DMatrix44f &m);
     static void DrawWireFramedBatch(GLTriangleBatch* pBatch);
+    bool LoadTGATexture(const char *szFileName, GLenum minFilter, GLenum magFilter, GLenum wrapMode);
+    string getFileName(const char *fileName);
 };
 
 

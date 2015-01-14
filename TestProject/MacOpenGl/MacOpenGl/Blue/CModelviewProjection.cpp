@@ -88,5 +88,5 @@ void CModelviewProjection::defaultReshapeFunc(int width, int height)
     viewFrustum.SetPerspective(35.0f, float(width)/float(height), 1.0f, 1000.0f);
     
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
-    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
+    transformPipeline.SetMatrixStacks(modelViewMatrix, projectionMatrix);
 }

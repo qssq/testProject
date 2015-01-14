@@ -7,6 +7,8 @@
 #include "COrthoGraphic.h"
 #include "CModelviewProjection.h"
 #include "CSphereWorld.h"
+#include "CPyramid.h"
+#include "CTunnel.h"
 
 int main(int argc, char* argv[])
 {
@@ -26,8 +28,12 @@ int main(int argc, char* argv[])
 //    og.mainLoop();
 //    CModelviewProjection mp(argc, argv);
 //    mp.mainLoop();
-    CSphereWorld sw(argc, argv);
-    sw.mainLoop();
+//    CSphereWorld sw(argc, argv);
+//    sw.mainLoop();
+//    CPyramid pyramid(argc, argv);
+//    pyramid.mainLoop();
+    CTunnel tunnel(argc, argv);
+    tunnel.mainLoop();
     
     return 0;
 }

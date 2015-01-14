@@ -37,7 +37,7 @@ void CObjects::SetupRC()
     
     glEnable(GL_DEPTH_TEST);
     
-    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
+    transformPipeline.SetMatrixStacks(modelViewMatrix, projectionMatrix);
     
 //    viewFrame.MoveForward(-20.0f);
     
@@ -63,7 +63,7 @@ void CObjects::defaultDisplayFunc()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
     
-    modelViewMatix.PushMatrix(viewFrame);
+    modelViewMatrix.PushMatrix(viewFrame);
     
     switch(mStep)
     {
@@ -84,7 +84,7 @@ void CObjects::defaultDisplayFunc()
             break;
     }
     
-    modelViewMatix.PopMatrix();
+    modelViewMatrix.PopMatrix();
     
     // Flush drawing commands
     glutSwapBuffers();
@@ -104,7 +104,7 @@ void CObjects::defaultReshapeFunc(int width, int height)
     //    viewFrustum.SetPerspective(35.0f, float(width)/float(height), 1.0f, 1000.0f);
     
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
-    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
+    transformPipeline.SetMatrixStacks(modelViewMatrix, projectionMatrix);
 }
 
 void CObjects::defaultKeyboardFunc(unsigned char key, int x, int y)

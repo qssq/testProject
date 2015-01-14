@@ -32,15 +32,17 @@ typedef void (*FP_SPECIA)(int key, int x, int y);
 class COpenGLFunc
 {
 public:
+    ~COpenGLFunc();
     //OpenGL
     static GLFrustum           viewFrustum;         // View Frustum 视景体
-    static GLMatrixStack       modelViewMatix;      // Modelview Matrix
+    static GLMatrixStack       modelViewMatrix;      // Modelview Matrix
     static GLMatrixStack       projectionMatrix;    // Projection Matrix
     static GLShaderManager     shaderManager;       // Shader Manager
     static GLGeometryTransform transformPipeline;   // Geometry Transform Pipeline  集合变换管线
     
     static M3DMatrix44f        shadowMatrix;
     static GLFrame             viewFrame;
+    static GLFrame             CameraFrame;
     
     //func
     void setDefaultFunc();

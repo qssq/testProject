@@ -9,13 +9,19 @@
 #include "COpenGLFunc.h"
 
 GLFrame             COpenGLFunc::viewFrame;
+GLFrame             COpenGLFunc::CameraFrame;
 GLFrustum           COpenGLFunc::viewFrustum;
-GLMatrixStack       COpenGLFunc::modelViewMatix;
+GLMatrixStack       COpenGLFunc::modelViewMatrix;
 GLMatrixStack       COpenGLFunc::projectionMatrix;
 GLShaderManager     COpenGLFunc::shaderManager;
 
 GLGeometryTransform COpenGLFunc::transformPipeline;
 M3DMatrix44f        COpenGLFunc::shadowMatrix;
+
+COpenGLFunc::~COpenGLFunc()
+{
+    
+}
 
 void COpenGLFunc::setDefaultFunc()
 {
@@ -68,11 +74,11 @@ void COpenGLFunc::defaultReshapeFunc(int width, int height)
     glViewport(0, 0, width, height);
     
     //创建投影矩阵 并将他压入投影矩阵堆栈中
-    viewFrustum.SetPerspective(35.0f, float(width)/float(height), 1.0f, 100.0f);
+    viewFrustum.SetPerspective(35.0f, float(width)/float(height), 1.0f, 100.0f);        //角度 深度(min-max)
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
     
     //设置变换管线以使用两个矩阵堆栈
-    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
+    transformPipeline.SetMatrixStacks(modelViewMatrix, projectionMatrix);
 }
 
 void COpenGLFunc::defaultKeyboardFunc(unsigned char key, int x, int y)

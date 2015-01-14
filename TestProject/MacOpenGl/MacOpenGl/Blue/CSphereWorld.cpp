@@ -30,7 +30,7 @@ void CSphereWorld::SetupRC()
     shaderManager.InitializeStockShaders();
     
     glEnable(GL_DEPTH_TEST);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
     glClearColor(0, 0, 0, 1);
     
@@ -52,6 +52,14 @@ void CSphereWorld::SetupRC()
         floorBatch.Vertex3f(-20.0f, -0.55f, x);
     }
     floorBatch.End();
+    
+    //spheres
+    for (int i = 0; i < spheresCout; ++i)
+    {
+        GLfloat x = ((GLfloat)((rand() % 400) - 200) * 0.1f);
+        GLfloat z = ((GLfloat)((rand() % 400) - 200) * 0.1f);
+        mSpheres[i].SetOrigin(x, 0.0f, z);
+    }
 }
 
 void CSphereWorld::defaultDisplayFunc()
@@ -59,7 +67,7 @@ void CSphereWorld::defaultDisplayFunc()
     // Color values
     static GLfloat vFloorColor[] = { 0.0f, 1.0f, 0.0f, 1.0f};
     static GLfloat vTorusColor[] = { 1.0f, 0.8f, 0.8f, 1.0f };
-    static GLfloat vSphereColor[] = { 0.0f, 0.0f, 1.0f, 1.0f };
+    static GLfloat vSphereColor[] = { 1.0f, 0.0f, 0.0f, 1.0f };
     
     static CStopWatch	rotTimer;
     float yRot = rotTimer.GetElapsedSeconds() * 60.0f;
@@ -67,34 +75,55 @@ void CSphereWorld::defaultDisplayFunc()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     //保存单位矩阵
-    modelViewMatix.PushMatrix();
+    modelViewMatrix.PushMatrix();
     
+    //摄像机
+    M3DMatrix44f camera;
+    gSphereWorld->mCameraFrame.GetCameraMatrix(camera);
+    modelViewMatrix.PushMatrix(camera);
+    
+    //光源
+    M3DVector4f vLightPos = { 0.0f, 10.0f, 5.0f, 1.0f };
+    M3DVector4f vLightEyePos;
+    m3dTransformVector4(vLightEyePos, vLightPos, camera);
+    
+    //地板
     shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vFloorColor);
     gSphereWorld->mFloorBatch.Draw();
     
-    modelViewMatix.Translate(0.0f, 0.0f, -2.5f);
+    //小球
+    for(int i = 0; i < spheresCout; ++i)
+    {
+        modelViewMatrix.PushMatrix();
+        modelViewMatrix.MultMatrix(gSphereWorld->mSpheres[i]);
+        shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vSphereColor);
+        gSphereWorld->mSphereBatch.Draw();
+        modelViewMatrix.PopMatrix();
+    }
+    
+    modelViewMatrix.Translate(0.0f, 0.0f, -2.5f);
     
     //保存平移
-    modelViewMatix.PushMatrix();
+    modelViewMatrix.PushMatrix();
     
-    modelViewMatix.Rotate(yRot, 0.0f, 1.0f, 0.0f);
-    shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(),
-                                 vTorusColor);
+    modelViewMatrix.Rotate(yRot, 0.0f, 1.0f, 0.0f);
+    shaderManager.UseStockShader(GLT_SHADER_POINT_LIGHT_DIFF, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vLightEyePos, vTorusColor);
     
     gSphereWorld->mTorusBatch.Draw();
     
     //消除旋转
-    modelViewMatix.PopMatrix();
+    modelViewMatrix.PopMatrix();
     
-    modelViewMatix.Rotate(yRot * -2.0f, 0.0f, 1.0f, 0.0f);
-    modelViewMatix.Translate(0.8f, 0.0f, 0.0f);
-    shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(),
-                                 vSphereColor);
+    modelViewMatrix.Rotate(yRot * -2.0f, 0.0f, 1.0f, 0.0f);
+    modelViewMatrix.Translate(0.8f, 0.0f, 0.0f);
+    shaderManager.UseStockShader(GLT_SHADER_POINT_LIGHT_DIFF, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vLightEyePos, vSphereColor);
     
     gSphereWorld->mSphereBatch.Draw();
     
     //消除平移
-    modelViewMatix.PopMatrix();
+    modelViewMatrix.PopMatrix();
+    //消除摄像机
+    modelViewMatrix.PopMatrix();
 
     // Do the buffer Swap
     glutSwapBuffers();
@@ -109,7 +138,7 @@ void CSphereWorld::defaultReshapeFunc(int width, int height)
     viewFrustum.SetPerspective(35, (float)width/(float)height, 1, 100);
     
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
-    transformPipeline.SetMatrixStacks(modelViewMatix, projectionMatrix);
+    transformPipeline.SetMatrixStacks(modelViewMatrix, projectionMatrix);
 }
 
 void CSphereWorld::defaultKeyboardFunc(unsigned char key, int x, int y)
@@ -138,5 +167,31 @@ void CSphereWorld::defaultKeyboardFunc(unsigned char key, int x, int y)
 
 void CSphereWorld::defaultSpecialFunc(int key, int x, int y)
 {
+    float linear = 0.2f;
+    float angular = float(m3dDegToRad(10.0f));
+    if(key == GLUT_KEY_UP)
+        gSphereWorld->mCameraFrame.MoveForward(linear);
     
+    if(key == GLUT_KEY_DOWN)
+        gSphereWorld->mCameraFrame.MoveForward(-linear);
+    
+    if(key == GLUT_KEY_LEFT)
+        gSphereWorld->mCameraFrame.RotateWorld(angular, 0.0f, 1.0f, 0.0f);
+    
+    if(key == GLUT_KEY_RIGHT)
+        gSphereWorld->mCameraFrame.RotateWorld(-angular, 0.0f, 1.0f, 0.0f);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

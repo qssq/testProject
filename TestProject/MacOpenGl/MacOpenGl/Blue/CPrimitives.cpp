@@ -122,7 +122,7 @@ void CPrimitives::defaultDisplayFunc()
     
     glEnable(GL_DEPTH_TEST);
     
-    modelViewMatix.PushMatrix(viewFrame);
+    modelViewMatrix.PushMatrix(viewFrame);
     shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vBlack);
     //点
 //    glPointSize(4.0f);
@@ -133,7 +133,7 @@ void CPrimitives::defaultDisplayFunc()
     //环形
     DrawWireFramedBatch(&triangleStripBatch);
     
-    modelViewMatix.PopMatrix();
+    modelViewMatrix.PopMatrix();
     glutSwapBuffers();
 }
 

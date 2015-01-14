@@ -26,6 +26,13 @@ public:
     GLTriangleBatch		mTorusBatch;
     GLTriangleBatch     mSphereBatch;
     GLBatch				mFloorBatch;
+    GLFrame             mCameraFrame;
+    
+    enum index
+    {
+        spheresCout = 50
+    };
+    GLFrame             mSpheres[spheresCout];
     
     int mStep;
 };
