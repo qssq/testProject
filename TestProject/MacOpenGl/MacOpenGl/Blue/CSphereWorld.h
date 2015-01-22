@@ -18,23 +18,29 @@ public:
     CSphereWorld(int argc, char *argv[]);
     ~CSphereWorld();
     virtual void SetupRC();
+    virtual void ShutdownRC();
     static void defaultDisplayFunc();
     static void defaultReshapeFunc(int width, int height);
     static void defaultKeyboardFunc(unsigned char key, int x, int y);
     static void defaultSpecialFunc(int key, int x, int y);
     
+    void DrawSongAndDance(GLfloat yRot);
+    
     GLTriangleBatch		mTorusBatch;
     GLTriangleBatch     mSphereBatch;
     GLBatch				mFloorBatch;
-    GLFrame             mCameraFrame;
     
     enum index
     {
-        spheresCout = 50
+        textureCount = 3,
+        spheresCount = 50
     };
-    GLFrame             mSpheres[spheresCout];
+    GLFrame             mSpheres[spheresCount];
     
     int mStep;
+    
+    //纹理
+    GLuint mUiTextures[textureCount];
 };
 
 #endif /* defined(__MacOpenGL__CSphereWorld__) */

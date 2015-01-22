@@ -13,7 +13,7 @@ COpenGLBase::COpenGLBase(int argc, char* argv[])
     gltSetWorkingDirectory(argv[0]);
     
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL | GLUT_3_2_CORE_PROFILE);
     glutInitWindowSize(800, 600);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("GongXun");
@@ -119,7 +119,7 @@ bool COpenGLBase::LoadTGATexture(const char *szFileName, GLenum minFilter, GLenu
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, magFilter);
     
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);          //改成紧密包装像素数据
-    glTexImage2D(GL_TEXTURE_2D, 0, nComponents, nWidth, nHeight, 0, eFormat, GL_UNSIGNED_BYTE, pBits);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_COMPRESSED_RGB, nWidth, nHeight, 0, eFormat, GL_UNSIGNED_BYTE, pBits);
     
     free(pBits);
     

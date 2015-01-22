@@ -19,6 +19,7 @@
 		EA6F44371A5D9AED002E6A94 /* COrthoGraphic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6F44351A5D9AED002E6A94 /* COrthoGraphic.cpp */; };
 		EA8529DE1A63AFD0001F97C9 /* CPyramid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8529DC1A63AFD0001F97C9 /* CPyramid.cpp */; };
 		EA8DCDFC1A66406E009124A1 /* CTunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8DCDFA1A66406E009124A1 /* CTunnel.cpp */; };
+		EA9C72721A6FA3F9005B4F93 /* CShadedTriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA9C72701A6FA3F9005B4F93 /* CShadedTriangle.cpp */; };
 		EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEF419FFD788006D42C3 /* main.cpp */; };
 		EAA1CF0119FFD8AC006D42C3 /* TestAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */; };
 		EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA1CEFD19FFD8AC006D42C3 /* TestLines.cpp */; };
@@ -64,6 +65,8 @@
 		EA8529DD1A63AFD0001F97C9 /* CPyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPyramid.h; path = MacOpenGL/Blue/CPyramid.h; sourceTree = SOURCE_ROOT; };
 		EA8DCDFA1A66406E009124A1 /* CTunnel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CTunnel.cpp; path = MacOpenGL/Blue/CTunnel.cpp; sourceTree = SOURCE_ROOT; };
 		EA8DCDFB1A66406E009124A1 /* CTunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTunnel.h; path = MacOpenGL/Blue/CTunnel.h; sourceTree = SOURCE_ROOT; };
+		EA9C72701A6FA3F9005B4F93 /* CShadedTriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CShadedTriangle.cpp; path = MacOpenGL/Blue/CShadedTriangle.cpp; sourceTree = SOURCE_ROOT; };
+		EA9C72711A6FA3F9005B4F93 /* CShadedTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CShadedTriangle.h; path = MacOpenGL/Blue/CShadedTriangle.h; sourceTree = SOURCE_ROOT; };
 		EAA1CEF119FFD788006D42C3 /* MacOpenGL.temp_caseinsensitive_rename */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacOpenGL.temp_caseinsensitive_rename; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA1CEF419FFD788006D42C3 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EAA1CEFB19FFD8AC006D42C3 /* TestAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestAnimation.cpp; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				EA8529DD1A63AFD0001F97C9 /* CPyramid.h */,
 				EA8DCDFA1A66406E009124A1 /* CTunnel.cpp */,
 				EA8DCDFB1A66406E009124A1 /* CTunnel.h */,
+				EA9C72701A6FA3F9005B4F93 /* CShadedTriangle.cpp */,
+				EA9C72711A6FA3F9005B4F93 /* CShadedTriangle.h */,
 			);
 			name = Blue;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				EA8529DE1A63AFD0001F97C9 /* CPyramid.cpp in Sources */,
 				EA6F44371A5D9AED002E6A94 /* COrthoGraphic.cpp in Sources */,
 				EAFDBD691A5AF6E100A4E6AA /* CMove.cpp in Sources */,
+				EA9C72721A6FA3F9005B4F93 /* CShadedTriangle.cpp in Sources */,
 				EAA1CF0219FFD8AC006D42C3 /* TestLines.cpp in Sources */,
 				EAA1CEF519FFD788006D42C3 /* main.cpp in Sources */,
 				EA57EBCB1A41E4320043BC72 /* CSmoother.cpp in Sources */,

@@ -9,6 +9,7 @@
 #include "CSphereWorld.h"
 #include "CPyramid.h"
 #include "CTunnel.h"
+#include "CShadedTriangle.h"
 
 int main(int argc, char* argv[])
 {
@@ -32,8 +33,12 @@ int main(int argc, char* argv[])
 //    sw.mainLoop();
 //    CPyramid pyramid(argc, argv);
 //    pyramid.mainLoop();
-    CTunnel tunnel(argc, argv);
-    tunnel.mainLoop();
+//    CTunnel tunnel(argc, argv);
+    //    tunnel.mainLoop();
+    
+    CShadedTriangle shadedTriangle(argc, argv);
+    shadedTriangle.mainLoop();
+    
     
     return 0;
 }
