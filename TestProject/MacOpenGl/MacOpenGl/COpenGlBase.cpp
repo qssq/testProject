@@ -13,7 +13,7 @@ COpenGLBase::COpenGLBase(int argc, char* argv[])
     gltSetWorkingDirectory(argv[0]);
     
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL | GLUT_3_2_CORE_PROFILE);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
     glutInitWindowSize(800, 600);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("GongXun");

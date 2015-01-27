@@ -10,6 +10,7 @@
 #include "CPyramid.h"
 #include "CTunnel.h"
 #include "CShadedTriangle.h"
+#include "CLight.h"
 
 int main(int argc, char* argv[])
 {
@@ -36,9 +37,11 @@ int main(int argc, char* argv[])
 //    CTunnel tunnel(argc, argv);
     //    tunnel.mainLoop();
     
-    CShadedTriangle shadedTriangle(argc, argv);
-    shadedTriangle.mainLoop();
-    
+//    CShadedTriangle shadedTriangle(argc, argv);
+//    shadedTriangle.mainLoop();
+
+    CLight light(argc, argv);
+    light.mainLoop();
     
     return 0;
 }

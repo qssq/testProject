@@ -7,6 +7,7 @@
 //
 
 #include "CShadedTriangle.h"
+#include <StopWatch.h>
 
 CShadedTriangle *CShadedTriangle::gShadedTriangle = NULL;
 
@@ -29,23 +30,18 @@ void CShadedTriangle::SetupRC()
     // Blue background
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
     
-    shaderManager.InitializeStockShaders();
+    glEnable(GL_DEPTH_TEST);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
-    // Load up a triangle
-    GLfloat vVerts[] = { -0.5f, -0.5f, 0.0f,
-        0.5f, -0.5f, 0.0f,
-						  0.0f, 0.5f, 0.0f };
+    viewFrame.MoveForward(4.0f);
     
-    GLfloat vColors [] = { 1.0f, 0.0f, 0.0f, 1.0f,
-        0.0f, 1.0f, 0.0f, 1.0f,
-        0.0f, 0.0f, 1.0f, 1.0f };
+    // Make the torus
+    gltMakeTorus(torusBatch, .80f, 0.25f, 52, 26);
     
-    triangleBatch.Begin(GL_TRIANGLES, 3);
-    triangleBatch.CopyVertexData3f(vVerts);
-    triangleBatch.CopyColorData4f(vColors);
-    triangleBatch.End();
+    myIdentityShader = gltLoadShaderPairWithAttributes("/Users/gongxun/GitHub/testProject/TestProject/MacOpenGL/Resources/FlatShader.vp", "/Users/gongxun/GitHub/testProject/TestProject/MacOpenGL/Resources/FlatShader.fp", 1, GLT_ATTRIBUTE_VERTEX, "vVertex");
     
-    myIdentityShader = gltLoadShaderPairWithAttributes(getFileName("ShadedIdentity.vp").c_str(), getFileName("ShadedIdentity.fp").c_str(), 2, GLT_ATTRIBUTE_VERTEX, "vVertex", GLT_ATTRIBUTE_COLOR, "vColor");
+    locMVP = glGetUniformLocation(myIdentityShader, "mvpMatrix");
+    locColor = glGetUniformLocation(myIdentityShader, "vColorValue");
     
     cout<<myIdentityShader<<endl;
 }
@@ -57,14 +53,26 @@ void CShadedTriangle::ShutdownRC()
 
 void CShadedTriangle::defaultDisplayFunc()
 {
-    // Clear the window with current clearing color
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+    static CStopWatch rotTimer;
+    
+    // Clear the window and the depth buffer
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    modelViewMatrix.PushMatrix(viewFrame);
+    modelViewMatrix.Rotate(rotTimer.GetElapsedSeconds() * 30.0f, 0.0f, 1.0f, 0.0f);
+    
+    GLfloat vColor[] = { 0.1f, 0.1f, 1.f, 1.0f };
     
     glUseProgram(gShadedTriangle->myIdentityShader);
-    gShadedTriangle->triangleBatch.Draw();
+    glUniform4fv(gShadedTriangle->locColor, 1, vColor);
+    glUniformMatrix4fv(gShadedTriangle->locMVP, 1, GL_FALSE, transformPipeline.GetModelViewProjectionMatrix());
+    gShadedTriangle->torusBatch.Draw();
     
-    // Perform the buffer swap to display back buffer
+    modelViewMatrix.PopMatrix();
+    
+    
     glutSwapBuffers();
+    glutPostRedisplay();
 }
 
 

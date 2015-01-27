@@ -15,6 +15,7 @@
 		EA5442E81A1062DB002AD2B3 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA5442E61A1062DB002AD2B3 /* Triangle.cpp */; };
 		EA57EBC81A41D5840043BC72 /* CBlending.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA57EBC61A41D5840043BC72 /* CBlending.cpp */; };
 		EA57EBCB1A41E4320043BC72 /* CSmoother.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA57EBC91A41E4320043BC72 /* CSmoother.cpp */; };
+		EA59CB111A7684F9001A19DA /* CLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA59CB0F1A7684F9001A19DA /* CLight.cpp */; };
 		EA5D243F1A6353F20023CF0C /* stone.tga in Resources */ = {isa = PBXBuildFile; fileRef = EA5D243E1A6353F20023CF0C /* stone.tga */; };
 		EA6F44371A5D9AED002E6A94 /* COrthoGraphic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6F44351A5D9AED002E6A94 /* COrthoGraphic.cpp */; };
 		EA8529DE1A63AFD0001F97C9 /* CPyramid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA8529DC1A63AFD0001F97C9 /* CPyramid.cpp */; };
@@ -58,6 +59,8 @@
 		EA57EBC71A41D5840043BC72 /* CBlending.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBlending.h; path = MacOpenGL/Blue/CBlending.h; sourceTree = SOURCE_ROOT; };
 		EA57EBC91A41E4320043BC72 /* CSmoother.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CSmoother.cpp; path = MacOpenGL/Blue/CSmoother.cpp; sourceTree = SOURCE_ROOT; };
 		EA57EBCA1A41E4320043BC72 /* CSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSmoother.h; path = MacOpenGL/Blue/CSmoother.h; sourceTree = SOURCE_ROOT; };
+		EA59CB0F1A7684F9001A19DA /* CLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CLight.cpp; path = MacOpenGL/Blue/CLight.cpp; sourceTree = SOURCE_ROOT; };
+		EA59CB101A7684F9001A19DA /* CLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLight.h; path = MacOpenGL/Blue/CLight.h; sourceTree = SOURCE_ROOT; };
 		EA5D243E1A6353F20023CF0C /* stone.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = stone.tga; sourceTree = "<group>"; };
 		EA6F44351A5D9AED002E6A94 /* COrthoGraphic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = COrthoGraphic.cpp; path = MacOpenGL/Blue/COrthoGraphic.cpp; sourceTree = SOURCE_ROOT; };
 		EA6F44361A5D9AED002E6A94 /* COrthoGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = COrthoGraphic.h; path = MacOpenGL/Blue/COrthoGraphic.h; sourceTree = SOURCE_ROOT; };
@@ -130,6 +133,8 @@
 				EA8DCDFB1A66406E009124A1 /* CTunnel.h */,
 				EA9C72701A6FA3F9005B4F93 /* CShadedTriangle.cpp */,
 				EA9C72711A6FA3F9005B4F93 /* CShadedTriangle.h */,
+				EA59CB0F1A7684F9001A19DA /* CLight.cpp */,
+				EA59CB101A7684F9001A19DA /* CLight.h */,
 			);
 			name = Blue;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				EAD5784E1A5E6C3200394A3F /* CSphereWorld.cpp in Sources */,
 				EAD076021A08F49A00BAA734 /* TestPrimrestart.cpp in Sources */,
 				EAA1CF0319FFD8AC006D42C3 /* TestVertexArray.cpp in Sources */,
+				EA59CB111A7684F9001A19DA /* CLight.cpp in Sources */,
 				EAD578491A5E5B8F00394A3F /* CModelviewProjection.cpp in Sources */,
 				EA1FB33A1A1CCAF70023F3E3 /* COpenGLBase.cpp in Sources */,
 				EA1FB3371A1CC6250023F3E3 /* CPrimitives.cpp in Sources */,

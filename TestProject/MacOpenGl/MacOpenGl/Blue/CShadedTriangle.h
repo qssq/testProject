@@ -24,7 +24,11 @@ public:
     
 private:
     GLBatch	triangleBatch;
+    GLTriangleBatch torusBatch;
+    
     GLint	myIdentityShader;
+    GLint	locMVP;				// The location of the ModelViewProjection matrix uniform
+    GLint   locColor;			// The location of the color value uniform
 };
 
 #endif /* defined(__MacOpenGL__CShadedTriangle__) */
