@@ -73,8 +73,33 @@ void CSphereWorld::SetupRC()
     floorBatch.Vertex3f(-20.0f, -0.41f, -20.0f);
     floorBatch.End();
     
+    //log
+    int x = 500;
+    int y = 155;
+    int width = 300;
+    int height = 155;
+    mLogoBatch.Begin(GL_TRIANGLE_FAN, 4, 1);
+    
+    // Upper left hand corner
+    mLogoBatch.MultiTexCoord2f(0, 0.0f, height);
+    mLogoBatch.Vertex3f(x, y, 0.0);
+    
+    // Lower left hand corner
+    mLogoBatch.MultiTexCoord2f(0, 0.0f, 0.0f);
+    mLogoBatch.Vertex3f(x, y - height, 0.0f);
+    
+    // Lower right hand corner
+    mLogoBatch.MultiTexCoord2f(0, width, 0.0f);
+    mLogoBatch.Vertex3f(x + width, y - height, 0.0f);
+    
+    // Upper righ hand corner
+    mLogoBatch.MultiTexCoord2f(0, width, height);
+    mLogoBatch.Vertex3f(x + width, y, 0.0f);
+    
+    mLogoBatch.End();
+    
     // Make 3 texture objects
-    glGenTextures(3, mUiTextures);
+    glGenTextures(4, mUiTextures);
     
     // Load the Marble
     glBindTexture(GL_TEXTURE_2D, mUiTextures[0]);
@@ -87,6 +112,16 @@ void CSphereWorld::SetupRC()
     // Load Moon
     glBindTexture(GL_TEXTURE_2D, mUiTextures[2]);
     LoadTGATexture(getFileName("moonlike.tga").c_str(), GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_CLAMP_TO_EDGE);
+    
+    // Load the Logo
+    glBindTexture(GL_TEXTURE_RECTANGLE, mUiTextures[3]);
+    LoadTGATextureRect(getFileName("OpenGL-Logo.tga").c_str(), GL_NEAREST, GL_NEAREST, GL_CLAMP_TO_EDGE);
+    
+    rectReplaceShader = gltLoadShaderPairWithAttributes(getFileName("RectReplace.vp").c_str(), getFileName("RectReplace.fp").c_str(), 2, GLT_ATTRIBUTE_VERTEX, "vVertex", GLT_ATTRIBUTE_TEXTURE0, "vTexCoord");
+    
+    
+    locRectMVP = glGetUniformLocation(rectReplaceShader, "mvpMatrix");
+    locRectTexture = glGetUniformLocation(rectReplaceShader, "rectangleImage");
     
     //spheres
     for (int i = 0; i < spheresCount; ++i)
@@ -195,63 +230,32 @@ void CSphereWorld::defaultDisplayFunc()
     
     modelViewMatrix.PopMatrix();
     
+    // Render the overlay
+    
+    // Creating this matrix really doesn't need to be done every frame. I'll leave it here
+    // so all the pertenant code is together
+    M3DMatrix44f mScreenSpace;
+    m3dMakeOrthographicMatrix(mScreenSpace, 0.0f, 800.0f, 0.0f, 600.0f, -1.0f, 1.0f);
+    
+    // Turn blending on, and depth testing off
+    glEnable(GL_BLEND);
+    glDisable(GL_DEPTH_TEST);
+    
+    glUseProgram(gSphereWorld->rectReplaceShader);
+    glUniform1i(gSphereWorld->locRectTexture, 0);
+    glUniformMatrix4fv(gSphereWorld->locRectMVP, 1, GL_FALSE, mScreenSpace);
+    glBindTexture(GL_TEXTURE_RECTANGLE, gSphereWorld->mUiTextures[3]);
+    gSphereWorld->mLogoBatch.Draw();
+    
+    // Restore no blending and depth test
+    glDisable(GL_BLEND);
+    glEnable(GL_DEPTH_TEST);
+    
     // Do the buffer Swap
     glutSwapBuffers();
     
     // Do it again
     glutPostRedisplay();
-    /* 纹理
-     static GLfloat vTorusColor[] = { 1.0f, 0.8f, 0.8f, 1.0f };
-     static GLfloat vSphereColor[] = { 1.0f, 0.0f, 0.0f, 1.0f };
-    //光源
-    M3DVector4f vLightPos = { 0.0f, 10.0f, 5.0f, 1.0f };
-    M3DVector4f vLightEyePos;
-    m3dTransformVector4(vLightEyePos, vLightPos, camera);
-    
-    //地板
-    shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vFloorColor);
-    gSphereWorld->mFloorBatch.Draw();
-    
-    //小球
-    for(int i = 0; i < spheresCount; ++i)
-    {
-        modelViewMatrix.PushMatrix();
-        modelViewMatrix.MultMatrix(gSphereWorld->mSpheres[i]);
-        shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vSphereColor);
-        gSphereWorld->mSphereBatch.Draw();
-        modelViewMatrix.PopMatrix();
-    }
-    
-    modelViewMatrix.Translate(0.0f, 0.0f, -2.5f);
-    
-    //保存平移
-    modelViewMatrix.PushMatrix();
-    
-    modelViewMatrix.Rotate(yRot, 0.0f, 1.0f, 0.0f);
-    shaderManager.UseStockShader(GLT_SHADER_POINT_LIGHT_DIFF, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vLightEyePos, vTorusColor);
-    
-    gSphereWorld->mTorusBatch.Draw();
-    
-    //消除旋转
-    modelViewMatrix.PopMatrix();
-    
-    modelViewMatrix.Rotate(yRot * -2.0f, 0.0f, 1.0f, 0.0f);
-    modelViewMatrix.Translate(0.8f, 0.0f, 0.0f);
-    shaderManager.UseStockShader(GLT_SHADER_POINT_LIGHT_DIFF, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vLightEyePos, vSphereColor);
-    
-    gSphereWorld->mSphereBatch.Draw();
-    
-    //消除平移
-    modelViewMatrix.PopMatrix();
-    //消除摄像机
-    modelViewMatrix.PopMatrix();
-
-    // Do the buffer Swap
-    glutSwapBuffers();
-    
-    // Tell GLUT to do it again
-    glutPostRedisplay();
-     */
 }
 
 void CSphereWorld::defaultReshapeFunc(int width, int height)

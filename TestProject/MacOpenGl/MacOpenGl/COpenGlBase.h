@@ -28,6 +28,7 @@ public:
     static void logMatrix44(const M3DMatrix44f &m);
     static void DrawWireFramedBatch(GLTriangleBatch* pBatch);
     bool LoadTGATexture(const char *szFileName, GLenum minFilter, GLenum magFilter, GLenum wrapMode);
+    bool LoadTGATextureRect(const char *szFileName, GLenum minFilter, GLenum magFilter, GLenum wrapMode);
     string getFileName(const char *fileName);
 };
 

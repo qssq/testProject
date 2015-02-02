@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacOpenGL/Blue/CSphereWorld.cpp"
-            timestampString = "442945385.169525"
+            timestampString = "444042361.849913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "CSphereWorld::defaultDisplayFunc()"
             landmarkType = "5">
          </BreakpointContent>
@@ -185,14 +185,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MacOpenGl/main.cpp"
-            timestampString = "443975700.1118"
+            filePath = "MacOpenGL/Blue/CSkyBox.cpp"
+            timestampString = "444557447.54456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "main(int argc, char* argv[])"
-            landmarkType = "7">
+            startingLineNumber = "112"
+            endingLineNumber = "112">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -23,27 +23,29 @@ varying vec4 vVaryingColor;
 
 void main(void) 
     { 
-    // Get surface normal in eye coordinates
+    // 获取表面法线的视觉坐标
     vec3 vEyeNormal = normalMatrix * vNormal;
 
-    // Get vertex position in eye coordinates
+    // 获取顶点的视觉坐标
     vec4 vPosition4 = mvMatrix * vVertex;
     vec3 vPosition3 = vPosition4.xyz / vPosition4.w;
+    // vec3 vPosition3 = normalMatrix * (vVertex.xyz / vVertex.w);
 
-    // Get vector to light source
+    // 获取到光源的向量
     vec3 vLightDir = normalize(vLightPosition - vPosition3);
 
-    // Dot product gives us diffuse intensity
+    // dot得到漫反射强度
     float diff = max(0.0, dot(vEyeNormal, vLightDir));
 
-    // Multiply intensity by diffuse color, force alpha to 1.0
+    // 强度乘以漫反射颜色
     vVaryingColor = diff * diffuseColor;
+    vVaryingColor.a = 1.0;
 
-    // Add in ambient light
+    // 添加环境光
     vVaryingColor += ambientColor;
 
 
-    // Specular Light
+    // 镜面光
     vec3 vReflection = normalize(reflect(-vLightDir, vEyeNormal));
     float spec = max(0.0, dot(vEyeNormal, vReflection));
     if(diff != 0) {
@@ -51,6 +53,6 @@ void main(void)
         vVaryingColor.rgb += vec3(fSpec, fSpec, fSpec);
     }
 
-    // Let's not forget to transform the geometry
+    //多边形投影变换
     gl_Position = mvpMatrix * vVertex;
     }

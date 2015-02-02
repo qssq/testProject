@@ -29,10 +29,11 @@ public:
     GLTriangleBatch		mTorusBatch;
     GLTriangleBatch     mSphereBatch;
     GLBatch				mFloorBatch;
+    GLBatch				mLogoBatch;
     
     enum index
     {
-        textureCount = 3,
+        textureCount = 4,
         spheresCount = 50
     };
     GLFrame             mSpheres[spheresCount];
@@ -41,6 +42,10 @@ public:
     
     //纹理
     GLuint mUiTextures[textureCount];
+    
+    GLint				rectReplaceShader;
+    GLint				locRectMVP;
+    GLint				locRectTexture;
 };
 
 #endif /* defined(__MacOpenGL__CSphereWorld__) */

@@ -34,6 +34,8 @@ private:
     GLint	locMVP;				// The location of the ModelViewProjection matrix uniform
     GLint	locMV;				// The location of the ModelView matrix uniform
     GLint	locNM;				// The location of the Normal matrix uniform
+    GLint   locTexture;
+    GLuint  texture;
 };
 
 #endif /* defined(__MacOpenGL__CLight__) */
