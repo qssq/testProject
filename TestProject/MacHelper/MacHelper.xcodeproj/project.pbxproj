@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA442EFD1B6FDF5D0062E30C /* main.cpp */; };
+		EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA442F041B6FDF7D0062E30C /* FileHelper.cpp */; };
+		EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F071B6FE5530062E30C /* libboost_system.a */; };
+		EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		EA442EFA1B6FDF5D0062E30C /* MacHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA442EFD1B6FDF5D0062E30C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EA442F041B6FDF7D0062E30C /* FileHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileHelper.cpp; sourceTree = "<group>"; };
+		EA442F051B6FDF7D0062E30C /* FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
+		EA442F071B6FE5530062E30C /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../usr/local/lib/libboost_system.a; sourceTree = "<group>"; };
+		EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../../../usr/local/lib/libboost_filesystem.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */,
+				EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +50,8 @@
 		EA442EF11B6FDF5D0062E30C = {
 			isa = PBXGroup;
 			children = (
+				EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */,
+				EA442F071B6FE5530062E30C /* libboost_system.a */,
 				EA442EFC1B6FDF5D0062E30C /* MacHelper */,
 				EA442EFB1B6FDF5D0062E30C /* Products */,
 			);
@@ -58,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				EA442EFD1B6FDF5D0062E30C /* main.cpp */,
+				EA442F041B6FDF7D0062E30C /* FileHelper.cpp */,
+				EA442F051B6FDF7D0062E30C /* FileHelper.h */,
 			);
 			path = MacHelper;
 			sourceTree = "<group>";
@@ -119,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */,
+				EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +219,12 @@
 		EA442F021B6FDF5D0062E30C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +232,12 @@
 		EA442F031B6FDF5D0062E30C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
