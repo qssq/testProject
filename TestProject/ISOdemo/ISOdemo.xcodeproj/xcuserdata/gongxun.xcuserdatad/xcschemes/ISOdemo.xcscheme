@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA49F2E81BCFFAA500F3C5A8"
-               BuildableName = "iOSdemo.app"
-               BlueprintName = "iOSdemo"
-               ReferencedContainer = "container:iOSdemo.xcodeproj">
+               BlueprintIdentifier = "EA49F32A1BD00B5300F3C5A8"
+               BuildableName = "ISOdemo.app"
+               BlueprintName = "ISOdemo"
+               ReferencedContainer = "container:ISOdemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA49F3041BCFFAA600F3C5A8"
-               BuildableName = "iOSdemoTests.xctest"
-               BlueprintName = "iOSdemoTests"
-               ReferencedContainer = "container:iOSdemo.xcodeproj">
+               BlueprintIdentifier = "EA49F3431BD00B5300F3C5A8"
+               BuildableName = "ISOdemoTests.xctest"
+               BlueprintName = "ISOdemoTests"
+               ReferencedContainer = "container:ISOdemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA49F30F1BCFFAA600F3C5A8"
-               BuildableName = "iOSdemoUITests.xctest"
-               BlueprintName = "iOSdemoUITests"
-               ReferencedContainer = "container:iOSdemo.xcodeproj">
+               BlueprintIdentifier = "EA49F34E1BD00B5300F3C5A8"
+               BuildableName = "ISOdemoUITests.xctest"
+               BlueprintName = "ISOdemoUITests"
+               ReferencedContainer = "container:ISOdemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA49F2E81BCFFAA500F3C5A8"
-            BuildableName = "iOSdemo.app"
-            BlueprintName = "iOSdemo"
-            ReferencedContainer = "container:iOSdemo.xcodeproj">
+            BlueprintIdentifier = "EA49F32A1BD00B5300F3C5A8"
+            BuildableName = "ISOdemo.app"
+            BlueprintName = "ISOdemo"
+            ReferencedContainer = "container:ISOdemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA49F2E81BCFFAA500F3C5A8"
-            BuildableName = "iOSdemo.app"
-            BlueprintName = "iOSdemo"
-            ReferencedContainer = "container:iOSdemo.xcodeproj">
+            BlueprintIdentifier = "EA49F32A1BD00B5300F3C5A8"
+            BuildableName = "ISOdemo.app"
+            BlueprintName = "ISOdemo"
+            ReferencedContainer = "container:ISOdemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA49F2E81BCFFAA500F3C5A8"
-            BuildableName = "iOSdemo.app"
-            BlueprintName = "iOSdemo"
-            ReferencedContainer = "container:iOSdemo.xcodeproj">
+            BlueprintIdentifier = "EA49F32A1BD00B5300F3C5A8"
+            BuildableName = "ISOdemo.app"
+            BlueprintName = "ISOdemo"
+            ReferencedContainer = "container:ISOdemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

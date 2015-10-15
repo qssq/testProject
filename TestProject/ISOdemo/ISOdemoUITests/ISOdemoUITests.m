@@ -1,18 +1,18 @@
 //
-//  iOSdemoUITests.m
-//  iOSdemoUITests
+//  ISOdemoUITests.m
+//  ISOdemoUITests
 //
-//  Created by gongxun on 15/10/15.
+//  Created by gongxun on 15/10/16.
 //  Copyright © 2015年 gongxun. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface iOSdemoUITests : XCTestCase
+@interface ISOdemoUITests : XCTestCase
 
 @end
 
-@implementation iOSdemoUITests
+@implementation ISOdemoUITests
 
 - (void)setUp {
     [super setUp];
