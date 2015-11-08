@@ -1,5 +1,5 @@
 //
-//  AddItemViewController.h
+//  ItemDetailViewController.h
 //  CheckLists
 //
 //  Created by gongxun on 15/11/7.
@@ -11,19 +11,19 @@
 @class ItemDetailViewController;
 @class ChecklistItem;
 
-@protocol AddItemViewControllerDelegate <NSObject>
+@protocol ItemDetailViewControllerDelegate <NSObject>
 
--(void)addItemViewControllerDidCancel:(ItemDetailViewController*)controller;
+-(void)ItemDetailViewControllerDidCancel:(ItemDetailViewController*)controller;
 
--(void)addItemViewController:(ItemDetailViewController*)controller didFinishAddingItem:(ChecklistItem*)item;
+-(void)ItemDetailViewController:(ItemDetailViewController*)controller didFinishAddingItem:(ChecklistItem*)item;
 
--(void)addItemViewController:(ItemDetailViewController*)controller didFinishEditingItem:(ChecklistItem*)item;
+-(void)ItemDetailViewController:(ItemDetailViewController*)controller didFinishEditingItem:(ChecklistItem*)item;
 
 @end
 
 @interface ItemDetailViewController : UITableViewController<UITextFieldDelegate>
 
-@property (weak, nonatomic)id <AddItemViewControllerDelegate> delegate;
+@property (weak, nonatomic)id <ItemDetailViewControllerDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneBarButton;
 

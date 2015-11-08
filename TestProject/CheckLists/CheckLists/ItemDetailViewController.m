@@ -1,5 +1,5 @@
 //
-//  AddItemViewController.m
+//  ItemDetailViewController.m
 //  CheckLists
 //
 //  Created by gongxun on 15/11/7.
@@ -57,17 +57,17 @@
         ChecklistItem *item = [[ChecklistItem alloc] init];
         item.text = self.textField.text;
         item.checked = NO;
-        [self.delegate addItemViewController:self didFinishAddingItem:item];
+        [self.delegate ItemDetailViewController:self didFinishAddingItem:item];
     }
     else
     {
         self.mEditItem.text = self.textField.text;
-        [self.delegate addItemViewController:self didFinishEditingItem:self.mEditItem];
+        [self.delegate ItemDetailViewController:self didFinishEditingItem:self.mEditItem];
     }
 }
 
 - (IBAction)cancel:(id)sender {
-    [self.delegate addItemViewControllerDidCancel:self];
+    [self.delegate ItemDetailViewControllerDidCancel:self];
 }
 @end
 
