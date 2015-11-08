@@ -12,5 +12,19 @@
 
 - (IBAction)showAlert:(id)sender;
 
+- (IBAction)touchAbout:(id)sender;
+
+//- (void)setNewCurrentScore;
+//
+//- (void)initSlider;
+//
+//- (void)playBackgroundMusic;
+
+@property (strong, nonatomic) IBOutlet UISlider *slider;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelQuestion;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelScore;
+
 @end
 
