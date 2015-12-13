@@ -1,27 +1,27 @@
 //
-//  ItemDetailViewController.m
+//  ListDetailViewController.m
 //  CheckLists
 //
-//  Created by gongxun on 15/11/7.
+//  Created by gongxun on 15/11/9.
 //  Copyright © 2015年 gongxun. All rights reserved.
 //
 
-#import "ItemDetailViewController.h"
-#import "ChecklistItem.h"
+#import "ListDetailViewController.h"
+#import "Checklist.h"
 
-@interface ItemDetailViewController ()
+@interface ListDetailViewController ()
 
 @end
 
-@implementation ItemDetailViewController
+@implementation ListDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     if (self.mEditItem != nil)
     {
-        self.title = @"Edit Item";
-        self.textField.text = self.mEditItem.text;
+        self.title = @"Edit Checklist";
+        self.textField.text = self.mEditItem.name;
     }
     
     self.doneBarButton.enabled = self.textField.text > 0;
@@ -52,41 +52,19 @@
 - (IBAction)done:(id)sender {
     if (self.mEditItem == nil)
     {
-        ChecklistItem *item = [[ChecklistItem alloc] init];
-        item.text = self.textField.text;
-        item.checked = NO;
-        [self.delegate ItemDetailViewController:self didFinishAddingItem:item];
+        Checklist *item = [[Checklist alloc] init];
+        item.name = self.textField.text;
+        [self.delegate ListDetailViewController:self didFinishAddingChecklist:item];
     }
     else
     {
-        self.mEditItem.text = self.textField.text;
-        [self.delegate ItemDetailViewController:self didFinishEditingItem:self.mEditItem];
+        self.mEditItem.name = self.textField.text;
+        [self.delegate ListDetailViewController:self didFinishEditingChecklist:self.mEditItem];
     }
 }
 
 - (IBAction)cancel:(id)sender {
-    [self.delegate ItemDetailViewControllerDidCancel:self];
+    [self.delegate ListDetailViewControllerDidCancel:self];
 }
+
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

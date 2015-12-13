@@ -11,10 +11,12 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <boost/filesystem.hpp>
+#include <boost/filesystem/fstream.hpp>
 
 using namespace std;
-using namespace boost::filesystem;
+namespace fs = boost::filesystem;
 
 class FileHelper
 {
@@ -23,6 +25,10 @@ public:
     ~FileHelper();
     
     void showFileInfo(const string &file);
+    void testOutFile();
+    
+private:
+    string getKeyOrValue(const string &key, const string &value);
 };
 
 #endif /* defined(__MacHelper__FileHelper__) */

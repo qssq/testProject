@@ -1,0 +1,228 @@
+//
+//  GamesVersionHelper.cpp
+//  MacHelper
+//
+//  Created by gongxun on 15/12/8.
+//  Copyright © 2015年 gongxun. All rights reserved.
+//
+
+#include "GamesVersionHelper.h"
+#include "GameVersionServer.h"
+#include <iostream>
+#include <sstream>
+#include <boost/filesystem.hpp>
+#include <boost/filesystem/fstream.hpp>
+#include <algorithm>
+
+namespace fs = boost::filesystem;
+
+string GamesVersionHelper::gLocalPath;
+string GamesVersionHelper::gServerPath;
+
+GamesVersionHelper::GamesVersionHelper()
+{
+
+    gLocalPath = "/Users/gongxun/GitHub/GameHall/NewbeeHall/";
+    gServerPath = "/Users/gongxun/Sites/";
+    mUrl = "http://192.168.2.68:8081";
+//    mUrl = "http://res.16youxi.cc/assets/app_update";
+}
+
+GamesVersionHelper::~GamesVersionHelper()
+{
+    
+}
+
+void GamesVersionHelper::setVersion(const string &version)
+{
+    
+}
+
+void GamesVersionHelper::createLocal()
+{
+    vector<GameVersionLocal> gameLocals;
+    {
+        GameVersionLocal hall;
+        hall.setInfo("Hall", mUrl, "1.1.1");
+        gameLocals.push_back(hall);
+        
+        GameVersionLocal zjh;
+        zjh.setInfo("Zjh", mUrl, "1.1.1");
+        gameLocals.push_back(zjh);
+        
+        GameVersionLocal fknn;
+        fknn.setInfo("Fknn", mUrl, "1.1.1");
+        gameLocals.push_back(fknn);
+        
+        GameVersionLocal brnn;
+        brnn.setInfo("Brnn", mUrl, "1.1.1");
+        gameLocals.push_back(brnn);
+    }
+    for (auto it : gameLocals)
+    {
+        it.createFile();
+    }
+}
+
+void GamesVersionHelper::createServer()
+{
+    vector<GameVersionServer> gameServers;
+    {
+        GameVersionServer hall;
+        hall.setInfo("Hall", mUrl, "1.1.1");
+        gameServers.push_back(hall);
+        
+        GameVersionServer zjh;
+        zjh.setInfo("Zjh", mUrl, "1.1.1");
+        gameServers.push_back(zjh);
+        
+        GameVersionServer fknn;
+        fknn.setInfo("Fknn", mUrl, "1.1.1");
+        gameServers.push_back(fknn);
+        
+        GameVersionServer brnn;
+        brnn.setInfo("Brnn", mUrl, "1.1.1");
+        gameServers.push_back(brnn);
+    }
+    for (auto it : gameServers)
+    {
+        it.createFile();
+    }
+}
+
+//--------------
+//GameVersionLocal
+//--------------
+
+GameVersionLocal::GameVersionLocal()
+{
+    
+}
+
+GameVersionLocal::~GameVersionLocal()
+{
+    
+}
+
+void GameVersionLocal::setInfo(const string &name, const string &url, const string &version)
+{
+    mName = name;
+    mUrl = url;
+    mVersion = version;
+    mOutPath = getHallPath();
+    mOutPath2 = getGamePath();
+    
+    mPackageUrl = mUrl + "/game" + mName;
+    mRemoteManifestUrl = mPackageUrl + "/project.manifest";
+    mRemoteVersionUrl = mPackageUrl + "/version.manifest";
+    
+    vector<string> keys =
+    {
+        "#packageUrl",
+        "#remoteManifestUrl",
+        "#remoteVersionUrl",
+        "#version",
+        "#groupVersions"
+    };
+    mKeys = keys;
+    
+    vector<string> values =
+    {
+        mPackageUrl,
+        mRemoteManifestUrl,
+        mRemoteVersionUrl,
+        mVersion,
+        mVersion
+    };
+    mValues = values;
+}
+
+void GameVersionLocal::createFile()
+{
+    fs::ifstream ifile;
+    ifile.open("projectLocal.manifest");
+    
+    vector<fs::ofstream *> ofiles;
+    
+    fs::ofstream ofile;
+    if (mOutPath != "")
+    {
+        ofile.open(mOutPath);
+        ofiles.push_back(&ofile);
+        cout<<"创建文件:"<<mOutPath<<endl;
+    }
+    
+    fs::ofstream ofile2;
+    if (mOutPath2 != "")
+    {
+        ofile2.open(mOutPath2);
+        ofiles.push_back(&ofile2);
+        cout<<"创建文件:"<<mOutPath2<<endl;
+    }
+    
+    string s;
+    while (getline(ifile, s))
+    {
+        for (auto *it : ofiles)
+        {
+            (*it)<<replaceFile(s)<<endl;
+        }
+    }
+    
+    for (auto *it : ofiles)
+    {
+        it->close();
+    }
+    
+    ifile.close();
+    
+}
+
+string GameVersionLocal::replaceFile(const string &s)
+{
+    string result(s);
+    
+    for (int i = 0; i < mKeys.size(); ++i)
+    {
+        if (result.find(mKeys[i]) != string::npos)
+        {
+            result = result.replace(s.find(mKeys[i]), mKeys[i].size(), mValues[i]);
+        }
+    }
+    
+    return result;
+}
+
+string GameVersionLocal::getHallPath()
+{
+    ostringstream oss;
+    oss<<GamesVersionHelper::gLocalPath;
+    oss<<"hallRes/project";
+    oss<<mName;
+    oss<<".manifest";
+    return oss.str();
+}
+
+string GameVersionLocal::getGamePath()
+{
+    if (mName == "Hall")
+    {
+        return "";
+    }
+    
+    string upper = mName;
+    transform(upper.begin(), upper.end(), upper.begin(), (int (*)(int))tolower);
+    ostringstream oss;
+    oss<<GamesVersionHelper::gLocalPath;
+    oss<<upper;
+    oss<<"/";
+    oss<<upper;
+    oss<<"Res/project";
+    oss<<mName;
+    oss<<".manifest";
+    return oss.str();
+}
+
+
+
+

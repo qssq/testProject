@@ -22,15 +22,15 @@ const char * say_what(bool b) { return b ? "true" : "false"; }
 
 void FileHelper::showFileInfo(const string &file)
 {
-    path p(file);
+    fs::path p(file);
     
     cout  <<  "\ncomposed path:\n";
     cout  <<  "  cout << -------------: " << p << "\n";
-    cout  <<  "  make_preferred()----------: " << path(p).make_preferred() << "\n";
+    cout  <<  "  make_preferred()----------: " << fs::path(p).make_preferred() << "\n";
     
     cout << "\nelements:\n";
     
-    for (path::iterator it(p.begin()), it_end(p.end()); it != it_end; ++it)
+    for (fs::path::iterator it(p.begin()), it_end(p.end()); it != it_end; ++it)
         cout << "  " << *it << '\n';
     
     cout  <<  "\nobservers, native format:" << endl;
@@ -71,6 +71,37 @@ void FileHelper::showFileInfo(const string &file)
     cout  <<  "  has_extension()------: " << say_what(p.has_extension()) << '\n';
 }
 
+void FileHelper::testOutFile()
+{
+    fs::path p("projectHall.manifest");
+    
+    fs::ifstream ifile;
+    ifile.open(p);
+    
+    fs::ofstream ofile;
+    ofile.open("projectHall.temp");
+    
+    string s;
+    while (getline(ifile, s))
+    {
+        ofile<<s<<endl;
+    }
+}
+
+string FileHelper::getKeyOrValue(const string &key, const string &value)
+{
+    ostringstream oss;
+    string result;
+    oss<<'"';
+    oss<<key;
+    oss<<'"';
+    oss<<" : ";
+    oss<<'"';
+    oss<<value;
+    oss<<'"';
+    result = oss.str();
+    return result;
+}
 
 
 

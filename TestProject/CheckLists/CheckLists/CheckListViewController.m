@@ -6,14 +6,15 @@
 //  Copyright © 2015年 gongxun. All rights reserved.
 //
 
-#import "CheckListsViewController.h"
+#import "CheckListViewController.h"
 #import "ChecklistItem.h"
+#import "Checklist.h"
 
-@interface CheckListsViewController ()
+@interface CheckListViewController ()
 
 @end
 
-@implementation CheckListsViewController{
+@implementation CheckListViewController{
     NSMutableArray *mItems;
 }
 
@@ -59,19 +60,7 @@
     NSLog(@"文件夹的目录是:%@",[self documentsDirectory]);
     NSLog(@"数据文件的最终路径是:%@",[self dataFilePath]);
     
-//    NSArray *texts = @[@"观看嫦娥 天和 兔升空的视频",
-//                      @"了解Sony a7和MBP的最新价格",
-//                      @"复习苍 师的经典视频教程",
-//                      @"去电影院看地 引 ",
-//                      @"看 甲巴萨新败的 赛回放"];
-//    
-//    for (int i = 0; i < texts.count; ++i)
-//    {
-//        ChecklistItem *item = [[ChecklistItem alloc]init];
-//        item.text = texts[i];
-//        item.checked = arc4random() % 2 == 0;
-//        [mItems addObject:item];
-//    }
+    self.title = self.checklist.name;
 }
 
 - (NSString*)documentsDirectory
@@ -191,6 +180,7 @@
         ItemDetailViewController *controller = (ItemDetailViewController*)navigationController.topViewController;
         
         controller.delegate = self;
+        controller.mEditItem = nil;
     }
     else if ([segue.identifier isEqualToString:@"EditItem"])
     {

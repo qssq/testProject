@@ -11,6 +11,11 @@
 		EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA442F041B6FDF7D0062E30C /* FileHelper.cpp */; };
 		EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F071B6FE5530062E30C /* libboost_system.a */; };
 		EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */; };
+		EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */; };
+		EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABFC62B1C1ABD1B0048E278 /* GameVersionServer.cpp */; };
+		EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABFC62E1C1AC1480048E278 /* ZipDemo.cpp */; };
+		EABFC6361C1AC86B0048E278 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EABFC6351C1AC86B0048E278 /* libz.1.2.5.tbd */; };
+		EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +37,15 @@
 		EA442F051B6FDF7D0062E30C /* FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
 		EA442F071B6FE5530062E30C /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../usr/local/lib/libboost_system.a; sourceTree = "<group>"; };
 		EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../../../usr/local/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GXMD5.cpp; sourceTree = "<group>"; };
+		EAA0CB001C1DBDA600877842 /* GXMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXMD5.h; sourceTree = "<group>"; };
+		EABFC62B1C1ABD1B0048E278 /* GameVersionServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameVersionServer.cpp; sourceTree = "<group>"; };
+		EABFC62C1C1ABD1B0048E278 /* GameVersionServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameVersionServer.h; sourceTree = "<group>"; };
+		EABFC62E1C1AC1480048E278 /* ZipDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipDemo.cpp; sourceTree = "<group>"; };
+		EABFC62F1C1AC1480048E278 /* ZipDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipDemo.h; sourceTree = "<group>"; };
+		EABFC6351C1AC86B0048E278 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamesVersionHelper.cpp; sourceTree = "<group>"; };
+		EAC8E6B91C16A8300047FD62 /* GamesVersionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesVersionHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABFC6361C1AC86B0048E278 /* libz.1.2.5.tbd in Frameworks */,
 				EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */,
 				EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */,
 			);
@@ -50,6 +65,7 @@
 		EA442EF11B6FDF5D0062E30C = {
 			isa = PBXGroup;
 			children = (
+				EABFC6351C1AC86B0048E278 /* libz.1.2.5.tbd */,
 				EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */,
 				EA442F071B6FE5530062E30C /* libboost_system.a */,
 				EA442EFC1B6FDF5D0062E30C /* MacHelper */,
@@ -68,9 +84,17 @@
 		EA442EFC1B6FDF5D0062E30C /* MacHelper */ = {
 			isa = PBXGroup;
 			children = (
+				EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */,
+				EAA0CB001C1DBDA600877842 /* GXMD5.h */,
 				EA442EFD1B6FDF5D0062E30C /* main.cpp */,
 				EA442F041B6FDF7D0062E30C /* FileHelper.cpp */,
 				EA442F051B6FDF7D0062E30C /* FileHelper.h */,
+				EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */,
+				EAC8E6B91C16A8300047FD62 /* GamesVersionHelper.h */,
+				EABFC62B1C1ABD1B0048E278 /* GameVersionServer.cpp */,
+				EABFC62C1C1ABD1B0048E278 /* GameVersionServer.h */,
+				EABFC62E1C1AC1480048E278 /* ZipDemo.cpp */,
+				EABFC62F1C1AC1480048E278 /* ZipDemo.h */,
 			);
 			path = MacHelper;
 			sourceTree = "<group>";
@@ -132,7 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */,
+				EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */,
+				EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */,
+				EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */,
 				EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */,
+				EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +289,7 @@
 				EA442F031B6FDF5D0062E30C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
