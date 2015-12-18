@@ -11,12 +11,18 @@
 #include "GamesVersionHelper.h"
 #include "ZipDemo.h"
 #include "GXMD5.h"
+#include "RandomList.h"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "input 0:createLocal  1:createServer"<<endl;
+    cout << "input 0:createLocal"<<endl;
+    cout << "1:createServer"<<endl;
+    cout << "2:zipdemo compress"<<endl;
+    cout << "3:zipdemo uncompress"<<endl;
+    cout << "4:random list"<<endl;
+
     
     GamesVersionHelper gh;
     string input;
@@ -25,12 +31,41 @@ int main(int argc, const char * argv[]) {
         if (input == "0")
         {
             cout<<"本地文件开始创建"<<endl;
-            gh.createLocal();
+            string hallVersion, lastVersion;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>hallVersion;
+            cout<<"输入的上次的版本:"<<endl;
+            cin>>lastVersion;
+            gh.createLocal(hallVersion, lastVersion);
         }
         else if (input == "1")
         {
             cout<<"远程文件开始创建"<<endl;
-            gh.createServer();
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createServer(version);
+        }
+        else if (input == "2")
+        {
+            string file;
+            cout<<"输入压缩文件名:"<<endl;
+            cin>>file;
+            ZipDemo zd;
+            zd.compressFile("zipdemo/" + file, "zipdemo/temp.gzip");
+        }
+        else if (input == "3")
+        {
+            string file;
+            cout<<"输入解压后文件名:"<<endl;
+            cin>>file;
+            ZipDemo zd;
+            zd.uncpmpressFile("zipdemo/temp.gzip", "zipdemo/" + file);
+        }
+        else if (input == "4")
+        {
+            RandomList rl;
+            rl.start();
         }
     }
     

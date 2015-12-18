@@ -15,16 +15,15 @@
 #include <algorithm>
 
 namespace fs = boost::filesystem;
-
 string GamesVersionHelper::gLocalPath;
 string GamesVersionHelper::gServerPath;
 
 GamesVersionHelper::GamesVersionHelper()
 {
 
-    gLocalPath = "/Users/gongxun/GitHub/GameHall/NewbeeHall/";
+    gLocalPath = "/Users/gongxun/bitbucket/newbeegame/NewbeeHall/";
     gServerPath = "/Users/gongxun/Sites/";
-    mUrl = "http://192.168.2.68:8081";
+    mUrl = "http://192.168.2.68:8081/update";
 //    mUrl = "http://res.16youxi.cc/assets/app_update";
 }
 
@@ -38,24 +37,24 @@ void GamesVersionHelper::setVersion(const string &version)
     
 }
 
-void GamesVersionHelper::createLocal()
+void GamesVersionHelper::createLocal(const string &hallVersion, const string &lastVersion)
 {
     vector<GameVersionLocal> gameLocals;
     {
         GameVersionLocal hall;
-        hall.setInfo("Hall", mUrl, "1.1.1");
+        hall.setInfo("Hall", mUrl, hallVersion, "");
         gameLocals.push_back(hall);
         
         GameVersionLocal zjh;
-        zjh.setInfo("Zjh", mUrl, "1.1.1");
+        zjh.setInfo("Zjh", mUrl, lastVersion, hallVersion);
         gameLocals.push_back(zjh);
         
         GameVersionLocal fknn;
-        fknn.setInfo("Fknn", mUrl, "1.1.1");
+        fknn.setInfo("Fknn", mUrl, lastVersion, hallVersion);
         gameLocals.push_back(fknn);
         
         GameVersionLocal brnn;
-        brnn.setInfo("Brnn", mUrl, "1.1.1");
+        brnn.setInfo("Brnn", mUrl, lastVersion, hallVersion);
         gameLocals.push_back(brnn);
     }
     for (auto it : gameLocals)
@@ -64,24 +63,24 @@ void GamesVersionHelper::createLocal()
     }
 }
 
-void GamesVersionHelper::createServer()
+void GamesVersionHelper::createServer(const string &version)
 {
     vector<GameVersionServer> gameServers;
     {
         GameVersionServer hall;
-        hall.setInfo("Hall", mUrl, "1.1.1");
+        hall.setInfo("Hall", mUrl, version);
         gameServers.push_back(hall);
         
         GameVersionServer zjh;
-        zjh.setInfo("Zjh", mUrl, "1.1.1");
+        zjh.setInfo("Zjh", mUrl, version);
         gameServers.push_back(zjh);
         
         GameVersionServer fknn;
-        fknn.setInfo("Fknn", mUrl, "1.1.1");
+        fknn.setInfo("Fknn", mUrl, version);
         gameServers.push_back(fknn);
         
         GameVersionServer brnn;
-        brnn.setInfo("Brnn", mUrl, "1.1.1");
+        brnn.setInfo("Brnn", mUrl, version);
         gameServers.push_back(brnn);
     }
     for (auto it : gameServers)
@@ -104,7 +103,7 @@ GameVersionLocal::~GameVersionLocal()
     
 }
 
-void GameVersionLocal::setInfo(const string &name, const string &url, const string &version)
+void GameVersionLocal::setInfo(const string &name, const string &url, const string &version, const string &version2)
 {
     mName = name;
     mUrl = url;
@@ -135,6 +134,16 @@ void GameVersionLocal::setInfo(const string &name, const string &url, const stri
         mVersion
     };
     mValues = values;
+    
+    vector<string> values2 =
+    {
+        mPackageUrl,
+        mRemoteManifestUrl,
+        mRemoteVersionUrl,
+        version2,
+        version2
+    };
+    mValues2 = values;
 }
 
 void GameVersionLocal::createFile()
@@ -163,9 +172,16 @@ void GameVersionLocal::createFile()
     string s;
     while (getline(ifile, s))
     {
-        for (auto *it : ofiles)
+        for (int i = 0; i < ofiles.size(); ++i)
         {
-            (*it)<<replaceFile(s)<<endl;
+            if (i == 1)
+            {
+                (*ofiles[i])<<replaceFile(s, mValues2)<<endl;
+            }
+            else
+            {
+                (*ofiles[i])<<replaceFile(s)<<endl;
+            }
         }
     }
     
@@ -187,6 +203,21 @@ string GameVersionLocal::replaceFile(const string &s)
         if (result.find(mKeys[i]) != string::npos)
         {
             result = result.replace(s.find(mKeys[i]), mKeys[i].size(), mValues[i]);
+        }
+    }
+    
+    return result;
+}
+
+string GameVersionLocal::replaceFile(const string &s, const vector<string> values)
+{
+    string result(s);
+    
+    for (int i = 0; i < mKeys.size(); ++i)
+    {
+        if (result.find(mKeys[i]) != string::npos)
+        {
+            result = result.replace(s.find(mKeys[i]), mKeys[i].size(), values[i]);
         }
     }
     

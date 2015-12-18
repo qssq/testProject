@@ -10,6 +10,7 @@
 #define ZipDemo_h
 
 #include <stdio.h>
+#include <string>
 
 class ZipDemo
 {
@@ -17,7 +18,8 @@ public:
     ZipDemo();
     ~ZipDemo();
     
-    void test();
+    void compressFile(const std::string sourceFile, const std::string destFile);
+    void uncpmpressFile(const std::string sourceFile, const std::string destFile);
 };
 
 #endif /* ZipDemo_hpp */

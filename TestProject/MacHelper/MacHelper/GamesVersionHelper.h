@@ -23,8 +23,8 @@ public:
     GamesVersionHelper();
     ~GamesVersionHelper();
     
-    void createLocal();
-    void createServer();
+    void createLocal(const string &hallVersion, const string &lastVersion);
+    void createServer(const string &version);
     
     void setVersion(const string &version);
 private:
@@ -37,7 +37,8 @@ public:
     GameVersionLocal();
     ~GameVersionLocal();
     
-    void setInfo(const string &name, const string &url, const string &version);
+    //version1 hallRes/ version2 name/
+    void setInfo(const string &name, const string &url, const string &version, const string &version2);
     
     void createFile();
 private:
@@ -53,8 +54,10 @@ private:
     
     vector<string> mKeys;
     vector<string> mValues;
+    vector<string> mValues2;
     
     string replaceFile(const string &s);
+    string replaceFile(const string &s, const vector<string> values);
     string getHallPath();
     string getGamePath();
 };

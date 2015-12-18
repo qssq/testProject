@@ -369,7 +369,7 @@ std::string md5file(const std::string file)
     
     ifile.seekg(0, std::ios::end);
     size_t ifileSize = ifile.tellg();
-    char filePtr[ifileSize];
+    char *filePtr = new char[ifileSize];
     
     ifile.seekg(0, std::ios::beg);
     ifile.read(filePtr, ifileSize);
@@ -378,5 +378,8 @@ std::string md5file(const std::string file)
     MD5 md5 = MD5();
     md5.update(filePtr, ifileSize);
     md5.finalize();
-    return md5.hexdigest();
+    std::string md5value = md5.hexdigest();
+    delete [] filePtr;
+    
+    return md5value;
 }
