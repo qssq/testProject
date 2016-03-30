@@ -87,6 +87,7 @@
 		EA442EFC1B6FDF5D0062E30C /* MacHelper */ = {
 			isa = PBXGroup;
 			children = (
+				EA7E8C7C1C247101004853F1 /* Tools */,
 				EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */,
 				EAA0CB001C1DBDA600877842 /* GXMD5.h */,
 				EA442EFD1B6FDF5D0062E30C /* main.cpp */,
@@ -102,6 +103,13 @@
 				EA88753E1C240B0900BFD5B0 /* RandomList.h */,
 			);
 			path = MacHelper;
+			sourceTree = "<group>";
+		};
+		EA7E8C7C1C247101004853F1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,10 +261,12 @@
 		EA442F021B6FDF5D0062E30C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
+					"\"$(SRCROOT)/../../../googletest/googletest/include\"",
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -266,10 +276,12 @@
 		EA442F031B6FDF5D0062E30C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
+					"\"$(SRCROOT)/../../../googletest/googletest/include\"",
 				);
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";

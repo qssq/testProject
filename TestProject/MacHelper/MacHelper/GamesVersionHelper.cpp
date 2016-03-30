@@ -21,10 +21,10 @@ string GamesVersionHelper::gServerPath;
 GamesVersionHelper::GamesVersionHelper()
 {
 
-    gLocalPath = "/Users/gongxun/bitbucket/newbeegame/NewbeeHall/";
+    gLocalPath = "/Users/gongxun/oschina/newbeegame/NewbeeHall/";
     gServerPath = "/Users/gongxun/Sites/";
-    mUrl = "http://192.168.2.68:8081/update";
-//    mUrl = "http://res.16youxi.cc/assets/app_update";
+//    mUrl = "http://192.168.2.68:8081/update";
+    mUrl = "http://res.16youxi.cc/assets/app_update";
 }
 
 GamesVersionHelper::~GamesVersionHelper()
@@ -56,6 +56,14 @@ void GamesVersionHelper::createLocal(const string &hallVersion, const string &la
         GameVersionLocal brnn;
         brnn.setInfo("Brnn", mUrl, lastVersion, hallVersion);
         gameLocals.push_back(brnn);
+        
+        GameVersionLocal ddz;
+        ddz.setInfo("Ddz", mUrl, lastVersion, hallVersion);
+        gameLocals.push_back(ddz);
+        
+        GameVersionLocal wzq;
+        wzq.setInfo("Wzq", mUrl, lastVersion, hallVersion);
+        gameLocals.push_back(wzq);
     }
     for (auto it : gameLocals)
     {
@@ -82,6 +90,14 @@ void GamesVersionHelper::createServer(const string &version)
         GameVersionServer brnn;
         brnn.setInfo("Brnn", mUrl, version);
         gameServers.push_back(brnn);
+        
+        GameVersionServer ddz;
+        ddz.setInfo("Ddz", mUrl, version);
+        gameServers.push_back(ddz);
+        
+        GameVersionServer wzq;
+        wzq.setInfo("Wzq", mUrl, version);
+        gameServers.push_back(wzq);
     }
     for (auto it : gameServers)
     {
@@ -143,7 +159,7 @@ void GameVersionLocal::setInfo(const string &name, const string &url, const stri
         version2,
         version2
     };
-    mValues2 = values;
+    mValues2 = values2;
 }
 
 void GameVersionLocal::createFile()

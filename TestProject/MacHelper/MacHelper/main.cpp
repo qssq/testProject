@@ -12,17 +12,32 @@
 #include "ZipDemo.h"
 #include "GXMD5.h"
 #include "RandomList.h"
+//#include <gtest/gtest.h>
 
 using namespace std;
 
+//int add(int a, int b)
+//{
+//    return a + b;
+//}
+
+//TEST(demoTest, demoTestInput)
+//{
+//    EXPECT_EQ(2, add(1, 2));
+//}
+
 int main(int argc, const char * argv[]) {
+    
+//    testing::InitGoogleTest(&argc, const_cast<char **>(argv));
+//    return RUN_ALL_TESTS();
+    
     // insert code here...
-    cout << "input 0:createLocal"<<endl;
+    cout << "input" <<endl;
+    cout << "0:createLocal"<<endl;
     cout << "1:createServer"<<endl;
     cout << "2:zipdemo compress"<<endl;
     cout << "3:zipdemo uncompress"<<endl;
     cout << "4:random list"<<endl;
-
     
     GamesVersionHelper gh;
     string input;
