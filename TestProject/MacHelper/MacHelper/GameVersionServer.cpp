@@ -75,7 +75,7 @@ void GameVersionServer::createFile()
     //project
     {
         fs::ifstream ifile;
-        ifile.open("project.manifest");
+        ifile.open("/Users/gongxun/Sites/machelper/project.manifest");
         
         fs::ofstream ofile;
         ofile.open(mOutPath);
@@ -95,7 +95,7 @@ void GameVersionServer::createFile()
     //version
     {
         fs::ifstream ifile;
-        ifile.open("version.manifest");
+        ifile.open("/Users/gongxun/Sites/machelper/version.manifest");
         
         fs::ofstream ofile;
         ofile.open(mOutPath2);

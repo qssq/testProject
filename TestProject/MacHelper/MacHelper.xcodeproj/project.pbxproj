@@ -13,9 +13,15 @@
 		EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */; };
 		EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88753D1C240B0900BFD5B0 /* RandomList.cpp */; };
 		EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */; };
+		EAAEC3421CDAF09300C93741 /* libX11.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAEC3411CDAF09300C93741 /* libX11.6.dylib */; };
+		EAAF866A1D0E83F7003F9E4C /* XMLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAF86681D0E83F7003F9E4C /* XMLHelper.cpp */; };
+		EAAF86721D0E8E18003F9E4C /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAF86701D0E8E18003F9E4C /* pugixml.cpp */; };
+		EAAF86761D0E8FBB003F9E4C /* Plist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAF86751D0E8FBB003F9E4C /* Plist.cpp */; };
+		EAAF86781D0E8FD8003F9E4C /* PlistDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAF86771D0E8FD8003F9E4C /* PlistDate.cpp */; };
 		EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABFC62B1C1ABD1B0048E278 /* GameVersionServer.cpp */; };
 		EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EABFC62E1C1AC1480048E278 /* ZipDemo.cpp */; };
 		EABFC6361C1AC86B0048E278 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EABFC6351C1AC86B0048E278 /* libz.1.2.5.tbd */; };
+		EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC3DE801CD9853C00CC72AE /* CImgHelper.cpp */; };
 		EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */; };
 /* End PBXBuildFile section */
 
@@ -42,11 +48,26 @@
 		EA88753E1C240B0900BFD5B0 /* RandomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomList.h; sourceTree = "<group>"; };
 		EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GXMD5.cpp; sourceTree = "<group>"; };
 		EAA0CB001C1DBDA600877842 /* GXMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXMD5.h; sourceTree = "<group>"; };
+		EAAEC3411CDAF09300C93741 /* libX11.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libX11.6.dylib; path = ../../../../../../opt/X11/lib/libX11.6.dylib; sourceTree = "<group>"; };
+		EAAEC3441CDAF19F00C93741 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		EAAEC3451CDB009D00C93741 /* libjpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.dylib; path = ../../../../../../usr/local/lib/libjpeg.dylib; sourceTree = "<group>"; };
+		EAAF86681D0E83F7003F9E4C /* XMLHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XMLHelper.cpp; path = Tools/XMLHelper.cpp; sourceTree = "<group>"; };
+		EAAF86691D0E83F7003F9E4C /* XMLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLHelper.h; path = Tools/XMLHelper.h; sourceTree = "<group>"; };
+		EAAF866C1D0E8E18003F9E4C /* base64.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = base64.hpp; sourceTree = "<group>"; };
+		EAAF866D1D0E8E18003F9E4C /* Plist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plist.hpp; sourceTree = "<group>"; };
+		EAAF866E1D0E8E18003F9E4C /* PlistDate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlistDate.hpp; sourceTree = "<group>"; };
+		EAAF866F1D0E8E18003F9E4C /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
+		EAAF86701D0E8E18003F9E4C /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
+		EAAF86711D0E8E18003F9E4C /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
+		EAAF86751D0E8FBB003F9E4C /* Plist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plist.cpp; sourceTree = "<group>"; };
+		EAAF86771D0E8FD8003F9E4C /* PlistDate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlistDate.cpp; sourceTree = "<group>"; };
 		EABFC62B1C1ABD1B0048E278 /* GameVersionServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameVersionServer.cpp; sourceTree = "<group>"; };
 		EABFC62C1C1ABD1B0048E278 /* GameVersionServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameVersionServer.h; sourceTree = "<group>"; };
 		EABFC62E1C1AC1480048E278 /* ZipDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipDemo.cpp; sourceTree = "<group>"; };
 		EABFC62F1C1AC1480048E278 /* ZipDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipDemo.h; sourceTree = "<group>"; };
 		EABFC6351C1AC86B0048E278 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		EAC3DE801CD9853C00CC72AE /* CImgHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CImgHelper.cpp; sourceTree = "<group>"; };
+		EAC3DE811CD9853C00CC72AE /* CImgHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CImgHelper.h; sourceTree = "<group>"; };
 		EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamesVersionHelper.cpp; sourceTree = "<group>"; };
 		EAC8E6B91C16A8300047FD62 /* GamesVersionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesVersionHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +80,7 @@
 				EABFC6361C1AC86B0048E278 /* libz.1.2.5.tbd in Frameworks */,
 				EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */,
 				EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */,
+				EAAEC3421CDAF09300C93741 /* libX11.6.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +90,12 @@
 		EA442EF11B6FDF5D0062E30C = {
 			isa = PBXGroup;
 			children = (
+				EAAEC3451CDB009D00C93741 /* libjpeg.dylib */,
+				EAAEC3411CDAF09300C93741 /* libX11.6.dylib */,
 				EABFC6351C1AC86B0048E278 /* libz.1.2.5.tbd */,
 				EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */,
 				EA442F071B6FE5530062E30C /* libboost_system.a */,
+				EAAEC3441CDAF19F00C93741 /* resources */,
 				EA442EFC1B6FDF5D0062E30C /* MacHelper */,
 				EA442EFB1B6FDF5D0062E30C /* Products */,
 			);
@@ -87,6 +112,8 @@
 		EA442EFC1B6FDF5D0062E30C /* MacHelper */ = {
 			isa = PBXGroup;
 			children = (
+				EAAF866B1D0E8E18003F9E4C /* src */,
+				EAC3DE7F1CD9853C00CC72AE /* CImg */,
 				EA7E8C7C1C247101004853F1 /* Tools */,
 				EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */,
 				EAA0CB001C1DBDA600877842 /* GXMD5.h */,
@@ -108,8 +135,34 @@
 		EA7E8C7C1C247101004853F1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EAAF86681D0E83F7003F9E4C /* XMLHelper.cpp */,
+				EAAF86691D0E83F7003F9E4C /* XMLHelper.h */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		EAAF866B1D0E8E18003F9E4C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				EAAF86771D0E8FD8003F9E4C /* PlistDate.cpp */,
+				EAAF86751D0E8FBB003F9E4C /* Plist.cpp */,
+				EAAF866C1D0E8E18003F9E4C /* base64.hpp */,
+				EAAF866D1D0E8E18003F9E4C /* Plist.hpp */,
+				EAAF866E1D0E8E18003F9E4C /* PlistDate.hpp */,
+				EAAF866F1D0E8E18003F9E4C /* pugiconfig.hpp */,
+				EAAF86701D0E8E18003F9E4C /* pugixml.cpp */,
+				EAAF86711D0E8E18003F9E4C /* pugixml.hpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		EAC3DE7F1CD9853C00CC72AE /* CImg */ = {
+			isa = PBXGroup;
+			children = (
+				EAC3DE801CD9853C00CC72AE /* CImgHelper.cpp */,
+				EAC3DE811CD9853C00CC72AE /* CImgHelper.h */,
+			);
+			path = CImg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,12 +221,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAAF86781D0E8FD8003F9E4C /* PlistDate.cpp in Sources */,
+				EAAF86721D0E8E18003F9E4C /* pugixml.cpp in Sources */,
 				EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */,
+				EAAF866A1D0E83F7003F9E4C /* XMLHelper.cpp in Sources */,
 				EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */,
+				EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */,
 				EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */,
 				EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */,
 				EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */,
 				EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */,
+				EAAF86761D0E8FBB003F9E4C /* Plist.cpp in Sources */,
 				EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,14 +319,21 @@
 		EA442F021B6FDF5D0062E30C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				FRAMEWORK_SEARCH_PATHS = /usr/local/bin;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
 					"\"$(SRCROOT)/../../../googletest/googletest/include\"",
+					/opt/X11/include,
+					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/opt/X11/lib,
+				);
+				OTHER_LDFLAGS = "-lpng";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,14 +341,21 @@
 		EA442F031B6FDF5D0062E30C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				FRAMEWORK_SEARCH_PATHS = /usr/local/bin;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/include,
 					"\"$(SRCROOT)/../../../googletest/googletest/include\"",
+					/opt/X11/include,
+					/usr/local/include,
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/opt/X11/lib,
+				);
+				OTHER_LDFLAGS = "-lpng";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -20,10 +20,9 @@ string GamesVersionHelper::gServerPath;
 
 GamesVersionHelper::GamesVersionHelper()
 {
-
     gLocalPath = "/Users/gongxun/oschina/newbeegame/NewbeeHall/";
     gServerPath = "/Users/gongxun/Sites/";
-//    mUrl = "http://192.168.2.68:8081/update";
+//    mUrl = "http://192.168.2.24/game";
     mUrl = "http://res.16youxi.cc/assets/app_update";
 }
 
@@ -165,7 +164,7 @@ void GameVersionLocal::setInfo(const string &name, const string &url, const stri
 void GameVersionLocal::createFile()
 {
     fs::ifstream ifile;
-    ifile.open("projectLocal.manifest");
+    ifile.open("/Users/gongxun/Sites/machelper/projectLocal.manifest");
     
     vector<fs::ofstream *> ofiles;
     

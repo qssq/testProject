@@ -12,6 +12,8 @@
 #include "ZipDemo.h"
 #include "GXMD5.h"
 #include "RandomList.h"
+#include "CImgHelper.h"
+#include "XMLHelper.h"
 //#include <gtest/gtest.h>
 
 using namespace std;
@@ -38,6 +40,9 @@ int main(int argc, const char * argv[]) {
     cout << "2:zipdemo compress"<<endl;
     cout << "3:zipdemo uncompress"<<endl;
     cout << "4:random list"<<endl;
+    cout << "5:CImg test"<<endl;
+    cout << "6:xml test"<<endl;
+    cout << "7:test"<<endl;
     
     GamesVersionHelper gh;
     string input;
@@ -81,6 +86,26 @@ int main(int argc, const char * argv[]) {
         {
             RandomList rl;
             rl.start();
+        }
+        else if (input == "5")
+        {
+            CImgHelper cimg;
+            cimg.test01();
+        }
+        else if (input == "6")
+        {
+            XMLHelper::singleton()->test();
+        }
+        else if (input == "7")
+        {
+            ifstream file;
+            file.open("snow.plist");
+        
+            string s;
+            while (getline(file, s))
+            {
+                cout<<s<<endl;
+            }
         }
     }
     
