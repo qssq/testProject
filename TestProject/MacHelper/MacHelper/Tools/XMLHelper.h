@@ -24,6 +24,11 @@ struct TexturePackerInfo
     int y;
     int width;
     int height;
+    int offsetX;
+    int offsetY;
+    int sizeWidth;
+    int sizeHeight;
+    bool isRotated;
 };
 
 class XMLHelper

@@ -95,6 +95,9 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
         const dictionary_type& temp = boost::any_cast<const dictionary_type&>(it->second);
         
         string frame = boost::any_cast<const string&>(temp.find("frame")->second);
+        string sourceColorRect = boost::any_cast<const string&>(temp.find("sourceColorRect")->second);
+        string sourceSize = boost::any_cast<const string&>(temp.find("sourceSize")->second);
+        string offset = boost::any_cast<const string&>(temp.find("offset")->second);
         bool isRotated = boost::any_cast<const bool&>(temp.find("rotated")->second);
         
 //        string frame = boost::any_cast<const string&>(temp.find("textureRect")->second);
@@ -108,11 +111,15 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
         string name = split(it->first, '.').front();
         info.name = name;
         
+        info.isRotated = isRotated;
+        
+        int x, y, width, height, offsetX, offsetY, sizeWidth, sizeHeight;
+        
+        //frame
         frame = getCleanString(frame, '{');
         frame = getCleanString(frame, '}');
         vector<string> texts = split(frame, ',');
         stringstream ss;
-        int x, y, width, height;
         
         ss.str("");
         ss.clear();
@@ -134,14 +141,54 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
         ss<<texts[3];
         ss>>height;
         
+        //sourceColorRect
+        offset = getCleanString(offset, '{');
+        offset = getCleanString(offset, '}');
+        texts = split(offset, ',');
+        
+        ss.str("");
+        ss.clear();
+        ss<<texts[0];
+        ss>>offsetX;
+        
+        ss.str("");
+        ss.clear();
+        ss<<texts[1];
+        ss>>offsetY;
+        
+        //sourceSize
+        sourceSize = getCleanString(sourceSize, '{');
+        sourceSize = getCleanString(sourceSize, '}');
+        texts = split(sourceSize, ',');
+        
+        ss.str("");
+        ss.clear();
+        ss<<texts[0];
+        ss>>sizeWidth;
+        
+        ss.str("");
+        ss.clear();
+        ss<<texts[1];
+        ss>>sizeHeight;
+        
         if (width == 0 || height == 0)
         {
             continue;
         }
         info.x = x;
         info.y = y;
-        info.width = isRotated ? height : width;
-        info.height = isRotated ? width : height;
+//        info.width = isRotated ? height : width;
+//        info.height = isRotated ? width : height;
+//        info.offsetX = isRotated ? offsetY : offsetX;
+//        info.offsetY = isRotated ? offsetX : offsetY;
+//        info.offsetWidth = isRotated ? offsetHeight : offsetWidth;
+//        info.offsetHeight = isRotated ? offsetWidth : offsetHeight;
+        info.width = width;
+        info.height = height;
+        info.offsetX = offsetX;
+        info.offsetY = offsetY;
+        info.sizeWidth = sizeWidth;
+        info.sizeHeight = sizeHeight;
         
         infos.push_back(info);
     }

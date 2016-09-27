@@ -64,7 +64,7 @@ void CImgHelper::test01()
 //    copyTimerFiles();
 //    copyChiFiles();
     
-    texturePacker(gPath + "PlayerInfoLayer.plist", "PlayerInfoLayer.png");
+//    texturePacker(gPath + "fish_net.plist", "fish_net.png");
 //    texturePacker(gPath + "ddz_result11.plist", "ddz_result11.png");
 //    texturePacker(gPath + "tableresult.plist", "tableresult.png");
 //    texturePacker(gPath + "fish_frame_1_1.plist", "fish_frame_1_1.png");
@@ -73,7 +73,9 @@ void CImgHelper::test01()
 //    texturePacker(gPath + "fish_frame_1_4.plist", "fish_frame_1_4.png");
 //    texturePacker(gPath + "fish_frame_1_5.plist", "fish_frame_1_5.png");
 //    texturePacker(gPath + "fish_frame_1_6.plist", "fish_frame_1_6.png");
-//    texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
+    //    texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
+        texturePacker(gPath + "fish_net.plist", "fish_net.png");
+//        texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
     //创建麻将牌纹理
 //    createCards();
     
@@ -134,78 +136,126 @@ void CImgHelper::copyFiles(const vector<ImgRect> &rects, const string &file)
     CImg<unsigned char> imgSource(getFullName(file).c_str());
     for (auto it : rects)
     {
-        CImg<unsigned char> img(it.width, it.height, 1, 4);
-        for (int x = it.x, ox = 0; x < imgSource.width(); ++x, ++ox)
+        if (!it.isRotated)
         {
-            for (int y = it.y, oy = 0; y < imgSource.height(); ++y, ++oy)
+            CImg<unsigned char> img(it.sizeWidth, it.sizeHeight, 1, 4);
+            int startX = (it.sizeWidth - it.width) / 2 + it.offsetX;
+            int startY = (it.sizeHeight - it.height) / 2 - it.offsetY;
+            for (int i = 0; i < it.sizeWidth; ++i)
             {
-                for (int c = 0; c < 4; ++c)
+                for (int j = 0; j < it.sizeHeight; ++j)
                 {
-                    auto temp = imgSource.atXYZC(x, y, 1, c);
-                    img.atXYZC(ox, oy, 1, c) = temp;
+                    int x = i - startX;
+                    int y = j - startY;
+                    if ((x >= 0 && x < it.width) && (y >= 0 && y < it.height))
+                    {
+                        for (int c = 0; c < 4; ++c)
+                        {
+                            auto temp = imgSource.atXYZC(it.x + x, it.y + y, 1, c);
+                            img.atXYZC(i, j, 1, c) = temp;
+                        }
+                    }
+                    else
+                    {
+                        for (int c = 0; c < 4; ++c)
+                        {
+                            img.atXYZC(i, j, 1, c) = 0;
+                        }
+                    }
                 }
             }
+            char name[100];
+            sprintf(name, "%s.png", it.name.c_str());
+            img.save_png(name);
+            cout<<"复制文件:"<<name<<endl;
         }
-        char name[100];
-        sprintf(name, "%s.png", it.name.c_str());
-        img.save_png(name);
-        cout<<"复制文件:"<<name<<endl;
+        else
+        {
+//            CImg<unsigned char> img(it.width, it.height, 1, 4);
+//            for (int i = 0; i < it.width; ++i)
+//            {
+//                for (int j = 0; j < it.height; ++j)
+//                {
+//                    int x = i - it.offsetX;
+//                    int y = (it.height - j) - it.offsetY;
+//                    if ((x >= 0 && x < it.offsetWidth) && (y >= 0 && y < it.offsetHeight))
+//                    {
+//                        for (int c = 0; c < 4; ++c)
+//                        {
+//                            auto temp = imgSource.atXYZC(it.x + y, it.y + x, 1, c);
+//                            img.atXYZC(i, j, 1, c) = temp;
+//                        }
+//                    }
+//                    else
+//                    {
+//                        for (int c = 0; c < 4; ++c)
+//                        {
+//                            img.atXYZC(i, j, 1, c) = 0;
+//                        }
+//                    }
+//                }
+//            }
+//            char name[100];
+//            sprintf(name, "%s.png", it.name.c_str());
+//            img.save_png(name);
+//            cout<<"复制文件:"<<name<<endl;
+        }
     }
     cout<<"结束复制文件"<<endl;
 }
 
 void CImgHelper::copyLodingFiles()
 {
-    ImgRect rect0 = {2, 370, 100, 100, "loading1"};
-    ImgRect rect1 = {2, 268, 100, 100, "loading2"};
-    ImgRect rect2 = {104, 166, 100, 100, "loading3"};
-    ImgRect rect3 = {2, 166, 100, 100, "loading4"};
-    ImgRect rect4 = {344, 104, 100, 100, "loading5"};
-    ImgRect rect5 = {242, 104, 100, 100, "loading6"};
-    ImgRect rect6 = {344, 2, 100, 100, "loading7"};
-    ImgRect rect7 = {242, 2, 100, 100, "loading8"};
-    ImgRect rect8 = {2, 2, 238, 162, "loading_bg"};
-    vector<ImgRect> rects = {rect0, rect1, rect2, rect3, rect4, rect5, rect6, rect7, rect8};
-    copyFiles(rects, "LoadingPin.png");
+//    ImgRect rect0 = {2, 370, 100, 100, "loading1"};
+//    ImgRect rect1 = {2, 268, 100, 100, "loading2"};
+//    ImgRect rect2 = {104, 166, 100, 100, "loading3"};
+//    ImgRect rect3 = {2, 166, 100, 100, "loading4"};
+//    ImgRect rect4 = {344, 104, 100, 100, "loading5"};
+//    ImgRect rect5 = {242, 104, 100, 100, "loading6"};
+//    ImgRect rect6 = {344, 2, 100, 100, "loading7"};
+//    ImgRect rect7 = {242, 2, 100, 100, "loading8"};
+//    ImgRect rect8 = {2, 2, 238, 162, "loading_bg"};
+//    vector<ImgRect> rects = {rect0, rect1, rect2, rect3, rect4, rect5, rect6, rect7, rect8};
+//    copyFiles(rects, "LoadingPin.png");
 }
 
 void CImgHelper::copyTimerFiles()
 {
-    ImgRect rect0 = {158, 0, 114, 114, "TimerProgress"};
-    ImgRect rect1 = {0, 0, 156, 156, "Timer_blackBack"};
-    ImgRect rect2 = {0, 298, 56, 140, "Timer_wind0"};
-    ImgRect rect3 = {140, 274, 140, 56, "Timer_wind1"};
-    ImgRect rect4 = {140, 216, 140, 56, "Timer_wind2"};
-    ImgRect rect5 = {140, 158, 140, 56, "Timer_wind3"};
-    ImgRect rect6 = {0, 158, 138, 138, "Timer_windBack"};
-    ImgRect rect7 = {274, 0, 138, 104, "Timer_windBack_DP"};
-    vector<ImgRect> rects = {rect0, rect1, rect2, rect3, rect4, rect5, rect6, rect7};
-    copyFiles(rects, "TimerImage.png");
+//    ImgRect rect0 = {158, 0, 114, 114, "TimerProgress"};
+//    ImgRect rect1 = {0, 0, 156, 156, "Timer_blackBack"};
+//    ImgRect rect2 = {0, 298, 56, 140, "Timer_wind0"};
+//    ImgRect rect3 = {140, 274, 140, 56, "Timer_wind1"};
+//    ImgRect rect4 = {140, 216, 140, 56, "Timer_wind2"};
+//    ImgRect rect5 = {140, 158, 140, 56, "Timer_wind3"};
+//    ImgRect rect6 = {0, 158, 138, 138, "Timer_windBack"};
+//    ImgRect rect7 = {274, 0, 138, 104, "Timer_windBack_DP"};
+//    vector<ImgRect> rects = {rect0, rect1, rect2, rect3, rect4, rect5, rect6, rect7};
+//    copyFiles(rects, "TimerImage.png");
 }
 
 void CImgHelper::copyChiFiles()
 {
-    vector<ImgRect> rects;
-    auto add = [](int x, int y, int width, int height, string name, vector<ImgRect> &rects)
-    {
-        ImgRect rect = {x, y, width, height, name};
-        rects.push_back(rect);
-    };
-    add(338, 98, 48, 73, "chipenggang", rects);
-    add(0, 276, 126, 92, "tray_cancel", rects);
-    add(398, 179, 81, 152, "tray_focus_cpgh", rects);
-    add(411, 0, 100, 177, "tray_focus_guoting", rects);
-    add(0, 370, 99, 93, "tray_guo", rects);
-    add(308, 375, 150, 132, "tray_hu", rects);
-    add(158, 238, 148, 136, "tray_ting", rects);
-    add(0, 0, 172, 136, "tray_word_chi", rects);
-    add(174, 98, 162, 138, "tray_word_gang", rects);
-    add(0, 138, 156, 136, "tray_word_peng", rects);
-    add(460, 375, 46, 63, "tray_pai_mask", rects);
-    add(338, 173, 46, 70, "tray_pai_back", rects);
-    add(174, 0, 235, 96, "tray_back_cpg", rects);
-
-    copyFiles(rects, "gametrayImage.png");
+//    vector<ImgRect> rects;
+//    auto add = [](int x, int y, int width, int height, string name, vector<ImgRect> &rects)
+//    {
+//        ImgRect rect = {x, y, width, height, name};
+//        rects.push_back(rect);
+//    };
+//    add(338, 98, 48, 73, "chipenggang", rects);
+//    add(0, 276, 126, 92, "tray_cancel", rects);
+//    add(398, 179, 81, 152, "tray_focus_cpgh", rects);
+//    add(411, 0, 100, 177, "tray_focus_guoting", rects);
+//    add(0, 370, 99, 93, "tray_guo", rects);
+//    add(308, 375, 150, 132, "tray_hu", rects);
+//    add(158, 238, 148, 136, "tray_ting", rects);
+//    add(0, 0, 172, 136, "tray_word_chi", rects);
+//    add(174, 98, 162, 138, "tray_word_gang", rects);
+//    add(0, 138, 156, 136, "tray_word_peng", rects);
+//    add(460, 375, 46, 63, "tray_pai_mask", rects);
+//    add(338, 173, 46, 70, "tray_pai_back", rects);
+//    add(174, 0, 235, 96, "tray_back_cpg", rects);
+//
+//    copyFiles(rects, "gametrayImage.png");
 }
 
 void CImgHelper::copyFishFiles()
@@ -230,7 +280,7 @@ void CImgHelper::texturePacker(const string &plist, const string &png)
     vector<ImgRect> rects;
     for (int i = 0; i < infos.size(); ++i)
     {
-        ImgRect rect = {infos[i].x, infos[i].y, infos[i].width, infos[i].height, infos[i].name};
+        ImgRect rect = {infos[i].x, infos[i].y, infos[i].width, infos[i].height, infos[i].offsetX, infos[i].offsetY, infos[i].sizeWidth, infos[i].sizeHeight, infos[i].isRotated, infos[i].name};
         rects.push_back(rect);
     }
     copyFiles(rects, png);
