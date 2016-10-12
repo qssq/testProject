@@ -1,0 +1,350 @@
+{
+  "ID": "b6e23a49-c54d-46a3-80da-bf9723b92bd4",
+  "Version": "2.3.2.3",
+  "Name": "HallMain",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 6,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "hall/chatroom_game_view_bg@2x.jpg",
+              "Plist": ""
+            },
+            "Scale9Width": 640,
+            "Scale9Height": 1010,
+            "StretchWidthEnable": true,
+            "StretchHeightEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 320.0,
+              "Y": 480.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "Tag": 8,
+            "ActionTag": 626269757,
+            "Size": {
+              "X": 640.0,
+              "Y": 960.0
+            },
+            "Name": "Image_bg",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 23,
+              "G": 24,
+              "B": 29
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.1042
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BottomEdge",
+            "TopMargin": 860.0,
+            "Tag": 7,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "hall/tab_discovery@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 60,
+                "Scale9Height": 50,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 64.0,
+                  "Y": 50.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0938,
+                  "Y": 0.5
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 34.0,
+                "RightMargin": 546.0,
+                "TopMargin": 25.0,
+                "BottomMargin": 25.0,
+                "Tag": 9,
+                "ActionTag": 266300491,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 50.0
+                },
+                "Name": "Image_faxian",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "hall/tab_moments@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 60,
+                "Scale9Height": 50,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 176.0,
+                  "Y": 50.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.275,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0938,
+                  "Y": 0.5
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 146.0,
+                "RightMargin": 434.0,
+                "TopMargin": 25.0,
+                "BottomMargin": 25.0,
+                "Tag": 10,
+                "ActionTag": 628966082,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 50.0
+                },
+                "Name": "Image_xiaoxi",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "hall/tab_game@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 124,
+                "Scale9Height": 124,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 320.0,
+                  "Y": 60.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.6
+                },
+                "PreSize": {
+                  "X": 0.1937,
+                  "Y": 1.24
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 258.0,
+                "RightMargin": 258.0,
+                "TopMargin": -22.0,
+                "BottomMargin": -2.0,
+                "Tag": 11,
+                "ActionTag": 1373210889,
+                "Size": {
+                  "X": 124.0,
+                  "Y": 124.0
+                },
+                "Name": "Image_zhong",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "hall/tab_record@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 60,
+                "Scale9Height": 50,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 464.0,
+                  "Y": 50.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.725,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0938,
+                  "Y": 0.5
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 434.0,
+                "RightMargin": 146.0,
+                "TopMargin": 25.0,
+                "BottomMargin": 25.0,
+                "Tag": 12,
+                "ActionTag": -1807787191,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 50.0
+                },
+                "Name": "Image_zhanji",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "hall/tab_me@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 60,
+                "Scale9Height": 50,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 576.0,
+                  "Y": 50.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0938,
+                  "Y": 0.5
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 546.0,
+                "RightMargin": 34.0,
+                "TopMargin": 25.0,
+                "BottomMargin": 25.0,
+                "Tag": 13,
+                "ActionTag": -122279186,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 50.0
+                },
+                "Name": "Image_wo",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": -652754380,
+            "Size": {
+              "X": 640.0,
+              "Y": 100.0
+            },
+            "Name": "Panel_tab",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 960.0
+        },
+        "Name": "Panel",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "hall/chatroom_game_view_bg@2x.jpg",
+        "hall/tab_discovery@2x.png",
+        "hall/tab_game@2x.png",
+        "hall/tab_me@2x.png",
+        "hall/tab_moments@2x.png",
+        "hall/tab_record@2x.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}
