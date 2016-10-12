@@ -51,13 +51,18 @@ var HallChatLayer = GameBaseLayer.extend({
         this.mInputBox.setPlaceholderFontColor(cc.color(255, 255, 255));
         this.mInputBox.setDelegate(this);
         this.Panel_move1.addChild(this.mInputBox);
+
+        this.openWebSocket();
     },
 
     onEidtBoxSend : function(text){
         if (text != "") {
             cc.log("1111111111111111111 send Text:" + text);
-            this.ListView_content.pushBackCustomItem(new HallChatText(Math.random() > 0.5, text));
-            this.ListView_content.jumpToBottom();
+            //this.ListView_content.pushBackCustomItem(new HallChatText(Math.random() > 0.5, text));
+            //this.ListView_content.jumpToBottom();
+
+            this.mWebSocketClient.send(this.getStrForJson({type:"chatmsg", content:text}));
+
 
             this.mInputBox.setString("");
             this.closeFaceLayer(false);
@@ -98,8 +103,65 @@ var HallChatLayer = GameBaseLayer.extend({
         } else {
             this.Panel_move1.runAction(cc.sequence(cc.moveTo(0.2, cc.p(0, 0))));
         }
-    }
+    },
 
+    mWebSocketClient :null,
+
+    onExit : function(){
+        if (this.mWebSocketClient){
+            this.mWebSocketClient.close();
+        }
+        this._super();
+    },
+
+    getJsonForStr:function(str){
+        return JSON.parse(str);
+    },
+
+    getStrForJson:function(json){
+        return JSON.stringify(json);
+    },
+
+    openWebSocket : function(){
+        var userId = 0;
+        var that = this;
+        this.mWebSocketClient = new WebSocket("ws://192.168.0.102:8080/");
+
+        this.mWebSocketClient.onopen = function(evt) {
+            cc.log("Send Text WS was opened.");
+
+            that.mWebSocketClient.send(that.getStrForJson({type:"login"}));
+        };
+
+        this.mWebSocketClient.onmessage = function(evt) {
+            var textStr = "response text msg: " + evt.data;
+            cc.log(textStr);
+
+            var json = that.getJsonForStr(evt.data);
+            if (json.type == "login"){
+                userId = json.content;
+                cc.log("login userid:" + userId);
+            } else if (json.type == "chatmsg"){
+                cc.log("chat msg content:" + json.content + "id" + json.userid);
+
+                that.ListView_content.pushBackCustomItem(new HallChatText(json.userid == userId, json.content));
+                that.ListView_content.jumpToBottom();
+            }
+        };
+
+        this.mWebSocketClient.onerror = function(evt) {
+            cc.log("_wsiSendText Error was fired");
+            if (cc.sys.isObjectValid(that)) {
+                cc.log("an error was fired");
+            } else {
+                cc.log("WebSocket test layer was destroyed!");
+            }
+        };
+
+        this.mWebSocketClient.onclose = function(evt) {
+            cc.log("mWebSocketClient websocket instance closed.");
+        };
+    }
 });
 
 

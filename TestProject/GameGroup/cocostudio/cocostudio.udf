@@ -28,5 +28,17 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="HallMain.csd" />
+          <FilePathData Path="HallFastLayer.csd" />
+          <FilePathData Path="HallMsgLayer.csd" />
+          <FilePathData Path="HallChatLayer.csd" />
+          <FilePathData Path="HallChatFaceLayer.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="HallChatLayer.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>
