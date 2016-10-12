@@ -14,6 +14,8 @@
 #include "RandomList.h"
 #include "CImgHelper.h"
 #include "XMLHelper.h"
+#include "SocketServer.h"
+#include "CoinFrontTest.h"
 //#include <gtest/gtest.h>
 
 using namespace std;
@@ -43,6 +45,9 @@ int main(int argc, const char * argv[]) {
     cout << "5:CImg test"<<endl;
     cout << "6:xml test"<<endl;
     cout << "7:test"<<endl;
+    cout << "8:ipv6 server"<<endl;
+    cout << "9:期望"<<endl;
+
     
     GamesVersionHelper gh;
     string input;
@@ -107,9 +112,24 @@ int main(int argc, const char * argv[]) {
                 cout<<s<<endl;
             }
         }
+        else if (input == "8")
+        {
+            SocketServer ss;
+            ss.start();
+        }
+        else if (input == "9")
+        {
+            CoinFrontTest cft;
+            cft.showResult();
+        }
     }
     
     cout<<"结束"<<endl;
     
     return 0;
 }
+
+
+
+
+

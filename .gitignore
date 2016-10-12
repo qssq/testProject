@@ -214,3 +214,6 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 TestProject/FishPath/cocos2d/
+
+TestProject/GameGroup/frameworks/cocos2d-x/*
+~TestProject/GameGroup/frameworks/cocos2d-x/cocos

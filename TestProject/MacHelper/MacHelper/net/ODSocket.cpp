@@ -1,8 +1,5 @@
 #include "ODSocket.h"
 #include <stdio.h>
-#ifdef WIN32
-	#pragma comment(lib, "wsock32")
-#endif
 
 
 ODSocket::ODSocket(SOCKET sock)
@@ -108,6 +105,51 @@ bool ODSocket::Create()
     }
     return true;
 }
+
+bool ODSocket::CreateServer()
+{
+    int type = SOCK_STREAM;
+    m_sock = socket(AF_INET, type, 0);
+    if ( m_sock == INVALID_SOCKET )
+    {
+        return false;
+    }
+    if(type == SOCK_DGRAM)//udp
+    {
+        int opt = 1;
+        //设置该套接字为广播类型，
+        setsockopt(m_sock,SOL_SOCKET,SO_BROADCAST,(char *)&opt,sizeof(opt));
+        //recv timeout 2 sec
+        struct timeval tv_recv_timeout;
+        tv_recv_timeout.tv_sec = 2;
+        tv_recv_timeout.tv_usec = 0;
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+        int nTvlen = 2000;  //1s
+        setsockopt(m_sock,SOL_SOCKET,SO_RCVTIMEO,(const char *)&nTvlen, sizeof(tv_recv_timeout));
+#else
+        setsockopt(m_sock,SOL_SOCKET,SO_RCVTIMEO,(void *)&tv_recv_timeout, sizeof(tv_recv_timeout));
+#endif
+    }
+    if(type == SOCK_STREAM)//tcp
+    {
+        struct timeval tv_recv_timeout;
+        struct timeval tv_send_timeout;
+        tv_recv_timeout.tv_sec = 0;
+        tv_recv_timeout.tv_usec = 500000;
+        tv_send_timeout.tv_sec = 0;
+        tv_send_timeout.tv_usec = 500000;
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+        int nTvlen = 500;  //0.6s
+        setsockopt(m_sock,SOL_SOCKET,SO_SNDTIMEO,(const char *)&nTvlen, sizeof(tv_send_timeout));
+        setsockopt(m_sock,SOL_SOCKET,SO_RCVTIMEO,(const char *)&nTvlen, sizeof(tv_recv_timeout));
+#else
+        setsockopt(m_sock,SOL_SOCKET,SO_SNDTIMEO,(void *)&tv_send_timeout, sizeof(tv_send_timeout));
+        setsockopt(m_sock,SOL_SOCKET,SO_RCVTIMEO,(void *)&tv_recv_timeout, sizeof(tv_recv_timeout));
+#endif
+    }
+    return true;
+}
+
 bool ODSocket::Connect(const char* ip, unsigned short port)
 {
 	struct sockaddr_in svraddr;

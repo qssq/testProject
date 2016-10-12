@@ -9,6 +9,19 @@
 #ifndef SocketServer_hpp
 #define SocketServer_hpp
 
-#include <stdio.h>
+#include "ODSocket6.h"
+#include "ODSocket.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class SocketServer
+{
+public:
+    SocketServer();
+    ~SocketServer();
+    void start();
+};
 
 #endif /* SocketServer_hpp */

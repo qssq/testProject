@@ -23,8 +23,8 @@ struct ImgRect
     int height;
     int offsetX;
     int offsetY;
-    int sizeWidth;
-    int sizeHeight;
+    int offsetWidth;
+    int offsetHeight;
     bool isRotated;
     string name;
 };

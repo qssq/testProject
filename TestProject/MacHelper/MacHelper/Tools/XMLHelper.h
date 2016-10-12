@@ -26,8 +26,8 @@ struct TexturePackerInfo
     int height;
     int offsetX;
     int offsetY;
-    int sizeWidth;
-    int sizeHeight;
+    int offsetWidth;
+    int offsetHeight;
     bool isRotated;
 };
 

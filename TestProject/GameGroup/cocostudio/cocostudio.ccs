@@ -1,0 +1,60 @@
+<Solution>
+  <PropertyGroup Name="cocostudio" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="HallMain.csd" Type="Layer" />
+        <Folder Name="chat">
+          <Image Name="chatroom_expression_btn@2x.png" />
+          <Image Name="chatroom_expression_btn_pressed@2x.png" />
+          <Image Name="chatroom_friend_item_bg_pressed@2x.png" />
+          <Image Name="chatroom_input_bg@2x.png" />
+          <Image Name="chatroom_member_bottom_line@2x.png" />
+          <Image Name="chatroom_my_msg@2x.png" />
+          <Image Name="chatroom_switch_add_btn@2x.png" />
+          <Image Name="chatroom_switch_add_btn_pressed@2x.png" />
+          <Image Name="chatroom_time_label_bg@2x.png" />
+          <Image Name="club_fund_timeline@2x.png" />
+          <Image Name="common_female_head@2x.png" />
+          <Image Name="common_male_head@2x.png" />
+          <Image Name="chatroom_switch_vioce_btn@2x.png" />
+          <Image Name="chatroom_switch_vioce_btn_pressed@2x.png" />
+          <Image Name="chat_face_0.png" />
+          <Image Name="chat_face_1.png" />
+          <Image Name="chat_face_2.png" />
+          <Image Name="chat_face_3.png" />
+          <Image Name="chat_face_4.png" />
+          <Image Name="chat_face_5.png" />
+          <Image Name="chat_face_6.png" />
+          <Image Name="expression_del@2x.png" />
+          <Image Name="expression_del_pressed@2x.png" />
+        </Folder>
+        <Folder Name="hall">
+          <Image Name="chatroom_single_settings_btn@2x.png" />
+          <Image Name="chatroom_single_settings_btn_pressed@2x.png" />
+          <Image Name="club_location_arrow@2x.png" />
+          <Image Name="club_location_arrow_pressed@2x.png" />
+          <Image Name="tab_discovery@2x.png" />
+          <Image Name="tab_discovery_pressed@2x.png" />
+          <Image Name="tab_game@2x.png" />
+          <Image Name="tab_game_pressed@2x.png" />
+          <Image Name="tab_me@2x.png" />
+          <Image Name="tab_me_pressed@2x.png" />
+          <Image Name="tab_moments@2x.png" />
+          <Image Name="tab_moments_pressed@2x.png" />
+          <Image Name="tab_record@2x.png" />
+          <Image Name="tab_record_pressed@2x.png" />
+          <Image Name="chatroom_game_view_bg@2x.jpg" />
+          <Image Name="system_msg_games@2x.png" />
+          <Image Name="system_msg_notice@2x.png" />
+          <Image Name="system_msg_welfare@2x.png" />
+          <Image Name="common_bottom_shadow@2x.png" />
+        </Folder>
+        <Project Name="HallFastLayer.csd" Type="Layer" />
+        <Project Name="HallMsgLayer.csd" Type="Layer" />
+        <Project Name="HallChatLayer.csd" Type="Layer" />
+        <Project Name="HallChatFaceLayer.csd" Type="Layer" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

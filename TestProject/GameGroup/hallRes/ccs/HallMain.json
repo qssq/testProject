@@ -15,22 +15,26 @@
         "Tag": 6,
         "Children": [
           {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "hall/chatroom_game_view_bg@2x.jpg",
-              "Plist": ""
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 23,
+              "G": 24,
+              "B": 29
             },
-            "Scale9Width": 640,
-            "Scale9Height": 1010,
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
             "StretchWidthEnable": true,
-            "StretchHeightEnable": true,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
+            "AnchorPoint": {},
             "Position": {
-              "X": 320.0,
-              "Y": 480.0
+              "X": 0.0,
+              "Y": 860.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -39,23 +43,70 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.5,
-              "Y": 0.5
+              "X": 0.0,
+              "Y": 0.0
             },
             "PreSize": {
               "X": 1.0,
-              "Y": 1.0
+              "Y": 0.1042
             },
             "HorizontalEdge": "BothEdge",
-            "VerticalEdge": "BothEdge",
-            "Tag": 8,
-            "ActionTag": 626269757,
+            "VerticalEdge": "TopEdge",
+            "BottomMargin": 760.0,
+            "Tag": 13,
+            "ActionTag": -603712871,
             "Size": {
               "X": 640.0,
-              "Y": 960.0
+              "Y": 100.0
             },
-            "Name": "Image_bg",
-            "ctype": "ImageViewObjectData"
+            "Name": "Panel_top",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": 640.0,
+            "TopMargin": 960.0,
+            "Tag": 14,
+            "ActionTag": 1339038839,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "Panel_content",
+            "ctype": "PanelObjectData"
           },
           {
             "ComboBoxIndex": 1,
@@ -150,6 +201,7 @@
                 },
                 "Scale9Width": 60,
                 "Scale9Height": 50,
+                "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -177,7 +229,6 @@
                 "RightMargin": 434.0,
                 "TopMargin": 25.0,
                 "BottomMargin": 25.0,
-                "Tag": 10,
                 "ActionTag": 628966082,
                 "Size": {
                   "X": 60.0,
@@ -194,6 +245,7 @@
                 },
                 "Scale9Width": 124,
                 "Scale9Height": 124,
+                "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -221,7 +273,7 @@
                 "RightMargin": 258.0,
                 "TopMargin": -22.0,
                 "BottomMargin": -2.0,
-                "Tag": 11,
+                "Tag": 1,
                 "ActionTag": 1373210889,
                 "Size": {
                   "X": 124.0,
@@ -336,7 +388,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "hall/chatroom_game_view_bg@2x.jpg",
         "hall/tab_discovery@2x.png",
         "hall/tab_game@2x.png",
         "hall/tab_me@2x.png",

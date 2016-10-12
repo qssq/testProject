@@ -1,9 +1,5 @@
 #include "ODSocket6.h"
 #include <stdio.h>
-#ifdef WIN32
-	#pragma comment(lib, "wsock32")
-#endif
-
 
 ODSocket6::ODSocket6(SOCKET sock)
 {
@@ -111,7 +107,7 @@ bool ODSocket6::Create()
 bool ODSocket6::CreateServer()
 {
     int type = SOCK_STREAM;
-    m_sock = socket(AF_INET6, type, 0);
+    m_sock = socket(PF_INET6, type, 0);
     if ( m_sock == INVALID_SOCKET )
     {
         return false;
@@ -184,7 +180,10 @@ bool ODSocket6::Bind(unsigned short port)
 	svraddr.sin6_family = AF_INET6;
     svraddr.sin6_addr = in6addr_any;
 	svraddr.sin6_port = htons(port);
-
+    
+    char buf[1024 + 1];
+    printf("%s\n", inet_ntop(AF_INET6, &svraddr.sin6_addr, buf, sizeof(buf)));
+    
 	int opt =  1;
 	if ( setsockopt(m_sock, SOL_SOCKET, SO_REUSEADDR, (char*)&opt, sizeof(opt)) < 0 ) 
 		return false;
@@ -207,7 +206,7 @@ bool ODSocket6::Listen(int backlog)
 
 bool ODSocket6::Accept(ODSocket6& s, char* fromip)
 {
-	struct sockaddr_in cliaddr;
+	struct sockaddr_in6 cliaddr;
 	socklen_t addrlen = sizeof(cliaddr);
 	SOCKET sock = accept(m_sock, (struct sockaddr*)&cliaddr, &addrlen);
 	if ( sock == SOCKET_ERROR ) {
@@ -216,7 +215,10 @@ bool ODSocket6::Accept(ODSocket6& s, char* fromip)
 
 	s = sock;
 	if ( fromip != NULL )
-		sprintf(fromip, "%s", inet_ntoa(cliaddr.sin_addr));
+    {
+        char buf[1024 + 1];
+        sprintf(fromip, "%s", inet_ntop(AF_INET6, &cliaddr.sin6_addr, buf, sizeof(buf)));
+    }
 
 	return true;
 }

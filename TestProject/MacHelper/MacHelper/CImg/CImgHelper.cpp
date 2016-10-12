@@ -74,8 +74,14 @@ void CImgHelper::test01()
 //    texturePacker(gPath + "fish_frame_1_5.plist", "fish_frame_1_5.png");
 //    texturePacker(gPath + "fish_frame_1_6.plist", "fish_frame_1_6.png");
     //    texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
-        texturePacker(gPath + "fish_net.plist", "fish_net.png");
 //        texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
+    
+//    texturePacker(gPath + "fish_net.plist", "fish_net.png");
+//    texturePacker(gPath + "fish_net4.plist", "fish_net4.png");
+    //    texturePacker(gPath + "fish_zidan.plist", "fish_zidan.png");
+        texturePacker(gPath + "chatImg.plist", "chatImg.png");
+    
+    
     //创建麻将牌纹理
 //    createCards();
     
@@ -138,16 +144,14 @@ void CImgHelper::copyFiles(const vector<ImgRect> &rects, const string &file)
     {
         if (!it.isRotated)
         {
-            CImg<unsigned char> img(it.sizeWidth, it.sizeHeight, 1, 4);
-            int startX = (it.sizeWidth - it.width) / 2 + it.offsetX;
-            int startY = (it.sizeHeight - it.height) / 2 - it.offsetY;
-            for (int i = 0; i < it.sizeWidth; ++i)
+            CImg<unsigned char> img(it.width, it.height, 1, 4);
+            for (int i = 0; i < it.width; ++i)
             {
-                for (int j = 0; j < it.sizeHeight; ++j)
+                for (int j = 0; j < it.height; ++j)
                 {
-                    int x = i - startX;
-                    int y = j - startY;
-                    if ((x >= 0 && x < it.width) && (y >= 0 && y < it.height))
+                    int x = i - it.offsetX;
+                    int y = j - it.offsetY;
+                    if ((x >= 0 && x < it.offsetWidth) && (y >= 0 && y < it.offsetHeight))
                     {
                         for (int c = 0; c < 4; ++c)
                         {
@@ -171,34 +175,34 @@ void CImgHelper::copyFiles(const vector<ImgRect> &rects, const string &file)
         }
         else
         {
-//            CImg<unsigned char> img(it.width, it.height, 1, 4);
-//            for (int i = 0; i < it.width; ++i)
-//            {
-//                for (int j = 0; j < it.height; ++j)
-//                {
-//                    int x = i - it.offsetX;
-//                    int y = (it.height - j) - it.offsetY;
-//                    if ((x >= 0 && x < it.offsetWidth) && (y >= 0 && y < it.offsetHeight))
-//                    {
-//                        for (int c = 0; c < 4; ++c)
-//                        {
-//                            auto temp = imgSource.atXYZC(it.x + y, it.y + x, 1, c);
-//                            img.atXYZC(i, j, 1, c) = temp;
-//                        }
-//                    }
-//                    else
-//                    {
-//                        for (int c = 0; c < 4; ++c)
-//                        {
-//                            img.atXYZC(i, j, 1, c) = 0;
-//                        }
-//                    }
-//                }
-//            }
-//            char name[100];
-//            sprintf(name, "%s.png", it.name.c_str());
-//            img.save_png(name);
-//            cout<<"复制文件:"<<name<<endl;
+            CImg<unsigned char> img(it.width, it.height, 1, 4);
+            for (int i = 0; i < it.width; ++i)
+            {
+                for (int j = 0; j < it.height; ++j)
+                {
+                    int x = i - it.offsetX;
+                    int y = (it.height - j) - (it.height - it.offsetY - it.offsetHeight) - 1;
+                    if ((x >= 0 && x < it.offsetWidth) && (y >= 0 && y < it.offsetHeight))
+                    {
+                        for (int c = 0; c < 4; ++c)
+                        {
+                            auto temp = imgSource.atXYZC(it.x + y, it.y + x, 1, c);
+                            img.atXYZC(i, j, 1, c) = temp;
+                        }
+                    }
+                    else
+                    {
+                        for (int c = 0; c < 4; ++c)
+                        {
+                            img.atXYZC(i, j, 1, c) = 0;
+                        }
+                    }
+                }
+            }
+            char name[100];
+            sprintf(name, "%s.png", it.name.c_str());
+            img.save_png(name);
+            cout<<"复制文件:"<<name<<endl;
         }
     }
     cout<<"结束复制文件"<<endl;
@@ -280,7 +284,7 @@ void CImgHelper::texturePacker(const string &plist, const string &png)
     vector<ImgRect> rects;
     for (int i = 0; i < infos.size(); ++i)
     {
-        ImgRect rect = {infos[i].x, infos[i].y, infos[i].width, infos[i].height, infos[i].offsetX, infos[i].offsetY, infos[i].sizeWidth, infos[i].sizeHeight, infos[i].isRotated, infos[i].name};
+        ImgRect rect = {infos[i].x, infos[i].y, infos[i].width, infos[i].height, infos[i].offsetX, infos[i].offsetY, infos[i].offsetWidth, infos[i].offsetHeight, infos[i].isRotated, infos[i].name};
         rects.push_back(rect);
     }
     copyFiles(rects, png);

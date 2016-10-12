@@ -113,7 +113,7 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
         
         info.isRotated = isRotated;
         
-        int x, y, width, height, offsetX, offsetY, sizeWidth, sizeHeight;
+        int x, y, width, height, offsetX, offsetY, offsetWidth, offsetHeight;
         
         //frame
         frame = getCleanString(frame, '{');
@@ -134,17 +134,17 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
         ss.str("");
         ss.clear();
         ss<<texts[2];
-        ss>>width;
+        ss>>offsetWidth;
         
         ss.str("");
         ss.clear();
         ss<<texts[3];
-        ss>>height;
+        ss>>offsetHeight;
         
         //sourceColorRect
-        offset = getCleanString(offset, '{');
-        offset = getCleanString(offset, '}');
-        texts = split(offset, ',');
+        sourceColorRect = getCleanString(sourceColorRect, '{');
+        sourceColorRect = getCleanString(sourceColorRect, '}');
+        texts = split(sourceColorRect, ',');
         
         ss.str("");
         ss.clear();
@@ -164,12 +164,12 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
         ss.str("");
         ss.clear();
         ss<<texts[0];
-        ss>>sizeWidth;
+        ss>>width;
         
         ss.str("");
         ss.clear();
         ss<<texts[1];
-        ss>>sizeHeight;
+        ss>>height;
         
         if (width == 0 || height == 0)
         {
@@ -187,8 +187,8 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
         info.height = height;
         info.offsetX = offsetX;
         info.offsetY = offsetY;
-        info.sizeWidth = sizeWidth;
-        info.sizeHeight = sizeHeight;
+        info.offsetWidth = offsetWidth;
+        info.offsetHeight = offsetHeight;
         
         infos.push_back(info);
     }

@@ -1,0 +1,671 @@
+{
+  "ID": "d0d327b7-7c3c-4902-9e38-1fef197ffd6f",
+  "Version": "2.3.2.3",
+  "Name": "HallChatFaceLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 34,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "StretchHeightEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 400.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.2083
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "TopMargin": 100.0,
+            "BottomMargin": 400.0,
+            "Tag": 46,
+            "ActionTag": 482034288,
+            "Size": {
+              "X": 640.0,
+              "Y": 460.0
+            },
+            "Name": "Panel_touch",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ComboBoxIndex": 1,
+            "SingleColor": {},
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.3125
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BottomEdge",
+            "TopMargin": 660.0,
+            "Tag": 47,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chatroom_member_bottom_line@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 640,
+                "Scale9Height": 7,
+                "StretchWidthEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 320.0,
+                  "Y": 296.5
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0233
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "TopEdge",
+                "BottomMargin": -3.5,
+                "Tag": 58,
+                "ActionTag": 1724099893,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 7.0
+                },
+                "Name": "Image_fenge",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chat_face_0.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 32,
+                "Scale9Height": 34,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 64.0,
+                  "Y": 240.0
+                },
+                "Scale": {
+                  "ScaleX": 2.0,
+                  "ScaleY": 2.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.8
+                },
+                "PreSize": {
+                  "X": 0.05,
+                  "Y": 0.1133
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 48.0,
+                "RightMargin": 560.0,
+                "TopMargin": 43.0,
+                "BottomMargin": 223.0,
+                "Tag": 48,
+                "ActionTag": -2005630239,
+                "Size": {
+                  "X": 32.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_face0",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chat_face_1.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 33,
+                "Scale9Height": 34,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 166.4,
+                  "Y": 240.0
+                },
+                "Scale": {
+                  "ScaleX": 2.0,
+                  "ScaleY": 2.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.26,
+                  "Y": 0.8
+                },
+                "PreSize": {
+                  "X": 0.0516,
+                  "Y": 0.1133
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 149.9,
+                "RightMargin": 457.1,
+                "TopMargin": 43.0,
+                "BottomMargin": 223.0,
+                "Tag": 49,
+                "ActionTag": -1616335743,
+                "Size": {
+                  "X": 33.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_face1",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chat_face_2.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 33,
+                "Scale9Height": 34,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 268.8,
+                  "Y": 240.0
+                },
+                "Scale": {
+                  "ScaleX": 2.0,
+                  "ScaleY": 2.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.42,
+                  "Y": 0.8
+                },
+                "PreSize": {
+                  "X": 0.0516,
+                  "Y": 0.1133
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 252.3,
+                "RightMargin": 354.7,
+                "TopMargin": 43.0,
+                "BottomMargin": 223.0,
+                "Tag": 50,
+                "ActionTag": -782812243,
+                "Size": {
+                  "X": 33.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_face2",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chat_face_3.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 32,
+                "Scale9Height": 34,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 371.2,
+                  "Y": 240.0
+                },
+                "Scale": {
+                  "ScaleX": 2.0,
+                  "ScaleY": 2.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.58,
+                  "Y": 0.8
+                },
+                "PreSize": {
+                  "X": 0.05,
+                  "Y": 0.1133
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 355.2,
+                "RightMargin": 252.8,
+                "TopMargin": 43.0,
+                "BottomMargin": 223.0,
+                "Tag": 51,
+                "ActionTag": 1694571060,
+                "Size": {
+                  "X": 32.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_face3",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chat_face_4.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 32,
+                "Scale9Height": 34,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 473.6,
+                  "Y": 240.0
+                },
+                "Scale": {
+                  "ScaleX": 2.0,
+                  "ScaleY": 2.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.74,
+                  "Y": 0.8
+                },
+                "PreSize": {
+                  "X": 0.05,
+                  "Y": 0.1133
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 457.6,
+                "RightMargin": 150.4,
+                "TopMargin": 43.0,
+                "BottomMargin": 223.0,
+                "Tag": 52,
+                "ActionTag": 1947884108,
+                "Size": {
+                  "X": 32.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_face4",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chat_face_5.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 33,
+                "Scale9Height": 34,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 576.0,
+                  "Y": 240.0
+                },
+                "Scale": {
+                  "ScaleX": 2.0,
+                  "ScaleY": 2.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9,
+                  "Y": 0.8
+                },
+                "PreSize": {
+                  "X": 0.0516,
+                  "Y": 0.1133
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 559.5,
+                "RightMargin": 47.5,
+                "TopMargin": 43.0,
+                "BottomMargin": 223.0,
+                "Tag": 53,
+                "ActionTag": -914846159,
+                "Size": {
+                  "X": 33.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_face5",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "chat/chat_face_6.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 33,
+                "Scale9Height": 34,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 64.0,
+                  "Y": 150.0
+                },
+                "Scale": {
+                  "ScaleX": 2.0,
+                  "ScaleY": 2.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0516,
+                  "Y": 0.1133
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 47.5,
+                "RightMargin": 559.5,
+                "TopMargin": 133.0,
+                "BottomMargin": 133.0,
+                "Tag": 54,
+                "ActionTag": 994383144,
+                "Size": {
+                  "X": 33.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_face6",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "chat/expression_del_pressed@2x.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "chat/expression_del@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 26,
+                "Scale9Height": 34,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 576.0,
+                  "Y": 150.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0875,
+                  "Y": 0.1867
+                },
+                "HorizontalEdge": "BothEdge",
+                "LeftMargin": 548.0,
+                "RightMargin": 36.0,
+                "TopMargin": 122.0,
+                "BottomMargin": 122.0,
+                "Tag": 57,
+                "ActionTag": -1075590821,
+                "Size": {
+                  "X": 56.0,
+                  "Y": 56.0
+                },
+                "Name": "Button_del",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 30,
+                  "G": 144
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 510.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7969,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.2031,
+                  "Y": 0.2333
+                },
+                "HorizontalEdge": "RightEdge",
+                "VerticalEdge": "BottomEdge",
+                "LeftMargin": 510.0,
+                "TopMargin": 230.0,
+                "Tag": 55,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "LabelText": "发送",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 65.0,
+                      "Y": 35.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 35.0,
+                    "RightMargin": 35.0,
+                    "TopMargin": 18.0,
+                    "BottomMargin": 18.0,
+                    "Tag": 56,
+                    "ActionTag": 695102148,
+                    "Size": {
+                      "X": 60.0,
+                      "Y": 34.0
+                    },
+                    "Name": "Text_text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 2107134623,
+                "Size": {
+                  "X": 130.0,
+                  "Y": 70.0
+                },
+                "Name": "Panel_send",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": -993128599,
+            "Size": {
+              "X": 640.0,
+              "Y": 300.0
+            },
+            "Name": "Panel_face",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 960.0
+        },
+        "Name": "Panel",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "chat/chat_face_0.png",
+        "chat/chat_face_1.png",
+        "chat/chat_face_2.png",
+        "chat/chat_face_3.png",
+        "chat/chat_face_4.png",
+        "chat/chat_face_5.png",
+        "chat/chat_face_6.png",
+        "chat/chatroom_member_bottom_line@2x.png",
+        "chat/expression_del@2x.png",
+        "chat/expression_del_pressed@2x.png",
+        "Default/Button_Disable.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

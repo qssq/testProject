@@ -11,6 +11,9 @@
 		EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA442F041B6FDF7D0062E30C /* FileHelper.cpp */; };
 		EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F071B6FE5530062E30C /* libboost_system.a */; };
 		EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */; };
+		EA6895241D9C09B900A26DD6 /* ODSocket6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895221D9C09B900A26DD6 /* ODSocket6.cpp */; };
+		EA6895271D9C09DF00A26DD6 /* SocketServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895251D9C09DF00A26DD6 /* SocketServer.cpp */; };
+		EA68952A1D9C175100A26DD6 /* ODSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895281D9C175100A26DD6 /* ODSocket.cpp */; };
 		EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88753D1C240B0900BFD5B0 /* RandomList.cpp */; };
 		EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */; };
 		EAAEC3421CDAF09300C93741 /* libX11.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAEC3411CDAF09300C93741 /* libX11.6.dylib */; };
@@ -23,6 +26,7 @@
 		EABFC6361C1AC86B0048E278 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EABFC6351C1AC86B0048E278 /* libz.1.2.5.tbd */; };
 		EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC3DE801CD9853C00CC72AE /* CImgHelper.cpp */; };
 		EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */; };
+		EAD542291DA8A1BE0021C194 /* CoinFrontTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +48,12 @@
 		EA442F051B6FDF7D0062E30C /* FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
 		EA442F071B6FE5530062E30C /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../usr/local/lib/libboost_system.a; sourceTree = "<group>"; };
 		EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../../../usr/local/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		EA6895221D9C09B900A26DD6 /* ODSocket6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ODSocket6.cpp; sourceTree = "<group>"; };
+		EA6895231D9C09B900A26DD6 /* ODSocket6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSocket6.h; sourceTree = "<group>"; };
+		EA6895251D9C09DF00A26DD6 /* SocketServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketServer.cpp; sourceTree = "<group>"; };
+		EA6895261D9C09DF00A26DD6 /* SocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketServer.h; sourceTree = "<group>"; };
+		EA6895281D9C175100A26DD6 /* ODSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ODSocket.cpp; sourceTree = "<group>"; };
+		EA6895291D9C175100A26DD6 /* ODSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSocket.h; sourceTree = "<group>"; };
 		EA88753D1C240B0900BFD5B0 /* RandomList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomList.cpp; sourceTree = "<group>"; };
 		EA88753E1C240B0900BFD5B0 /* RandomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomList.h; sourceTree = "<group>"; };
 		EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GXMD5.cpp; sourceTree = "<group>"; };
@@ -70,6 +80,8 @@
 		EAC3DE811CD9853C00CC72AE /* CImgHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CImgHelper.h; sourceTree = "<group>"; };
 		EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamesVersionHelper.cpp; sourceTree = "<group>"; };
 		EAC8E6B91C16A8300047FD62 /* GamesVersionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesVersionHelper.h; sourceTree = "<group>"; };
+		EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoinFrontTest.cpp; sourceTree = "<group>"; };
+		EAD542281DA8A1BE0021C194 /* CoinFrontTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinFrontTest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 		EA442EFC1B6FDF5D0062E30C /* MacHelper */ = {
 			isa = PBXGroup;
 			children = (
+				EA6895211D9C09B900A26DD6 /* net */,
 				EAAF866B1D0E8E18003F9E4C /* src */,
 				EAC3DE7F1CD9853C00CC72AE /* CImg */,
 				EA7E8C7C1C247101004853F1 /* Tools */,
@@ -128,8 +141,23 @@
 				EABFC62F1C1AC1480048E278 /* ZipDemo.h */,
 				EA88753D1C240B0900BFD5B0 /* RandomList.cpp */,
 				EA88753E1C240B0900BFD5B0 /* RandomList.h */,
+				EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */,
+				EAD542281DA8A1BE0021C194 /* CoinFrontTest.h */,
 			);
 			path = MacHelper;
+			sourceTree = "<group>";
+		};
+		EA6895211D9C09B900A26DD6 /* net */ = {
+			isa = PBXGroup;
+			children = (
+				EA6895281D9C175100A26DD6 /* ODSocket.cpp */,
+				EA6895291D9C175100A26DD6 /* ODSocket.h */,
+				EA6895221D9C09B900A26DD6 /* ODSocket6.cpp */,
+				EA6895231D9C09B900A26DD6 /* ODSocket6.h */,
+				EA6895251D9C09DF00A26DD6 /* SocketServer.cpp */,
+				EA6895261D9C09DF00A26DD6 /* SocketServer.h */,
+			);
+			path = net;
 			sourceTree = "<group>";
 		};
 		EA7E8C7C1C247101004853F1 /* Tools */ = {
@@ -223,16 +251,20 @@
 			files = (
 				EAAF86781D0E8FD8003F9E4C /* PlistDate.cpp in Sources */,
 				EAAF86721D0E8E18003F9E4C /* pugixml.cpp in Sources */,
+				EA68952A1D9C175100A26DD6 /* ODSocket.cpp in Sources */,
 				EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */,
+				EAD542291DA8A1BE0021C194 /* CoinFrontTest.cpp in Sources */,
 				EAAF866A1D0E83F7003F9E4C /* XMLHelper.cpp in Sources */,
 				EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */,
 				EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */,
+				EA6895241D9C09B900A26DD6 /* ODSocket6.cpp in Sources */,
 				EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */,
 				EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */,
 				EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */,
 				EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */,
 				EAAF86761D0E8FBB003F9E4C /* Plist.cpp in Sources */,
 				EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */,
+				EA6895271D9C09DF00A26DD6 /* SocketServer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
