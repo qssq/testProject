@@ -216,4 +216,4 @@ pip-log.txt
 TestProject/FishPath/cocos2d/
 
 TestProject/GameGroup/frameworks/cocos2d-x/*
-~TestProject/GameGroup/frameworks/cocos2d-x/cocos
+!TestProject/GameGroup/frameworks/cocos2d-x/cocos

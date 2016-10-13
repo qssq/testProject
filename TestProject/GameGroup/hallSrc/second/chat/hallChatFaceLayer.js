@@ -73,16 +73,14 @@ var HallChatFaceLayer = GameBaseLayer.extend({
     delText : function(){
         var text = this.getParent().mInputBox.getString();
 
-        var newText = text;
+        var newText = text.substring(0, text.length - 1);
         if (text.length >= 5){
             //是删除了字符
-            if (text.charAt(length - 1) == "]"){
-                if (text.substring(length - 5, length - 3) == "[e"){
-                    newText = text.substring(0, length - 5);
+            if (text.charAt(text.length - 1) == "]"){
+                if (text.substring(text.length - 5, text.length - 3) == "[e"){
+                    newText = text.substring(0, text.length - 5);
                 }
             }
-        } else{
-            newText = text.substring(0, length - 5);
         }
 
         this.getParent().mInputBox.setString(newText);
