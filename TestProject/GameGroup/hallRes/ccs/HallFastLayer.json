@@ -40,15 +40,19 @@
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
-            "CColor": {},
+            "CColor": {
+              "R": 253,
+              "G": 222,
+              "B": 162
+            },
             "IconVisible": false,
             "PrePosition": {
               "X": 0.5,
               "Y": 0.9479
             },
             "PreSize": {
-              "X": 0.0,
-              "Y": 0.0
+              "X": 0.1875,
+              "Y": 0.0437
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "TopEdge",

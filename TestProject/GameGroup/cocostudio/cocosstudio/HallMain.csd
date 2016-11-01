@@ -35,7 +35,7 @@
           <AbstractNodeData Name="Panel_tab" ActionTag="-652754380" Tag="7" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BottomEdge" TopMargin="860.0000" TouchEnable="True" StretchWidthEnable="True" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
             <Size X="640.0000" Y="100.0000" />
             <Children>
-              <AbstractNodeData Name="Image_faxian" ActionTag="266300491" Tag="9" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="34.0000" RightMargin="546.0000" TopMargin="25.0000" BottomMargin="25.0000" Scale9Width="60" Scale9Height="50" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_faxian" ActionTag="266300491" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="34.0000" RightMargin="546.0000" TopMargin="25.0000" BottomMargin="25.0000" TouchEnable="True" Scale9Width="60" Scale9Height="50" ctype="ImageViewObjectData">
                 <Size X="60.0000" Y="50.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="64.0000" Y="50.0000" />
@@ -45,7 +45,7 @@
                 <PreSize X="0.0938" Y="0.5000" />
                 <FileData Type="Normal" Path="hall/tab_discovery@2x.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Image_xiaoxi" ActionTag="628966082" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="146.0000" RightMargin="434.0000" TopMargin="25.0000" BottomMargin="25.0000" TouchEnable="True" Scale9Width="60" Scale9Height="50" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_xiaoxi" ActionTag="628966082" Tag="1" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="146.0000" RightMargin="434.0000" TopMargin="25.0000" BottomMargin="25.0000" TouchEnable="True" Scale9Width="60" Scale9Height="50" ctype="ImageViewObjectData">
                 <Size X="60.0000" Y="50.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="176.0000" Y="50.0000" />
@@ -55,7 +55,7 @@
                 <PreSize X="0.0938" Y="0.5000" />
                 <FileData Type="Normal" Path="hall/tab_moments@2x.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Image_zhong" ActionTag="1373210889" Tag="1" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="258.0000" RightMargin="258.0000" TopMargin="-22.0000" BottomMargin="-2.0000" TouchEnable="True" Scale9Width="124" Scale9Height="124" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_zhong" ActionTag="1373210889" Tag="2" IconVisible="False" HorizontalEdge="BothEdge" LeftMargin="258.0000" RightMargin="258.0000" TopMargin="-22.0000" BottomMargin="-2.0000" TouchEnable="True" Scale9Width="124" Scale9Height="124" ctype="ImageViewObjectData">
                 <Size X="124.0000" Y="124.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="320.0000" Y="60.0000" />

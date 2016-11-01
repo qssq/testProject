@@ -1,0 +1,438 @@
+{
+  "ID": "7eb7ed3b-1213-412c-8625-ad7c3085f014",
+  "Version": "2.3.2.3",
+  "Name": "HallClubLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 68,
+        "Children": [
+          {
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 23,
+              "G": 24,
+              "B": 29
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 860.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 1.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.1042
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "TopEdge",
+            "BottomMargin": 960.0,
+            "Tag": 69,
+            "ActionTag": 1707941473,
+            "Size": {
+              "X": 640.0,
+              "Y": 100.0
+            },
+            "Name": "Panel_bg_top",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FontSize": 30,
+            "LabelText": "一号群",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 320.0,
+              "Y": 910.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 253,
+              "G": 222,
+              "B": 162
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.9479
+            },
+            "PreSize": {
+              "X": 0.0938,
+              "Y": 0.0437
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 290.0,
+            "RightMargin": 290.0,
+            "TopMargin": 33.0,
+            "BottomMargin": 893.0,
+            "Tag": 70,
+            "ActionTag": 1224176548,
+            "Size": {
+              "X": 90.0,
+              "Y": 34.0
+            },
+            "Name": "Text_title",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "hall/club_location_arrow_pressed@2x.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "hall/club_location_arrow@2x.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 50,
+            "Scale9Height": 58,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 40.0,
+              "Y": 910.0
+            },
+            "Scale": {
+              "ScaleX": -1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.9479
+            },
+            "PreSize": {
+              "X": 0.125,
+              "Y": 0.0833
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "TopEdge",
+            "RightMargin": 600.0,
+            "TopMargin": 10.0,
+            "BottomMargin": 870.0,
+            "Tag": 71,
+            "ActionTag": -1288275225,
+            "Size": {
+              "X": 80.0,
+              "Y": 80.0
+            },
+            "Name": "Button_exit",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "club/chatroom_single_settings_btn_pressed@2x.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "club/chatroom_single_settings_btn@2x.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 14,
+            "Scale9OriginY": 11,
+            "Scale9Width": 16,
+            "Scale9Height": 22,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 598.0,
+              "Y": 910.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0781,
+              "Y": 0.9479
+            },
+            "PreSize": {
+              "X": 0.0688,
+              "Y": 0.0458
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 28.0,
+            "RightMargin": 20.0,
+            "TopMargin": 28.0,
+            "BottomMargin": 888.0,
+            "Tag": 81,
+            "ActionTag": 1211625077,
+            "Size": {
+              "X": 44.0,
+              "Y": 44.0
+            },
+            "Name": "Button_clupInfo",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "hall/chatroom_game_view_bg@2x.jpg",
+              "Plist": ""
+            },
+            "Scale9OriginX": 211,
+            "Scale9Width": 218,
+            "Scale9Height": 1010,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 320.0,
+              "Y": 730.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.7604
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.2708
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "TopEdge",
+            "TopMargin": 100.0,
+            "BottomMargin": 600.0,
+            "Tag": 88,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "club/quick_game_create_btn@2x.png",
+                  "Plist": ""
+                },
+                "Scale9Width": 416,
+                "Scale9Height": 221,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 320.0,
+                  "Y": 130.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.65,
+                  "Y": 0.85
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 112.0,
+                "RightMargin": 112.0,
+                "TopMargin": 19.5,
+                "BottomMargin": 19.5,
+                "Tag": 89,
+                "ActionTag": -1903041079,
+                "Size": {
+                  "X": 416.0,
+                  "Y": 221.0
+                },
+                "Name": "Image_tableBg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 24,
+                "LabelText": "创建牌局",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 320.0,
+                  "Y": 130.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 272.0,
+                "RightMargin": 272.0,
+                "TopMargin": 116.0,
+                "BottomMargin": 116.0,
+                "Tag": 25,
+                "ActionTag": 990230712,
+                "Size": {
+                  "X": 96.0,
+                  "Y": 28.0
+                },
+                "Name": "Text_text",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -1223921781,
+            "Size": {
+              "X": 640.0,
+              "Y": 260.0
+            },
+            "Name": "Image_createBg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 960.0
+        },
+        "Name": "Panel",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "club/chatroom_single_settings_btn@2x.png",
+        "club/chatroom_single_settings_btn_pressed@2x.png",
+        "club/quick_game_create_btn@2x.png",
+        "Default/Button_Disable.png",
+        "hall/chatroom_game_view_bg@2x.jpg",
+        "hall/club_location_arrow@2x.png",
+        "hall/club_location_arrow_pressed@2x.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

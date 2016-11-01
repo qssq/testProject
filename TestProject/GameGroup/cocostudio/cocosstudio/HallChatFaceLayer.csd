@@ -120,14 +120,14 @@
               <AbstractNodeData Name="Panel_send" ActionTag="2107134623" Tag="55" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="BottomEdge" LeftMargin="510.0000" TopMargin="230.0000" TouchEnable="True" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
                 <Size X="130.0000" Y="70.0000" />
                 <Children>
-                  <AbstractNodeData Name="Text_text" ActionTag="695102148" Tag="56" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="35.0000" RightMargin="35.0000" TopMargin="18.0000" BottomMargin="18.0000" FontSize="30" LabelText="发送" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="60.0000" Y="34.0000" />
+                  <AbstractNodeData Name="Text_text" ActionTag="695102148" Tag="56" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="35.0000" RightMargin="35.0000" TopMargin="14.0000" BottomMargin="14.0000" FontSize="30" LabelText="发送" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="60.0000" Y="42.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="65.0000" Y="35.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4615" Y="0.6000" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

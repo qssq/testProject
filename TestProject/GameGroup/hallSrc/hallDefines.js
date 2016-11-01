@@ -5,7 +5,14 @@
 var HallDefines = function(){
     var that = [];
 
-    that.hallMainlLayer = null;
+    that.gettimestamp = function(){
+        var timestamp = Math.round(new Date().getTime()/1000);
+        return timestamp;
+    };
+
+    that.getMillisecond = function(){
+        return new Date().getTime();
+    };
 
     return that;
 };

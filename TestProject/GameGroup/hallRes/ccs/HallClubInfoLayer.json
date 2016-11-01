@@ -1,0 +1,2194 @@
+{
+  "ID": "1b229344-d783-4c55-a84b-dc05a13a5cc4",
+  "Version": "2.3.2.3",
+  "Name": "HallClubInfoLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 82,
+        "Children": [
+          {
+            "DirectionType": "Vertical",
+            "IsBounceEnabled": true,
+            "ScrollDirectionType": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 150
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "StretchHeightEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 100.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.1042
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.7917
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "TopMargin": 100.0,
+            "BottomMargin": 100.0,
+            "Tag": 115,
+            "Children": [
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 760.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.6387
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.3613
+                },
+                "BottomMargin": 760.0,
+                "Tag": 117,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "club/club_photo_temp@2x.jpg",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 640,
+                    "Scale9Height": 640,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 320.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 0.7442
+                    },
+                    "LeftMargin": -297.0,
+                    "RightMargin": 297.0,
+                    "TopMargin": -297.0,
+                    "BottomMargin": 517.0,
+                    "Tag": 116,
+                    "ActionTag": -1707685941,
+                    "ZOrder": 1,
+                    "Size": {
+                      "X": 640.0,
+                      "Y": 640.0
+                    },
+                    "Name": "Image_clupBg",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -2014000262,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 430.0
+                },
+                "Name": "Panel_clupBg",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 720.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0465
+                },
+                "TopMargin": 430.0,
+                "BottomMargin": 390.0,
+                "Tag": 118,
+                "ActionTag": -875714986,
+                "ZOrder": 1,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 40.0
+                },
+                "Name": "Panel_fanye",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 550.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.4622
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.1429
+                },
+                "TopMargin": 470.0,
+                "BottomMargin": 550.0,
+                "Tag": 119,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "club/common_club_head@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 180,
+                    "Scale9Height": 180,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 80.0,
+                      "Y": 85.0
+                    },
+                    "Scale": {
+                      "ScaleX": 0.65,
+                      "ScaleY": 0.65
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.125,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.2812,
+                      "Y": 1.0588
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": -10.0,
+                    "RightMargin": 470.0,
+                    "TopMargin": -5.0,
+                    "BottomMargin": -5.0,
+                    "Tag": 137,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "club/club_ribbon_0@3x.png",
+                          "Plist": ""
+                        },
+                        "Scale9Width": 204,
+                        "Scale9Height": 204,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 90.0,
+                          "Y": 90.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 1.1333,
+                          "Y": 1.1333
+                        },
+                        "HorizontalEdge": "BothEdge",
+                        "VerticalEdge": "BothEdge",
+                        "LeftMargin": -12.0,
+                        "RightMargin": -12.0,
+                        "TopMargin": -12.0,
+                        "BottomMargin": -12.0,
+                        "Tag": 138,
+                        "ActionTag": -441804180,
+                        "Size": {
+                          "X": 204.0,
+                          "Y": 204.0
+                        },
+                        "Name": "Image_clupLv",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 1409656581,
+                    "Size": {
+                      "X": 180.0,
+                      "Y": 180.0
+                    },
+                    "Name": "Image_clupIco",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "hall/chatroom_slider_front_bg@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9Width": 538,
+                    "Scale9Height": 12,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 77,
+                      "G": 77,
+                      "B": 77
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 3.5556,
+                      "Y": 0.0056
+                    },
+                    "TopMargin": 169.5,
+                    "BottomMargin": -0.5,
+                    "Tag": 139,
+                    "ActionTag": -237871311,
+                    "Size": {
+                      "X": 640.0,
+                      "Y": 1.0
+                    },
+                    "Name": "Image_fenge",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 38,
+                    "LabelText": "一号群",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 160.0,
+                      "Y": 110.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.25,
+                      "Y": 0.6471
+                    },
+                    "PreSize": {
+                      "X": 0.1781,
+                      "Y": 0.3533
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 160.0,
+                    "RightMargin": 366.0,
+                    "TopMargin": 38.5,
+                    "BottomMargin": 88.5,
+                    "Tag": 140,
+                    "ActionTag": 926151441,
+                    "Size": {
+                      "X": 114.0,
+                      "Y": 43.0
+                    },
+                    "Name": "Text_clupName",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 20,
+                    "LabelText": "美国圣地亚哥",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 280.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 253,
+                      "G": 252,
+                      "B": 162
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4375,
+                      "Y": 0.3235
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 280.0,
+                    "RightMargin": 240.0,
+                    "TopMargin": 103.5,
+                    "BottomMargin": 43.5,
+                    "Tag": 145,
+                    "ActionTag": 1158165187,
+                    "Size": {
+                      "X": 120.0,
+                      "Y": 23.0
+                    },
+                    "Name": "Text_clupDddress",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "club/club_member_icon@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 30,
+                    "Scale9Height": 20,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 160.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.25,
+                      "Y": 0.3235
+                    },
+                    "PreSize": {
+                      "X": 0.0469,
+                      "Y": 0.1176
+                    },
+                    "LeftMargin": 160.0,
+                    "RightMargin": 450.0,
+                    "TopMargin": 105.0,
+                    "BottomMargin": 45.0,
+                    "Tag": 143,
+                    "Children": [
+                      {
+                        "FontSize": 20,
+                        "LabelText": "1/40",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 30.0,
+                          "Y": 10.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 253,
+                          "G": 252,
+                          "B": 162
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 1.0,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.0,
+                          "Y": 0.0
+                        },
+                        "VerticalEdge": "BothEdge",
+                        "LeftMargin": 30.0,
+                        "RightMargin": -91.0,
+                        "TopMargin": -1.5,
+                        "BottomMargin": -1.5,
+                        "Tag": 144,
+                        "ActionTag": -350320824,
+                        "Size": {
+                          "X": 38.0,
+                          "Y": 23.0
+                        },
+                        "Name": "Text_clupMenberCount",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": 1564485568,
+                    "Size": {
+                      "X": 30.0,
+                      "Y": 20.0
+                    },
+                    "Name": "Image_memberCount_bg",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 2034539429,
+                "ZOrder": 2,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 170.0
+                },
+                "Name": "Panel_name",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 440.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.3697
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0924
+                },
+                "TopMargin": 640.0,
+                "BottomMargin": 440.0,
+                "Tag": 146,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "hall/chatroom_slider_front_bg@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9Width": 538,
+                    "Scale9Height": 12,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 77,
+                      "G": 77,
+                      "B": 77
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 3.5556,
+                      "Y": 0.0056
+                    },
+                    "TopMargin": 169.5,
+                    "BottomMargin": -0.5,
+                    "Tag": 149,
+                    "ActionTag": 269028756,
+                    "Size": {
+                      "X": 640.0,
+                      "Y": 1.0
+                    },
+                    "Name": "Image_fenge",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "创始人",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 25.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 127,
+                      "G": 127,
+                      "B": 127
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0391,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1781,
+                      "Y": 0.3533
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 25.0,
+                    "RightMargin": 525.0,
+                    "TopMargin": 38.0,
+                    "BottomMargin": 38.0,
+                    "Tag": 150,
+                    "ActionTag": -1831484260,
+                    "Size": {
+                      "X": 84.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_clupName",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "chat/common_male_head@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 180,
+                    "Scale9Height": 180,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 180.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 0.4,
+                      "ScaleY": 0.4
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.125,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.2813,
+                      "Y": 1.6364
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 90.0,
+                    "RightMargin": 470.0,
+                    "TopMargin": -35.0,
+                    "BottomMargin": -35.0,
+                    "Tag": 147,
+                    "ActionTag": 200226775,
+                    "Size": {
+                      "X": 180.0,
+                      "Y": 180.0
+                    },
+                    "Name": "Image_founderHead",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "我是群主",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 250.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 253,
+                      "G": 252,
+                      "B": 162
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.375,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 250.0,
+                    "RightMargin": 280.0,
+                    "TopMargin": 43.5,
+                    "BottomMargin": 43.5,
+                    "Tag": 151,
+                    "ActionTag": -2100192130,
+                    "Size": {
+                      "X": 112.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_founderName",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1700627082,
+                "ZOrder": 3,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 110.0
+                },
+                "Name": "Panel_founder",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 330.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.2773
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0924
+                },
+                "TopMargin": 750.0,
+                "BottomMargin": 330.0,
+                "Tag": 154,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "hall/chatroom_slider_front_bg@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9Width": 538,
+                    "Scale9Height": 12,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 77,
+                      "G": 77,
+                      "B": 77
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 3.5556,
+                      "Y": 0.0056
+                    },
+                    "TopMargin": 169.5,
+                    "BottomMargin": -0.5,
+                    "Tag": 155,
+                    "ActionTag": 1469239685,
+                    "Size": {
+                      "X": 640.0,
+                      "Y": 1.0
+                    },
+                    "Name": "Image_fenge",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "会员",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 25.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 127,
+                      "G": 127,
+                      "B": 127
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0391,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1781,
+                      "Y": 0.3533
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 25.0,
+                    "RightMargin": 525.0,
+                    "TopMargin": 38.0,
+                    "BottomMargin": 38.0,
+                    "Tag": 156,
+                    "ActionTag": -1796234987,
+                    "Size": {
+                      "X": 56.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_clupName",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "chat/common_male_head@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 180,
+                    "Scale9Height": 180,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 180.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 0.4,
+                      "ScaleY": 0.4
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.125,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.2813,
+                      "Y": 1.6364
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 90.0,
+                    "RightMargin": 470.0,
+                    "TopMargin": -35.0,
+                    "BottomMargin": -35.0,
+                    "Tag": 157,
+                    "ActionTag": 409463084,
+                    "Size": {
+                      "X": 180.0,
+                      "Y": 180.0
+                    },
+                    "Name": "Image_memberItem0",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "chat/common_male_head@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 180,
+                    "Scale9Height": 180,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 270.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 0.4,
+                      "ScaleY": 0.4
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.2969,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.2813,
+                      "Y": 1.6364
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 180.0,
+                    "RightMargin": 360.0,
+                    "TopMargin": -35.0,
+                    "BottomMargin": -35.0,
+                    "Tag": 55,
+                    "ActionTag": 305660703,
+                    "Size": {
+                      "X": 180.0,
+                      "Y": 180.0
+                    },
+                    "Name": "Image_memberItem1",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "hall/club_location_arrow@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Width": 80,
+                    "Scale9Height": 80,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 600.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.125,
+                      "Y": 0.7273
+                    },
+                    "HorizontalEdge": "RightEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": -40.0,
+                    "TopMargin": 15.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 56,
+                    "ActionTag": 1297020245,
+                    "Size": {
+                      "X": 80.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Image_text",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -178144502,
+                "ZOrder": 4,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 110.0
+                },
+                "Name": "Panel_member",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 220.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.1849
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0924
+                },
+                "TopMargin": 860.0,
+                "BottomMargin": 220.0,
+                "Tag": 159,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "hall/chatroom_slider_front_bg@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9Width": 538,
+                    "Scale9Height": 12,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 77,
+                      "G": 77,
+                      "B": 77
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 3.5556,
+                      "Y": 0.0056
+                    },
+                    "TopMargin": 169.5,
+                    "BottomMargin": -0.5,
+                    "Tag": 160,
+                    "ActionTag": 633978412,
+                    "Size": {
+                      "X": 640.0,
+                      "Y": 1.0
+                    },
+                    "Name": "Image_fenge",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "介绍",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 25.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 127,
+                      "G": 127,
+                      "B": 127
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0391,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1781,
+                      "Y": 0.3533
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 25.0,
+                    "RightMargin": 525.0,
+                    "TopMargin": 38.0,
+                    "BottomMargin": 38.0,
+                    "Tag": 161,
+                    "ActionTag": -1940179913,
+                    "Size": {
+                      "X": 56.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_introduction",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -587226480,
+                "ZOrder": 5,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 110.0
+                },
+                "Name": "Panel_introduction",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 110.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0924
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0924
+                },
+                "TopMargin": 970.0,
+                "BottomMargin": 110.0,
+                "Tag": 164,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "hall/chatroom_slider_front_bg@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9Width": 538,
+                    "Scale9Height": 12,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 77,
+                      "G": 77,
+                      "B": 77
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 3.5556,
+                      "Y": 0.0056
+                    },
+                    "TopMargin": 169.5,
+                    "BottomMargin": -0.5,
+                    "Tag": 165,
+                    "ActionTag": -445587493,
+                    "Size": {
+                      "X": 640.0,
+                      "Y": 1.0
+                    },
+                    "Name": "Image_fenge",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "名片",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 25.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 127,
+                      "G": 127,
+                      "B": 127
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0391,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1781,
+                      "Y": 0.3533
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 25.0,
+                    "RightMargin": 525.0,
+                    "TopMargin": 38.0,
+                    "BottomMargin": 38.0,
+                    "Tag": 166,
+                    "ActionTag": -858318545,
+                    "Size": {
+                      "X": 56.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_card",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "100001",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 150.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 253,
+                      "G": 252,
+                      "B": 162
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.375,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 150.0,
+                    "RightMargin": 280.0,
+                    "TopMargin": 43.5,
+                    "BottomMargin": 43.5,
+                    "Tag": 168,
+                    "ActionTag": 151419826,
+                    "Size": {
+                      "X": 93.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_card",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Normal",
+                      "Path": "club/club_share_btn_pressed@2x.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "club/club_share_btn@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 94,
+                    "Scale9Height": 64,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 568.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1937,
+                      "Y": 0.7818
+                    },
+                    "HorizontalEdge": "RightEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": -62.0,
+                    "RightMargin": 10.0,
+                    "TopMargin": 12.0,
+                    "BottomMargin": 12.0,
+                    "Tag": 57,
+                    "ActionTag": -1189383851,
+                    "Size": {
+                      "X": 124.0,
+                      "Y": 86.0
+                    },
+                    "Name": "Button_share",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": 1055229651,
+                "ZOrder": 6,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 110.0
+                },
+                "Name": "Panel_card",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0924
+                },
+                "TopMargin": 1080.0,
+                "Tag": 174,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "hall/chatroom_slider_front_bg@2x.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9Width": 538,
+                    "Scale9Height": 12,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 77,
+                      "G": 77,
+                      "B": 77
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 3.5556,
+                      "Y": 0.0056
+                    },
+                    "TopMargin": 169.5,
+                    "BottomMargin": -0.5,
+                    "Tag": 175,
+                    "ActionTag": 863574411,
+                    "Size": {
+                      "X": 640.0,
+                      "Y": 1.0
+                    },
+                    "Name": "Image_fenge",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "清空聊天纪录",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 25.0,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 127,
+                      "G": 127,
+                      "B": 127
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0391,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1781,
+                      "Y": 0.3533
+                    },
+                    "HorizontalEdge": "LeftEdge",
+                    "LeftMargin": 25.0,
+                    "RightMargin": 525.0,
+                    "TopMargin": 38.0,
+                    "BottomMargin": 38.0,
+                    "Tag": 176,
+                    "ActionTag": 826285584,
+                    "Size": {
+                      "X": 168.0,
+                      "Y": 32.0
+                    },
+                    "Name": "Text_del",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1017310769,
+                "ZOrder": 7,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 110.0
+                },
+                "Name": "Panel_delMsgHistory",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": -32192593,
+            "Size": {
+              "X": 640.0,
+              "Y": 760.0
+            },
+            "Name": "ListView_content",
+            "ctype": "ListViewObjectData"
+          },
+          {
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 23,
+              "G": 24,
+              "B": 29
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 860.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 1.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.1042
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "TopEdge",
+            "BottomMargin": 960.0,
+            "Tag": 103,
+            "ActionTag": 1218119646,
+            "Size": {
+              "X": 640.0,
+              "Y": 100.0
+            },
+            "Name": "Panel_bg_top",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FontSize": 30,
+            "LabelText": "一号群",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 320.0,
+              "Y": 910.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 253,
+              "G": 222,
+              "B": 162
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.9479
+            },
+            "PreSize": {
+              "X": 0.0938,
+              "Y": 0.0437
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 290.0,
+            "RightMargin": 290.0,
+            "TopMargin": 33.0,
+            "BottomMargin": 893.0,
+            "Tag": 104,
+            "ActionTag": 1169180970,
+            "Size": {
+              "X": 90.0,
+              "Y": 34.0
+            },
+            "Name": "Text_title",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "hall/club_location_arrow_pressed@2x.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "hall/club_location_arrow@2x.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 50,
+            "Scale9Height": 58,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 40.0,
+              "Y": 910.0
+            },
+            "Scale": {
+              "ScaleX": -1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0625,
+              "Y": 0.9479
+            },
+            "PreSize": {
+              "X": 0.125,
+              "Y": 0.0833
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "TopEdge",
+            "RightMargin": 560.0,
+            "TopMargin": 10.0,
+            "BottomMargin": 870.0,
+            "Tag": 105,
+            "ActionTag": -537152061,
+            "Size": {
+              "X": 80.0,
+              "Y": 80.0
+            },
+            "Name": "Button_exit",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BottomEdge",
+            "TopMargin": 960.0,
+            "Tag": 391,
+            "Children": [
+              {
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 0,
+                  "G": 128,
+                  "B": 0
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "StretchWidthEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BottomEdge",
+                "TopMargin": -100.0,
+                "Tag": 392,
+                "Children": [
+                  {
+                    "FontSize": 38,
+                    "LabelText": "加入圈子",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 50.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 274.55,
+                    "RightMargin": 274.55,
+                    "TopMargin": 38.5,
+                    "BottomMargin": 38.5,
+                    "Tag": 393,
+                    "ActionTag": -528579737,
+                    "Size": {
+                      "X": 152.0,
+                      "Y": 43.0
+                    },
+                    "Name": "Text_JoinClub",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -2139753021,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 100.0
+                },
+                "Name": "Panel_joinClub",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": -1841281806,
+            "Size": {
+              "X": 640.0,
+              "Y": 0.0
+            },
+            "VisibleForFrame": false,
+            "Name": "Panel_join",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "StretchWidthEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BottomEdge",
+            "TopMargin": 960.0,
+            "Tag": 394,
+            "Children": [
+              {
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "StretchWidthEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BottomEdge",
+                "TopMargin": -100.0,
+                "Tag": 395,
+                "Children": [
+                  {
+                    "FontSize": 38,
+                    "LabelText": "退出圈子",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 320.0,
+                      "Y": 50.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 274.55,
+                    "RightMargin": 274.55,
+                    "TopMargin": 38.5,
+                    "BottomMargin": 38.5,
+                    "Tag": 396,
+                    "ActionTag": 2005402963,
+                    "Size": {
+                      "X": 152.0,
+                      "Y": 43.0
+                    },
+                    "Name": "Text_exitClub",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1995456905,
+                "Size": {
+                  "X": 640.0,
+                  "Y": 100.0
+                },
+                "Name": "Panel_exitClub",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": -1101302251,
+            "Size": {
+              "X": 640.0,
+              "Y": 0.0
+            },
+            "VisibleForFrame": false,
+            "Name": "Panel_exit",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 960.0
+        },
+        "Name": "Panel",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "chat/common_male_head@2x.png",
+        "club/club_member_icon@2x.png",
+        "club/club_photo_temp@2x.jpg",
+        "club/club_ribbon_0@3x.png",
+        "club/club_share_btn@2x.png",
+        "club/club_share_btn_pressed@2x.png",
+        "club/common_club_head@2x.png",
+        "Default/Button_Disable.png",
+        "hall/chatroom_slider_front_bg@2x.png",
+        "hall/club_location_arrow@2x.png",
+        "hall/club_location_arrow_pressed@2x.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

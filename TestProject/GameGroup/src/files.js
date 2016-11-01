@@ -5,5 +5,7 @@
 var Files = [
     "src/resource.js",
     "src/gameBaseLayer.js",
+    "src/gameBaseItem.js",
+    "src/gameHelper.js",
     "src/gameScene.js"
 ];

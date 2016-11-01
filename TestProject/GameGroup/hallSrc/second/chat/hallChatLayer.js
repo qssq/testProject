@@ -22,13 +22,6 @@ var HallChatLayer = GameBaseLayer.extend({
         this.ListView_content = ccui.helper.seekWidgetByName(this.ccsNode, "ListView_content");
         this.ListView_content.setScrollBarEnabled(false);
 
-        //关闭
-        ccui.helper.seekWidgetByName(this.ccsNode, "Button_exit").addTouchEventListener(function(sender, type){
-            if (type == ccui.Widget.TOUCH_ENDED) {
-                this.removeFromParent();
-            }
-        }, this);
-
         //打开表情选择
         ccui.helper.seekWidgetByName(this.ccsNode, "Button_emoticons").addTouchEventListener(function(sender, type){
             if (type == ccui.Widget.TOUCH_ENDED) {
@@ -52,6 +45,10 @@ var HallChatLayer = GameBaseLayer.extend({
         this.mInputBox.setDelegate(this);
         this.Panel_move1.addChild(this.mInputBox);
 
+    },
+
+    onEnter : function(){
+        this._super();
         this.openWebSocket();
     },
 
@@ -67,6 +64,11 @@ var HallChatLayer = GameBaseLayer.extend({
             this.mInputBox.setString("");
             this.closeFaceLayer(false);
         }
+    },
+
+    onRecvText : function(text, isMy){
+        this.ListView_content.pushBackCustomItem(new HallChatText(isMy, text));
+        this.ListView_content.jumpToBottom();
     },
 
     editBoxEditingDidBegin: function (editBox) {
@@ -114,6 +116,17 @@ var HallChatLayer = GameBaseLayer.extend({
         this._super();
     },
 
+    setTopWidgetHeight : function(topWidgetHetght){
+        if (topWidgetHetght) {
+            var Panel_bg2 = ccui.helper.seekWidgetByName(this.ccsNode, "Panel_bg2");
+            var ListView_content = ccui.helper.seekWidgetByName(this.ccsNode, "ListView_content");
+
+            var size = cc.size(mo.curSize.x, mo.curSize.y - 100 - topWidgetHetght);
+            Panel_bg2.setContentSize(size);
+            ListView_content.setContentSize(size);
+        }
+    },
+
     getJsonForStr:function(str){
         return JSON.parse(str);
     },
@@ -144,8 +157,7 @@ var HallChatLayer = GameBaseLayer.extend({
             } else if (json.type == "chatmsg"){
                 cc.log("chat msg content:" + json.content + "id" + json.userid);
 
-                that.ListView_content.pushBackCustomItem(new HallChatText(json.userid == userId, json.content));
-                that.ListView_content.jumpToBottom();
+                that.onRecvText(json.content, json.userid == userId);
             }
         };
 

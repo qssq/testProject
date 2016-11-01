@@ -31,11 +31,12 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="HallMain.csd" />
-          <FilePathData Path="HallFastLayer.csd" />
-          <FilePathData Path="HallMsgLayer.csd" />
+          <FilePathData Path="HallJoinClubLayer.csd" />
+          <FilePathData Path="HallClubInfoLayer.csd" />
+          <FilePathData Path="HallClubMemberLayer.csd" />
+          <FilePathData Path="HallClubMemberItem.csd" />
+          <FilePathData Path="HallClubListLayer.csd" />
           <FilePathData Path="HallChatLayer.csd" />
-          <FilePathData Path="HallChatFaceLayer.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="HallChatLayer.csd" />
       </Value>

@@ -16,6 +16,7 @@
 #include "XMLHelper.h"
 #include "SocketServer.h"
 #include "CoinFrontTest.h"
+#include "GameGroupHelper.h"
 //#include <gtest/gtest.h>
 
 using namespace std;
@@ -34,6 +35,8 @@ int main(int argc, const char * argv[]) {
     
 //    testing::InitGoogleTest(&argc, const_cast<char **>(argv));
 //    return RUN_ALL_TESTS();
+    string startPath = argv[0];
+    cout<<"程序启动位置:"<<startPath<<endl;
     
     // insert code here...
     cout << "input" <<endl;
@@ -47,6 +50,8 @@ int main(int argc, const char * argv[]) {
     cout << "7:test"<<endl;
     cout << "8:ipv6 server"<<endl;
     cout << "9:期望"<<endl;
+    cout << "10:GameGroup Config"<<endl;
+    cout << "11:GameGroup html test"<<endl;
 
     
     GamesVersionHelper gh;
@@ -121,6 +126,14 @@ int main(int argc, const char * argv[]) {
         {
             CoinFrontTest cft;
             cft.showResult();
+        }
+        else if (input == "10")
+        {
+            GameGroupHelper::singleton()->buildConfigFile();
+        }
+        else if (input == "11")
+        {
+            GameGroupHelper::singleton()->buildHtmlTest();
         }
     }
     

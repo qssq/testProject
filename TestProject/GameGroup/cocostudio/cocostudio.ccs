@@ -49,11 +49,41 @@
           <Image Name="system_msg_notice@2x.png" />
           <Image Name="system_msg_welfare@2x.png" />
           <Image Name="common_bottom_shadow@2x.png" />
+          <Image Name="Transparent.png" />
+          <Image Name="chatroom_slider_front_bg@2x.png" />
+          <Image Name="contact_search_icon@2x.png" />
+          <Image Name="contact_search_input_bg@2x.png" />
         </Folder>
         <Project Name="HallFastLayer.csd" Type="Layer" />
         <Project Name="HallMsgLayer.csd" Type="Layer" />
         <Project Name="HallChatLayer.csd" Type="Layer" />
         <Project Name="HallChatFaceLayer.csd" Type="Layer" />
+        <Folder Name="club">
+          <Image Name="club_ribbon_0@3x.png" />
+          <Image Name="common_club_head@2x.png" />
+          <Image Name="quick_game_create_btn@2x.png" />
+          <Image Name="chatroom_single_settings_btn@2x.png" />
+          <Image Name="chatroom_single_settings_btn_pressed@2x.png" />
+          <Image Name="club_photo_temp@2x.jpg" />
+          <Image Name="club_member_icon@2x.png" />
+          <Image Name="club_share_btn@2x.png" />
+          <Image Name="club_share_btn_pressed@2x.png" />
+          <Image Name="common_add_btn@2x.png" />
+          <Image Name="club_menu_bg@2x.png" />
+          <Image Name="common_close_btn@2x.png" />
+          <Image Name="club_big_logo@2x.png" />
+          <Image Name="common_input_bg@2x.png" />
+          <Image Name="record_green_bg@2x.png" />
+        </Folder>
+        <Project Name="HallPrivateChatLayer.csd" Type="Layer" />
+        <Project Name="HallClubLayer.csd" Type="Layer" />
+        <Folder Name="fonts" />
+        <Project Name="HallClubInfoLayer.csd" Type="Layer" />
+        <Project Name="HallClubMemberLayer.csd" Type="Layer" />
+        <Project Name="HallClubListLayer.csd" Type="Layer" />
+        <Project Name="HallCreateClubLayer.csd" Type="Layer" />
+        <Project Name="HallJoinClubLayer.csd" Type="Layer" />
+        <Project Name="HallClubMemberItem.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

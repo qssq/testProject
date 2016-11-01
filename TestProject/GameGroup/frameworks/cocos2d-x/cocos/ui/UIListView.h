@@ -186,7 +186,7 @@ public:
      * @param index A given index in ssize_t.
      * @return A widget instance.
      */
-    Widget* getItem(ssize_t index)const;
+    Widget* getItem(ssize_t  index)const;
     
     /**
      * Return all items in a ListView.

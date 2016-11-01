@@ -14,6 +14,7 @@
 		EA6895241D9C09B900A26DD6 /* ODSocket6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895221D9C09B900A26DD6 /* ODSocket6.cpp */; };
 		EA6895271D9C09DF00A26DD6 /* SocketServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895251D9C09DF00A26DD6 /* SocketServer.cpp */; };
 		EA68952A1D9C175100A26DD6 /* ODSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895281D9C175100A26DD6 /* ODSocket.cpp */; };
+		EA74D7E61DC84834005B2B66 /* GameGroupHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA74D7E41DC84834005B2B66 /* GameGroupHelper.cpp */; };
 		EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88753D1C240B0900BFD5B0 /* RandomList.cpp */; };
 		EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */; };
 		EAAEC3421CDAF09300C93741 /* libX11.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAEC3411CDAF09300C93741 /* libX11.6.dylib */; };
@@ -54,6 +55,8 @@
 		EA6895261D9C09DF00A26DD6 /* SocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketServer.h; sourceTree = "<group>"; };
 		EA6895281D9C175100A26DD6 /* ODSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ODSocket.cpp; sourceTree = "<group>"; };
 		EA6895291D9C175100A26DD6 /* ODSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSocket.h; sourceTree = "<group>"; };
+		EA74D7E41DC84834005B2B66 /* GameGroupHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameGroupHelper.cpp; sourceTree = "<group>"; };
+		EA74D7E51DC84834005B2B66 /* GameGroupHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameGroupHelper.h; sourceTree = "<group>"; };
 		EA88753D1C240B0900BFD5B0 /* RandomList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomList.cpp; sourceTree = "<group>"; };
 		EA88753E1C240B0900BFD5B0 /* RandomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomList.h; sourceTree = "<group>"; };
 		EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GXMD5.cpp; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		EA442EFC1B6FDF5D0062E30C /* MacHelper */ = {
 			isa = PBXGroup;
 			children = (
+				EA74D7E01DC846E3005B2B66 /* file */,
 				EA6895211D9C09B900A26DD6 /* net */,
 				EAAF866B1D0E8E18003F9E4C /* src */,
 				EAC3DE7F1CD9853C00CC72AE /* CImg */,
@@ -158,6 +162,15 @@
 				EA6895261D9C09DF00A26DD6 /* SocketServer.h */,
 			);
 			path = net;
+			sourceTree = "<group>";
+		};
+		EA74D7E01DC846E3005B2B66 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				EA74D7E41DC84834005B2B66 /* GameGroupHelper.cpp */,
+				EA74D7E51DC84834005B2B66 /* GameGroupHelper.h */,
+			);
+			path = file;
 			sourceTree = "<group>";
 		};
 		EA7E8C7C1C247101004853F1 /* Tools */ = {
@@ -258,6 +271,7 @@
 				EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */,
 				EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */,
 				EA6895241D9C09B900A26DD6 /* ODSocket6.cpp in Sources */,
+				EA74D7E61DC84834005B2B66 /* GameGroupHelper.cpp in Sources */,
 				EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */,
 				EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */,
 				EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */,

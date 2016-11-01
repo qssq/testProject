@@ -103,10 +103,59 @@ string FileHelper::getKeyOrValue(const string &key, const string &value)
     return result;
 }
 
+vector<string> FileHelper::getDirectoryFile(const string &path)
+{
+    vector<string> files;
+    getFileForDirectory(path, files);
+    for (auto &it : files)
+    {
+        fs::path p(it);
+        cout<<"fileName:"<<p.filename()<<" fileExtension:"<<p.extension()<<endl;
+    }
+    return files;
+}
 
+void FileHelper::getFileForDirectory(const string &path, vector<string> &fileNames)
+{
+    try
+    {
+        if (fs::exists(path))
+        {
+            if (fs::is_regular_file(path))
+            {
+                if (fs::path(path).extension().string() != ".DS_Store"){
+                    fileNames.push_back(path);
+                }
+            }
+            else if (fs::is_directory(path))
+            {
+                for (fs::directory_entry& x : fs::directory_iterator(path))
+                {
+                    getFileForDirectory(x.path().string(), fileNames);
+                }
+            }
+            else
+                cout << path << " exists, but is not a regular file or directory\n";
+        }
+        else
+            cout << path << " does not exist\n";
+    }
+    
+    catch (const fs::filesystem_error& ex)
+    {
+        cout << ex.what() << '\n';
+    }
+}
 
-
-
+void FileHelper::copyFile(const string &fromFile, const string &toFile)
+{
+    auto parent_path = fs::path(toFile).parent_path();
+    if (!fs::exists(parent_path))
+    {
+        fs::create_directories(parent_path);
+    }
+    fs::copy_file(fromFile, toFile, fs::copy_option::overwrite_if_exists);
+}
 
 
 

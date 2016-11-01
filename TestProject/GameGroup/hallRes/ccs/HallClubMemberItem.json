@@ -1,0 +1,231 @@
+{
+  "ID": "bf0dfb9a-a064-4e15-b99a-25a53fe82b7d",
+  "Version": "2.3.2.3",
+  "Name": "HallClubMemberItem",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 175,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "chat/common_male_head@2x.png",
+              "Plist": ""
+            },
+            "Scale9Width": 180,
+            "Scale9Height": 180,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 80.0,
+              "Y": 55.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.125,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.125,
+              "Y": 0.7273
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 40.0,
+            "RightMargin": 520.0,
+            "TopMargin": 15.0,
+            "BottomMargin": 15.0,
+            "Tag": 176,
+            "ActionTag": 273358083,
+            "Size": {
+              "X": 80.0,
+              "Y": 80.0
+            },
+            "Name": "Image_head",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "hall/chatroom_slider_front_bg@2x.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9Width": 538,
+            "Scale9Height": 12,
+            "StretchWidthEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 320.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 77,
+              "G": 77,
+              "B": 77
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.0067
+            },
+            "HorizontalEdge": "BothEdge",
+            "TopMargin": 149.5,
+            "BottomMargin": -0.5,
+            "Tag": 177,
+            "ActionTag": 304447192,
+            "Size": {
+              "X": 640.0,
+              "Y": 1.0
+            },
+            "Name": "Image_fenge",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 34,
+            "LabelText": "张三",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 160.0,
+              "Y": 55.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2719,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.1781,
+              "Y": 0.3533
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 160.0,
+            "RightMargin": 366.0,
+            "TopMargin": 33.5,
+            "BottomMargin": 33.5,
+            "Tag": 178,
+            "ActionTag": 1299696922,
+            "Size": {
+              "X": 68.0,
+              "Y": 39.0
+            },
+            "Name": "Text_nick",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 24,
+            "LabelText": "24天前",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 1.0,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 600.0,
+              "Y": 55.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 30,
+              "G": 144
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4688,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.2188,
+              "Y": 0.26
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 70.0,
+            "RightMargin": 40.0,
+            "TopMargin": 39.0,
+            "BottomMargin": 39.0,
+            "Tag": 179,
+            "ActionTag": -1166543964,
+            "Size": {
+              "X": 74.0,
+              "Y": 28.0
+            },
+            "Name": "Text_lastTime",
+            "ctype": "TextObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 110.0
+        },
+        "Name": "Panel",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "chat/common_male_head@2x.png",
+        "hall/chatroom_slider_front_bg@2x.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

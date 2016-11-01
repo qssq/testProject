@@ -3,69 +3,58 @@
  */
 
 var HallScene = cc.Scene.extend({
+    mChildLayers : null,
+    mTimestamp : null,
     onEnter:function () {
         this._super();
         var layer = new HallMainLayer();
         this.addChild(layer);
         mo.gameScene = this;
 
-        //this.openWebSocket();
+        this.mChildLayers = new Array();
+        this.mChildLayers.push(layer);
+
+        this.mTimestamp = mo.hallDefines.getMillisecond();
     },
 
-    openWebSocket : function(){
+    pushLayer : function(layer){
+        var currenttime = mo.hallDefines.getMillisecond();
+        if (currenttime - 500 < this.mTimestamp){
+            return;
+        }
+        this.mTimestamp = currenttime;
 
-        var getJsonForStr = function(str){
-            return JSON.parse(str);
-        };
+        var layer1 = this.mChildLayers[this.mChildLayers.length - 1];
+        this.addChild(layer);
+        this.mChildLayers.push(layer);
 
-        var getStrForJson = function(json){
-            return JSON.stringify(json);
-        };
+        layer1.stopAllActions();
+        layer.stopAllActions();
+        layer.setPosition(cc.p(mo.curSize.x, 0));
 
-        var json = {type:"login"};
-        var temp1 = getStrForJson(json);
-        var temp2 = getJsonForStr(temp1);
-        cc.log(temp2);
+        layer1.runAction(cc.sequence(cc.moveTo(0.2, cc.p(-mo.curSize.x / 2, 0))));
+        layer.runAction(cc.sequence(cc.moveTo(0.2, cc.p(0, 0))));
+    },
 
-        var userId = 0;
+    popLayer : function(){
+        var currenttime = mo.hallDefines.getMillisecond();
+        if (currenttime - 500 < this.mTimestamp){
+            return;
+        }
+        this.mTimestamp = currenttime;
 
+        if (this.mChildLayers.length > 1){
+            var layer = this.mChildLayers.pop();
+            var layer1 = this.mChildLayers[this.mChildLayers.length - 1];
 
-        var that = this;
-        this.mWebSocketClient = new WebSocket("ws://192.168.0.102:8080/");
+            layer1.stopAllActions();
+            layer.stopAllActions();
+            layer1.setPosition(cc.p(-mo.curSize.x / 2, 0));
 
-        this.mWebSocketClient.onopen = function(evt) {
-            cc.log("Send Text WS was opened.");
-
-            that.mWebSocketClient.send(getStrForJson({type:"login"}));
-        };
-
-        this.mWebSocketClient.onmessage = function(evt) {
-            var textStr = "response text msg: " + evt.data;
-            cc.log(textStr);
-
-            var json = getJsonForStr(evt.data);
-            if (json.type == "login"){
-                userId = json.content;
-                cc.log("login userid:" + userId);
-
-
-                that.mWebSocketClient.send(getStrForJson({type:"chatmsg", content:"测试消息"}));
-            } else if (json.type == "chatmsg"){
-                cc.log("chat msg content:" + json.content + "id" + json.userid);
-            }
-        };
-
-        this.mWebSocketClient.onerror = function(evt) {
-            cc.log("_wsiSendText Error was fired");
-            if (cc.sys.isObjectValid(that)) {
-                cc.log("an error was fired");
-            } else {
-                cc.log("WebSocket test layer was destroyed!");
-            }
-        };
-
-        this.mWebSocketClient.onclose = function(evt) {
-            cc.log("mWebSocketClient websocket instance closed.");
-        };
+            layer1.runAction(cc.sequence(cc.moveTo(0.2, cc.p(0, 0))));
+            layer.runAction(cc.sequence(cc.moveTo(0.2, cc.p(mo.curSize.x, 0)), cc.callFunc(function(){
+                this.removeChild(layer);
+            }, this)));
+        }
     }
 });
