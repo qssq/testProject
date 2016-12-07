@@ -79,7 +79,8 @@ void CImgHelper::test01()
 //    texturePacker(gPath + "fish_net.plist", "fish_net.png");
 //    texturePacker(gPath + "fish_net4.plist", "fish_net4.png");
     //    texturePacker(gPath + "fish_zidan.plist", "fish_zidan.png");
-        texturePacker(gPath + "chatImg.plist", "chatImg.png");
+        texturePacker(gPath + "tileImage.plist", "tileImage.png");
+//    texturePacker(gPath + "gametrayImage.plist", "gametrayImage.png");
     
     
     //创建麻将牌纹理

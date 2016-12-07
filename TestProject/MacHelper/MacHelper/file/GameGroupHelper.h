@@ -24,13 +24,19 @@ public:
     
     //生成网页测试项目
     void buildHtmlTest();
+    
+    //生成kwx配置文件
+    void buildConfigKwxFile();
+    
+    //生成kwx网页测试项目
+    void buildHtmlKwxTest();
 private:
     //项目根目录
     string mProjectPath;
     //项目版本号
     string mProjectVersion;
     
-    void buildConfig(const string &srcPath, const string &recPath, const string &rootPath);
+    void buildConfig(const vector<string> &srcPaths, const vector<string> &recPaths, const string &rootPath);
     
     string getCurDateTime();
     

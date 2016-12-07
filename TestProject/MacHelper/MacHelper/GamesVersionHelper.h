@@ -27,6 +27,9 @@ public:
     void createServer(const string &version);
     
     void setVersion(const string &version);
+    
+    void createLocalKwx(const string &version);
+    void createServerKwx(const string &version);
 private:
     string mUrl;
 };

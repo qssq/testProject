@@ -17,6 +17,7 @@
 #include "SocketServer.h"
 #include "CoinFrontTest.h"
 #include "GameGroupHelper.h"
+#include "GzipHelper.h"
 //#include <gtest/gtest.h>
 
 using namespace std;
@@ -52,14 +53,18 @@ int main(int argc, const char * argv[]) {
     cout << "9:期望"<<endl;
     cout << "10:GameGroup Config"<<endl;
     cout << "11:GameGroup html test"<<endl;
-
+    cout << "12:gzip test"<<endl;
+    cout << "13:gtKwx config"<<endl;
+    cout << "14:gtKwx html test"<<endl;
+    cout << "15:gtKwx create local manifest"<<endl;
+    cout << "16:gtKwx create server manifest"<<endl;
     
-    GamesVersionHelper gh;
     string input;
     while (cin>>input)
     {
         if (input == "0")
         {
+            GamesVersionHelper gh;
             cout<<"本地文件开始创建"<<endl;
             string hallVersion, lastVersion;
             cout<<"输入当前的版本:"<<endl;
@@ -70,6 +75,7 @@ int main(int argc, const char * argv[]) {
         }
         else if (input == "1")
         {
+            GamesVersionHelper gh;
             cout<<"远程文件开始创建"<<endl;
             string version;
             cout<<"输入当前的版本:"<<endl;
@@ -134,6 +140,41 @@ int main(int argc, const char * argv[]) {
         else if (input == "11")
         {
             GameGroupHelper::singleton()->buildHtmlTest();
+        }
+        else if (input == "12")
+        {
+            GzipHelper gh;
+            gh.start();
+        }
+        else if (input == "13")
+        {
+            GameGroupHelper::singleton()->buildConfigKwxFile();
+        }
+        else if (input == "14")
+        {
+            GameGroupHelper::singleton()->buildHtmlKwxTest();
+        }
+        else if (input == "15")
+        {
+            GamesVersionHelper gh;
+            cout<<"本地文件开始创建"<<endl;
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createLocalKwx(version);
+        }
+        else if (input == "16")
+        {
+            GamesVersionHelper gh;
+            cout<<"远程文件开始创建"<<endl;
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createServerKwx(version);
+        }
+        else if (input == "17")
+        {
+            
         }
     }
     

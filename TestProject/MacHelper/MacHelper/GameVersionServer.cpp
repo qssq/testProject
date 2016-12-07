@@ -132,7 +132,7 @@ string GameVersionServer::getProjectPath()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
-    oss<<"game/";
+    oss<<"kwxUpdate/";
     oss<<"game";
     oss<<mName;
     oss<<"/project.manifest";
@@ -143,7 +143,7 @@ string GameVersionServer::getVersionPath()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
-    oss<<"game/";
+    oss<<"kwxUpdate/";
     oss<<"game";
     oss<<mName;
     oss<<"/version.manifest";
@@ -155,11 +155,11 @@ void GameVersionServer::setUpdateValue()
     string upper = mName;
     transform(upper.begin(), upper.end(), upper.begin(), (int (*)(int))tolower);
     
-    mUpdate1path = upper + "Src.zip";
-    mUpdate2path = upper + "Res.zip";
+    mUpdate1path = "src.zip";
+    mUpdate2path = "res.zip";
     
-    string zipSrc = getMD5Path() + "/" + upper + "Src.zip";
-    string zipRes = getMD5Path() + "/" + upper + "Res.zip";
+    string zipSrc = getMD5Path() + "/src.zip";
+    string zipRes = getMD5Path() + "/res.zip";
     
     mUpdate1md5 = md5file(zipSrc);
     mUpdate2md5 = md5file(zipRes);
@@ -168,7 +168,7 @@ string GameVersionServer::getMD5Path()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
-    oss<<"game/";
+    oss<<"kwxUpdate/";
     oss<<"game";
     oss<<mName;
     return oss.str();

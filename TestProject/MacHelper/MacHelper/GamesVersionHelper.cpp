@@ -104,6 +104,35 @@ void GamesVersionHelper::createServer(const string &version)
     }
 }
 
+void GamesVersionHelper::createLocalKwx(const string &version)
+{
+    gLocalPath = "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/";
+    vector<GameVersionLocal> gameLocals;
+    {
+        GameVersionLocal hall;
+        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version, "");
+        gameLocals.push_back(hall);
+    }
+    for (auto it : gameLocals)
+    {
+        it.createFile();
+    }
+}
+
+void GamesVersionHelper::createServerKwx(const string &version)
+{
+    vector<GameVersionServer> gameServers;
+    {
+        GameVersionServer hall;
+        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version);
+        gameServers.push_back(hall);
+    }
+    for (auto it : gameServers)
+    {
+        it.createFile();
+    }
+}
+
 //--------------
 //GameVersionLocal
 //--------------
@@ -124,7 +153,7 @@ void GameVersionLocal::setInfo(const string &name, const string &url, const stri
     mUrl = url;
     mVersion = version;
     mOutPath = getHallPath();
-    mOutPath2 = getGamePath();
+    mOutPath2 = "";
     
     mPackageUrl = mUrl + "/game" + mName;
     mRemoteManifestUrl = mPackageUrl + "/project.manifest";
@@ -243,7 +272,7 @@ string GameVersionLocal::getHallPath()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gLocalPath;
-    oss<<"hallRes/project";
+    oss<<"res/project";
     oss<<mName;
     oss<<".manifest";
     return oss.str();

@@ -20,7 +20,7 @@ GameGroupHelper *GameGroupHelper::mGameGroupHelper = nullptr;
 GameGroupHelper::GameGroupHelper()
 {
     mProjectPath = "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/";
-    mProjectVersion = "0001";
+    mProjectVersion = "0018";
 }
 
 GameGroupHelper::~GameGroupHelper()
@@ -39,9 +39,28 @@ GameGroupHelper *GameGroupHelper::singleton()
 
 void GameGroupHelper::buildConfigFile()
 {
-    buildConfig("/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/src/", "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/res/", mProjectPath);
-    buildConfig("/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/hallSrc/", "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/hallRes/", mProjectPath);
-    buildConfig("/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/gameKwx/src/", "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/gameKwx/res/", mProjectPath);
+    vector<string> srcs = {
+        "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/src/"
+    };
+    
+    vector<string> ress = {
+        "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/res/"
+    };
+    
+    buildConfig(srcs, ress, mProjectPath);
+}
+
+void GameGroupHelper::buildConfigKwxFile()
+{
+    vector<string> srcs = {
+        "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/src/"
+    };
+    
+    vector<string> ress = {
+        "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/res/"
+    };
+    
+    buildConfig(srcs, ress, "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/");
 }
 
 void GameGroupHelper::buildHtmlTest()
@@ -98,17 +117,90 @@ void GameGroupHelper::buildHtmlTest()
     }
     
     
-    buildConfig("/Users/gongxun/Sites/group/src/", "/Users/gongxun/Sites/group/res/", otPath);
-    buildConfig("/Users/gongxun/Sites/group/hallSrc/", "/Users/gongxun/Sites/group/hallRes/", otPath);
-    buildConfig("/Users/gongxun/Sites/group/gameKwx/src/", "/Users/gongxun/Sites/group/gameKwx/res/", otPath);
+//    buildConfig("/Users/gongxun/Sites/group/src/", "/Users/gongxun/Sites/group/res/", otPath);
+//    buildConfig("/Users/gongxun/Sites/group/hallSrc/", "/Users/gongxun/Sites/group/hallRes/", otPath);
+//    buildConfig("/Users/gongxun/Sites/group/gameKwx/src/", "/Users/gongxun/Sites/group/gameKwx/res/", otPath);
 }
 
-void GameGroupHelper::buildConfig(const string &srcPath, const string &recPath, const string &rootPath)
+void GameGroupHelper::buildHtmlKwxTest()
+{
+    FileHelper fileHelper;
+    //复制文件
+    string otPath = "/Users/gongxun/Sites/kwx/";
+    //本地文件位置
+    string mLocationPath = "/Users/gongxun/oschina/gt-card/mobiles/GTKwx";
+    
+    //需要复制的文件
+    vector<string> fileNames;
+    for (fs::directory_entry& x : fs::directory_iterator(mLocationPath))
+    {
+        fs::path p = x.path();
+        if (fs::is_regular_file(p))
+        {
+            fileNames.push_back(p.string());
+        }
+        else if (fs::is_directory(p))
+        {
+            if (p.filename().string() != "cocostudio" && p.filename().string() != "frameworks")
+            {
+                vector<string> temp = fileHelper.getDirectoryFile(p.string());
+                fileNames.insert(fileNames.end(), temp.begin(), temp.end());
+            }
+        }
+    }
+    //过滤文件
+    for (auto it = fileNames.begin(); it != fileNames.end(); )
+    {
+        fs::path p(*it);
+        if (p.filename().string().front() == '.')
+        {
+            it = fileNames.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+    
+    //复制到的文件
+    vector<string> toFileNames;
+    for (int i = 0; i < fileNames.size(); ++i)
+    {
+        string newFileName = otPath + fileNames[i].substr(mLocationPath.size());
+        toFileNames.push_back(getRenameJsFile(newFileName));
+    }
+    
+    cout<<"------------------------"<<endl;
+    cout<<"------------------------"<<endl;
+    
+    for (int i = 0; i < fileNames.size(); ++i)
+    {
+        fileHelper.copyFile(fileNames[i], toFileNames[i]);
+    }
+    
+    
+    vector<string> srcs = {
+        "/Users/gongxun/Sites/kwx/src/"
+    };
+    
+    vector<string> ress = {
+        "/Users/gongxun/Sites/kwx/res/"
+    };
+    
+    buildConfig(srcs, ress, "/Users/gongxun/Sites/kwx/");
+}
+
+void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<string> &recPaths, const string &rootPath)
 {
     FileHelper fileHelper;
     {
         //src
-        vector<string> fileNames = fileHelper.getDirectoryFile(srcPath);
+        vector<string> fileNames;
+        for (int i = 0; i < srcPaths.size(); ++i)
+        {
+            auto temp = fileHelper.getDirectoryFile(srcPaths[i]);
+            fileNames.insert(fileNames.end(), temp.begin(), temp.end());
+        }
         for (auto it = fileNames.begin(); it != fileNames.end(); )
         {
             string &filename = *it;
@@ -128,7 +220,7 @@ void GameGroupHelper::buildConfig(const string &srcPath, const string &recPath, 
         }
         
         fs::ofstream ofile;
-        string srcFileName = srcPath + "files.js";
+        string srcFileName = srcPaths[0] + "files.js";
         ofile.open(srcFileName);
         cout<<"创建文件:"<<srcFileName<<endl;
         
@@ -153,7 +245,12 @@ void GameGroupHelper::buildConfig(const string &srcPath, const string &recPath, 
     }
     {
         //rec
-        vector<string> fileNames = fileHelper.getDirectoryFile(recPath);
+        vector<string> fileNames;
+        for (int i = 0; i < recPaths.size(); ++i)
+        {
+            auto temp = fileHelper.getDirectoryFile(recPaths[i]);
+            fileNames.insert(fileNames.end(), temp.begin(), temp.end());
+        }
         for (auto it = fileNames.begin(); it != fileNames.end(); )
         {
             string &filename = *it;
@@ -169,7 +266,7 @@ void GameGroupHelper::buildConfig(const string &srcPath, const string &recPath, 
         }
         
         fs::ofstream ofile;
-        string srcFileName = srcPath + "resource.js";
+        string srcFileName = srcPaths[0] + "resource.js";
         ofile.open(srcFileName);
         cout<<"创建文件:"<<srcFileName<<endl;
         
