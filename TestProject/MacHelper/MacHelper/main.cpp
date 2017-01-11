@@ -58,6 +58,10 @@ int main(int argc, const char * argv[]) {
     cout << "14:gtKwx html test"<<endl;
     cout << "15:gtKwx create local manifest"<<endl;
     cout << "16:gtKwx create server manifest"<<endl;
+    cout << "17:GameGroup create local manifest"<<endl;
+    cout << "18:GameGroup create server manifest"<<endl;
+    cout << "19:删除注释"<<endl;
+    
     
     string input;
     while (cin>>input)
@@ -174,7 +178,43 @@ int main(int argc, const char * argv[]) {
         }
         else if (input == "17")
         {
+            GamesVersionHelper gh;
+            cout<<"本地文件开始创建"<<endl;
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createLocalHall(version);
+        }
+        else if (input == "18")
+        {
+            GamesVersionHelper gh;
+            cout<<"远程文件开始创建"<<endl;
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createServerHall(version);
+        }else if (input == "19")
+        {
             
+            fs::path p("protobuffer.txt");
+            
+            fs::ifstream ifile;
+            ifile.open(p);
+            
+            fs::ofstream ofile;
+            ofile.open("protobuffer2.txt");
+            
+            string s;
+            while (getline(ifile, s))
+            {
+                string va = s;
+                auto fi = va.find("//", 0);
+                if (fi != va.npos){
+                    va = va.substr(0, fi);
+                }
+                
+                ofile<<va<<endl;
+            }
         }
     }
     

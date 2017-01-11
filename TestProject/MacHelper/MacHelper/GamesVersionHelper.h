@@ -30,6 +30,9 @@ public:
     
     void createLocalKwx(const string &version);
     void createServerKwx(const string &version);
+    
+    void createLocalHall(const string &version);
+    void createServerHall(const string &version);
 private:
     string mUrl;
 };

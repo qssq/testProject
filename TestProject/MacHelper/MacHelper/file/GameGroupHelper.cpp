@@ -205,7 +205,7 @@ void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<s
         {
             string &filename = *it;
             fs::path p(filename);
-            if (p.filename() == "files.js" || p.filename() == "sceneHelper.js")
+            if (p.filename() == "files.js")
             {
                 it = fileNames.erase(it);
             }

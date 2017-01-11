@@ -107,10 +107,12 @@ void GamesVersionHelper::createServer(const string &version)
 void GamesVersionHelper::createLocalKwx(const string &version)
 {
     gLocalPath = "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/";
+    GameVersionServer::serverOutPath = "kwxUpdate/";
     vector<GameVersionLocal> gameLocals;
     {
         GameVersionLocal hall;
-        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version, "");
+        //        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version, "");
+        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version, "");
         gameLocals.push_back(hall);
     }
     for (auto it : gameLocals)
@@ -121,10 +123,46 @@ void GamesVersionHelper::createLocalKwx(const string &version)
 
 void GamesVersionHelper::createServerKwx(const string &version)
 {
+    GameVersionServer::serverOutPath = "kwxUpdate/";
     vector<GameVersionServer> gameServers;
     {
         GameVersionServer hall;
-        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version);
+        //        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version);
+        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version);
+        gameServers.push_back(hall);
+    }
+    for (auto it : gameServers)
+    {
+        it.createFile();
+    }
+}
+
+void GamesVersionHelper::createLocalHall(const string &version)
+{
+    gLocalPath = "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/";
+    GameVersionServer::serverOutPath = "hallUpdate/";
+    
+    vector<GameVersionLocal> gameLocals;
+    {
+        GameVersionLocal hall;
+        hall.setInfo("Game", "http://oimqz5jij.bkt.clouddn.com", version, "");
+//        hall.setInfo("Game", "http://192.168.0.100/hallUpdate", version, "");
+        gameLocals.push_back(hall);
+    }
+    for (auto it : gameLocals)
+    {
+        it.createFile();
+    }
+}
+
+void GamesVersionHelper::createServerHall(const string &version)
+{
+    GameVersionServer::serverOutPath = "hallUpdate/";
+    vector<GameVersionServer> gameServers;
+    {
+        GameVersionServer hall;
+        hall.setInfo("Game", "http://oimqz5jij.bkt.clouddn.com", version);
+//        hall.setInfo("Game", "http://192.168.0.100/hallUpdate", version);
         gameServers.push_back(hall);
     }
     for (auto it : gameServers)

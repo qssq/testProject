@@ -18,6 +18,8 @@
 
 namespace fs = boost::filesystem;
 
+string GameVersionServer::serverOutPath = "";
+
 GameVersionServer::GameVersionServer()
 {
     
@@ -132,7 +134,7 @@ string GameVersionServer::getProjectPath()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
-    oss<<"kwxUpdate/";
+    oss<<serverOutPath;
     oss<<"game";
     oss<<mName;
     oss<<"/project.manifest";
@@ -143,7 +145,7 @@ string GameVersionServer::getVersionPath()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
-    oss<<"kwxUpdate/";
+    oss<<serverOutPath;
     oss<<"game";
     oss<<mName;
     oss<<"/version.manifest";
@@ -168,7 +170,7 @@ string GameVersionServer::getMD5Path()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
-    oss<<"kwxUpdate/";
+    oss<<serverOutPath;
     oss<<"game";
     oss<<mName;
     return oss.str();

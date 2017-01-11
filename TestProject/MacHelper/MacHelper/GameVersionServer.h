@@ -17,6 +17,8 @@ using namespace std;
 class GameVersionServer
 {
 public:
+    static string serverOutPath;
+public:
     GameVersionServer();
     ~GameVersionServer();
     
