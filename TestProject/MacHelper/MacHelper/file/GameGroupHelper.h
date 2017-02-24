@@ -30,6 +30,9 @@ public:
     
     //生成kwx网页测试项目
     void buildHtmlKwxTest();
+    
+    //生层大富翁配置
+    void buildConfigFuweng();
 private:
     //项目根目录
     string mProjectPath;

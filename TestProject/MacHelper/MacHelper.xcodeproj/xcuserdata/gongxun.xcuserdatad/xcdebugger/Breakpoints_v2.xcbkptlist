@@ -392,11 +392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/main.cpp"
-            timestampString = "504190840.137274"
+            timestampString = "507823809.731109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "main(int argc, const char * argv[])"
             landmarkType = "9">
          </BreakpointContent>
@@ -408,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/main.cpp"
-            timestampString = "504190840.137274"
+            timestampString = "507823809.731109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "main(int argc, const char * argv[])"
             landmarkType = "9">
          </BreakpointContent>
@@ -456,11 +456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/main.cpp"
-            timestampString = "504190840.137274"
+            timestampString = "507823809.731109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "main(int argc, const char * argv[])"
             landmarkType = "9">
          </BreakpointContent>
@@ -520,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/CImg/CImgHelper.cpp"
-            timestampString = "500708316.731701"
+            timestampString = "508060209.584169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "CImgHelper::copyFiles(const vector&lt;ImgRect&gt; &amp;rects, const string &amp;file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -536,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/CImg/CImgHelper.cpp"
-            timestampString = "500708316.731701"
+            timestampString = "508060209.584169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "CImgHelper::copyFiles(const vector&lt;ImgRect&gt; &amp;rects, const string &amp;file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -552,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/CImg/CImgHelper.cpp"
-            timestampString = "500708316.731701"
+            timestampString = "508060209.584169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "CImgHelper::copyFiles(const vector&lt;ImgRect&gt; &amp;rects, const string &amp;file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -568,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/CImg/CImgHelper.cpp"
-            timestampString = "500708316.731701"
+            timestampString = "508060209.584169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "CImgHelper::copyFiles(const vector&lt;ImgRect&gt; &amp;rects, const string &amp;file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -584,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/CImg/CImgHelper.cpp"
-            timestampString = "500708316.731701"
+            timestampString = "508060209.584169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "CImgHelper::copyFiles(const vector&lt;ImgRect&gt; &amp;rects, const string &amp;file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -600,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/CImg/CImgHelper.cpp"
-            timestampString = "500708316.731701"
+            timestampString = "508060209.584169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "CImgHelper::copyFiles(const vector&lt;ImgRect&gt; &amp;rects, const string &amp;file)"
             landmarkType = "7">
          </BreakpointContent>
@@ -776,11 +776,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/file/GameGroupHelper.cpp"
-            timestampString = "502441855.506359"
+            timestampString = "509215723.327508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "GameGroupHelper::buildHtmlTest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -792,11 +792,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/file/GameGroupHelper.cpp"
-            timestampString = "502441855.506359"
+            timestampString = "509215723.327508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "GameGroupHelper::buildHtmlTest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -824,11 +824,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/file/GameGroupHelper.cpp"
-            timestampString = "502441855.506359"
+            timestampString = "509215723.327508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "321"
-            endingLineNumber = "321"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
             landmarkName = "GameGroupHelper::getRenameJsFile(const string &amp;jsFile)"
             landmarkType = "7">
          </BreakpointContent>
@@ -840,11 +840,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/file/GameGroupHelper.cpp"
-            timestampString = "502441855.506359"
+            timestampString = "509215723.327508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
             landmarkName = "GameGroupHelper::getRenameJsFile(const string &amp;jsFile)"
             landmarkType = "7">
          </BreakpointContent>
@@ -904,11 +904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/file/GameGroupHelper.cpp"
-            timestampString = "502441855.506359"
+            timestampString = "509215723.327508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "GameGroupHelper::buildConfig(const vector&lt;string&gt; &amp;srcPaths, const vector&lt;string&gt; &amp;recPaths, const string &amp;rootPath)"
             landmarkType = "7">
          </BreakpointContent>
@@ -920,11 +920,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/file/GameGroupHelper.cpp"
-            timestampString = "502441855.506359"
+            timestampString = "509215723.327508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "GameGroupHelper::buildConfig(const vector&lt;string&gt; &amp;srcPaths, const vector&lt;string&gt; &amp;recPaths, const string &amp;rootPath)"
             landmarkType = "7">
          </BreakpointContent>
@@ -936,12 +936,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MacHelper/CImg/CImgHelper.cpp"
-            timestampString = "500708356.91345"
+            timestampString = "508060209.584169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "CImgHelper::texturePacker(const string &amp;plist, const string &amp;png)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacHelper/CImg/CImgHelper.cpp"
+            timestampString = "508060218.240013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "CImgHelper::test01()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacHelper/main.cpp"
+            timestampString = "508060224.399668"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "main(int argc, const char * argv[])"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MacHelper/CImg/CImgHelper.cpp"
+            timestampString = "508060254.205609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "CImgHelper::test01()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

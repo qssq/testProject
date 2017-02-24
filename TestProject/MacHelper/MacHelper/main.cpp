@@ -61,6 +61,7 @@ int main(int argc, const char * argv[]) {
     cout << "17:GameGroup create local manifest"<<endl;
     cout << "18:GameGroup create server manifest"<<endl;
     cout << "19:删除注释"<<endl;
+    cout << "20:fuweng Config"<<endl;
     
     
     string input;
@@ -215,6 +216,10 @@ int main(int argc, const char * argv[]) {
                 
                 ofile<<va<<endl;
             }
+        }
+        else if (input == "20")
+        {
+            GameGroupHelper::singleton()->buildConfigFuweng();
         }
     }
     

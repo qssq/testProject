@@ -106,12 +106,12 @@ void GamesVersionHelper::createServer(const string &version)
 
 void GamesVersionHelper::createLocalKwx(const string &version)
 {
-    gLocalPath = "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/";
+    gLocalPath = "/Users/gongxun/oschina/gtKwx/mobiles/GTKwx";
     GameVersionServer::serverOutPath = "kwxUpdate/";
     vector<GameVersionLocal> gameLocals;
     {
         GameVersionLocal hall;
-        //        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version, "");
+//        hall.setInfo("Game", "http://192.168.0.103/kwxUpdate", version, "");
         hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version, "");
         gameLocals.push_back(hall);
     }
@@ -127,7 +127,7 @@ void GamesVersionHelper::createServerKwx(const string &version)
     vector<GameVersionServer> gameServers;
     {
         GameVersionServer hall;
-        //        hall.setInfo("Game", "http://192.168.0.100/kwxUpdate", version);
+//        hall.setInfo("Game", "http://192.168.0.103/kwxUpdate", version);
         hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version);
         gameServers.push_back(hall);
     }
@@ -146,7 +146,7 @@ void GamesVersionHelper::createLocalHall(const string &version)
     {
         GameVersionLocal hall;
         hall.setInfo("Game", "http://oimqz5jij.bkt.clouddn.com", version, "");
-//        hall.setInfo("Game", "http://192.168.0.100/hallUpdate", version, "");
+//        hall.setInfo("Game", "http://192.168.0.103/hallUpdate", version, "");
         gameLocals.push_back(hall);
     }
     for (auto it : gameLocals)
@@ -162,7 +162,7 @@ void GamesVersionHelper::createServerHall(const string &version)
     {
         GameVersionServer hall;
         hall.setInfo("Game", "http://oimqz5jij.bkt.clouddn.com", version);
-//        hall.setInfo("Game", "http://192.168.0.100/hallUpdate", version);
+//        hall.setInfo("Game", "http://192.168.0.103/hallUpdate", version);
         gameServers.push_back(hall);
     }
     for (auto it : gameServers)

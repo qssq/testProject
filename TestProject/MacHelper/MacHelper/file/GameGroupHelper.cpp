@@ -61,6 +61,15 @@ void GameGroupHelper::buildConfigKwxFile()
     };
     
     buildConfig(srcs, ress, "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/");
+//    vector<string> srcs = {
+//        "/Users/gongxun/oschina/gtKwx/mobiles/gtWhmj/src/"
+//    };
+//    
+//    vector<string> ress = {
+//        "/Users/gongxun/oschina/gtKwx/mobiles/gtWhmj/res/"
+//    };
+//    
+//    buildConfig(srcs, ress, "/Users/gongxun/oschina/gtKwx/mobiles/gtWhmj/");
 }
 
 void GameGroupHelper::buildHtmlTest()
@@ -188,6 +197,19 @@ void GameGroupHelper::buildHtmlKwxTest()
     };
     
     buildConfig(srcs, ress, "/Users/gongxun/Sites/kwx/");
+}
+
+void GameGroupHelper::buildConfigFuweng()
+{
+    vector<string> srcs = {
+        "/Users/gongxun/GitHub/testProject/TestProject/Fuweng/src/"
+    };
+    
+    vector<string> ress = {
+        "/Users/gongxun/GitHub/testProject/TestProject/Fuweng/res/"
+    };
+    
+    buildConfig(srcs, ress, "/Users/gongxun/GitHub/testProject/TestProject/Fuweng/");
 }
 
 void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<string> &recPaths, const string &rootPath)
