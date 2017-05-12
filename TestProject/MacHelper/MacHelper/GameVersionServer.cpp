@@ -39,6 +39,10 @@ void GameVersionServer::setInfo(const string &name, const string &url, const str
     mOutPath2 = getVersionPath();
     
     mPackageUrl = mUrl + "/game" + mName;
+    if (name != "Game")
+    {
+        mPackageUrl = mUrl;
+    }
     mRemoteManifestUrl = mPackageUrl + "/project.manifest";
     mRemoteVersionUrl = mPackageUrl + "/version.manifest";
     setUpdateValue();
@@ -135,8 +139,19 @@ string GameVersionServer::getProjectPath()
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
     oss<<serverOutPath;
-    oss<<"game";
-    oss<<mName;
+    if (mName == "lefan")
+    {
+        oss<<"app";
+    }
+    else if (mName == "newbee")
+    {
+        oss<<"newbee";
+    }
+    else
+    {
+        oss<<"game";
+        oss<<mName;
+    }
     oss<<"/project.manifest";
     return oss.str();
 }
@@ -146,8 +161,19 @@ string GameVersionServer::getVersionPath()
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
     oss<<serverOutPath;
-    oss<<"game";
-    oss<<mName;
+    if (mName == "lefan")
+    {
+        oss<<"app";
+    }
+    else if (mName == "newbee")
+    {
+        oss<<"newbee";
+    }
+    else
+    {
+        oss<<"game";
+        oss<<mName;
+    }
     oss<<"/version.manifest";
     return oss.str();
 }
@@ -171,8 +197,19 @@ string GameVersionServer::getMD5Path()
     ostringstream oss;
     oss<<GamesVersionHelper::gServerPath;
     oss<<serverOutPath;
-    oss<<"game";
-    oss<<mName;
+    if (mName == "lefan")
+    {
+        oss<<"app";
+    }
+    else if (mName == "newbee")
+    {
+        oss<<"newbee";
+    }
+    else
+    {
+        oss<<"game";
+        oss<<mName;
+    }
     return oss.str();
 }
 

@@ -33,6 +33,12 @@ public:
     
     //生层大富翁配置
     void buildConfigFuweng();
+    
+    //生成lefan配置
+    void buildConfigLefan();
+    
+    //生成newbee配置
+    void buildConfigNewbee();
 private:
     //项目根目录
     string mProjectPath;

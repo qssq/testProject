@@ -33,6 +33,11 @@ public:
     
     void createLocalHall(const string &version);
     void createServerHall(const string &version);
+    
+    void createLocalLefan(const string &version);
+    void createServerLefan(const string &version);
+    
+    void createServerNewbee(const string &version);
 private:
     string mUrl;
 };

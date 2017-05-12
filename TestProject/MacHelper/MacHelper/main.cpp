@@ -19,6 +19,10 @@
 #include "GameGroupHelper.h"
 #include "GzipHelper.h"
 //#include <gtest/gtest.h>
+#include "CImageHandle.h"
+#include "UpdateManager.h"
+#include "Defines.h"
+#include "FileHelper.h"
 
 using namespace std;
 
@@ -37,6 +41,8 @@ int main(int argc, const char * argv[]) {
 //    testing::InitGoogleTest(&argc, const_cast<char **>(argv));
 //    return RUN_ALL_TESTS();
     string startPath = argv[0];
+    string projectName = FileHelper::gProjectName;
+    FileHelper::gStartPath = startPath.substr(0, startPath.size() - projectName.size());
     cout<<"程序启动位置:"<<startPath<<endl;
     
     // insert code here...
@@ -62,6 +68,13 @@ int main(int argc, const char * argv[]) {
     cout << "18:GameGroup create server manifest"<<endl;
     cout << "19:删除注释"<<endl;
     cout << "20:fuweng Config"<<endl;
+    cout << "21:切分图片"<<endl;
+    cout << "22:lefan config"<<endl;
+    cout << "23:lefan local manifest"<<endl;
+    cout << "24:lefan setver manifest"<<endl;
+    cout << "25:newbee config"<<endl;
+    cout << "26:newbee setver manifest"<<endl;
+    cout << "100:kwx增量更新"<<endl;
     
     
     string input;
@@ -120,12 +133,12 @@ int main(int argc, const char * argv[]) {
         else if (input == "7")
         {
             ifstream file;
-            file.open("snow.plist");
+            file.open("gt_user_info.txt");
         
             string s;
             while (getline(file, s))
             {
-                cout<<s<<endl;
+                cout<<"\""<<s<<"\","<<endl;
             }
         }
         else if (input == "8")
@@ -220,6 +233,51 @@ int main(int argc, const char * argv[]) {
         else if (input == "20")
         {
             GameGroupHelper::singleton()->buildConfigFuweng();
+        }
+        else if (input == "21")
+        {
+            CImageHandle imageHandle;
+            imageHandle.handlerKw();
+        }
+        else if (input == "22")
+        {
+            GameGroupHelper::singleton()->buildConfigLefan();
+        }
+        else if (input == "23")
+        {
+            GamesVersionHelper gh;
+            cout<<"本地文件开始创建"<<endl;
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createLocalLefan(version);
+        }
+        else if (input == "24")
+        {
+            GamesVersionHelper gh;
+            cout<<"远程文件开始创建"<<endl;
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createServerLefan(version);
+        }
+        else if (input == "25")
+        {
+            GameGroupHelper::singleton()->buildConfigNewbee();
+        }
+        else if (input == "26")
+        {
+            GamesVersionHelper gh;
+            cout<<"远程文件开始创建"<<endl;
+            string version;
+            cout<<"输入当前的版本:"<<endl;
+            cin>>version;
+            gh.createServerNewbee(version);
+        }
+        else if (input == "100")
+        {
+            cout<<"开始构造增量更新包"<<endl;
+            UpdateManager::singleton()->start();
         }
     }
     

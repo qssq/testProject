@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <plists>
+        <plist>lobby_res.plist</plist>
+    </plists>
+    <animations>
+        <animation>
+            <name>beauty_eyes</name>
+            <delay>0.2</delay>
+            <flipX>false</flipX>
+            <flipY>false</flipY>
+            <spriteFrame>beauty_eyes_2.png</spriteFrame>
+            <spriteFrame>beauty_eyes_1.png</spriteFrame>
+        </animation>
+    </animations>
+</root>

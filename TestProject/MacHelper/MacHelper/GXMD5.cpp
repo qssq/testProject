@@ -259,7 +259,7 @@ void MD5::update(const unsigned char input[], size_type length)
 		count[1]++;
 	count[1] += (length >> 29);
 
-	// number of bytes we need to fill in buffer
+	// number of bytes we need to fill in buffer1
 	size_type firstpart = 64 - index;
 
 	size_type i;

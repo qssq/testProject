@@ -14,6 +14,7 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/foreach.hpp>
+#include "CImageHandle.h"
 
 using namespace std;
 
@@ -38,6 +39,11 @@ public:
     
     void test();
     void getTexturePackets(const string &file, vector<TexturePackerInfo> &infos);
+    
+    void getTexturePacketsKw(const string &file, vector<frameStruct> &frames);
+    
+    //特殊处理返回结构
+    vector<frameStruct> getFrameStruct2(const string &file);
 private:
     static XMLHelper *mXMLHelper;
     XMLHelper();

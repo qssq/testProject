@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <plists>
+        <plist>lobBigRes.plist</plist>
+    </plists>
+    <animations>
+        <animation>
+            <name>beautyEyes</name>
+            <delay>0.2</delay>
+            <flipX>false</flipX>
+            <flipY>false</flipY>
+            <spriteFrame>lob_gril_a0.png</spriteFrame>
+            <spriteFrame>lob_gril_a1.png</spriteFrame>
+            <spriteFrame>lob_gril_a2.png</spriteFrame>
+            <spriteFrame>lob_gril_a0.png</spriteFrame>
+        </animation>
+        <animation>
+            <name>beautyMouth</name>
+            <delay>0.2</delay>
+            <flipX>false</flipX>
+            <flipY>false</flipY>
+            <spriteFrame>lob_gril_b0.png</spriteFrame>
+            <spriteFrame>lob_gril_b1.png</spriteFrame>
+            <spriteFrame>lob_gril_b2.png</spriteFrame>
+            <spriteFrame>lob_gril_b0.png</spriteFrame>
+            <spriteFrame>lob_gril_b1.png</spriteFrame>
+            <spriteFrame>lob_gril_b2.png</spriteFrame>
+            <spriteFrame>lob_gril_b1.png</spriteFrame>
+            <spriteFrame>lob_gril_b2.png</spriteFrame>
+            <spriteFrame>lob_gril_b0.png</spriteFrame>
+            <spriteFrame>lob_gril_b1.png</spriteFrame>
+            <spriteFrame>lob_gril_b2.png</spriteFrame>
+            <spriteFrame>lob_gril_b0.png</spriteFrame>
+        </animation>
+    </animations>
+</root>

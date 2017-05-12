@@ -21,17 +21,28 @@ namespace fs = boost::filesystem;
 class FileHelper
 {
 public:
+    static string gStartPath;
+    static string gProjectName;
     FileHelper();
     ~FileHelper();
     
     void showFileInfo(const string &file);
     void testOutFile();
     
+    //复制文件
+    void copyFile(const string &fromFile, const string &toFile);
+    
     //获取目录里的所有文件
     vector<string> getDirectoryFile(const string &path);
     
-    //复制文件
-    void copyFile(const string &fromFile, const string &toFile);
+    //返回目录下面所有文件夹
+    vector<string> getDirectory(const string &path);
+    
+    //返回文件名
+    string getFileName(const string &path);
+    
+    //删除文件
+    int removeFile(const string &path);
 private:
     string getKeyOrValue(const string &key, const string &value);
     

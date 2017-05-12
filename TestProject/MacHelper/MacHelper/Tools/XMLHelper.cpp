@@ -9,8 +9,12 @@
 #include "XMLHelper.h"
 #include "Plist.hpp"
 #include <strstream>
+#include <boost/filesystem.hpp>
+#include <boost/filesystem/fstream.hpp>
+#include "Defines.h"
 
 using namespace Plist;
+namespace fs = boost::filesystem;
 
 XMLHelper *XMLHelper::mXMLHelper = nullptr;
 
@@ -51,34 +55,6 @@ void XMLHelper::test()
         const string& frame = boost::any_cast<const string&>(temp.find("frame")->second);
         cout<<"frame :" << frame<<endl;
     }
-}
-
-//清除符号
-inline string getCleanString(const string &s, const char &rechar)
-{
-    string result = s;
-    string::size_type pos = 0;
-    while ((pos = result.find(rechar, pos)) != string::npos)
-    {
-        result.replace(pos, 1, "");
-    }
-    return result;
-}
-
-//切分
-inline vector<string>& split( const string& ori , char ch , vector<string>& ans )
-{
-    istringstream iss(ori);
-    string item;
-    while(getline(iss , item , ch)) ans.push_back(item);
-    return ans;
-}
-
-inline vector<string> split( const string& ori , char ch )
-{
-    vector<string> ans;
-    split(ori , ch , ans);
-    return ans;
 }
 
 void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> &infos)
@@ -194,9 +170,102 @@ void XMLHelper::getTexturePackets(const string &file, vector<TexturePackerInfo> 
     }
 }
 
+void XMLHelper::getTexturePacketsKw(const string &file, vector<frameStruct> &frames)
+{
+    map<string, boost::any> dict;
+    Plist::readPlist(file.c_str(), dict);
 
+    const dictionary_type& plistDic = boost::any_cast<const dictionary_type&>(dict.find("frames")->second);
+    for(auto it = plistDic.begin(); it != plistDic.end(); ++it)
+    {
+        frameStruct frame;
+        
+        //rect
+        const dictionary_type& temp = boost::any_cast<const dictionary_type&>(it->second);
+        string textureRect = boost::any_cast<const string&>(temp.find("textureRect")->second);
+        textureRect = getCleanString(textureRect, '{');
+        textureRect = getCleanString(textureRect, '}');
+        vector<string> rectStr = split(textureRect, ',');
+        frame.x = getIntForString(rectStr[0]);
+        frame.y = getIntForString(rectStr[1]);
+        frame.w = getIntForString(rectStr[2]);
+        frame.h = getIntForString(rectStr[3]);
+        
+        //textureRotated
+        bool isRotated = boost::any_cast<const bool&>(temp.find("textureRotated")->second);
+        frame.rotated = isRotated;
+        
+        //name
+        string name = split(it->first, '.').front();
+        frame.name = name;
+        
+        
+        frames.push_back(frame);
+    }
+}
 
-
+vector<frameStruct> XMLHelper::getFrameStruct2(const string &file)
+{
+    vector<frameStruct> reuslt;
+    
+    fs::path p(file);
+    
+    fs::ifstream ifile;
+    ifile.open(p);
+    
+    vector<string> spriteSourceSizes;
+    vector<string> names;
+    string s;
+    while (getline(ifile, s))
+    {
+        string findKey = "{\"frame\":{";
+        size_t nameStart = 0;
+        size_t end = 0;
+        while (true)
+        {
+            nameStart = s.find(findKey, end);
+            if (nameStart == string::npos)
+            {
+                break;
+            }
+            size_t start = nameStart + findKey.size();
+            end = s.find("}", start);
+            spriteSourceSizes.push_back(s.substr(start, end - start));
+            
+            string nickKey = "\"";
+            size_t nickEnd = s.rfind(".png\"", nameStart);
+            size_t nickStart = s.rfind(nickKey, nickEnd);
+            names.push_back(s.substr(nickStart + nickKey.size(), nickEnd - nickStart - nickKey.size()));
+        }
+    }
+    
+    for (auto i = 0; i < spriteSourceSizes.size(); ++i)
+    {
+        frameStruct frame;
+        frame.rotated = false;
+        frame.name = names[i];
+        
+        string str = spriteSourceSizes[i];
+        string key = "\"x\":";
+        str = str.replace(str.find(key), key.size(), "");
+        key = "\"y\":";
+        str = str.replace(str.find(key), key.size(), "");
+        key = "\"w\":";
+        str = str.replace(str.find(key), key.size(), "");
+        key = "\"h\":";
+        str = str.replace(str.find(key), key.size(), "");
+        
+        vector<string> rectStr = split(str, ',');
+        frame.x = getIntForString(rectStr[0]);
+        frame.y = getIntForString(rectStr[1]);
+        frame.w = getIntForString(rectStr[2]);
+        frame.h = getIntForString(rectStr[3]);
+        
+        reuslt.push_back(frame);
+    }
+    
+    return reuslt;
+}
 
 
 

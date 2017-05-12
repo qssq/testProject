@@ -106,13 +106,13 @@ void GamesVersionHelper::createServer(const string &version)
 
 void GamesVersionHelper::createLocalKwx(const string &version)
 {
-    gLocalPath = "/Users/gongxun/oschina/gtKwx/mobiles/GTKwx";
+    gLocalPath = "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/";
     GameVersionServer::serverOutPath = "kwxUpdate/";
     vector<GameVersionLocal> gameLocals;
     {
         GameVersionLocal hall;
-//        hall.setInfo("Game", "http://192.168.0.103/kwxUpdate", version, "");
-        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version, "");
+        hall.setInfo("Game", "http://192.168.1.106/kwxUpdate", version, "");
+//        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version, "");
         gameLocals.push_back(hall);
     }
     for (auto it : gameLocals)
@@ -127,8 +127,8 @@ void GamesVersionHelper::createServerKwx(const string &version)
     vector<GameVersionServer> gameServers;
     {
         GameVersionServer hall;
-//        hall.setInfo("Game", "http://192.168.0.103/kwxUpdate", version);
-        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version);
+        hall.setInfo("Game", "http://192.168.1.106/kwxUpdate", version);
+//        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version);
         gameServers.push_back(hall);
     }
     for (auto it : gameServers)
@@ -171,6 +171,55 @@ void GamesVersionHelper::createServerHall(const string &version)
     }
 }
 
+void GamesVersionHelper::createLocalLefan(const string &version)
+{
+    gLocalPath = "/Users/gongxun/oschina/lefan/mobiles/Lefan/";
+    GameVersionServer::serverOutPath = "lefanUpdate/";
+    vector<GameVersionLocal> gameLocals;
+    {
+        GameVersionLocal hall;
+//        hall.setInfo("Game", "http://192.168.0.101/lefanUpdate", version, "");
+        hall.setInfo("lefan", "http://lfkwx.oss-cn-shanghai.aliyuncs.com/app", version, "");
+        gameLocals.push_back(hall);
+    }
+    for (auto it : gameLocals)
+    {
+        it.createFile();
+    }
+}
+
+void GamesVersionHelper::createServerLefan(const string &version)
+{
+    GameVersionServer::serverOutPath = "lefanUpdate/";
+    vector<GameVersionServer> gameServers;
+    {
+        GameVersionServer hall;
+//        hall.setInfo("lefan", "http://192.168.0.101/kwxUpdate", version);
+        hall.setInfo("lefan", "http://lfkwx.oss-cn-shanghai.aliyuncs.com/app", version);
+        gameServers.push_back(hall);
+    }
+    for (auto it : gameServers)
+    {
+        it.createFile();
+    }
+}
+
+void GamesVersionHelper::createServerNewbee(const string &version)
+{
+    GameVersionServer::serverOutPath = "newbeeUpdate/";
+    vector<GameVersionServer> gameServers;
+    {
+        GameVersionServer hall;
+        hall.setInfo("newbee", "http://oimqz5jij.bkt.clouddn.com/newbee", version);
+        //        hall.setInfo("Game", "http://192.168.0.103/hallUpdate", version);
+        gameServers.push_back(hall);
+    }
+    for (auto it : gameServers)
+    {
+        it.createFile();
+    }
+}
+
 //--------------
 //GameVersionLocal
 //--------------
@@ -194,6 +243,10 @@ void GameVersionLocal::setInfo(const string &name, const string &url, const stri
     mOutPath2 = "";
     
     mPackageUrl = mUrl + "/game" + mName;
+    if (name == "lefan")
+    {
+        mPackageUrl = mUrl;
+    }
     mRemoteManifestUrl = mPackageUrl + "/project.manifest";
     mRemoteVersionUrl = mPackageUrl + "/version.manifest";
     
@@ -310,8 +363,15 @@ string GameVersionLocal::getHallPath()
 {
     ostringstream oss;
     oss<<GamesVersionHelper::gLocalPath;
-    oss<<"res/project";
-    oss<<mName;
+    if (mName == "lefan")
+    {
+        oss<<"res/projectGame";
+    }
+    else
+    {
+        oss<<"res/project";
+        oss<<mName;
+    }
     oss<<".manifest";
     return oss.str();
 }

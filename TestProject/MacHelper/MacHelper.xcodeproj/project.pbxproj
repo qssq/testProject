@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA230AE71E6D0DAC00C52914 /* CImageHandle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA230AE51E6D0DAC00C52914 /* CImageHandle.cpp */; };
+		EA4378A51EC2FB9D00E17717 /* UpdateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA4378A31EC2FB9D00E17717 /* UpdateManager.cpp */; };
 		EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA442EFD1B6FDF5D0062E30C /* main.cpp */; };
 		EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA442F041B6FDF7D0062E30C /* FileHelper.cpp */; };
 		EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F071B6FE5530062E30C /* libboost_system.a */; };
@@ -45,6 +47,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA230AE51E6D0DAC00C52914 /* CImageHandle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CImageHandle.cpp; sourceTree = "<group>"; };
+		EA230AE61E6D0DAC00C52914 /* CImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CImageHandle.h; sourceTree = "<group>"; };
+		EA4378A31EC2FB9D00E17717 /* UpdateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UpdateManager.cpp; path = update/UpdateManager.cpp; sourceTree = "<group>"; };
+		EA4378A41EC2FB9D00E17717 /* UpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateManager.h; path = update/UpdateManager.h; sourceTree = "<group>"; };
 		EA442EFA1B6FDF5D0062E30C /* MacHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA442EFD1B6FDF5D0062E30C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EA442F041B6FDF7D0062E30C /* FileHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileHelper.cpp; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 		EA88753E1C240B0900BFD5B0 /* RandomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomList.h; sourceTree = "<group>"; };
 		EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GXMD5.cpp; sourceTree = "<group>"; };
 		EAA0CB001C1DBDA600877842 /* GXMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXMD5.h; sourceTree = "<group>"; };
+		EAA9283F1EC4115B00D9C656 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		EAAEC3411CDAF09300C93741 /* libX11.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libX11.6.dylib; path = ../../../../../../opt/X11/lib/libX11.6.dylib; sourceTree = "<group>"; };
 		EAAEC3441CDAF19F00C93741 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 		EAAEC3451CDB009D00C93741 /* libjpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjpeg.dylib; path = ../../../../../../usr/local/lib/libjpeg.dylib; sourceTree = "<group>"; };
@@ -108,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA4378A21EC2FA2200E17717 /* update */ = {
+			isa = PBXGroup;
+			children = (
+				EA4378A31EC2FB9D00E17717 /* UpdateManager.cpp */,
+				EA4378A41EC2FB9D00E17717 /* UpdateManager.h */,
+			);
+			name = update;
+			sourceTree = "<group>";
+		};
 		EA442EF11B6FDF5D0062E30C = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +150,7 @@
 		EA442EFC1B6FDF5D0062E30C /* MacHelper */ = {
 			isa = PBXGroup;
 			children = (
+				EA4378A21EC2FA2200E17717 /* update */,
 				EA74D7E01DC846E3005B2B66 /* file */,
 				EA6895211D9C09B900A26DD6 /* net */,
 				EAAF866B1D0E8E18003F9E4C /* src */,
@@ -154,6 +171,7 @@
 				EA88753E1C240B0900BFD5B0 /* RandomList.h */,
 				EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */,
 				EAD542281DA8A1BE0021C194 /* CoinFrontTest.h */,
+				EAA9283F1EC4115B00D9C656 /* Defines.h */,
 			);
 			path = MacHelper;
 			sourceTree = "<group>";
@@ -211,6 +229,8 @@
 			children = (
 				EAC3DE801CD9853C00CC72AE /* CImgHelper.cpp */,
 				EAC3DE811CD9853C00CC72AE /* CImgHelper.h */,
+				EA230AE51E6D0DAC00C52914 /* CImageHandle.cpp */,
+				EA230AE61E6D0DAC00C52914 /* CImageHandle.h */,
 			);
 			path = CImg;
 			sourceTree = "<group>";
@@ -280,8 +300,10 @@
 				EAAF866A1D0E83F7003F9E4C /* XMLHelper.cpp in Sources */,
 				EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */,
 				EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */,
+				EA230AE71E6D0DAC00C52914 /* CImageHandle.cpp in Sources */,
 				EA6895241D9C09B900A26DD6 /* ODSocket6.cpp in Sources */,
 				EA74D7E61DC84834005B2B66 /* GameGroupHelper.cpp in Sources */,
+				EA4378A51EC2FB9D00E17717 /* UpdateManager.cpp in Sources */,
 				EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */,
 				EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */,
 				EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */,

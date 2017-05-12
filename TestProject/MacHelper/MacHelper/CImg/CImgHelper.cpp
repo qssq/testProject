@@ -92,12 +92,13 @@ void CImgHelper::test01()
     
     //裁切
     vector<ImgRect> rects;
+    int index = 0;
     for(int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 6; j++)
         {
             char name[20];
-            sprintf(name, "%d", 51 + i * 5 + j);
+            sprintf(name, "emoji_%d", i * 6 + j);
             ImgRect rect = {i * 100, j * 100, 100, 100, 0, 0, 100, 100, false, name};
             rects.push_back(rect);
         }

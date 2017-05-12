@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>benz_back.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{46,46}</string>
+                <key>spriteSourceSize</key>
+                <string>{46,46}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{46,46}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>benz_menu.png</string>
+            <key>size</key>
+            <string>{48,48}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:02d8e7190a6d33c50a87ffd3d27fcee9:d32146478ee5b8f166a1733d65a80946:8396b49fa76a6d54d9eb2be3d99c7300$</string>
+            <key>textureFileName</key>
+            <string>benz_menu.png</string>
+        </dict>
+    </dict>
+</plist>

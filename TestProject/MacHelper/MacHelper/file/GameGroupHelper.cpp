@@ -40,14 +40,14 @@ GameGroupHelper *GameGroupHelper::singleton()
 void GameGroupHelper::buildConfigFile()
 {
     vector<string> srcs = {
-        "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/src/"
+        "/Users/gongxun/oschina/gtKwx/mobiles/newbee/src/"
     };
     
     vector<string> ress = {
-        "/Users/gongxun/oschina/gt_sphere/mobiles/GameGroup/res/"
+        "/Users/gongxun/oschina/gtKwx/mobiles/newbee/res/"
     };
     
-    buildConfig(srcs, ress, mProjectPath);
+    buildConfig(srcs, ress, "/Users/gongxun/oschina/gtKwx/mobiles/newbee/");
 }
 
 void GameGroupHelper::buildConfigKwxFile()
@@ -210,6 +210,32 @@ void GameGroupHelper::buildConfigFuweng()
     };
     
     buildConfig(srcs, ress, "/Users/gongxun/GitHub/testProject/TestProject/Fuweng/");
+}
+
+void GameGroupHelper::buildConfigLefan()
+{
+    vector<string> srcs = {
+        "/Users/gongxun/oschina/lefan/mobiles/Lefan/src/"
+    };
+    
+    vector<string> ress = {
+        "/Users/gongxun/oschina/lefan/mobiles/Lefan/res/"
+    };
+    
+    buildConfig(srcs, ress, "/Users/gongxun/oschina/lefan/mobiles/Lefan/");
+}
+
+void GameGroupHelper::buildConfigNewbee()
+{
+    vector<string> srcs = {
+        "/Users/gongxun/oschina/gtKwx/mobiles/newbee/src/"
+    };
+    
+    vector<string> ress = {
+        "/Users/gongxun/oschina/gtKwx/mobiles/newbee/res/"
+    };
+    
+    buildConfig(srcs, ress, "/Users/gongxun/oschina/gtKwx/mobiles/newbee/");
 }
 
 void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<string> &recPaths, const string &rootPath)

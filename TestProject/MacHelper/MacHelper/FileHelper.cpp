@@ -8,6 +8,10 @@
 
 #include "FileHelper.h"
 
+string FileHelper::gStartPath = "";
+
+string FileHelper::gProjectName = "MacHelper";
+
 FileHelper::FileHelper()
 {
     
@@ -103,15 +107,25 @@ string FileHelper::getKeyOrValue(const string &key, const string &value)
     return result;
 }
 
+void FileHelper::copyFile(const string &fromFile, const string &toFile)
+{
+    auto parent_path = fs::path(toFile).parent_path();
+    if (!fs::exists(parent_path))
+    {
+        fs::create_directories(parent_path);
+    }
+    fs::copy_file(fromFile, toFile, fs::copy_option::overwrite_if_exists);
+}
+
 vector<string> FileHelper::getDirectoryFile(const string &path)
 {
     vector<string> files;
     getFileForDirectory(path, files);
-    for (auto &it : files)
-    {
-        fs::path p(it);
-        cout<<"fileName:"<<p.filename()<<" fileExtension:"<<p.extension()<<endl;
-    }
+//    for (auto &it : files)
+//    {
+//        fs::path p(it);
+//        cout<<"fileName:"<<p.filename()<<" fileExtension:"<<p.extension()<<endl;
+//    }
     return files;
 }
 
@@ -147,19 +161,32 @@ void FileHelper::getFileForDirectory(const string &path, vector<string> &fileNam
     }
 }
 
-void FileHelper::copyFile(const string &fromFile, const string &toFile)
+vector<string> FileHelper::getDirectory(const string &path)
 {
-    auto parent_path = fs::path(toFile).parent_path();
-    if (!fs::exists(parent_path))
+    vector<string> result;
+    
+    for (fs::directory_entry& x : fs::directory_iterator(path))
     {
-        fs::create_directories(parent_path);
+        if (fs::is_directory(x))
+        {
+            string temp = x.path().string();
+            result.push_back(temp);
+        }
     }
-    fs::copy_file(fromFile, toFile, fs::copy_option::overwrite_if_exists);
+    
+    return result;
 }
 
+string FileHelper::getFileName(const string &path)
+{
+    fs::path p(path);
+    return p.filename().string();
+}
 
-
-
+int FileHelper::removeFile(const string &path)
+{
+    return fs::remove_all(path);
+}
 
 
 
