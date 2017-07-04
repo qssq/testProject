@@ -32,6 +32,7 @@
 		EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC3DE801CD9853C00CC72AE /* CImgHelper.cpp */; };
 		EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */; };
 		EAD542291DA8A1BE0021C194 /* CoinFrontTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */; };
+		EAE9C2FD1EE468A900B8B2F3 /* ChangeFileName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE9C2FB1EE468A900B8B2F3 /* ChangeFileName.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +98,8 @@
 		EAC8E6B91C16A8300047FD62 /* GamesVersionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesVersionHelper.h; sourceTree = "<group>"; };
 		EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoinFrontTest.cpp; sourceTree = "<group>"; };
 		EAD542281DA8A1BE0021C194 /* CoinFrontTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinFrontTest.h; sourceTree = "<group>"; };
+		EAE9C2FB1EE468A900B8B2F3 /* ChangeFileName.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChangeFileName.cpp; sourceTree = "<group>"; };
+		EAE9C2FC1EE468A900B8B2F3 /* ChangeFileName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeFileName.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,8 @@
 				EA74D7E51DC84834005B2B66 /* GameGroupHelper.h */,
 				EA8171791DD9E6FB00C4F87E /* GzipHelper.cpp */,
 				EA81717A1DD9E6FB00C4F87E /* GzipHelper.h */,
+				EAE9C2FB1EE468A900B8B2F3 /* ChangeFileName.cpp */,
+				EAE9C2FC1EE468A900B8B2F3 /* ChangeFileName.h */,
 			);
 			path = file;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */,
 				EAD542291DA8A1BE0021C194 /* CoinFrontTest.cpp in Sources */,
 				EAAF866A1D0E83F7003F9E4C /* XMLHelper.cpp in Sources */,
+				EAE9C2FD1EE468A900B8B2F3 /* ChangeFileName.cpp in Sources */,
 				EA442EFE1B6FDF5D0062E30C /* main.cpp in Sources */,
 				EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */,
 				EA230AE71E6D0DAC00C52914 /* CImageHandle.cpp in Sources */,

@@ -91,6 +91,21 @@ void CImgHelper::test01()
     
     
     //裁切
+//    vector<ImgRect> rects;
+//    int index = 0;
+//    for(int i = 0; i < 5; i++)
+//    {
+//        for (int j = 0; j < 6; j++)
+//        {
+//            char name[20];
+//            sprintf(name, "emoji_%d", i * 6 + j);
+//            ImgRect rect = {i * 100, j * 100, 100, 100, 0, 0, 100, 100, false, name};
+//            rects.push_back(rect);
+//        }
+//    }
+//    copyFiles(rects, "faceq_res.png");
+    
+    //裁切
     vector<ImgRect> rects;
     int index = 0;
     for(int i = 0; i < 5; i++)
@@ -103,7 +118,7 @@ void CImgHelper::test01()
             rects.push_back(rect);
         }
     }
-    copyFiles(rects, "faceq_res.png");
+    copyFiles(rects, "dice_left.png");
 }
 
 void CImgHelper::GaussianBlur(const string &file)

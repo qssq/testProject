@@ -1,0 +1,91 @@
+package msg;
+
+message LoginRequest {
+	required string uid = 1;
+	required string name = 2;
+}
+
+message LoginResponse {
+	required int32 code = 1;
+}
+
+message JoinGameCCRequest {
+	enum JoinGameCCRequestCode {
+		join = 0;
+		create = 1;
+	}
+	required JoinGameCCRequestCode code = 1;
+	optional int32 tableId = 2;
+}
+
+message JoinGameCCResponse {
+	enum JoinGameCCResponseCode {
+		Ok = 0;
+		CreateErr = 1;
+		JoinErr = 2;
+		TableIdErr = 3;
+		TableFullErr = 4;
+	}
+	required JoinGameCCResponseCode code = 1;
+	optional int32 tableId = 2;
+}
+
+message QzCC{
+	required int32 row = 1;			//10行 0开始
+	required int32 col = 2;			//9列 0开始
+	required int32 color = 3;		//1红 2黑
+	required int32 num = 4;			//0:帅 1:士 2:相 3:马 4:车 5:炮 6:卒
+}
+
+message ActionCCRequest {
+	enum ActionCCRequestCode {
+		play = 0;
+		ready = 1;
+	}
+	required ActionCCRequestCode code = 1;
+	optional QzCC qz1 = 2;
+	optional QzCC qz2 = 3;
+}
+
+message ActionCCResponse {
+	enum ActonCCResponseCode {
+		ok = 0;
+		err = 1;
+	}
+	required ActonCCResponseCode code = 1;
+	required int32 lastCode = 2; 	
+}
+
+message TableUserStatsCC {
+	required string uid = 1;
+	required int32 color = 2;
+	required bool isReady = 3;
+}
+
+message TableStatsCC {
+	required int32 step = 1; 							//0未开始 1开始
+	required int32 mySeat = 2;
+	required int32 nowSeat = 3;
+	optional TableUserStatsCC seatUser1 = 4;
+	optional TableUserStatsCC seatUser2 = 5;
+	repeated QzCC qzs = 6;
+	optional ActionCCRequest lastAction = 7;     
+}
+
+message TableUserRoundEndEventCC {
+	required string uid = 1;
+	required int32 color = 2;
+}
+
+message TableRoundEndEventCC {
+	required int32 tableID = 1;  
+	required int32 mySeat = 2;
+	required int32 winSeat = 3;								//0平局
+	optional TableUserRoundEndEventCC seatUser1 = 4;
+	optional TableUserRoundEndEventCC seatUser2 = 5;
+}
+
+
+
+
+

@@ -217,4 +217,7 @@ TestProject/FishPath/cocos2d/
 
 TestProject/GameGroup/frameworks/cocos2d-x/*
 !TestProject/GameGroup/frameworks/cocos2d-x/cocos
-TestProject/Fuweng/
+TestProject/Fuweng/*
+!TestProject/Fuweng/src
+!TestProject/Fuweng/cocostudio
+!TestProject/Fuweng/res

@@ -111,8 +111,8 @@ void GamesVersionHelper::createLocalKwx(const string &version)
     vector<GameVersionLocal> gameLocals;
     {
         GameVersionLocal hall;
-        hall.setInfo("Game", "http://192.168.1.106/kwxUpdate", version, "");
-//        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version, "");
+//        hall.setInfo("Game", "http://192.168.1.106/kwxUpdate", version, "");
+        hall.setInfo("Game", "http://qxkwx.oss-cn-beijing.aliyuncs.com", version, "");
         gameLocals.push_back(hall);
     }
     for (auto it : gameLocals)

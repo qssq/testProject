@@ -31,8 +31,9 @@ UpdateManager::~UpdateManager()
     
 }
 
-void UpdateManager::start()
+void UpdateManager::start(const string &path, const string &strPackageUrl)
 {
+    mStrPackageUrl = strPackageUrl;
     ///1.找到所有文件夹
     ///2.所有文件夹和最新的文件夹对比 记录下对应filename
     ///3.开始移动改动文件到主目录打包 然后移动包到工作目录 打包完之后删除
@@ -40,7 +41,7 @@ void UpdateManager::start()
     ///5.写更新配置
     
     //工作目录
-    string path = "/Users/gongxun/Sites/update/kwx/";
+//    string path = "/Users/gongxun/Sites/update/kwx/";
     //增量包
     vector<string> mUpdateZipFiles;
     //全包
@@ -63,7 +64,8 @@ void UpdateManager::start()
     
     ///2
     //找到所有文件的对比
-    cout<<"2 开始进行对比文件夹 最新版本文件夹是:"<<newDirectory<<"..."<<endl;
+    cout<<"2 开始进行对比文件夹..."<<endl;
+    cout<<"最新版本文件夹是:"<<newDirectory<<endl;
     map<string, vector<string>> differenceMaps;
     for (const auto &directory : directorys)
     {
@@ -122,6 +124,21 @@ vector<string> UpdateManager::sortVersionDirectory(const vector<string> &directo
 {
     vector<string> result(directory.begin(), directory.end());
     
+    //过滤tools文件夹
+    for (auto it = result.begin(); it != result.end(); ){
+        string fileName = *it;
+        fs::path p(fileName);
+        if (p.filename() == "tools")
+        {
+            it = result.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+    
+    //开始排序
     auto getStringMax = [](string a, string b){
         int aNum = getIntForString(a);
         int bNum = getIntForString(b);
@@ -231,8 +248,8 @@ bool UpdateManager::createConifgFile(const vector<string> &addZip, const string 
 {
     string strProject = "project.manifest";
     string strVersion = "version.manifest";
-    string strPackageUrl = "http://192.168.1.106/update/kwx";
-    
+    string strPackageUrl = mStrPackageUrl;
+    cout<<"更新的网络下载地址:"<<mStrPackageUrl<<endl;
     
     //生成project文件
     fs::ofstream ofile;
@@ -286,6 +303,7 @@ bool UpdateManager::createConifgFile(const vector<string> &addZip, const string 
         ofile<<"}"<<endl;
     }
     ofile.close();
+    cout<<strProject<<"生成完毕"<<endl;
     
     //生成version文件
     fs::ofstream ofile2;
@@ -306,6 +324,7 @@ bool UpdateManager::createConifgFile(const vector<string> &addZip, const string 
         ofile2<<"}"<<endl;
     }
     ofile2.close();
+    cout<<strVersion<<"生成完毕"<<endl;
     
     return true;
 }

@@ -1,0 +1,63 @@
+<Solution>
+  <PropertyGroup Name="cocostudio" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="chess">
+          <Image Name="board_1.png" />
+          <Image Name="chess_bg.png" />
+          <Folder Name="btn">
+            <Image Name="offline.png" />
+            <Image Name="online.png" />
+            <Image Name="zhchess.png" />
+            <Image Name="login_tourist.png" />
+            <Image Name="start.png" />
+            <Image Name="login_success.png" />
+          </Folder>
+          <Folder Name="flag">
+            <PlistImageFolder Image="chess0.png" PListFile="chess0.plist" Name=".chess0_PList.Dir">
+              <PlistImageFile Name="chess0_0_0.png" Key="chess0_0_0.png" />
+              <PlistImageFile Name="chess0_0_1.png" Key="chess0_0_1.png" />
+              <PlistImageFile Name="chess0_0_2.png" Key="chess0_0_2.png" />
+              <PlistImageFile Name="chess0_0_3.png" Key="chess0_0_3.png" />
+              <PlistImageFile Name="chess0_0_4.png" Key="chess0_0_4.png" />
+              <PlistImageFile Name="chess0_0_5.png" Key="chess0_0_5.png" />
+              <PlistImageFile Name="chess0_0_6.png" Key="chess0_0_6.png" />
+              <PlistImageFile Name="chess0_1_0.png" Key="chess0_1_0.png" />
+              <PlistImageFile Name="chess0_1_1.png" Key="chess0_1_1.png" />
+              <PlistImageFile Name="chess0_1_2.png" Key="chess0_1_2.png" />
+              <PlistImageFile Name="chess0_1_3.png" Key="chess0_1_3.png" />
+              <PlistImageFile Name="chess0_1_4.png" Key="chess0_1_4.png" />
+              <PlistImageFile Name="chess0_1_5.png" Key="chess0_1_5.png" />
+              <PlistImageFile Name="chess0_1_6.png" Key="chess0_1_6.png" />
+              <PlistImageFile Name="chessSel0_0_0.png" Key="chessSel0_0_0.png" />
+              <PlistImageFile Name="chessSel0_0_1.png" Key="chessSel0_0_1.png" />
+              <PlistImageFile Name="chessSel0_0_2.png" Key="chessSel0_0_2.png" />
+              <PlistImageFile Name="chessSel0_0_3.png" Key="chessSel0_0_3.png" />
+              <PlistImageFile Name="chessSel0_0_4.png" Key="chessSel0_0_4.png" />
+              <PlistImageFile Name="chessSel0_0_5.png" Key="chessSel0_0_5.png" />
+              <PlistImageFile Name="chessSel0_0_6.png" Key="chessSel0_0_6.png" />
+              <PlistImageFile Name="chessSel0_1_0.png" Key="chessSel0_1_0.png" />
+              <PlistImageFile Name="chessSel0_1_1.png" Key="chessSel0_1_1.png" />
+              <PlistImageFile Name="chessSel0_1_2.png" Key="chessSel0_1_2.png" />
+              <PlistImageFile Name="chessSel0_1_3.png" Key="chessSel0_1_3.png" />
+              <PlistImageFile Name="chessSel0_1_4.png" Key="chessSel0_1_4.png" />
+              <PlistImageFile Name="chessSel0_1_5.png" Key="chessSel0_1_5.png" />
+              <PlistImageFile Name="chessSel0_1_6.png" Key="chessSel0_1_6.png" />
+            </PlistImageFolder>
+            <Image Name="chess0_0_0.png" />
+            <Image Name="chessSel0_0_0.png" />
+          </Folder>
+          <Image Name="bk.png" />
+          <Image Name="editBk.png" />
+          <Image Name="bg.png" />
+          <Image Name="head_bk.png" />
+          <Image Name="touristPic.png" />
+        </Folder>
+        <Project Name="ChessTable.csd" Type="Layer" />
+        <Project Name="ChessFlag.csd" Type="Layer" />
+        <Project Name="ChessUI.csd" Type="Layer" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

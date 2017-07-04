@@ -19,9 +19,11 @@ class UpdateManager
 public:
     static UpdateManager *singleton();
     
-    void start();
+    //path:工作目录 strPackageUrl:更新http位置
+    void start(const string &path, const string &strPackageUrl);
 private:
     FileHelper mFileHelper;
+    string mStrPackageUrl;
     
     //排序文件夹 按照3点版本号排序
     vector<string> sortVersionDirectory(const vector<string> &directory);

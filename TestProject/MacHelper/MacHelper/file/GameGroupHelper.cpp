@@ -53,14 +53,14 @@ void GameGroupHelper::buildConfigFile()
 void GameGroupHelper::buildConfigKwxFile()
 {
     vector<string> srcs = {
-        "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/src/"
+        "/Users/gongxun/oschina/kwxclient/mobiles/GTKwx/src/"
     };
     
     vector<string> ress = {
-        "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/res/"
+        "/Users/gongxun/oschina/kwxclient/mobiles/GTKwx/res/"
     };
     
-    buildConfig(srcs, ress, "/Users/gongxun/oschina/gt-card/mobiles/GTKwx/");
+    buildConfig(srcs, ress, "/Users/gongxun/oschina/kwxclient/mobiles/GTKwx/");
 //    vector<string> srcs = {
 //        "/Users/gongxun/oschina/gtKwx/mobiles/gtWhmj/src/"
 //    };
@@ -253,7 +253,7 @@ void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<s
         {
             string &filename = *it;
             fs::path p(filename);
-            if (p.filename() == "files.js")
+            if (p.filename() == "files.jstest")
             {
                 it = fileNames.erase(it);
             }
@@ -304,6 +304,18 @@ void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<s
             string &filename = *it;
             fs::path p(filename);
             if (p.extension() == ".DS_Store")
+            {
+                it = fileNames.erase(it);
+            }
+            else if (p.extension() == ".manifest")
+            {
+                it = fileNames.erase(it);
+            }
+            else if (p.extension() == ".mp3")
+            {
+                it = fileNames.erase(it);
+            }
+            else if (p.extension() == ".js")
             {
                 it = fileNames.erase(it);
             }

@@ -1,0 +1,78 @@
+{
+  "ID": "e66b17f1-9d73-4aeb-80a5-d239687cdd2f",
+  "Version": "2.3.2.3",
+  "Name": "ChessChess",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 4,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "chess/board_1.png",
+              "Plist": ""
+            },
+            "Scale9Width": 720,
+            "Scale9Height": 823,
+            "StretchWidthEnable": true,
+            "StretchHeightEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 320.0001,
+              "Y": 367.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.3844
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.7615
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 0.0001,
+            "RightMargin": -0.0001,
+            "TopMargin": 226.0,
+            "Tag": 5,
+            "ActionTag": -148090116,
+            "Size": {
+              "X": 640.0,
+              "Y": 734.0
+            },
+            "Name": "Image_chessBg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 960.0
+        },
+        "Name": "Panel",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "chess/board_1.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

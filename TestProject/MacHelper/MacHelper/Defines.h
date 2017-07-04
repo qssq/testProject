@@ -52,5 +52,16 @@ inline int getIntForString(const string &s)
     return result;
 }
 
+//c++ 11 toString
+template <typename T>
+string getString(T value)
+{
+    ostringstream oss;
+    string s;
+    oss<<value;
+    s = oss.str();
+    return s;
+}
+
 
 #endif /* Defines_h */

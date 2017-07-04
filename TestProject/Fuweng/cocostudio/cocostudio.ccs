@@ -1,0 +1,26 @@
+<Solution>
+  <PropertyGroup Name="cocostudio" Version="2.3.2.3" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="HudLayer.csd" Type="Layer" />
+        <Folder Name="Hud">
+          <Image Name="go.png" />
+          <Image Name="sz_2.png" />
+          <Image Name="sz_3.png" />
+          <Image Name="go1.png" />
+          <Image Name="go2.png" />
+        </Folder>
+        <Project Name="LoginLayer.csd" Type="Layer" />
+        <Folder Name="Login">
+          <Image Name="btmutiplay.png" />
+          <Image Name="btmutiplaypress.png" />
+          <Image Name="btround_unlock_press.png" />
+          <Image Name="btsingleplay.png" />
+          <Image Name="btsingleplaypress.png" />
+          <Image Name="hallbg.png" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

@@ -23,6 +23,7 @@
 #include "UpdateManager.h"
 #include "Defines.h"
 #include "FileHelper.h"
+#include "ChangeFileName.h"
 
 using namespace std;
 
@@ -74,7 +75,10 @@ int main(int argc, const char * argv[]) {
     cout << "24:lefan setver manifest"<<endl;
     cout << "25:newbee config"<<endl;
     cout << "26:newbee setver manifest"<<endl;
+    cout << "27:change file name"<<endl;
     cout << "100:kwx增量更新"<<endl;
+    cout << "101:newbee增量更新"<<endl;
+    cout << "102:kwx增量更新(真实版本)"<<endl;
     
     
     string input;
@@ -274,10 +278,26 @@ int main(int argc, const char * argv[]) {
             cin>>version;
             gh.createServerNewbee(version);
         }
+        else if (input == "27")
+        {
+            ChangeFileName cfn;
+            cfn.start("/Users/gongxun/Desktop/test/9/");
+        }
         else if (input == "100")
         {
             cout<<"开始构造增量更新包"<<endl;
-            UpdateManager::singleton()->start();
+            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwx/", "http://qxkwx.oss-cn-beijing.aliyuncs.com/testGame");
+//            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwx/", "http://192.168.1.106/update/kwx");
+        }
+        else if (input == "101")
+        {
+            cout<<"开始构造增量更新包"<<endl;
+            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/newbee/", "http://192.168.1.106/update/newbee");
+        }
+        else if (input == "102")
+        {
+            cout<<"开始构造增量更新包"<<endl;
+            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwxreal/", "http://qxkwx.oss-cn-beijing.aliyuncs.com/gameGame");
         }
     }
     
