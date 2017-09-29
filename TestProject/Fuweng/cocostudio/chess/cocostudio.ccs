@@ -53,10 +53,34 @@
           <Image Name="bg.png" />
           <Image Name="head_bk.png" />
           <Image Name="touristPic.png" />
+          <Folder Name="end">
+            <Image Name="back.png" />
+            <Image Name="bg.png" />
+            <Image Name="draw.png" />
+            <Image Name="fail.png" />
+            <Image Name="restart.png" />
+            <Image Name="win.png" />
+          </Folder>
         </Folder>
         <Project Name="ChessTable.csd" Type="Layer" />
         <Project Name="ChessFlag.csd" Type="Layer" />
         <Project Name="ChessUI.csd" Type="Layer" />
+        <Project Name="ChessEndLayer.csd" Type="Layer" />
+        <Project Name="WzqTable.csd" Type="Layer" />
+        <Folder Name="wzq">
+          <PlistImageFolder Image="piece.png" PListFile="piece.plist" Name=".piece_PList.Dir">
+            <PlistImageFile Name="piece_black1.png" Key="piece_black1.png" />
+            <PlistImageFile Name="piece_black2.png" Key="piece_black2.png" />
+            <PlistImageFile Name="piece_red.png" Key="piece_red.png" />
+            <PlistImageFile Name="piece_white1.png" Key="piece_white1.png" />
+            <PlistImageFile Name="piece_white2.png" Key="piece_white2.png" />
+          </PlistImageFolder>
+          <Image Name="game_bg_chess_board.png" />
+          <Image Name="ui_player_black.png" />
+          <Image Name="ui_player_white.png" />
+          <Image Name="bg_login.png" />
+          <Image Name="game_chess_background_tiny.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

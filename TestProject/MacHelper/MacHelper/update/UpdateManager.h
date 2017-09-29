@@ -24,6 +24,8 @@ public:
 private:
     FileHelper mFileHelper;
     string mStrPackageUrl;
+    string mCurrentVersion;
+    string mOnlyMarkeStr;
     
     //排序文件夹 按照3点版本号排序
     vector<string> sortVersionDirectory(const vector<string> &directory);
@@ -39,6 +41,9 @@ private:
     
     //返回文件名
     string getFileNameByParentPath(const string &fileName, const string &path);
+    
+    //更具最新的版本号返回唯一标示
+    string getOnlyMarkedForVersion(const string &versionStr);
     
     static UpdateManager *mUpdateManager;
     UpdateManager();

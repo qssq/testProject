@@ -21,7 +21,8 @@ var ChessUILayer = GameBaseLayer.extend({
         mo.seekWidgetByName(this.ccsNode, "Button_login").addTouchEventListener(function(sender, type){
             if (type == ccui.Widget.TOUCH_ENDED){
                 var id = mo.seekWidgetByName(this.ccsNode, "TextField_input").getString();
-                mo.gameWebsocket.openWebSocket("ws://192.168.1.106:3653", id);
+                mo.gameWebsocket.openWebSocket("ws://127.0.0.1:3653", id);
+                mo.fileHelper.setItem("uid", id);
             }
         }, this);
 
@@ -36,6 +37,20 @@ var ChessUILayer = GameBaseLayer.extend({
         mo.seekWidgetByName(this.ccsNode, "Button_start").addTouchEventListener(function(sender, type){
             if (type == ccui.Widget.TOUCH_ENDED){
                 mo.chessTableStatus.sendActionReady();
+            }
+        }, this);
+
+        //test1
+        mo.seekWidgetByName(this.ccsNode, "Button_test1").addTouchEventListener(function(sender, type){
+            if (type == ccui.Widget.TOUCH_ENDED){
+                mo.gameMsgManager.sendJoinGameWzq_create();
+            }
+        }, this);
+
+        //test2
+        mo.seekWidgetByName(this.ccsNode, "Button_test2").addTouchEventListener(function(sender, type){
+            if (type == ccui.Widget.TOUCH_ENDED){
+                mo.gameMsgManager.sendActionWzqPlay(0, null, null)
             }
         }, this);
 
@@ -58,6 +73,12 @@ var ChessUILayer = GameBaseLayer.extend({
             }
         });
 
+        var uid = mo.fileHelper.getItem("uid");
+        if (uid == undefined){
+            uid = (parseInt(Math.random() * 1000)).toString();
+        }
+        mo.seekWidgetByName(this.ccsNode, "TextField_input").setString(uid);
+
         this.intoUIStatus(0);
     },
 
@@ -69,12 +90,15 @@ var ChessUILayer = GameBaseLayer.extend({
     setStep : function(step) {
         if (step == 1){
             this.intoUIStatus(3);
+
+            mo.chessTable.hideEndLayer();
         }else{
             var seatUserMy = mo.chessTableStatus.mTableStatus["seatUser" + mo.chessTableStatus.mTableStatus.mySeat];
             if (seatUserMy != null){
                 var isReadyMy = seatUserMy.isReady;
                 if (isReadyMy){
                     this.intoUIStatus(3);
+                    mo.chessTable.hideEndLayer();
                 }else{
 
                     this.intoUIStatus(2);

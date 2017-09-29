@@ -287,7 +287,7 @@ int main(int argc, const char * argv[]) {
         {
             cout<<"开始构造增量更新包"<<endl;
             UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwx/", "http://qxkwx.oss-cn-beijing.aliyuncs.com/testGame");
-//            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwx/", "http://192.168.1.106/update/kwx");
+//            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwx/", "http://192.168.1.200/update/kwx");
         }
         else if (input == "101")
         {

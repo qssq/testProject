@@ -1,14 +1,19 @@
 package msg;
 
+//0
 message LoginRequest {
 	required string uid = 1;
 	required string name = 2;
 }
 
+//1
 message LoginResponse {
 	required int32 code = 1;
 }
 
+///xq
+
+//2
 message JoinGameCCRequest {
 	enum JoinGameCCRequestCode {
 		join = 0;
@@ -18,6 +23,7 @@ message JoinGameCCRequest {
 	optional int32 tableId = 2;
 }
 
+//3
 message JoinGameCCResponse {
 	enum JoinGameCCResponseCode {
 		Ok = 0;
@@ -37,6 +43,7 @@ message QzCC{
 	required int32 num = 4;			//0:帅 1:士 2:相 3:马 4:车 5:炮 6:卒
 }
 
+//4
 message ActionCCRequest {
 	enum ActionCCRequestCode {
 		play = 0;
@@ -47,6 +54,7 @@ message ActionCCRequest {
 	optional QzCC qz2 = 3;
 }
 
+//5
 message ActionCCResponse {
 	enum ActonCCResponseCode {
 		ok = 0;
@@ -56,12 +64,14 @@ message ActionCCResponse {
 	required int32 lastCode = 2; 	
 }
 
+//6
 message TableUserStatsCC {
 	required string uid = 1;
 	required int32 color = 2;
 	required bool isReady = 3;
 }
 
+//7
 message TableStatsCC {
 	required int32 step = 1; 							//0未开始 1开始
 	required int32 mySeat = 2;
@@ -72,11 +82,13 @@ message TableStatsCC {
 	optional ActionCCRequest lastAction = 7;     
 }
 
+//8
 message TableUserRoundEndEventCC {
 	required string uid = 1;
 	required int32 color = 2;
 }
 
+//9
 message TableRoundEndEventCC {
 	required int32 tableID = 1;  
 	required int32 mySeat = 2;
@@ -86,6 +98,91 @@ message TableRoundEndEventCC {
 }
 
 
+///wzq
+
+//10
+message JoinGameWzqRequest {
+	enum JoinGameWzqRequestCode {
+		join = 0;
+		create = 1;
+	}
+	required JoinGameWzqRequestCode code = 1;
+	optional int32 tableId = 2;
+}
+
+//11
+message JoinGameWzqResponse {
+	enum JoinGameWzqResponseCode {
+		Ok = 0;
+		CreateErr = 1;
+		JoinErr = 2;
+		TableIdErr = 3;
+		TableFullErr = 4;
+	}
+	required JoinGameWzqResponseCode code = 1;
+	optional int32 tableId = 2;
+}
+
+message QzWzq{
+	required int32 row = 1;			//10行 0开始
+	required int32 col = 2;			//9列 0开始
+	required int32 color = 3;		//1白 2黑
+}
+
+//12
+message ActionWzqRequest {
+	enum ActionWzqRequestCode {
+		play = 0;
+		ready = 1;
+	}
+	required ActionWzqRequestCode code = 1;
+	optional int32 row = 2;						//行
+	optional int32 col = 3;						//列
+	optional int32 color = 4;					//1白 2黑
+}
+
+//13
+message ActionWzqResponse {
+	enum ActonWzqResponseCode {
+		ok = 0;
+		err = 1;
+	}
+	required ActonWzqResponseCode code = 1;
+	required int32 lastCode = 2; 	
+}
+
+//14
+message TableUserStatsWzq {
+	required string uid = 1;
+	required int32 color = 2;
+	required bool isReady = 3;
+}
+
+//15
+message TableStatsWzq {
+	required int32 step = 1; 							//0未开始 1开始
+	required int32 mySeat = 2;
+	required int32 nowSeat = 3;
+	optional TableUserStatsWzq seatUser1 = 4;
+	optional TableUserStatsWzq seatUser2 = 5;
+	repeated QzWzq qzs = 6;
+	optional ActionWzqRequest lastAction = 7;     
+}
+
+//16
+message TableUserRoundEndEventWzq {
+	required string uid = 1;
+	required int32 color = 2;
+}
+
+//17
+message TableRoundEndEventWzq {
+	required int32 tableID = 1;  
+	required int32 mySeat = 2;
+	required int32 winSeat = 3;								//0平局
+	optional TableUserRoundEndEventWzq seatUser1 = 4;
+	optional TableUserRoundEndEventWzq seatUser2 = 5;
+}
 
 
 

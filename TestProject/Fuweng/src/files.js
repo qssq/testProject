@@ -1,4 +1,4 @@
-//Created by MacHelper on 2017-07-03 03:04:45
+//Created by MacHelper on 2017-07-06 02:24:57
 
 var Files = [
     "src/ainterface/gameBaseItem.js",
@@ -8,6 +8,7 @@ var Files = [
     "src/games/chess/card/chessCard.js",
     "src/games/chess/chessFlagLayer.js",
     "src/games/chess/chessHelper.js",
+    "src/games/chess/chessTableEndLayer.js",
     "src/games/chess/chessTableLayer.js",
     "src/games/chess/chessTableStatus.js",
     "src/games/chess/chessUILayer.js",
@@ -29,12 +30,18 @@ var Files = [
     "src/net/response/hall/actionCCResponseHandler.js",
     "src/net/response/hall/joinGameCCResponseHandler.js",
     "src/net/response/hall/loginResponseHandler.js",
+    "src/net/response/hall/tableRoundEndEventCCHandler.js",
     "src/net/response/hall/tableStatsCChandler.js",
+    "src/net/response/wzq/actionWzqResponseHandler.js",
+    "src/net/response/wzq/joinGameWzqResponseHandler.js",
+    "src/net/response/wzq/tableRoundEndEventWzqHandler.js",
+    "src/net/response/wzq/tableStatsWzqhandler.js",
     "src/resource.js",
     "src/sceneHelper.js",
     "src/tools/base64.js",
     "src/tools/bundle.js",
     "src/tools/crypto-js.js",
     "src/tools/eventHelper.js",
+    "src/tools/fileHelper.js",
     "src/tools/gameHelper.js"
 ];

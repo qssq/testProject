@@ -5,7 +5,10 @@
 var ChessTableLayer = GameBaseLayer.extend({
     mChessFlagLayer : null,
     mChessUILayer : null,
+    mChessTableEndLayer : null,
+
     mCurrentViewSeat : null,
+
     ctor : function () {
         this._super();
         this.loadCocostudio("res/ccs/ChessTable.json");
@@ -34,6 +37,10 @@ var ChessTableLayer = GameBaseLayer.extend({
         this.mChessUILayer = new ChessUILayer();
         this.addChild(this.mChessUILayer);
         // this.mChessUILayer.setVisible(false);
+
+        this.mChessTableEndLayer = new ChessTableEndLayer();
+        this.mChessTableEndLayer.setVisible(false);
+        this.addChild(this.mChessTableEndLayer);
     },
 
     updateUserInfos : function(userInfos){
@@ -47,6 +54,17 @@ var ChessTableLayer = GameBaseLayer.extend({
         this.mChessUILayer.setCurrentViewSeat(seat);
 
         this.mChessFlagLayer.setCurrentViewSeat(seat);
+    },
+
+    //显示结算界面
+    showEndLayer : function(endInfo){
+        this.mChessTableEndLayer.setEndInfo(endInfo);
+        this.mChessTableEndLayer.setVisible(true);
+    },
+
+    //关闭结算界面
+    hideEndLayer : function(){
+        this.mChessTableEndLayer.setVisible(false);
     }
 });
 

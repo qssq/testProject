@@ -48,16 +48,16 @@ var ChessFlagLayer = GameBaseLayer.extend({
                 return that.onTouchCardBegan(location);
             },
             onTouchMoved: function(touch, event){
-                var location = touch.getLocation();
-                location.x = location.x / that.mScale;
-                location.y = (location.y - that.mPositionY) / that.mScale;
-                that.onTouchCardMoved(location);
+                // var location = touch.getLocation();
+                // location.x = location.x / that.mScale;
+                // location.y = (location.y - that.mPositionY) / that.mScale;
+                // that.onTouchCardMoved(location);
             },
             onTouchEnded: function(touch, event){
-                var location = touch.getLocation();
-                location.x = location.x / that.mScale;
-                location.y = (location.y - that.mPositionY) / that.mScale;
-                that.onTouchCardEnded(location);
+                // var location = touch.getLocation();
+                // location.x = location.x / that.mScale;
+                // location.y = (location.y - that.mPositionY) / that.mScale;
+                // that.onTouchCardEnded(location);
             },
             onTouchCancelled : function(touch, event){
                 that.onTouchCardCancelled();
@@ -118,6 +118,7 @@ var ChessFlagLayer = GameBaseLayer.extend({
         cc.log("x:" + point.x + " y:" + point.y);
         var rect = cc.rect(0, 0, 720, 823);
         if (cc.rectContainsPoint(rect, point)){
+            this.onTouchCardEnded(point);
             return true;
         }else{
             this.onSelectCard(-1, -1);

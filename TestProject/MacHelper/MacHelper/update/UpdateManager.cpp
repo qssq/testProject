@@ -22,6 +22,8 @@ UpdateManager *UpdateManager::singleton()
 }
 
 UpdateManager::UpdateManager()
+: mCurrentVersion("")
+, mOnlyMarkeStr("")
 {
     
 }
@@ -59,8 +61,13 @@ void UpdateManager::start(const string &path, const string &strPackageUrl)
     }
     cout<<endl;
     
-    //最新文件夹
+    //最新文件夹 最新版本号
     string newDirectory = directorys.back();
+    mCurrentVersion = newDirectory.substr(newDirectory.rfind("/") + 1, newDirectory.size() - newDirectory.rfind("/") + 1);
+    cout<<"当前最新版本号:"<<mCurrentVersion<<endl;
+    
+    mOnlyMarkeStr = getOnlyMarkedForVersion(mCurrentVersion);
+    cout<<"当前最新版本号的缩写为:"<<mOnlyMarkeStr<<endl;
     
     ///2
     //找到所有文件的对比
@@ -90,7 +97,8 @@ void UpdateManager::start(const string &path, const string &strPackageUrl)
         }
         
         string toVersion = itemPath.substr(itemPath.rfind("/") + 1, itemPath.size() - itemPath.rfind("/") + 1);
-        string zipFileName = "update_" + toVersion + ".zip";
+        //添加新版本唯一标示
+        string zipFileName = "update_" + toVersion + "_" + mOnlyMarkeStr + ".zip";
         
         setCompressionFile(path, differenceFiles, newDirectory, zipFileName);
         mUpdateZipFiles.push_back(path + zipFileName);
@@ -103,7 +111,7 @@ void UpdateManager::start(const string &path, const string &strPackageUrl)
     cout<<"4 开始压缩全更新文件夹..."<<endl;
     {
         vector<string> files = mFileHelper.getDirectoryFile(newDirectory);
-        string zipFileName = "update_all.zip";
+        string zipFileName = "update_all_" + mOnlyMarkeStr + ".zip";
         setCompressionFile(path, files, newDirectory, zipFileName);
         mAllUpdateZipFile = path + zipFileName;
         cout<<"全量更新文件:"<<mAllUpdateZipFile<<"生成完毕"<<endl;
@@ -283,7 +291,7 @@ bool UpdateManager::createConifgFile(const vector<string> &addZip, const string 
             ++len;
             string fileName = getFileNameByParentPath(file, workPath);
             string version = fileName.substr(fileName.find("_") + 1);
-            version = version.substr(0, version.rfind("."));
+            version = version.substr(0, version.rfind("_"));
             char temp[200];
             sprintf(temp, "        {\"version\" : \"%s\", \"path\" : \"%s\"}", version.c_str(), fileName.c_str());
             
@@ -334,6 +342,23 @@ string UpdateManager::getFileNameByParentPath(const string &fileName, const stri
     return fileName.substr(path.size(), fileName.size() - path.size());
 }
 
+string UpdateManager::getOnlyMarkedForVersion(const string &versionStr)
+{
+    string temp = getCleanString(versionStr, '.');
+    int tempInt = getIntForString(temp);
+    int len = 26;
+    vector<char> codes;
+    for (int i = 0; i < len; i++) {
+        char ascii = (i + 97);
+        codes.push_back(ascii);
+    }
+    
+    string result = "";
+    char tempCharArray[10];
+    sprintf(tempCharArray, "%c%c", codes[tempInt / len], codes[tempInt % len]);
+    result = tempCharArray;
+    return result;
+}
 
 
 

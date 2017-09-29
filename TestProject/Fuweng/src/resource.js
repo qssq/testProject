@@ -1,7 +1,10 @@
-//Created by MacHelper on 2017-07-03 03:04:45
+//Created by MacHelper on 2017-07-06 02:24:57
 
 var Resource = [
+    "res/ccs/chess/bg.png",
+    "res/ccs/chess/bk.png",
     "res/ccs/chess/board_1.png",
+    "res/ccs/chess/btn/login_success.png",
     "res/ccs/chess/btn/login_tourist.png",
     "res/ccs/chess/btn/offline.png",
     "res/ccs/chess/btn/online.png",
@@ -36,11 +39,21 @@ var Resource = [
     "res/ccs/chess/chess_1/sel/8.png",
     "res/ccs/chess/chess_1/sel/9.png",
     "res/ccs/chess/chess_bg.png",
+    "res/ccs/chess/editBk.png",
+    "res/ccs/chess/end/back.png",
+    "res/ccs/chess/end/bg.png",
+    "res/ccs/chess/end/draw.png",
+    "res/ccs/chess/end/fail.png",
+    "res/ccs/chess/end/restart.png",
+    "res/ccs/chess/end/win.png",
     "res/ccs/chess/flag/chess0.plist",
     "res/ccs/chess/flag/chess0.png",
     "res/ccs/chess/flag/chess0_0_0.png",
     "res/ccs/chess/flag/chessSel0_0_0.png",
+    "res/ccs/chess/head_bk.png",
+    "res/ccs/chess/touristPic.png",
     "res/ccs/ChessChess.json",
+    "res/ccs/ChessEndLayer.json",
     "res/ccs/ChessFlag.json",
     "res/ccs/ChessTable.json",
     "res/ccs/ChessUI.json",
