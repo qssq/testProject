@@ -1,0 +1,887 @@
+package VitServer;
+/*
+ * 游戏服务器所有通讯协议
+ */
+
+
+enum GAME_PROTOCOL_MSG_ID {
+
+    ID_C2S_LOGIN = 10101; // 微信登陆
+    ID_S2C_LOGIN = 10102; // 登陆
+
+    ID_C2S_GUEST = 10103; // 游客登录
+
+    ID_C2S_ACCOUNT = 10104; // 账号登陆
+    ID_C2S_REGISTER = 10105; // 账号注册
+
+    ID_C2S_GM = 10107; // 客服登陆
+
+    ID_C2S_NOTICE = 10110; // 公告
+    ID_S2C_NOTICE = 10111; // 公告
+
+    ID_C2S_VERSION = 10112; // 版本校验
+    ID_S2C_VERSION = 10113; // 版本校验
+
+    ID_C2S_CODE = 10114; // 短信验证码
+    ID_S2C_CODE = 10115; // 短信验证码
+    
+    ID_C2S_LOGIN_LOBBY = 20001; // 登录大厅
+    ID_S2C_LOGIN_LOBBY = 20002; // 登录大厅
+    ID_C2S_PLAYER_UPDATE = 20003; // 更新玩家信息
+    ID_S2C_PLAYER_UPDATE = 20004; // 更新玩家信息
+    ID_S2C_PLAYER_INFO          = 20005;    // 更新玩家数据
+
+
+    ID_C2S_ROOM_CREATE = 20011; // 创建房间
+    ID_C2S_ROOM_ENTER = 20012; // 进入房间
+
+    ID_S2C_ROOM_INFO = 20013; // 房间信息
+    ID_C2S_ROOM_AGENT_CREATE = 20014; // 代开房
+    ID_S2C_ROOM_AGENT_CREATE = 20015; // 代开房
+    ID_C2S_ROOM_AGENT_LIST = 20016; // 代开房列表
+    ID_S2C_ROOM_AGENT_LIST = 20017; // 代开房列表
+
+    ID_C2S_ROOM_AGENT_HISTORY = 20018; // 代开房记录
+    ID_S2C_ROOM_AGENT_HISTORY = 20019; // 代开房记录
+
+    ID_C2S_ROOM_AGENT_DISSOLVE = 20020; // 代开房解散
+    ID_S2C_ROOM_AGENT_DISSOLVE = 20021; // 代开房解散
+
+    ID_C2S_ROOM_AGENT_USER_LIST = 20024;    //代开房间内玩家列表
+    ID_S2C_ROOM_AGENT_USER_LIST = 20025;    //代开房间内玩家列表
+    ID_C2S_KICK_USER    = 20026;    //代开房间踢人
+    ID_S2C_KICK_USER    = 20027;    //代开房间踢人
+
+
+    ID_C2S_STATISTIC_LIST = 20031; // 统计数据
+    ID_S2C_STATISTIC_LIST = 20032; // 统计数据
+
+    ID_C2S_ADD_BWL  = 20041;    //添加黑白名单
+    ID_S2C_ADD_BWL  = 20042;    //添加黑白名单
+    ID_C2S_GET_BWL  = 20043;    //获取黑白名单
+    ID_S2C_GET_BWL  = 20044;    //获取黑白名单
+    ID_C2S_DEL_BWL  = 20045;    //删除黑白名单
+    ID_S2C_DEL_BWL  = 20046;    //删除黑白名单
+
+    ID_C2S_GET_USER_INFO        = 20050;    //获取玩家信息
+    ID_S2C_GET_USER_INFO        = 20051;    //获取玩家信息
+
+    // 房间服务器通用协议
+    ID_C2S_TDK_LOGIN = 21001; // 登陆请求
+    ID_C2S_TDK_EXIT_ROOM = 21002; // 退出房间
+    ID_C2S_TDK_CLOSE_ROOM = 21003; // 关闭房间
+    ID_C2S_TDK_REQUEST_UNGROUP = 21004; // 投票解散房间
+    ID_C2S_TDK_RESPONSE_UNGROUP = 21005; // 响应解散房间
+    ID_C2S_TDK_READY = 21006; // 准备
+    ID_C2S_TDK_START_GAME = 21007; // 开始游戏
+    ID_C2S_TDK_CHAT = 21008; // 聊天
+    ID_C2S_TDK_CLEAR_INFO       = 21009;        // 清理个人数据
+
+
+    ID_S2C_TDK_ON_CREATE_ROOM = 21011; // 创建房间
+    ID_S2C_TDK_ON_ENGER_ROOM = 21012; // 进入房间(别人)
+    ID_S2C_TDK_ON_ENTER_ROOM_RESULT = 21013; // 进入房间（给玩家自己回消息）
+
+    ID_S2C_TDK_ON_MY_EXIT_ROOM = 21021; // 自己退出房间
+    ID_S2C_TDK_ON_EXIT_ROOM = 21022; // 别人退出房间
+
+    ID_S2C_TDK_ON_CLOSE_ROOM = 21023; // 房主解散房间
+
+    ID_S2C_AGENT_KICK_USER      = 21024;  // 被房主踢出房间
+
+    ID_S2C_AGENT_START          = 21027;    // 代开房间，服务器通知客户端弹出开局按钮
+
+    ID_S2C_TDK_ON_REQUEST_UNGROUP = 21031; // 投票解散房间
+    ID_S2C_TDK_ON_KICK_ROOM = 21032; // 解散房间踢人
+
+    ID_S2C_TDK_ON_RECONNECT = 21041; // 断线重连
+
+    ID_S2C_TDK_ON_LEAVE = 21042; // 玩家掉线
+    ID_S2C_TDK_ON_BACK = 21043; // 玩家上线
+
+    ID_S2C_TDK_ON_START_GAME = 21044; // 开始游戏
+    ID_S2C_GAME_END = 21045; // 结束游戏
+    ID_S2C_TDK_ON_CHAT = 21046; // 聊天
+
+    // 房间服务器游戏逻辑
+    ID_C2S_TDK_GEN = 21051; // 填大坑-跟
+    ID_C2S_TDK_GIVE_UP = 21052; // 填大坑-放弃
+    ID_C2S_TDK_KAI_PAI = 21053; // 填大坑-开牌
+
+    ID_C2S_TDK_TI = 21054; // 填大坑-踢
+    ID_C2S_TDK_XIA_ZHU = 21055; // 填大坑-下注
+    ID_C2S_TDK_CHECK_CARD = 21056; // 查看底牌
+
+
+    ID_S2C_TDK_ON_GEN = 21071; // 填大坑-跟
+    ID_S2C_TDK_ON_FA_PAI = 21072; // 填大坑-发牌
+    ID_S2C_TDK_ON_REQUIRE_OPERATE = 21073; // 填大坑-当前需要操作
+    ID_S2C_TDK_ON_GIVE_UP = 21074; // 填大坑-放弃
+    ID_S2C_TDK_ON_SETTLE = 21075; // 填大坑-结算
+    ID_S2C_TDK_ON_READY = 21076; // 填大坑-准备
+    ID_S2C_TDK_ON_MY_READY = 21077; // 填大坑-准备
+
+
+    ID_S2C_TDK_ON_TI = 21078; // 填大坑-踢
+    ID_S2C_TDK_ON_XIA_ZHU = 21079; // 填大坑-下注
+    ID_S2C_TDK_ON_CHECK_CARD = 21080; // 填大坑-查看底牌
+    ID_S2C_TDK_ON_UPDATE_XIA_FEN = 21081; // 刷新玩家下分状态
+
+    ID_C2S_TDK_ADD_BLIST    = 21090;    //添加黑白名单
+    ID_S2C_TDK_ADD_BLIST    = 21091;    //添加黑白名单
+
+    // 房间服务器协议结束
+
+    ID_S2C_ERROR_CODE = 30000; // 错误码
+    ID_S2C_GAME_TIPS = 30001; // 游戏通告
+    ID_C2S_APPLE_PAY            = 30002;    //苹果支付请求
+    ID_S2C_APPLE_PAY            = 30003;    //苹果支付返回
+
+};
+
+// ID_C2S_LOGIN                     // 微信登陆请求
+message MsgLoginReq {
+    required string sign = 1; // 账号校验码
+    optional string openId = 2; // openId
+    optional string nickName = 3; // 昵称
+    optional string headImgurl = 4; // 头像
+    optional int32 sex = 5; // 性别
+    optional int32 serverIndex = 6; // 服务器索引
+}
+
+// ID_S2C_LOGIN                    // 登陆返回
+message MsgLoginRep
+{
+    required    string token = 1;       // 登录token
+    required    string host = 2;        // host
+    optional    int32  type = 3;        // 登录类型
+    optional    string openId = 4;      // openId
+    optional    int32 status = 5;       // 服务器状态
+    optional    string doc = 6;      // 停服公告
+    required    string hostWs = 7;        // hostWs
+}
+
+// ID_C2S_GUEST                         // 游客登录
+message MsgGuestReq {
+    required string sign = 1; // 账号校验码
+    optional string openId = 2; // openId
+    optional int32 serverIndex = 3; // 服务器索引
+}
+
+// ID_C2S_ACCOUNT                  // 账号登陆
+message MsgAccountReq {
+    required string sign = 1; // 账号校验码
+    optional string account = 2; // 账号
+    optional string password = 3; // 密码
+    optional int32 serverIndex = 5; // 服务器索引
+}
+// ID_C2S_REGISTER                // 账号注册
+message MsgRegisterReq {
+    required string sign = 1; // 账号校验码
+    optional string account = 2; // 账号
+    optional string password = 3; // 密码
+    optional int32 serverIndex = 5; // 服务器索引
+}
+
+// ID_C2S_GM                     // 客服登陆
+message MsgGmLoginReq {
+    required string sign = 1; // 账号校验码
+    required int32 uid = 2; // 用户索引
+    required int32 serverIndex = 3; // 服务器索引
+}
+
+// ID_C2S_NOTICE                   // 公告
+message MsgNoticeReq {
+    required int32 serverIndex = 1; // 服务器索引
+}
+// ID_S2C_NOTICE                   // 公告
+message MsgNoticeRep
+{
+    required    string notice = 1; // 客服
+    repeated    string news = 2; // 活动列表
+    optional    string wxshare = 3; // 微信分享
+    optional    string revolve = 4; //跑马灯
+}
+
+// ID_C2S_VERSION                  // 版本校验
+message MsgVersionReq {
+    required int32 serverIndex = 1; // 服务器索引
+    required string version = 2; // 版本号
+    required int32 platform = 3; // 平台  1 ios 2 Android
+}
+// ID_S2C_VERSION                  // 版本校验
+message MsgVersionRep {
+    required int32 result = 1; // 结果 0 正常 1 版本低
+    optional string url = 2; // 客户端地址
+    optional int32 sign = 3; // 游客标记 0正常 1游客
+    optional string versionUrl = 4; // 更新地址
+}
+
+// ID_C2S_CODE                     // 短信验证码
+message MsgSMSCodeReq {
+    required string phone = 1; // 手机号
+}
+// ID_S2C_CODE                     // 短信验证码
+message MsgSMSCodeRep {
+    required string code = 1; // 验证码
+}
+// ID_S2C_ERROR_CODE                       // 错误码
+message MsgErrorCodeRep {
+    required int32 code = 1; // 错误码
+    optional string str = 2; // 错误信息
+    optional int32 type = 3; // 错误类型 0 普通消息 1 退出游戏 2 自动消失
+}
+// ID_S2C_GAME_TIPS                // 游戏通告
+message MsgGameTipsReq {
+    required int32 type = 1; // 展示类型 1 弹出框 2 跑马灯
+    required string tips = 2; // 通告
+}
+
+// ID_C2S_APPLE_PAY             // 苹果支付购买房卡 请求
+message MsgPayAppleReq {
+    required    string  receipt  = 1;    // 订单号
+}
+
+// ID_S2C_APPLE_PAY             // 苹果支付购买房卡 返回
+message MsgPayAppleRep{
+    required    int32   status  = 1;     // 购买状态 0成功 。非0失败
+}
+
+// ID_C2S_LOGIN_LOBBY                    // 登录大厅
+message MsgLoginLobbyReq
+{
+    required    string token = 1;       // 游戏token
+    optional    string ip = 2;
+    optional    string version = 3;     //客户端 服务器版本校验
+}
+
+// ID_S2C_LOGIN_LOBBY                    // 登录大厅
+message MsgLoginLobbyRep
+{
+    required    int32 uid = 1;          // 玩家ID
+    required    string nickName = 2;    // 玩家昵称
+    required    int32 sex = 3;          // 玩家性别
+    required    string ip = 4;          // 玩家IP
+    required    string image = 5;       // 玩家头像
+    required    int32 cardCount = 6;    // 玩家房卡
+    optional    int32 reconnect = 7;    // 是否在房间
+    optional    string roomHost = 8;    // 房间服务器IP(Http)
+    optional    int32 roomId = 9;       // 房间索引
+    optional    int32 type = 10;        // 连接类型
+    optional    int32 total = 11;       // 牌局总次数
+    optional    int32 win = 12;         // 胜利次数
+    optional    int32 agent = 13;       // 代理权限
+    optional    string roomHostWs = 14;    // 房间服务器IP(Ws)
+}
+// ID_C2S_PLAYER_UPDATE            // 更新玩家信息
+message MsgPlayerUpdateReq {
+    optional string image = 1; // 头像
+    optional int32 sex = 2; // 性别
+    optional string newPassword = 3; // 新密码
+    optional string oldPassword = 4; // 旧密码
+}
+// ID_S2C_PLAYER_UPDATE            // 更新玩家信息
+message MsgPlayerUpdateRep {
+    required int32 updateType = 1; // 更新类型 0 头像 1 性别 2 密码
+}
+// ID_S2C_PLAYER_INFO             // 更新玩家数据
+message MsgPlayerInfoRep
+{
+    required    int32 cardCount = 1; // 房卡
+}
+
+// ID_C2S_ROOM_CREATE              // 创建房间
+message MsgRoomCreateReq {
+    required    int32 roomType = 1;  // 房间圈数
+    repeated    int32 playTypes = 2; // 房间配置
+    optional    int32 roomGps = 3;   // 房间是否要求开启GPS  1 开启  0 不开启
+    optional    int32 bwType = 4; //房间是否开启黑名单检测 1 开启  0 不开启
+}
+
+// ID_C2S_ROOM_ENTER               // 进入房间
+message MsgRoomEnterReq {
+    required int32 roomId = 1; // 房间索引
+    optional int32 gps = 2; // 是否获取到GPS 0 未获取到gpf 1 有gpf
+    optional string place = 3;      //玩家位置信息
+}
+
+// ID_S2C_ROOM_INFO                // 房间信息
+message MsgRoomInfoRep
+{
+    required    int32 type = 1;      // 类型
+    required    string roomHost = 2; // 房间服务器IP(Http)
+    required    int32 roomId = 3;    // 房间索引
+    required    string roomHostWs = 4; // 房间服务器IP(Ws)
+}
+// ID_C2S_ROOM_AGENT_CREATE        // 代开房
+message MsgAgentCreateReq {
+    required int32 roomType = 1; // 房间圈数
+    repeated int32 playTypes = 2; // 房间配置[玩法 (0半坑(满5人10起),1半坑(满5人9起),2全坑(2-A)),1是否烂锅翻倍,2其他是否带王]
+    required int32 playerNum = 3; // 玩家上限
+    optional int32 roomGps = 4; // 房间是否要求开启GPS  1 开启  0 不开启
+    optional int32 bwType = 5; //房间是否开启白名单检测 1 开启  0 不开启
+}
+// ID_S2C_ROOM_AGENT_CREATE        // 代开房
+message MsgAgentCreateRep {
+    required int32 roomId = 1; // 房间索引
+    required    int32 num = 2;       // 已开房间计数
+    required    int32 total = 3;     // 房间上限
+
+    // optional    int32 joyScoreLevel = 4;  // 基础喜分
+}
+
+// 房间信息
+message RoomInfo {
+    required    int32 roomId = 1;    // 房间索引
+    optional    int32 status = 2;    // 房间状态
+    required    string time = 3;     // 创建时间
+    repeated    ScoreInfo playerAry = 4; // 玩家列表
+    required    int32 roomType = 5;  // 房间圈数
+    repeated    int32 playTypes = 6; // 房间配置
+    required    int32 playerNum = 7; // 玩家上限
+    optional    int32 roomGps = 8;   // 房间是否要求开启GPS  1 开启  0 不开启
+    optional    int32 playCount = 9; // 局数
+    optional    int32 totalCount = 10;// 总局数
+    optional    int32 ungrounpUid = 11; // 解散玩家
+    optional    int32 bwType = 12;   //是否开启白名单
+}
+
+// ID_C2S_ROOM_AGENT_LIST          // 代开房列表
+message MsgAgentListReq {
+}
+// ID_S2C_ROOM_AGENT_LIST          // 代开房列表
+message MsgAgentListRep {
+    repeated RoomInfo list = 1; // 房间列表
+    required    int32       total = 2;// 房间上限
+}
+
+// ID_C2S_ROOM_AGENT_HISTORY       // 代开房记录
+message MsgAgentHistoryReq {
+}
+// ID_S2C_ROOM_AGENT_HISTORY       // 代开房记录
+message MsgAgentHistoryRep {
+    repeated RoomInfo list = 1; // 房间列表
+}
+
+// ID_C2S_ROOM_AGENT_DISSOLVE      // 代开房解散
+message MsgAgentDissolveReq {
+    required int32 roomId = 1; // 房间索引
+}
+// ID_S2C_ROOM_AGENT_DISSOLVE      // 代开房解散
+message MsgAgentDissolveRep {
+    required int32 roomId = 1; // 房间索引
+}
+
+// 玩家积分
+message ScoreInfo {
+    required  string nickName = 1;  // 用户名
+    required  int32  userId = 2;     // 索引
+    optional  string score = 3;     // 积分
+    optional  string image = 4;     // 玩家头像
+    optional int32 status = 5;      //玩家状态   2-未准备 3-准备
+}
+
+//ID_C2S_ROOM_AGENT_USER_LIST   代开房间 代开房间
+message MsgAgentUserListRep
+{
+    required int32 roomId = 1;   //代开房间id
+}
+//ID_S2C_ROOM_AGENT_USER_LIST
+message MsgAgentUserListReq
+{
+    required int32 roomId = 1;   //代开房间id
+    required int32 status = 2;   //当前房间状态 0-已解散 1-未开始 2-游戏中
+    repeated ScoreInfo userList = 3;    // 玩家列表
+}
+// 代开房间 踢人
+//ID_C2S_KICK_USER
+message MsgKickUserReq{
+    required int32 roomId = 1;  //房间号
+    required int32 kickUid = 2; //踢出玩家ID
+}
+//ID_S2C_KICK_USER
+message MsgKickUserRep{
+    required int32 status = 1; //状态 0-失败 1-成功
+    required string message = 2;    //返回消息
+}
+
+// 战绩信息
+message StatisInfo {
+    required int32 uid = 1; // 用户索引
+    required int32 roomId = 2; // 房间索引
+    repeated ScoreInfo statistic = 3; // 玩家积分
+    required string endTime = 4; // 结束时间
+    required int32 ungrounpUid = 5; // 解散玩家
+
+    optional int32 playCount = 6; //当前局数
+    optional int32 totalCount = 7; //总局数
+}
+
+// ID_C2S_STATISTIC_LIST           // 统计数据
+message MsgStatisticReq {
+
+}
+// ID_S2C_STATISTIC_LIST           // 统计数据
+message MsgStatisticRep {
+    repeated StatisInfo list = 1; // 统计列表
+}
+
+// playerObj
+message MsgTdkPlayerObj {
+    required int32 userId = 1; // 玩家id
+    required string nickName = 2; // 玩家昵称
+    required int32 sex = 3; // 性别
+    required string image = 4; // 头像
+    required int32 position = 5; // 房间内位置
+    required int32 score = 6; // 初始分数
+    required int32 status = 7; // 玩家状态
+    required string ip = 8; // 玩家ip
+    required int32 total = 9; // 牌局总次数
+    required int32 win = 10; // 胜利次数
+    optional string longitude = 11; // 玩家坐标经度
+    optional string latitude = 12; // 玩家坐标纬度
+    optional string place = 13;     //玩家位置信息
+}
+
+message MsgTdkOperateObj {
+    required int32 operateType = 1;
+    required int32 xiaFen = 2;
+}
+
+message MsgTdkReconnectPlayer {
+    required int32 userId = 1;
+    required string nickName = 2;
+    required int32 sex = 3;
+    required string image = 4;
+    required string ip = 5;
+    required int32 roomId = 6;
+    required int32 status = 7;
+    required int32 position = 8;
+    required bool roomOwner = 9;
+    required int32 score = 10;
+    required int32 winCount = 11;
+    repeated int32 cardArray = 12;
+    required int32 xiaFen = 13;
+    required int32 currXiaFen = 14;
+    repeated MsgTdkOperateObj operates = 15;
+    required bool borrowLastCard = 16; // 是否公张
+    required int32 total = 17; // 牌局总次数
+    required int32 win = 18; // 胜利次数
+    required int32 cardScore = 19; // 当前总分
+    required int32 currDianShu = 20; // 玩家手牌点数
+    optional string longitude = 21; //坐标经度
+    optional string latitude = 22; //坐标纬度
+    optional string place = 23;     //玩家位置信息
+}
+
+// 分数变化结构
+message MsgTdkChangeFenObj
+{
+    required int32 position = 1;        // 玩家位置
+    required int32 fen = 2;             // 变化分数
+    repeated int32 cardArray = 3;       // 玩家手牌
+    required int32 cardScore = 4;       // 牌面分
+    optional int32 score = 5;           // 同步分数
+}
+
+message MsgTdkInitPai {
+    required int32 position = 1; // 玩家位置
+    repeated int32 card = 2; // 玩家初始手牌
+    required int32 currDianShu = 3; // 玩家手牌点数
+    optional int32 initXiaZhu = 4; // 玩家初始下的底分
+    optional bool borrowLastCard = 5; // 是否公张
+}
+
+// roomObj
+message MsgTdkRoomObj
+{
+    required int32 roomId = 1;      // 房间号
+    required int32 roomType = 2;    // 房间类型
+    repeated int32 playTypes = 3;   // 房间配置
+    optional int32 roomGps = 4;     // 房间是否要求开启GPS
+    optional int32 totalPlayer = 5;     // 房间人数，非代开房间为0
+    optional int32 bwType = 6; //房间是否开启白名单检测 1 开启  0 不开启
+}
+
+// ID_C2S_TDK_LOGIN
+message MsgTdkLoginReq {
+    required string token = 1; // token
+    required int32 roomId = 2; // 房间id
+    required int32 type = 3; // 登陆类型(1:创建房间，2:进入房间，3:断线重连)
+    optional string longitude = 4; // 玩家坐标经度
+    optional string latitude = 5; // 玩家坐标纬度
+    optional string ip = 6;
+    optional string place = 7;      //玩家位置信息
+}
+
+// ID_S2C_TDK_ON_CREATE_ROOM
+message MsgTdkOnCreateRoomRep {
+    required MsgTdkRoomObj room = 1; // 房间
+    required MsgTdkPlayerObj player = 2; // 玩家
+}
+
+// ID_S2C_TDK_ON_ENGER_ROOM
+message MsgTdkOnEnterRoomRep {
+    required MsgTdkPlayerObj player = 1;
+}
+
+// ID_S2C_TDK_ON_FA_PAI
+message MsgTdkOnFaPaiRep {
+    repeated MsgTdkInitPai initPaiArray = 1; // 玩家初始手牌
+    required int32 cardScore = 2; // 当前总分
+}
+
+// ID_S2C_TDK_ON_REQUIRE_OPERATE
+message MsgTdkOnRequireOperateRep {
+    required int32 position = 1; // 当前需要行动的玩家位置
+    required int32 currNeedOperate = 2; // 当前玩家能够做的动作
+}
+
+// ID_S2C_TDK_ON_SETTLE                     // 填大坑-结算
+message MsgTdkOnSettleRep {
+    required int32 winPosition = 1;    // 小于零，表示为平局
+    repeated MsgTdkChangeFenObj changeFen = 2;
+    required bool kai = 3;  // 是否开牌
+
+    required int32 joyScore = 4;    //喜分分数
+}
+
+// ID_C2S_TDK_READY                     // 填大坑-准备
+message MsgTdkReadyReq {
+
+}
+
+// ID_S2C_TDK_ON_MY_READY              // 填大坑-准备
+message MsgTdkOnMuReadyRep {
+    required int32 readyCnt = 1;
+}
+
+// ID_S2C_TDK_ON_READY                  // 填大坑-准备
+message MsgTdkOnReadyRep {
+    required int32 position = 1; //ready的player位置
+    required int32 readyCnt = 2; //ready人数
+}
+
+// ID_C2S_TDK_START_GAME                // 填大坑-开始游戏
+message MsgTdkStartGameReq {
+
+}
+
+// ID_S2C_TDK_ON_START_GAME
+message MsgTdkOnStartGameRep
+{
+    repeated MsgTdkInitPai initPaiArray = 1;
+    required bool tie = 2;     // 上一局是否为平局
+    required int32 fengDingScore = 3;   // 每次下注封顶值
+    required int32 diZhuScore = 4;      // 底注值
+    required int32 totalChip = 5;       // 总注
+    required int32 cardScore = 6;   // 当前总分
+    required int32 roomId = 7;      // 房间id
+    required int32 curGame = 8;     // 当前游戏局数
+}
+
+// ID_C2S_TDK_GEN                       // 填大坑-跟
+message MsgTdkGenReq {
+
+}
+
+// ID_S2C_TDK_ON_GEN                    // 填大坑-跟
+message MsgTdkOnGenRep {
+    required int32 position = 1; // 操作玩家位置
+    required int32 fen = 2; // 跟的分数
+}
+
+// ID_C2S_TDK_GIVE_UP                   // 填大坑-放弃
+message MsgTdkGiveUpReq {
+
+}
+
+// ID_S2C_TDK_ON_GIVE_UP                // 填大坑-放弃
+message MsgTdkOnGiveUpRep {
+    required int32 position = 1;
+    required int32 operate = 2; //4，扣牌，6，不踢
+}
+
+// ID_C2S_TDK_EXIT_ROOM                 // 填大坑-退出房间
+message MsgTdkExitRoomReq {
+
+}
+
+// ID_S2C_TDK_ON_MY_EXIT_ROOM           // 填大坑-退出房间
+message MsgTdkOnMyExitRoomRep {
+
+}
+
+// ID_C2S_TDK_CLOSE_ROOM                // 填大坑-关闭房间
+message MsgTdkCloseRoomReq {
+
+}
+
+// ID_S2C_TDK_ON_CLOSE_ROOM             // 填大坑-房主解散房间
+message MsgTdkOnCloseRoomRep {
+
+}
+
+//ID_S2C_AGENT_KICK_USER
+message MsgAgentKickUserRep{
+    required int32 kickUid = 1; //被踢玩家ID
+    required string nickName = 2;   //被踢玩家昵称
+
+}
+
+// ID_C2S_TDK_KAI_PAI                   // 填大坑-开牌
+message MsgTdkKaiPaiReq {
+
+}
+
+// ID_S2C_TDK_ON_RECONNECT  填大坑-断线重连
+message MsgTdkOnReconnectRep {
+    required int32 totalCount = 1;
+    required int32 playCount = 2;
+    required int32 readyCount = 3;
+    required int32 roomStatus = 4;
+    required MsgTdkReconnectPlayer player = 5;
+    repeated MsgTdkReconnectPlayer otherPlayers = 6;
+    required int32 currXiaFen = 7;
+    required int32 currOperatePos = 8;
+    required int32 currNeedOperate = 9;
+    required bool requestUngroup = 10; // 是否发起投票
+    required int32 time = 11; // 倒计时
+    required int32 uid = 12; // 发起玩家
+    required string nickName = 13; // 发起玩家名字
+    repeated UngroupInfo ungroupArray = 14; // 投票结果
+    required int32 fengDingScore = 15; // 每次下注封顶值
+    required int32 diZhuScore = 16; // 底注值
+    required int32 totalChip = 17; // 总注
+    required int32 tiPos = 18; // 当前轮次第一个踢的玩家位置
+    required int32 roomType = 19; // 房间圈数
+    repeated int32 playTypes = 20; // 房间配置
+    required int32 fen = 21; // 下注分
+    required bool tie = 22; // 上一局是否为平局
+    required bool kai = 23; // 上一局是否开牌
+    repeated int32 recordXiaFen = 24; //总下分记录
+    optional int32 roomGps = 25; // 房间是否要求开启GPS
+    optional int32 totalPlayer = 26; // 房间人数，非代开房间为0
+    optional int32 joyScore = 27;  //当前喜分
+    optional int32 agentStartPos = 28; //\ 代开房间，弹窗玩家位置，谁弹窗，谁点击开局
+}
+
+// ID_C2S_TDK_REQUEST_UNGROUP           // 填大坑-请求解散房间
+message MsgTdkRequestUngroupReq {
+
+}
+
+// 投票结果
+message UngroupInfo {
+    required int32 uid = 1; // 玩家索引
+    required string nickName = 2; // 玩家名字
+    required int32 agree = 3; // 结果
+}
+
+// ID_S2C_TDK_ON_REQUEST_UNGROUP    // 请求解散房间
+message MsgTdkOnRequestUngroupRep {
+    required int32 time = 1; // 倒计时
+    required int32 uid = 2; // 发起玩家
+    required string nickName = 3; // 发起玩家名字
+    repeated UngroupInfo ungroupArray = 4; // 投票结果
+}
+
+// ID_C2S_TDK_RESPONSE_UNGROUP      // 响应解散房间
+message MsgTdkResponseUngroupReq {
+    required int32 agree = 1; // 是否同意解散
+}
+
+// ID_C2S_TDK_TI                    // 填大坑-踢
+message MsgTdkTiReq {
+    required int32 fen = 1; // 下分数值
+}
+
+// ID_S2C_TDK_ON_TI                 // 填大坑-踢
+message MsgTdkOnTiRep {
+    required int32 position = 1;
+    required int32 fen = 2;
+}
+
+// ID_C2S_TDK_XIA_ZHU               // 填大坑-下注
+message MsgTdkXiaZhuReq {
+    required int32 fen = 1; // 下分数值
+}
+
+// ID_S2C_TDK_ON_XIA_ZHU            // 填大坑-下注
+message MsgTdkOnXiaZhuRep {
+    required int32 position = 1;
+    required int32 fen = 2;
+}
+
+// ID_S2C_TDK_ON_ENTER_ROOM_RESULT
+message MsgTdkOnEnterRoomResultRep
+{
+    required MsgTdkRoomObj room = 1;            // 房间信息
+    required MsgTdkPlayerObj player = 2;        // 玩家自己信息
+    required int32 readyCnt = 3;                 // 已准备玩家数
+    repeated MsgTdkPlayerObj playerArray = 4;   // 其他玩家信息
+}
+
+// ID_S2C_TDK_ON_LEAVE              // 填大坑-离开房间
+message MsgTdkOnLeaveRep {
+    required int32 position = 1; // 离开玩家位置
+}
+
+// ID_S2C_TDK_ON_KICK_ROOM          // 填大坑-解散房间踢人
+message MsgTdkOnKickRoomRep {
+    required string name = 1;
+}
+
+// ID_S2C_TDK_ON_EXIT_ROOM
+message MsgTdkOnExitRoomRep { // 填大坑-别人退出房间
+                              required int32 position = 1; // 离开玩家位置
+}
+
+// ID_S2C_TDK_ON_BACK
+message MsgTdkOnBackRep {
+    required int32 position = 1; // 上线玩家位置
+    required string ip = 2; // 上线玩家ip
+}
+
+// 结算数据
+message PlayerResult {
+    required int32 uid = 1; // 玩家索引
+    required string nickName = 2; // 名字
+    required string image = 3; // 头像
+    required int32 score = 4; // 积分
+    required int32 sex = 5; // 性别
+    required int32 winCount = 6; // 胜利次数
+    required int32 loseCount = 7; // 输次数
+    required bool roomOwner = 8; // 是否是房主
+}
+// ID_S2C_GAME_END
+message MsgGameEndRep {
+    repeated PlayerResult playerAry = 1; // 玩家结算数据
+    required bool dissolve = 2; // 是否是解散房间
+
+    optional int32  joyScore = 3;   // 喜分分数
+}
+
+// ID_S2C_TDK_ON_UPDATE_XIA_FEN     // 刷新玩家下分状态
+message MsgTdkOnUpdateXiaFenRep {
+    repeated MsgTdkPlayerXiaFen xiaFenArray = 1;
+    required int32 totalChip = 2; // 总下注
+}
+
+message MsgTdkPlayerXiaFen {
+    required int32 position = 1;
+    required int32 xiaFen = 2;
+    required int32 currXiaFen = 3;
+}
+
+// ID_C2S_TDK_CHECK_CARD
+message MsgTdkCheckCardReq {
+    required int32 position = 1; // 查看底牌玩家位置
+}
+
+// ID_S2C_TDK_ON_CHECK_CARD
+message MsgTdkOnCheckCardRep {
+    required int32 position = 1; // 查看底牌玩家位置
+}
+
+// ID_C2S_TDK_CHAT
+message MsgTdkOnChatReq //请求(发送)
+{
+    optional int32 type = 1; //1:聊天文字,2:表情,3:固定文字,4语音
+    optional int32 idx = 2; //类型2中表情id 或 类型3中固定文字id
+    optional string msg = 3; //聊天信息/语音链接
+}
+// ID_S2C_TDK_ON_CHAT
+message MsgTdkOnChatRep //接收
+{
+    optional int32 position = 1; //玩家的位置(0~4)
+    optional int32 type = 2; //1:聊天文字,2:表情,3:固定文字,4语音
+    optional int32 idx = 3; //类型2中表情id 或 类型3中固定文字id
+    optional string msg = 4; //聊天信息/语音链接
+}
+
+// ID_C2S_TDK_CLEAR_INFO        // 清理个人数据
+message MsgTdkOnClearInfoReq   //请求
+{
+}
+
+//ID_C2S_GET_BWL
+message MsgPlayerBwListReq
+{
+    required int32 bwType = 1;  //黑白名单类型: 1-黑名单(2-白名单 暂不启用)
+}
+//ID_S2C_GET_BWL
+message MsgPlayerBwListRep
+{
+	repeated  BwPlayerInfo list = 1;          //黑名单列表信息
+}
+//ID_C2S_ADD_BWL
+message MsgAddBwListReq
+{
+    required BwPlayerInfo player = 1;    //待添加玩家信息
+}
+//ID_S2C_ADD_BWL
+message MsgAddBwListRep
+{
+    required BwPlayerInfo player = 1;    //待添加玩家信息
+    required int32 status = 2;           //添加状态 0-成功 非0-失败
+}
+//黑白名单玩家信息
+message BwPlayerInfo
+{
+    required int32 bwUid = 1;     //名单中玩家id
+    required string nickName = 2; //名单中玩家昵称
+    required string image = 3;    //头像
+    required int32 sex = 4;       //玩家性别
+    optional int32 bwType = 5;    //黑白名单类型：1-黑名单(2-白名单 暂不启用)
+}
+//ID_C2S_DEL_BWL
+message MsgDelBwListReq
+{
+    required int32 bwUid = 1;   //待删玩家id
+    required int32 bwType = 2;  //黑白名单类型: 1-黑名单(2-白名单 暂不启用)
+}
+//ID_S2C_DEL_BWL
+message MsgDelBwListRep
+{
+    required int32 bwUid = 1;   //已删玩家id
+    required int32 bwType = 2;  //黑白名单类型: 1-黑名单(2-白名单 暂不启用)
+    required int32 status = 3;  //删除状态: 0-成功 非0-失败
+}
+//ID_C2S_GET_USER_INFO
+message MsgUserInfoReq
+{
+    required int32 playerUid = 1; //玩家ID
+}
+//ID_S2C_GET_USER_INFO
+message MsgUserInfoRep
+{
+    required    int32 playerUid = 1;    // 玩家ID
+    required    string nickName = 2;    // 玩家昵称
+    required    int32 sex = 3;          // 玩家性别
+    required    string image = 4;       // 玩家头像
+    required    int32 bwType = 5;       // 查寻类型 0-无关系 1-黑名单 2-白名单
+}
+
+//ID_C2S_TDK_ADD_BLIST
+message MsgTdkAddBlackListReq
+{
+    required int32 bwUid = 1;     //名单中玩家id
+    required string nickName = 2; //名单中玩家昵称
+    required string image = 3;    //头像
+    required int32 sex = 4;       //玩家性别
+}
+//ID_S2C_TDK_ADD_BLIST
+message MsgTdkAddBlackListRep
+{
+    required int32 bwUid = 1;     //名单中玩家id
+    required string nickName = 2; //名单中玩家昵称
+    required string image = 3;    //头像
+    required int32 sex = 4;       //玩家性别
+    required int32 status = 5;    //状态 0 为成功 非0失败
+}
+
+//ID_S2C_AGENT_START          = 21027;    // 代开房间，服务器通知客户端弹出开局按钮
+message MsgAgentStartRep{
+
+}

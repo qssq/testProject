@@ -35,11 +35,11 @@ public:
     
     void handler();
     void handlerKw();
-private:
-    string getFullName(const string &file);
     
     //裁切大文件
     void copyFiles(const vector<frameStruct> &rects, const string &file, const string &path);
+private:
+    string getFullName(const string &file);
     
     //特殊处理返回结构
     vector<frameStruct> getFrameStruct(const string &file);

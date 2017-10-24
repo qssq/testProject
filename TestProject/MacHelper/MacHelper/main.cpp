@@ -24,6 +24,7 @@
 #include "Defines.h"
 #include "FileHelper.h"
 #include "ChangeFileName.h"
+#include "ImageKeLeHelper.h"
 
 using namespace std;
 
@@ -76,6 +77,7 @@ int main(int argc, const char * argv[]) {
     cout << "25:newbee config"<<endl;
     cout << "26:newbee setver manifest"<<endl;
     cout << "27:change file name"<<endl;
+    cout << "28:KeLe file"<<endl;
     cout << "100:kwx增量更新"<<endl;
     cout << "101:newbee增量更新"<<endl;
     cout << "102:kwx增量更新(真实版本)"<<endl;
@@ -282,6 +284,11 @@ int main(int argc, const char * argv[]) {
         {
             ChangeFileName cfn;
             cfn.start("/Users/gongxun/Desktop/test/9/");
+        }
+        else if (input == "28")
+        {
+            ImageKeLeHelper ikh;
+            ikh.start();
         }
         else if (input == "100")
         {

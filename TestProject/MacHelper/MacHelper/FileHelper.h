@@ -14,6 +14,8 @@
 #include <sstream>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
 using namespace std;
 namespace fs = boost::filesystem;
@@ -43,6 +45,9 @@ public:
     
     //删除文件
     int removeFile(const string &path);
+    
+    //返回json文件
+//    void getJSONFile(const string &fileName, boost::property_tree::ptree &outPtree);
 private:
     string getKeyOrValue(const string &key, const string &value);
     

@@ -188,6 +188,47 @@ int FileHelper::removeFile(const string &path)
     return fs::remove_all(path);
 }
 
+//void getJSONFile(const string &fileName, boost::property_tree::ptree &outPtree)
+//{
+//    fstream inFile;
+//    inFile.open(fileName.c_str());
+//    
+//    stringstream ss;
+//    ss<<inFile.rdbuf();
+//    try
+//    {
+//        read_json(ss, outPtree);
+//    }
+//    catch (boost::property_tree::ptree_error & e)
+//    {
+//        throw "不是json文件";
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -21,6 +21,7 @@
 		EA81717D1DD9E8AB00C4F87E /* libboost_iostreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA81717C1DD9E8AB00C4F87E /* libboost_iostreams.a */; };
 		EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA88753D1C240B0900BFD5B0 /* RandomList.cpp */; };
 		EAA0CB011C1DBDA600877842 /* GXMD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */; };
+		EAA8C60D1F8CD2A100CAA46E /* ImageKeLeHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAA8C60B1F8CD2A100CAA46E /* ImageKeLeHelper.cpp */; };
 		EAAEC3421CDAF09300C93741 /* libX11.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAEC3411CDAF09300C93741 /* libX11.6.dylib */; };
 		EAAF866A1D0E83F7003F9E4C /* XMLHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAF86681D0E83F7003F9E4C /* XMLHelper.cpp */; };
 		EAAF86721D0E8E18003F9E4C /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAF86701D0E8E18003F9E4C /* pugixml.cpp */; };
@@ -73,6 +74,8 @@
 		EA88753E1C240B0900BFD5B0 /* RandomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomList.h; sourceTree = "<group>"; };
 		EAA0CAFF1C1DBDA600877842 /* GXMD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GXMD5.cpp; sourceTree = "<group>"; };
 		EAA0CB001C1DBDA600877842 /* GXMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXMD5.h; sourceTree = "<group>"; };
+		EAA8C60B1F8CD2A100CAA46E /* ImageKeLeHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageKeLeHelper.cpp; sourceTree = "<group>"; };
+		EAA8C60C1F8CD2A100CAA46E /* ImageKeLeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageKeLeHelper.h; sourceTree = "<group>"; };
 		EAA9283F1EC4115B00D9C656 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		EAAEC3411CDAF09300C93741 /* libX11.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libX11.6.dylib; path = ../../../../../../opt/X11/lib/libX11.6.dylib; sourceTree = "<group>"; };
 		EAAEC3441CDAF19F00C93741 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */,
 				EAD542281DA8A1BE0021C194 /* CoinFrontTest.h */,
 				EAA9283F1EC4115B00D9C656 /* Defines.h */,
+				EAA8C60B1F8CD2A100CAA46E /* ImageKeLeHelper.cpp */,
+				EAA8C60C1F8CD2A100CAA46E /* ImageKeLeHelper.h */,
 			);
 			path = MacHelper;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				EA81717B1DD9E6FB00C4F87E /* GzipHelper.cpp in Sources */,
 				EAAF86721D0E8E18003F9E4C /* pugixml.cpp in Sources */,
 				EA68952A1D9C175100A26DD6 /* ODSocket.cpp in Sources */,
+				EAA8C60D1F8CD2A100CAA46E /* ImageKeLeHelper.cpp in Sources */,
 				EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */,
 				EAD542291DA8A1BE0021C194 /* CoinFrontTest.cpp in Sources */,
 				EAAF866A1D0E83F7003F9E4C /* XMLHelper.cpp in Sources */,
