@@ -25,6 +25,7 @@
 #include "FileHelper.h"
 #include "ChangeFileName.h"
 #include "ImageKeLeHelper.h"
+#include "GameProtoFileHelper.h"
 
 using namespace std;
 
@@ -81,6 +82,8 @@ int main(int argc, const char * argv[]) {
     cout << "100:kwx增量更新"<<endl;
     cout << "101:newbee增量更新"<<endl;
     cout << "102:kwx增量更新(真实版本)"<<endl;
+    cout << "103:备用cdn测试"<<endl;
+    cout << "104:合并proto kwx"<<endl;
     
     
     string input;
@@ -292,7 +295,7 @@ int main(int argc, const char * argv[]) {
         }
         else if (input == "100")
         {
-            cout<<"开始构造增量更新包"<<endl;
+            cout<<"开始构造增量更新包 测试版"<<endl;
             UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwx/", "http://qxkwx.oss-cn-beijing.aliyuncs.com/testGame");
 //            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwx/", "http://192.168.1.200/update/kwx");
         }
@@ -303,8 +306,19 @@ int main(int argc, const char * argv[]) {
         }
         else if (input == "102")
         {
-            cout<<"开始构造增量更新包"<<endl;
+            cout<<"开始构造增量更新包 正式版"<<endl;
             UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwxreal/", "http://qxkwx.oss-cn-beijing.aliyuncs.com/gameGame");
+        }
+        else if (input == "103")
+        {
+            cout<<"开始构造增量更新包 备份测试"<<endl;
+            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/cdnAli/", "http://192.168.1.200/update/cdnAli");
+            
+            UpdateManager::singleton()->start("/Users/gongxun/Sites/update/cndQiNiu/", "http://192.168.1.200/update/cndQiNiu");
+        }else if (input == "104")
+        {
+            GameProtoFileHelper gpfh;
+            gpfh.start("/Users/gongxun/bitbucket/gtdemo/GTServer/proto", "/Users/gongxun/oschina/kwxclient/mobiles/GTKwx");
         }
     }
     

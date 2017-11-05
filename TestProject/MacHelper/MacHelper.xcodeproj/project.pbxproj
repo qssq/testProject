@@ -33,6 +33,7 @@
 		EAC3DE821CD9853C00CC72AE /* CImgHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC3DE801CD9853C00CC72AE /* CImgHelper.cpp */; };
 		EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAC8E6B81C16A8300047FD62 /* GamesVersionHelper.cpp */; };
 		EAD542291DA8A1BE0021C194 /* CoinFrontTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */; };
+		EAE1A9C71FAB039D00E4BEAB /* GameProtoFileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE1A9C51FAB039D00E4BEAB /* GameProtoFileHelper.cpp */; };
 		EAE9C2FD1EE468A900B8B2F3 /* ChangeFileName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAE9C2FB1EE468A900B8B2F3 /* ChangeFileName.cpp */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		EAC8E6B91C16A8300047FD62 /* GamesVersionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesVersionHelper.h; sourceTree = "<group>"; };
 		EAD542271DA8A1BE0021C194 /* CoinFrontTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoinFrontTest.cpp; sourceTree = "<group>"; };
 		EAD542281DA8A1BE0021C194 /* CoinFrontTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinFrontTest.h; sourceTree = "<group>"; };
+		EAE1A9C51FAB039D00E4BEAB /* GameProtoFileHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameProtoFileHelper.cpp; sourceTree = "<group>"; };
+		EAE1A9C61FAB039D00E4BEAB /* GameProtoFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameProtoFileHelper.h; sourceTree = "<group>"; };
 		EAE9C2FB1EE468A900B8B2F3 /* ChangeFileName.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChangeFileName.cpp; sourceTree = "<group>"; };
 		EAE9C2FC1EE468A900B8B2F3 /* ChangeFileName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeFileName.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +209,8 @@
 				EA81717A1DD9E6FB00C4F87E /* GzipHelper.h */,
 				EAE9C2FB1EE468A900B8B2F3 /* ChangeFileName.cpp */,
 				EAE9C2FC1EE468A900B8B2F3 /* ChangeFileName.h */,
+				EAE1A9C51FAB039D00E4BEAB /* GameProtoFileHelper.cpp */,
+				EAE1A9C61FAB039D00E4BEAB /* GameProtoFileHelper.h */,
 			);
 			path = file;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				EA6895241D9C09B900A26DD6 /* ODSocket6.cpp in Sources */,
 				EA74D7E61DC84834005B2B66 /* GameGroupHelper.cpp in Sources */,
 				EA4378A51EC2FB9D00E17717 /* UpdateManager.cpp in Sources */,
+				EAE1A9C71FAB039D00E4BEAB /* GameProtoFileHelper.cpp in Sources */,
 				EABFC6301C1AC1480048E278 /* ZipDemo.cpp in Sources */,
 				EABFC62D1C1ABD1B0048E278 /* GameVersionServer.cpp in Sources */,
 				EAC8E6BA1C16A8300047FD62 /* GamesVersionHelper.cpp in Sources */,

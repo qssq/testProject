@@ -11,6 +11,9 @@
 
 #include <string>
 #include <vector>
+#include <iomanip>
+#include <ctime>
+#include <chrono>
 
 using namespace std;
 
@@ -60,6 +63,17 @@ string getString(T value)
     string s;
     oss<<value;
     s = oss.str();
+    return s;
+}
+
+//返回格式化时间
+inline string getCurDateTime()
+{
+    auto t = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+    auto time = std::put_time(std::localtime(&t), "%Y-%m-%d %X");
+    ostringstream oss;
+    oss<<time;
+    string s = oss.str();
     return s;
 }
 

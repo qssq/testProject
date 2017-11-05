@@ -30,9 +30,9 @@ void ImageKeLeHelper::start()
 {
     FileHelper fileHelper;
     
-    string fileName = "/Users/gongxun/GitHub/testProject/TestProject/MacHelper/resources/pokerCard.json";
-    string fileImageName = "/Users/gongxun/GitHub/testProject/TestProject/MacHelper/resources/pokerCard.png";
-    string outPath = "kele/";
+    string fileName = "/Users/gongxun/GitHub/testProject/TestProject/MacHelper/resources/Chips.json";
+    string fileImageName = "/Users/gongxun/GitHub/testProject/TestProject/MacHelper/resources/Chips.png";
+    string outPath = "Chips/";
     
     ///1分解json 找到key和对应的uuid
     ///2通过uuid找到对应的json文件

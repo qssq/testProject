@@ -7,6 +7,11 @@
 //
 
 #include "FileHelper.h"
+#include <boost/archive/iterators/base64_from_binary.hpp>
+#include <boost/archive/iterators/binary_from_base64.hpp>
+#include <boost/archive/iterators/transform_width.hpp>
+
+using namespace boost::archive::iterators;
 
 string FileHelper::gStartPath = "";
 
@@ -204,6 +209,44 @@ int FileHelper::removeFile(const string &path)
 //        throw "不是json文件";
 //    }
 //}
+
+
+bool FileHelper::Base64Encode(const string & inPut, string &outPut)
+{
+    typedef base64_from_binary<transform_width<string::const_iterator,6,8>> Base64EncodeIter;
+    
+    stringstream  result;
+    copy(Base64EncodeIter(inPut.begin()),
+         Base64EncodeIter(inPut.end()),
+         ostream_iterator<char>(result));
+    
+    size_t Num = (3 - inPut.length() % 3) % 3;
+    for (size_t i = 0; i < Num; i++)
+    {
+        result.put('=');
+    }
+    outPut = result.str();
+    return outPut.empty() == false;
+}
+
+bool FileHelper::Base64Decode(const string & inPut, string &outPut)
+{
+    typedef transform_width<binary_from_base64<string::const_iterator>,8,6> Base64DecodeIter;
+    
+    stringstream result;
+    try
+    {
+        copy(Base64DecodeIter(inPut.begin()),
+             Base64DecodeIter(inPut.end()),
+             ostream_iterator<char>(result));
+    }
+    catch (...)
+    {
+        return false;
+    }
+    outPut = result.str();
+    return outPut.empty() == false;
+}
 
 
 

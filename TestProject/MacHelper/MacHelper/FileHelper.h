@@ -48,6 +48,10 @@ public:
     
     //返回json文件
 //    void getJSONFile(const string &fileName, boost::property_tree::ptree &outPtree);
+    
+    //返回base64
+    bool Base64Encode(const string & inPut, string &outPut);
+    bool Base64Decode(const string & inPut, string &outPut);
 private:
     string getKeyOrValue(const string &key, const string &value);
     
