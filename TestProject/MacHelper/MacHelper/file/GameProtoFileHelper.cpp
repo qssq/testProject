@@ -27,6 +27,19 @@ void GameProtoFileHelper::start(const string &protoDir, const string &projectDir
     FileHelper fileHelper;
     vector<string> protoFiles = fileHelper.getDirectoryFile(protoDir);
     
+    //过滤文件
+    for (auto it = protoFiles.begin(); it != protoFiles.end(); )
+    {
+        string item = *it;
+        if (item.substr(protoDir.length(), 2) == "/."){
+            it = protoFiles.erase(it);
+        }
+        else
+        {
+            ++it;
+        }
+    }
+    
     //创建temp文件
     ofstream ofile;
     ofile.open("temp.txt", ios::binary | ios::trunc);
