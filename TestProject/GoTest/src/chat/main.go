@@ -1,9 +1,9 @@
 package main
 
-import "log"
+import "fmt"
 
 func main(){
-	log.Print("12312", "sadas")
+	fmt.Print("tes12123t")
 }
 
 
