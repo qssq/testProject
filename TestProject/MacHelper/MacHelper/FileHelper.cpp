@@ -10,6 +10,7 @@
 #include <boost/archive/iterators/base64_from_binary.hpp>
 #include <boost/archive/iterators/binary_from_base64.hpp>
 #include <boost/archive/iterators/transform_width.hpp>
+#include <boost/algorithm/string.hpp>
 
 using namespace boost::archive::iterators;
 
@@ -122,6 +123,22 @@ void FileHelper::copyFile(const string &fromFile, const string &toFile)
     fs::copy_file(fromFile, toFile, fs::copy_option::overwrite_if_exists);
 }
 
+vector<string> FileHelper::getDirectoryOnlyFile(const string &path)
+{
+    vector<string> result;
+    
+    for (fs::directory_entry& x : fs::directory_iterator(path))
+    {
+        if (!fs::is_directory(x))
+        {
+            string temp = x.path().string();
+            result.push_back(temp);
+        }
+    }
+    
+    return result;
+}
+
 vector<string> FileHelper::getDirectoryFile(const string &path)
 {
     vector<string> files;
@@ -176,6 +193,24 @@ vector<string> FileHelper::getDirectory(const string &path)
         {
             string temp = x.path().string();
             result.push_back(temp);
+        }
+    }
+    
+    return result;
+}
+
+vector<string> FileHelper::getDirectorys(const string &path)
+{
+    vector<string> result;
+    
+    boost::filesystem::recursive_directory_iterator end; //设置遍历结束标志，用recursive_directory_iterator即可循环的遍历目录
+    boost::system::error_code ec;
+    for (boost::filesystem::recursive_directory_iterator pos(path); pos != end; ++pos)
+    {
+        //过滤掉目录和子目录为空的情况
+        if(fs::is_directory(*pos))
+        {
+            result.push_back((*pos).path().string());
         }
     }
     
@@ -248,8 +283,34 @@ bool FileHelper::Base64Decode(const string & inPut, string &outPut)
     return outPut.empty() == false;
 }
 
+void FileHelper::copyDirectory(const string &source, const string &dir)
+{
+    boost::filesystem::recursive_directory_iterator end; //设置遍历结束标志，用recursive_directory_iterator即可循环的遍历目录
+    boost::system::error_code ec;
+    for (boost::filesystem::recursive_directory_iterator pos(source); pos != end; ++pos)
+    {
+        //过滤掉目录和子目录为空的情况
+        if(boost::filesystem::is_directory(*pos))
+            continue;
+        std::string strAppPath = boost::filesystem::path(*pos).string();
+        std::string strRestorePath;
+        //replace_first_copy在algorithm/string头文件中，在strAppPath中查找strSourceDir字符串，找到则用strDestDir替换，替换后的字符串保存在一个输出迭代器中
+        boost::replace_first_copy(std::back_inserter(strRestorePath), strAppPath, source, dir);
+        if(!boost::filesystem::exists(boost::filesystem::path(strRestorePath).parent_path()))
+        {
+            boost::filesystem::create_directories(boost::filesystem::path(strRestorePath).parent_path(), ec);
+        }
+        boost::filesystem::copy_file(strAppPath, strRestorePath, boost::filesystem::copy_option::overwrite_if_exists, ec);
+    }
+}
 
-
+void FileHelper::createDir(const string &dir)
+{
+    if (!boost::filesystem::is_directory(dir))
+    {
+        boost::filesystem::create_directory(dir);
+    }
+}
 
 
 

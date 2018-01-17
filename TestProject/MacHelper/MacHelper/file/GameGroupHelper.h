@@ -39,6 +39,13 @@ public:
     
     //生成newbee配置
     void buildConfigNewbee();
+    
+    //生成cc配置
+    void buildConfigCC();
+    
+    //cc配置
+    void buildConfigUser(const string &path1, const string &path2);
+    
 private:
     //项目根目录
     string mProjectPath;

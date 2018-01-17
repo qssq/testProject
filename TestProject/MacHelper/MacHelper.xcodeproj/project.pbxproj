@@ -13,6 +13,7 @@
 		EA442F061B6FDF7D0062E30C /* FileHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA442F041B6FDF7D0062E30C /* FileHelper.cpp */; };
 		EA442F081B6FE5530062E30C /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F071B6FE5530062E30C /* libboost_system.a */; };
 		EA442F0C1B6FE7D80062E30C /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */; };
+		EA555D0F1FC6BB900035E803 /* GameRealeaseProject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA555D0D1FC6BB900035E803 /* GameRealeaseProject.cpp */; };
 		EA6895241D9C09B900A26DD6 /* ODSocket6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895221D9C09B900A26DD6 /* ODSocket6.cpp */; };
 		EA6895271D9C09DF00A26DD6 /* SocketServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895251D9C09DF00A26DD6 /* SocketServer.cpp */; };
 		EA68952A1D9C175100A26DD6 /* ODSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA6895281D9C175100A26DD6 /* ODSocket.cpp */; };
@@ -60,6 +61,8 @@
 		EA442F051B6FDF7D0062E30C /* FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
 		EA442F071B6FE5530062E30C /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../usr/local/lib/libboost_system.a; sourceTree = "<group>"; };
 		EA442F0B1B6FE7D80062E30C /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../../../usr/local/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		EA555D0D1FC6BB900035E803 /* GameRealeaseProject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameRealeaseProject.cpp; sourceTree = "<group>"; };
+		EA555D0E1FC6BB900035E803 /* GameRealeaseProject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameRealeaseProject.h; sourceTree = "<group>"; };
 		EA6895221D9C09B900A26DD6 /* ODSocket6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ODSocket6.cpp; sourceTree = "<group>"; };
 		EA6895231D9C09B900A26DD6 /* ODSocket6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODSocket6.h; sourceTree = "<group>"; };
 		EA6895251D9C09DF00A26DD6 /* SocketServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketServer.cpp; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 				EAE9C2FC1EE468A900B8B2F3 /* ChangeFileName.h */,
 				EAE1A9C51FAB039D00E4BEAB /* GameProtoFileHelper.cpp */,
 				EAE1A9C61FAB039D00E4BEAB /* GameProtoFileHelper.h */,
+				EA555D0D1FC6BB900035E803 /* GameRealeaseProject.cpp */,
+				EA555D0E1FC6BB900035E803 /* GameRealeaseProject.h */,
 			);
 			path = file;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				EAAF86781D0E8FD8003F9E4C /* PlistDate.cpp in Sources */,
 				EA81717B1DD9E6FB00C4F87E /* GzipHelper.cpp in Sources */,
 				EAAF86721D0E8E18003F9E4C /* pugixml.cpp in Sources */,
+				EA555D0F1FC6BB900035E803 /* GameRealeaseProject.cpp in Sources */,
 				EA68952A1D9C175100A26DD6 /* ODSocket.cpp in Sources */,
 				EAA8C60D1F8CD2A100CAA46E /* ImageKeLeHelper.cpp in Sources */,
 				EA88753F1C240B0900BFD5B0 /* RandomList.cpp in Sources */,

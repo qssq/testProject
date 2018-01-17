@@ -26,6 +26,7 @@ void GameProtoFileHelper::start(const string &protoDir, const string &projectDir
 {
     FileHelper fileHelper;
     vector<string> protoFiles = fileHelper.getDirectoryFile(protoDir);
+    sort(protoFiles.begin(), protoFiles.end());
     
     //过滤文件
     for (auto it = protoFiles.begin(); it != protoFiles.end(); )

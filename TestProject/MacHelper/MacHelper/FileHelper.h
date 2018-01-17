@@ -34,17 +34,29 @@ public:
     //复制文件
     void copyFile(const string &fromFile, const string &toFile);
     
+    //返回目录下面的文件
+    vector<string> getDirectoryOnlyFile(const string &path);
+    
     //获取目录里的所有文件
     vector<string> getDirectoryFile(const string &path);
     
-    //返回目录下面所有文件夹
+    //返回目录下面的文件夹
     vector<string> getDirectory(const string &path);
+    
+    //遍历目录下面所有文件夹
+    vector<string> getDirectorys(const string &path);
     
     //返回文件名
     string getFileName(const string &path);
     
+    //新建文件夹
+    void createDir(const string &dir);
+    
     //删除文件
     int removeFile(const string &path);
+    
+    //复制文件夹
+    void copyDirectory(const string &source, const string &dir);
     
     //返回json文件
 //    void getJSONFile(const string &fileName, boost::property_tree::ptree &outPtree);

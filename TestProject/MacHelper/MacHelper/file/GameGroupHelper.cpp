@@ -72,6 +72,60 @@ void GameGroupHelper::buildConfigKwxFile()
 //    buildConfig(srcs, ress, "/Users/gongxun/oschina/gtKwx/mobiles/gtWhmj/");
 }
 
+void GameGroupHelper::buildConfigCC()
+{
+    {
+        vector<string> srcs = {
+            "/Users/gongxun/oschina/ccClient/mobiles/CCFire/src/"
+        };
+        
+        vector<string> ress = {
+            "/Users/gongxun/oschina/ccClient/mobiles/CCFire/res/"
+        };
+        
+        buildConfig(srcs, ress, "/Users/gongxun/oschina/ccClient/mobiles/CCFire/");
+    }
+    
+    vector<string> srcs = {
+        "/Users/gongxun/oschina/ccClient/mobiles/CCFire/publish/src/"
+    };
+    
+    vector<string> ress = {
+        "/Users/gongxun/oschina/ccClient/mobiles/CCFire/publish/res/"
+    };
+    
+    buildConfig(srcs, ress, "/Users/gongxun/oschina/ccClient/mobiles/CCFire/publish/");
+}
+
+void GameGroupHelper::buildConfigUser(const string &path1, const string &path2)
+{
+    if (path1 != "")
+    {
+        vector<string> srcs = {
+            path1 + "/src/"
+        };
+        
+        vector<string> ress = {
+            path1 + "/res/"
+        };
+        
+        buildConfig(srcs, ress, path1 + "/");
+    }
+    
+    if (path2 != "")
+    {
+        vector<string> srcs = {
+            path2 + "/src/"
+        };
+        
+        vector<string> ress = {
+            path2 + "/res/"
+        };
+        
+        buildConfig(srcs, ress, path2 + "/");
+    }
+}
+
 void GameGroupHelper::buildHtmlTest()
 {
     FileHelper fileHelper;
@@ -266,13 +320,14 @@ void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<s
                 ++it;
             }
         }
+        sort(fileNames.begin(), fileNames.end());
         
         fs::ofstream ofile;
         string srcFileName = srcPaths[0] + "files.js";
         ofile.open(srcFileName);
         cout<<"创建文件:"<<srcFileName<<endl;
         
-        ofile<<"//Created by MacHelper on "<<getCurDateTime()<<endl;
+        ofile<<"//Created by MacHelper"<<endl;
         ofile<<endl;
         ofile<<"var Files = ["<<endl;
         for (int i = 0; i < fileNames.size(); ++i)
@@ -324,13 +379,14 @@ void GameGroupHelper::buildConfig(const vector<string> &srcPaths, const vector<s
                 ++it;
             }
         }
+        sort(fileNames.begin(), fileNames.end());
         
         fs::ofstream ofile;
         string srcFileName = srcPaths[0] + "resource.js";
         ofile.open(srcFileName);
         cout<<"创建文件:"<<srcFileName<<endl;
         
-        ofile<<"//Created by MacHelper on "<<getCurDateTime()<<endl;
+        ofile<<"//Created by MacHelper"<<endl;
         ofile<<endl;
         ofile<<"var Resource = ["<<endl;
         for (int i = 0; i < fileNames.size(); ++i)
