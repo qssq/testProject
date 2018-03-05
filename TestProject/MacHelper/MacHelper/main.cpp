@@ -306,6 +306,10 @@ void handEvent(const string &input, const string &input2, const string &input3)
     {
         GameGroupHelper::singleton()->buildConfigUser("/Users/gongxun/oschina/gtkwx/mobiles/GTKwx", "");
     }
+    else if (input == "111")
+    {
+        GameGroupHelper::singleton()->buildConfigUser("/Users/gongxun/oschina/game_prototype/mobiles/game", "");
+    }
 }
 
 int main(int argc, const char * argv[]) {
@@ -375,6 +379,7 @@ int main(int argc, const char * argv[]) {
     cout << "108:cc 编译正式版本"<<endl;
     cout << "109:cc 编译测试版本"<<endl;
     cout << "110: gtKwx files"<<endl;
+    cout << "111: prototype files"<<endl;
     
     if (arg1 != "")
     {

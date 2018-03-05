@@ -27,15 +27,24 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+
+        btn01: {
+            default : null,
+            type : cc.Button
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {},
 
-    start () {
-
-    },
+    // start () {
+    //
+    // }
 
     // update (dt) {},
+
+    test01 : function(){
+        cc.log("test01 touch");
+    }
 });
