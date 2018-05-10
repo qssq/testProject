@@ -74,7 +74,7 @@ void GameRealeaseProject::moveSrc()
     fileHelper.copyFile(mProjectPath + "/src/gameVersion.js", mProjectPath + "/publish/src/gameVersion.js");
     fileHelper.copyFile(mProjectPath + "/src/gameAssetsManager.js", mProjectPath + "/publish/src/gameAssetsManager.js");
     fileHelper.copyFile(mProjectPath + "/src/tools/gameHelper.js", mProjectPath + "/publish/src/gameHelper.js");
-    fileHelper.copyFile(mProjectPath + "/src/zVersion.js", mProjectPath + "/publish/src/zVersion.js");
+    fileHelper.copyFile(mProjectPath + "/src/tools/zVersion.js", mProjectPath + "/publish/src/tools/zVersion.js");
     fileHelper.copyFile(mProjectPath + "/src/files.js", mProjectPath + "/publish/src/files.js");
     fileHelper.copyFile(mProjectPath + "/src/resource.js", mProjectPath + "/publish/src/resource.js");
     

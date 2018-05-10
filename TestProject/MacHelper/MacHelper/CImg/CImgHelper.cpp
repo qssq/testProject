@@ -75,6 +75,8 @@ void CImgHelper::test01()
 //    texturePacker(gPath + "fish_frame_1_6.plist", "fish_frame_1_6.png");
     //    texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
 //        texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
+//            texturePacker(gPath + "dbjdCards.plist", "dbjdCards.png");
+    texturePacker(gPath + "dbjdCards.plist", "dbjdCards.png");
     
 //    texturePacker(gPath + "fish_net.plist", "fish_net.png");
 //    texturePacker(gPath + "fish_net4.plist", "fish_net4.png");
@@ -106,19 +108,19 @@ void CImgHelper::test01()
 //    copyFiles(rects, "faceq_res.png");
     
     //裁切
-    vector<ImgRect> rects;
-    int index = 0;
-    for(int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 6; j++)
-        {
-            char name[20];
-            sprintf(name, "emoji_%d", i * 6 + j);
-            ImgRect rect = {i * 100, j * 100, 100, 100, 0, 0, 100, 100, false, name};
-            rects.push_back(rect);
-        }
-    }
-    copyFiles(rects, "dice_left.png");
+//    vector<ImgRect> rects;
+//    int index = 0;
+//    for(int i = 0; i < 5; i++)
+//    {
+//        for (int j = 0; j < 6; j++)
+//        {
+//            char name[20];
+//            sprintf(name, "emoji_%d", i * 6 + j);
+//            ImgRect rect = {i * 100, j * 100, 100, 100, 0, 0, 100, 100, false, name};
+//            rects.push_back(rect);
+//        }
+//    }
+//    copyFiles(rects, "dice_left.png");
 }
 
 void CImgHelper::GaussianBlur(const string &file)

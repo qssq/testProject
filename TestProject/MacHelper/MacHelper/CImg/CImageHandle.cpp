@@ -58,15 +58,16 @@ void CImageHandle::handlerKw()
 {
     map<string, string> results;
     //    results["game_base.plist"] = "game_base.png";
-    results["ttz_base.plist"] = "ttz_base.png";
-    results["com_dialog_new_texture.plist"] = "com_dialog_new_texture.png";
+//    results["ttz_base.plist"] = "ttz_base.png";
+//    results["com_dialog_new_texture.plist"] = "com_dialog_new_texture.png";
+        results["dbjdCards.plist"] = "dbjdCards.png";
     
     for(auto it : results)
     {
         vector<frameStruct> rects;
-        XMLHelper::singleton()->getTexturePacketsKw(getFullName("kwmj/" + it.first), rects);
+        XMLHelper::singleton()->getTexturePacketsKw(getFullName("" + it.first), rects);
         
-        copyFiles(rects, getFullName("kwmj/" + it.second), "ttz/");
+        copyFiles(rects, getFullName("" + it.second), "ttz/");
     }
 }
 

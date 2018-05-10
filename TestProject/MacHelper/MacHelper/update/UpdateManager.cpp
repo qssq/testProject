@@ -33,7 +33,7 @@ UpdateManager::~UpdateManager()
     
 }
 
-void UpdateManager::start(const string &path, const string &strPackageUrl)
+void UpdateManager::start(const string &path, const string &strPackageUrl, string iosCheckVersion)
 {
     mStrPackageUrl = strPackageUrl;
     ///1.找到所有文件夹
@@ -122,7 +122,7 @@ void UpdateManager::start(const string &path, const string &strPackageUrl)
     //生成配置文件
     cout<<"5 开始生成配置文件..."<<endl;
     string currentVersion = newDirectory.substr(newDirectory.rfind("/") + 1, newDirectory.size() - newDirectory.rfind("/") + 1);
-    createConifgFile(mUpdateZipFiles, mAllUpdateZipFile, path, currentVersion);
+    createConifgFile(mUpdateZipFiles, mAllUpdateZipFile, path, currentVersion, iosCheckVersion);
     cout<<endl;
     
     cout<<"end 增量包生成成功"<<endl;
@@ -252,7 +252,7 @@ bool UpdateManager::setCompressionFile(const string &workPath, const vector<stri
     return true;
 }
 
-bool UpdateManager::createConifgFile(const vector<string> &addZip, const string &allZip, const string workPath, const string &currentVersion)
+bool UpdateManager::createConifgFile(const vector<string> &addZip, const string &allZip, const string workPath, const string &currentVersion, const string &iosCheckVersion)
 {
     string strProject = "project.manifest";
     string strVersion = "version.manifest";
@@ -328,7 +328,8 @@ bool UpdateManager::createConifgFile(const vector<string> &addZip, const string 
         ofile2<<"    },"<<endl;
         ofile2<<"    \"engineVersion\" : \"3.13.1\","<<endl;
         ofile2<<"    \"updateInfo\" : \"发现新版本，是否升级客户端?\","<<endl;
-        ofile2<<"    \"updateSize\" : \"20M\""<<endl;
+        ofile2<<"    \"updateSize\" : \"20M\","<<endl;
+        ofile2<<"    \"iOSCheckVersion\" : \""+ iosCheckVersion + "\""<<endl;
         ofile2<<"}"<<endl;
     }
     ofile2.close();

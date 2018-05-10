@@ -20,7 +20,7 @@ public:
     static UpdateManager *singleton();
     
     //path:工作目录 strPackageUrl:更新http位置
-    void start(const string &path, const string &strPackageUrl);
+    void start(const string &path, const string &strPackageUrl, string iosCheckVersion = "close" );
 private:
     FileHelper mFileHelper;
     string mStrPackageUrl;
@@ -37,7 +37,7 @@ private:
     bool setCompressionFile(const string &workPath, const vector<string> &files, const string &filePath, const string &zipName);
     
     //生成配置文件
-    bool createConifgFile(const vector<string> &addZip, const string &allZip, const string workPath, const string &currentVersion);
+    bool createConifgFile(const vector<string> &addZip, const string &allZip, const string workPath, const string &currentVersion, const string &iosCheckVersion);
     
     //返回文件名
     string getFileNameByParentPath(const string &fileName, const string &path);

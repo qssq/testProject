@@ -221,3 +221,4 @@ TestProject/Fuweng/*
 !TestProject/Fuweng/src
 !TestProject/Fuweng/cocostudio
 !TestProject/Fuweng/res
+*.a
