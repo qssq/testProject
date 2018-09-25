@@ -76,7 +76,12 @@ void CImgHelper::test01()
     //    texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
 //        texturePacker(gPath + "fish_frame_1_7.plist", "fish_frame_1_7.png");
 //            texturePacker(gPath + "dbjdCards.plist", "dbjdCards.png");
-    texturePacker(gPath + "dbjdCards.plist", "dbjdCards.png");
+//    texturePacker(gPath + "dbjdCards.plist", "dbjdCards.png");
+//    texturePacker(gPath + "bigCards2.plist", "bigCards2.png");
+        texturePacker(gPath + "cymjCards.plist", "cymjCards.png");
+//            texturePacker(gPath + "dbjdCards.plist", "dbjdCards.png");
+//            texturePacker(gPath + "bigCards.plist", "bigCards.png");
+    
     
 //    texturePacker(gPath + "fish_net.plist", "fish_net.png");
 //    texturePacker(gPath + "fish_net4.plist", "fish_net4.png");

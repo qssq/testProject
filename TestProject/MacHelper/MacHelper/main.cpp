@@ -261,7 +261,7 @@ void handEvent(const string &input, const string &input2, const string &input3)
     else if (input == "102")
     {
         cout<<"开始构造增量更新包 正式版"<<endl;
-        UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwxreal/", "http://qxkwx.oss-cn-beijing.aliyuncs.com/gameGame");
+        UpdateManager::singleton()->start("/Users/gongxun/Sites/update/kwxreal/", "http://qxkwx.oss-cn-beijing.aliyuncs.com/gameGame", "1.1.0");
     }
     else if (input == "103")
     {
@@ -295,7 +295,7 @@ void handEvent(const string &input, const string &input2, const string &input3)
     else if (input == "108")
     {
         cout<<"开始构造增量更新包 CC正式版"<<endl;
-        UpdateManager::singleton()->start("/Users/gongxun/Sites/update/cc/", "http://ccgame.oss-cn-beijing.aliyuncs.com/ccgame", "1.0.8");
+        UpdateManager::singleton()->start("/Users/gongxun/Sites/update/cc/", "http://kkkwx.oss-cn-beijing.aliyuncs.com/ccgame");
     }
     else if (input == "109")
     {
@@ -346,7 +346,14 @@ void handEvent(const string &input, const string &input2, const string &input3)
     else if (input == "118")
     {
         GameProtoFileHelper gpfh;
-        gpfh.start("/Users/gongxun/oschina/kwxclient/proto", "/Users/gongxun/oschina/kkGame/mobiles/newKwx");
+        gpfh.start("/Users/gongxun/oschina/kkGame/proto", "/Users/gongxun/oschina/kkGame/mobiles/newKwx");
+    }
+    else if (input == "119")
+    {
+        GameRealeaseProject grp;
+        grp.start("/Users/gongxun/oschina/ccClient/mobiles/CCFire");
+        
+        GameGroupHelper::singleton()->buildConfigUser("/Users/gongxun/oschina/ccClient/mobiles/CCFire", "/Users/gongxun/oschina/ccClient/mobiles/CCFire/publish");
     }
 }
 
@@ -425,6 +432,7 @@ int main(int argc, const char * argv[]) {
     cout << "116: robot"<<endl;
     cout << "117: kk config"<<endl;
     cout << "118: kk proto"<<endl;
+    cout << "119: cc 生成正式项目版本"<<endl;
     
     if (arg1 != "")
     {

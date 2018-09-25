@@ -3,8 +3,8 @@ package main
 import (
 	"strings"
 	"encoding/xml"
-	"strconv"
 	"fmt"
+	//"strconv"
 )
 
 func main() {
@@ -41,7 +41,6 @@ func main() {
 	//numstr := strconv.Itoa(num)
 	//fmt.Println(numstr)
 
-
 	//xmlData := "&lt;msg fromusername=\"wxid_d7r5zm3n1m0d21\" encryptusername=\"v1_ccfae92d5d10c275764b317870c988a7bce10cba21996a18983111e0916216571cbdc88206af6ec2ef88b5b4aee733b0@stranger\" fromnickname=\"x(测试号)\" content=\"\"  shortpy=\"XCSH\" imagestatus=\"3\" scene=\"6\" country=\"CN\" province=\"Hubei\" city=\"Wuhan\" sign=\"\" percard=\"1\" sex=\"1\" alias=\"xungong91\" weibo=\"\" weibonickname=\"\" albumflag=\"0\" albumstyle=\"0\" albumbgimgid=\"\" snsflag=\"49\" snsbgimgid=\"\" snsbgobjectid=\"0\" mhash=\"0178aa0380e771150b990e0c1654e6d5\" mfullhash=\"0178aa0380e771150b990e0c1654e6d5\" bigheadimgurl=\"http://wx.qlogo.cn/mmhead/ver_1/bk8A4VEZ9iatu8xSSKibcqoVmxsdD7XIia0s1Y4XJ3NJuLQqicEcg769hrdpicClEYlickBtL7BxKaWp1WQ6DmdWfgAg/0\" smallheadimgurl=\"http://wx.qlogo.cn/mmhead/ver_1/bk8A4VEZ9iatu8xSSKibcqoVmxsdD7XIia0s1Y4XJ3NJuLQqicEcg769hrdpicClEYlickBtL7BxKaWp1WQ6DmdWfgAg/132\" ticket=\"v2_bc7161d31f6676b6ff4032ce014faf8e39ecb05a650f4ac2b3b9b8defc90c85960af4981b37bf30819940fa4a96d96fe92b7a1b8654f27fe0c862b928bcb0d1c@stranger\" opcode=\"2\" googlecontact=\"\" qrticket=\"\" chatroomusername=\"\" sourceusername=\"\" sourcenickname=\"\"&gt;&lt;brandlist count=\"0\" ver=\"617220389\"&gt;&lt;/brandlist&gt;&lt;/msg&gt;"
 	//
 	//temp := WXConvertHtmlString(xmlData)
@@ -52,10 +51,34 @@ func main() {
 	//	panic("err:" + err.Error())
 	//}
 
-	temp := "0.01"
-	num, _ := strconv.ParseFloat(temp, 64)
-	fmt.Printf("%f\n", num)
-	fmt.Printf("%0.2f\n", num)
+	//temp := "0.01"
+	//num, _ := strconv.ParseFloat(temp, 64)
+	//fmt.Printf("%f\n", num)
+	//fmt.Printf("%0.2f\n", num)
+
+	//cs := []int{1}
+	//cs = append(cs[:-1], cs[-1+1:]...)
+	//fmt.Printf("cs%v", cs)
+
+	//result := strings.Replace(strings.Trim(fmt.Sprint(cs), "[]"), " ", ",", -1)
+	//fmt.Printf("%s", result)
+
+	//a := -185
+	//b := a / 100
+	//c := a % 100
+	//d := float64(a) / 100.0
+	//e := strconv.FormatFloat(float64(a) / 100, 'f', 2, 32)
+	//fmt.Printf("%d,%d,%f,%s\n", b, c, d, e)
+	//
+	//if c < 0 {
+	//	c += 100
+	//	b -= 1
+	//}
+	//a = b * 100 + c
+	//fmt.Printf("a:%d,b:%d,c:%d", a, b, c)
+
+	a := make([]int, 10)
+	fmt.Printf("a:%v", a)
 }
 
 type WxFmessageContent struct {
